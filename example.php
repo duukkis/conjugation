@@ -58,7 +58,7 @@ $testSet = array(
 
 include('function.php');
 // initialize and use cache
-$conjugate = new Conjugate($words, true); 
+$conjugate = new Conjugate(true); 
 
 ksort($testSet);
 
