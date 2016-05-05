@@ -209,7 +209,7 @@ class Conjugate
   }
   
   /**
-  * inessive
+  * inessive -ssa, -ssä
   * @param string $word to conjugate
   */
   public function inessive($word) {
@@ -221,7 +221,7 @@ class Conjugate
   }
   
   /**
-  * elative
+  * elative -sta, -stä
   * @param string $word to conjugate
   */
   public function elative($word) {
@@ -269,7 +269,7 @@ class Conjugate
   }
   
   /**
-  * allative
+  * allative -lle
   * @param string $word to conjugate
   */
   public function allative($word) {
@@ -277,7 +277,7 @@ class Conjugate
   }
   
   /**
-  * abessive -lta, -ltä
+  * abessive -tta, -ttä
   * @param string $word to conjugate
   */
   public function abessive($word) {
