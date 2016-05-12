@@ -1,4 +1,4 @@
-# conjugation
+# Conjugation
 PHP:lla tehty taivutuskirjasto suomen kielen substantiiveille.
 PHP Conjugation library for Finnish nouns.
 
@@ -17,5 +17,10 @@ TODO:
 - Essiivi - essive
 - Illatiivi - illative
   
-Demo: http://www.palomaki.info/apps/conjugation/
-Author: https://twitter.com/duukkis
+# Demo
+http://www.palomaki.info/apps/conjugation/
+
+# Tests
+
+PHP Codesniffer rules in ruleset.xml
+phpcs --standard=ruleset.xml *.php
