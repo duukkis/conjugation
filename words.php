@@ -11,6 +11,8 @@
 * allatiivi : huo va lle ["si"][1]
 * abessiivi : huo va tta ["si"][1]
 * illatiivi : huo paa n ["si"][2]
+* partitive : huo pa a ["si"][3]
+* essive : huo pa na ["si"][4]
 *
 * plural => huo va t ["si"][0] (monikko)
 * plural genitive => huo pie n ["pl"][0]
@@ -22,6 +24,8 @@
 * allatiivi : huo vi lle ["pl"][1]
 * abessiivi : huo vi tta ["pl"][1]
 * illatiivi : huo pii n ["pl"][2]
+* partitive : huo pi a ["pl"][3]
+* essive : huo pi na ["pl"][4]
 *
 * words are reverse sorted with some reorganizing as the best match is picked first
 * fex. we have 2 akkaus words. First the more common version and then the exception
@@ -56,44 +60,41 @@
 $words = array(
   // -- aa
   "nugaa" => array("a",
-                  "si" => array("a", "a", "aha"),
-                  "pl" => array("ide", "i", "asii")),
+                  "si" => array("a", "a", "aha", "at", "a"),
+                  "pl" => array("ide", "i", "asii", "it", "i")),
   "maa" => array("a",
-                  "si" => array("a", "a", "aha"),
-                  "pl" => array("ide", "ailmo", "ihi")),
+                  "si" => array("a", "a", "aha", "at", "a"),
+                  "pl" => array("ide", "ailmo", "ihi", "it", "i")),
   "vapaa" => array("a",
-                  "si" => array("a", "a", "asee"),
-                  "pl" => array("ide", "i", "isii")),
+                  "si" => array("a", "a", "asee", "at", "a"),
+                  "pl" => array("ide", "i", "isii", "it", "i")),
   "sataa" => array("taa",
-                  "si" => array("danne", "danne", "dantee"),
-                  "pl" => array("dansie", "dansi", "dansii")),
+                  "si" => array("danne", "danne", "dantee", "dant", "dante"),
+                  "pl" => array("dansie", "dansi", "dansii", "dansi", "dansi")),
   // -- ea
   "korkea" => array("a",
-                  "si" => array("a", "a", "aa"),
-                  "pl" => array("ide", "i", "isii")),
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("ide", "i", "isii", "it", "i")),
   // -- ia
   "topografia" => array("a",
-                  "si" => array("a", "a", "aa"),
-                  "pl" => array("oide", "oi", "oihi")),
-  "filosofia" => array("a",
-                  "si" => array("a", "a", "aa"),
-                  "pl" => array("oide", "oi", "oihi")),
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("oide", "oi", "oihi", "oit", "oi")),
   "analogia" => array("a",
-                  "si" => array("a", "a", "aa"),
-                  "pl" => array("oide", "oi", "oihi")),
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("oide", "oi", "oihi", "oit", "oi")),
   // -- ja
   "apaja" => array("a",
-                  "si" => array("a", "a", "aa"),
-                  "pl" => array("oide", "oi", "oihi")),
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("oide", "oi", "oihi", "oit", "oi")),
   "kantaja" => array("a",
-                  "si" => array("a", "a", "aa"),
-                  "pl" => array("ie", "i", "ii")),
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("ie", "i", "ii", "i", "i")),
   "kulkija" => array("a",
-                  "si" => array("a", "a", "aa"),
-                  "pl" => array("oide", "oi", "oihi")),
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("oide", "oi", "oihi", "oit", "oi")),
   "oja" => array("a",
-                  "si" => array("a", "a", "aa"),
-                  "pl" => array("ie", "i", "ii")),
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("ie", "i", "ii", "i", "i")),
   // -- ka
   "raaka" => array("ka",
                   "si" => array("'a", "'a", "kaa"),

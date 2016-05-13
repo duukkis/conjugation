@@ -6,6 +6,14 @@
 class Conjugate
 {
 
+  // some helpers if we want to conjugate same word (performance)
+  private $word = null;
+  private $index = null;
+  private $bestMatch = null;
+  private $original = null;
+  private $conjugation = null;
+  private $auml = null;
+  
   // array of words
   public $words;
   // use this as helper
@@ -189,12 +197,12 @@ class Conjugate
 
   /**
   * akkusative
-  * Söin omena|n. Suututin naapuri|n. Meille ostetaan auto. Syökää ruoka loppuun. Kissa söi silaka|t
+  * this is same as nominative/ genetive, so no need to implement, returns the same
   * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
+  * @return array "match" with the word given and "answer" with the word
   */
   public function akkusative($word) {
-    return array("match" => "akkusative not implemented yet", "answer" => $word);
+    return array("match" => $word, "answer" => $word);
   }
 
   /**
@@ -204,7 +212,11 @@ class Conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
   public function partitive($word) {
-    return array("match" => "partitive not implemented yet", "answer" => $word);
+    if ($this->isBackWovelWord($word)) {
+      return $this->conjugateWord($word, "a", 4);
+    } else {
+      return $this->conjugateWord($word, "ä", 4);
+    }
   }
   
   
@@ -215,7 +227,11 @@ class Conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
   public function essive($word) {
-    return array("match" => "essive not implemented yet", "answer" => $word);
+    if ($this->isBackWovelWord($word)) {
+      return $this->conjugateWord($word, "na", 5);
+    } else {
+      return $this->conjugateWord($word, "nä", 5);
+    }
   }
   
   /**
@@ -354,13 +370,46 @@ class Conjugate
   */
   public function conjugateWord($word, $ender, $use_index) {
     
-    $original = "";
-    // first check for numeral
+    // full match
+    $fMatch = $this->fullMatchCheck($word, $use_index, $ender);
+    if ($fMatch !== false) {
+      return $fMatch;
+    }
+
+    // then check for numeral
     $numeral = $this->isNumeral($word, $ender);
     if ($numeral !== false) {
       return array("match" => "numeral", "answer" => $numeral);
     }
-    // first check full match
+    
+    // if the word is same as previously, use the existing conjugation and bestMatch
+    // otherwise match the word again
+    if ($word != $this->word) {
+      $this->matchWord($word);
+    }
+    
+    // then we have the bast match, just conjugate and exit
+    if (isset($this->conjugation[0]) && !empty($this->conjugation[0])
+        && isset($this->conjugation[$use_index]) && !empty($this->conjugation[$use_index])) {
+      if (!empty($this->original)) {
+        $word = $this->original;
+      }
+      $word = $this->strRreplace($this->conjugation[0], $this->conjugation[$use_index], $word).$ender;
+    } else {
+      if (!empty($this->original)) {
+        $word = $this->original;
+      }
+      $word = $word.$ender;
+    }
+    
+    return array("match" => $this->bestMatch, "answer" => $word);
+  }
+  
+  /**
+  * full match checker
+  *
+  */
+  private function fullMatchCheck($word, $use_index, $ender){
     if (isset($this->words[$word])) {
       if (isset($this->words[$word][0]) && !empty($this->words[$word][0])
           && isset($this->words[$word][$use_index]) && !empty($this->words[$word][$use_index])) {
@@ -372,14 +421,25 @@ class Conjugate
       }
       return array("match" => $word, "answer" => $answer);
     }
+    return false;
+  }
+  
+  /**
+  * function to match the word
+  * @param string $word - word to match
+  * @return string - the matched word against which to conjugate
+  */
+  private function matchWord($word) {
+    // ------- have the original if we have to convert some ä's / a's
+    $this->original = null;
     // ------- then check the ao OR äö this is used so that both a and ä conjugate the same
-    $auml = false; // is the last one a/o or ä/ö
+    $this->auml = false; // is the last one ä/ö and not a/o
     $aumlpos = mb_strrpos($word, "ä");
     $oumlpos = mb_strrpos($word, "ö");
-    $apos = mb_strrpos($word, "a");
-    $opos = mb_strrpos($word, "o");
     if ($aumlpos !== false || $oumlpos !== false) {
-      $original = $word;
+      $apos = mb_strrpos($word, "a");
+      $opos = mb_strrpos($word, "o");
+      $this->original = $word;
       $a = -1;
       if ($apos !== false && $opos !== false) {
         $a = max($apos, $opos);
@@ -389,11 +449,11 @@ class Conjugate
         $a = $opos;
       }
       if ($aumlpos !== false && $oumlpos !== false && max($aumlpos, $oumlpos) > $a) {
-        $auml = true;
+        $this->auml = true;
       } else if ($aumlpos !== false && $aumlpos > $a) {
-        $auml = true;
+        $this->auml = true;
       } else if ($oumlpos !== false && $oumlpos > $a) {
-        $auml = true;
+        $this->auml = true;
       }
     }
     
@@ -401,66 +461,49 @@ class Conjugate
     $word = str_replace(array("ä", "ö"), array("a", "o"), $word);
     $drow = $this->utf8Strrev($word);
     
-    $index = mb_substr($drow, 0, 1);
+    $this->index = mb_substr($drow, 0, 1);
 
     $wordLength = mb_strlen($word);
     
-    $bestMatch = "";
+    $this->bestMatch = "";
     $bestMatchLetters = 0;
-    if (isset($this->indexed_words[$index])) {
-      foreach ($this->indexed_words[$index] as $w => $conjugation) {
+    if (isset($this->indexed_words[$this->index])) {
+      foreach ($this->indexed_words[$this->index] as $w => $useOnlyKeys) {
         $match = 0;
         $shorterWord = min(mb_strlen($w), $wordLength);
         for ($i = 0; $i < $shorterWord; $i++) {
           if (mb_substr($w, $i, 1) == mb_substr($drow, $i, 1)) {
             $match++;
           } else {
-            $i = 100; // out of for loop
+            $i = 1000; // out of for loop
           }
         }
         if ($match > $bestMatchLetters) {
           $bestMatchLetters = $match;
-          $bestMatch = $w;
+          $this->bestMatch = $w;
         }
       }
-      $conjugation = $this->indexed_words[$index][$bestMatch];
-    }
-    // then we have the bast match, just make the genitive and exit
-    if (isset($conjugation[0]) && !empty($conjugation[0])
-        && isset($conjugation[$use_index]) && !empty($conjugation[$use_index])) {
-      if (!empty($original)) {
-        $word = $original;
-        if ($auml) {
-          $conjugation[0] = str_replace(array("a", "o"), array("ä", "ö"), $conjugation[0]);
-          $conjugation[$use_index] = str_replace(array("a", "o"), array("ä", "ö"), $conjugation[$use_index]);
-        } else {
-          $conjugation[0] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation[0]);
-          $conjugation[$use_index] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation[$use_index]);
-        }
-      } else if (!$auml) {
-        $conjugation[0] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation[0]);
-        $conjugation[$use_index] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation[$use_index]);
-      }
-      $word = $this->strRreplace($conjugation[0], $conjugation[$use_index], $word).$ender;
-    } else if (isset($conjugation[0]) && isset($conjugation[$use_index]) && !empty($conjugation[$use_index])) {
-      if (!empty($original)) {
-        $word = $original;
-        if ($auml) {
-          $conjugation[$use_index] = str_replace(array("a", "o"), array("ä", "ö"), $conjugation[$use_index]);
-        } else {
-          $conjugation[$use_index] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation[$use_index]);
-        }
-      } else if (!$auml) {
-        $conjugation[$use_index] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation[$use_index]);
-      }
-      $word .= $conjugation[$use_index].$ender;
-    } else {
-      if (!empty($original)) {
-        $word = $original;
-      }
-      $word = $word.$ender;
+      $this->conjugation = $this->indexed_words[$this->index][$this->bestMatch];
+      $this->bestMatch = strrev($this->bestMatch);
     }
     
-    return array("match" => strrev($bestMatch), "answer" => $word);
+    // fix the conjugation with the umlauts
+    if (!empty($this->original)) {
+      if ($this->auml) {
+        // fix all conjugations
+        foreach ($this->conjugation as $k => $v) {
+          $this->conjugation[$k] = str_replace(array("a", "o"), array("ä", "ö"), $this->conjugation[$k]);
+        }
+      } else {
+        foreach ($this->conjugation as $k => $v) {
+          $this->conjugation[$k] = str_replace(array("ä", "ö"), array("a", "o"), $this->conjugation[$k]);
+        }
+      }
+    } else if (!$this->auml) {
+      foreach ($this->conjugation as $k => $v) {
+        $this->conjugation[$k] = str_replace(array("ä", "ö"), array("a", "o"), $this->conjugation[$k]);
+      }
+    }
+    
   }
-} // end of class
+}
