@@ -390,7 +390,7 @@ class Conjugate
     
     // then we have the bast match, just conjugate and exit
     if (isset($this->conjugation[0]) && !empty($this->conjugation[0])
-        && isset($this->conjugation[$use_index]) && !empty($this->conjugation[$use_index])) {
+        && isset($this->conjugation[$use_index])) {
       if (!empty($this->original)) {
         $word = $this->original;
       }
@@ -412,7 +412,7 @@ class Conjugate
   private function fullMatchCheck($word, $use_index, $ender){
     if (isset($this->words[$word])) {
       if (isset($this->words[$word][0]) && !empty($this->words[$word][0])
-          && isset($this->words[$word][$use_index]) && !empty($this->words[$word][$use_index])) {
+          && isset($this->words[$word][$use_index])) {
         $answer = $this->strRreplace($this->words[$word][0], $this->words[$word][$use_index], $word).$ender;
       } else if (isset($this->words[$word][$use_index]) && !empty($this->words[$word][$use_index])) {
         $answer = $word.$this->words[$word][$use_index].$ender;
