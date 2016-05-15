@@ -10,17 +10,20 @@ PHP Conjugation library for Finnish nouns.
 - Ablatiivi - ablative (-lta)
 - Allatiivi - allative (-lle)
 - Abessiivi - abessive (-tta)
+- Partitiivi - partitive (-a, ta, tta)
+- Essiivi - essive (-na)
+- Illatiivi - illative (-an, -en, -han, -seen)
+- Akkusatiivi - akkusative, not implemented, same as nominative/genetive, so returns nominative
 
-TODO:
-- Akkusatiivi - akkusative
-- Partitiivi - partitive
-- Essiivi - essive
-- Illatiivi - illative
-  
+# Todo
+- Essive missing in words.php
+- Verbs
+
 # Demo
 http://www.palomaki.info/apps/conjugation/
 
 # Tests
-
-PHP Codesniffer rules in ruleset.xml
+PHP Codesniffer rules in ruleset.xml, run with:
+```
 phpcs --standard=ruleset.xml *.php
+```
