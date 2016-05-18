@@ -16,7 +16,6 @@ PHP Conjugation library for Finnish nouns.
 - Akkusatiivi - akkusative, not implemented, same as nominative/genetive, so returns nominative
 
 # Todo
-- Essive missing in words.php
 - Verbs
 
 # Demo
@@ -27,3 +26,7 @@ PHP Codesniffer rules in ruleset.xml, run with:
 ```
 phpcs --standard=ruleset.xml *.php
 ```
+
+# Some material for conjugation
+
+kotus nykysuomen sanalista
