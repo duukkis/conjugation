@@ -29,4 +29,5 @@ phpcs --standard=ruleset.xml *.php
 
 # Some material for conjugation
 
-kotus nykysuomen sanalista
+KOTIMAISTEN KIELTEN KESKUKSEN NYKYSUOMEN SANALISTA
+http://kaino.kotus.fi/sanat/nykysuomi/
