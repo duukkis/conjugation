@@ -1151,6 +1151,9 @@ $words = array(
                   "si" => array("di", "di", "tii", "ti", "ti"),
                   "pl" => array("tie", "dei", "teihi", "tej", "tei")),
   // -- vi
+  "substantiivi" => array("i",
+                  "si" => array("i", "i", "ii", "i", "i"),
+                  "pl" => array("ie", "ei", "eihi", "ej", "ei")),
   "savi" => array("i",
                   "si" => array("e", "e", "ee", "e", "e"),
                   "pl" => array("ie", "i", "ii", "i", "i")),
@@ -1161,9 +1164,6 @@ $words = array(
                   "si" => array("e", "e", "ee", "e", "e"),
                   "pl" => array("ie", "i", "ii", "i", "i")),
 
-  "substantiivi" => array("i",
-                  "si" => array("i", "i", "ii", "i", "i"),
-                  "pl" => array("ie", "ei", "eihi", "ej", "ei")),
   "alkovi" => array("i",
                   "si" => array("i", "i", "ii", "i", "i"),
                   "pl" => array("ie", "ei", "eihi", "eit", "ei")),
