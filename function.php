@@ -13,7 +13,7 @@ class Conjugate
   private $original = null;
   private $conjugation = null;
   private $auml = null;
-  private $backVowelWord = false;
+  private $backVowelWord = null;
   
   // array of words
   public $words;
@@ -341,55 +341,51 @@ class Conjugate
   */
   private function isBackWovelWord($word) {
     // if the same word is being checked, use the previous result instead of matching again
-    if ($word == $this->word && $this->backVowelWord != null) {
+    if ($word == $this->word && $this->backVowelWord !== null) {
       return $this->backVowelWord;
     }
-    $backWovelPos = false;
+    $backVowelPos = -1;
     $apos = mb_strrpos($word, "a");
     if ($apos !== false) {
       $backVowelPos = $apos;
     }
     $opos = mb_strrpos($word, "o");
-    if ($opos !== false && $opos > $backWovelPos) {
+    if ($opos !== false && $opos > $backVowelPos) {
       $backVowelPos = $opos;
     }
     $upos = mb_strrpos($word, "u");
-    if ($upos !== false && $upos > $backWovelPos) {
+    if ($upos !== false && $upos > $backVowelPos) {
       $backVowelPos = $upos;
     }
     
-    if ($backWovelPos !== false) { // there is a, o or u
-      
+    if ($backVowelPos >= 0) { // there is a, o or u      
       // we have to check for back wovels to see if the word is yhdyssana
-      $frontWovelPos = false;
+      $frontVowelPos = -1;
 
       $apos = mb_strrpos($word, "ä");
       if ($apos !== false) {
-        $frontWovelPos = $apos;
+        $frontVowelPos = $apos;
       }
       $opos = mb_strrpos($word, "ö");
-      if ($opos !== false && $opos > $backWovelPos) {
-        $frontWovelPos = $opos;
+      if ($opos !== false && $opos > $frontVowelPos) {
+        $frontVowelPos = $opos;
       }
       $upos = mb_strrpos($word, "y");
-      if ($upos !== false && $upos > $backWovelPos) {
-        $frontWovelPos = $upos;
+      if ($upos !== false && $upos > $frontVowelPos) {
+        $frontVowelPos = $upos;
       }
       
-      if ($frontWovelPos === false) {
+      if ($frontVowelPos == -1) {
         $this->backVowelWord = true;
-        return true;
-      } else if ($backWovelPos > $frontWovelPos) { // both present
+      } else if ($backVowelPos > $frontVowelPos) { // both present
         $this->backVowelWord = true;
-        return true;
       } else { // both present frontWovel later
         $this->backVowelWord = false;
-        return false;
       }
     } else { // no a, o or u
       $this->backVowelWord = false;
-      return false;
     }
+    return $this->backVowelWord;
   }
 
   /**
@@ -400,7 +396,6 @@ class Conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
   public function conjugateWord($word, $ender, $use_index) {
-    
     // full match
     $fMatch = $this->fullMatchCheck($word, $use_index, $ender);
     if ($fMatch !== false) {
@@ -417,6 +412,7 @@ class Conjugate
     // otherwise match the word again
     if ($word != $this->word) {
       $this->matchWord($word);
+      $this->word = $word;
     }
     
     // then we have the bast match, just conjugate and exit
@@ -462,7 +458,6 @@ class Conjugate
   */
   private function matchWord($word) {
     // ------- have the original if we have to convert some ä's / a's
-    $this->word = $word;
     $this->original = null;
     // ------- then check the ao OR äö this is used so that both a and ä conjugate the same
     $this->auml = false; // is the last one ä/ö and not a/o
