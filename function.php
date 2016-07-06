@@ -342,7 +342,7 @@ class Conjugate
   private function isBackWovelWord($word) {
     // if the same word is being checked, use the previous result instead of matching again
     if ($word == $this->word && $this->backVowelWord !== null) {
-      return $this->backVowelWord;
+      // return $this->backVowelWord;
     }
     $backVowelPos = -1;
     $apos = mb_strrpos($word, "a");
