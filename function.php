@@ -7,13 +7,13 @@ class Conjugate
 {
 
   // some helpers if we want to conjugate same word (performance)
-  private $word = null;
-  private $index = null;
-  private $bestMatch = null;
-  private $original = null;
-  private $conjugation = null;
-  private $auml = null;
-  private $backVowelWord = null;
+  public $word = null;
+  public $index = null;
+  public $bestMatch = null;
+  public $original = null;
+  public $conjugation = null;
+  public $auml = null;
+  public $backVowelWord = null;
   
   // array of words
   public $words;
@@ -193,6 +193,7 @@ class Conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
   public function genitive($word) {
+    $this->isBackWovelWord($word); // call this even not used so caching works
     return $this->conjugateWord($word, "n", 1);
   }
 
@@ -203,6 +204,7 @@ class Conjugate
   * @return array "match" with the word given and "answer" with the word
   */
   public function akkusative($word) {
+    $this->isBackWovelWord($word); // call this even not used so caching works
     return array("match" => $word, "answer" => $word);
   }
 
@@ -241,6 +243,7 @@ class Conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
   public function translative($word) {
+    $this->isBackWovelWord($word); // call this even not used so caching works
     return $this->conjugateWord($word, "ksi", 2);
   }
   
@@ -281,6 +284,7 @@ class Conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
   public function illative($word) {
+    $this->isBackWovelWord($word); // call this even not used so caching works
     return $this->conjugateWord($word, "n", 3);
   }
   
@@ -317,6 +321,7 @@ class Conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
   public function allative($word) {
+    $this->isBackWovelWord($word); // call this even not used so caching works
     return $this->conjugateWord($word, "lle", 2);
   }
   
@@ -336,13 +341,17 @@ class Conjugate
   
   /**
   * check if the word is frontWovel word
+  * NOTE: HAS TO BE CALLED BEFORE conjugateWord function
   * @param string $word string to check
   * @return boolean is back wovel
   */
   private function isBackWovelWord($word) {
     // if the same word is being checked, use the previous result instead of matching again
     if ($word == $this->word && $this->backVowelWord !== null) {
-      // return $this->backVowelWord;
+      return $this->backVowelWord;
+    } else {
+      // nullify
+      $this->backVowelWord = null;
     }
     $backVowelPos = -1;
     $apos = mb_strrpos($word, "a");
@@ -358,7 +367,7 @@ class Conjugate
       $backVowelPos = $upos;
     }
     
-    if ($backVowelPos >= 0) { // there is a, o or u      
+    if ($backVowelPos >= 0) { // there is a, o or u
       // we have to check for back wovels to see if the word is yhdyssana
       $frontVowelPos = -1;
 
@@ -399,12 +408,14 @@ class Conjugate
     // full match
     $fMatch = $this->fullMatchCheck($word, $use_index, $ender);
     if ($fMatch !== false) {
+      $this->word = $word;
       return $fMatch;
     }
 
     // then check for numeral
     $numeral = $this->isNumeral($word, $ender);
     if ($numeral !== false) {
+      $this->word = $word;
       return array("match" => "numeral", "answer" => $numeral);
     }
     
