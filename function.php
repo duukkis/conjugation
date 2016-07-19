@@ -7,13 +7,13 @@ class Conjugate
 {
 
   // some helpers if we want to conjugate same word (performance)
-  public $word = null;
-  public $index = null;
-  public $bestMatch = null;
-  public $original = null;
-  public $conjugation = null;
-  public $auml = null;
-  public $backVowelWord = null;
+  private $word = null;
+  private $index = null;
+  private $bestMatch = null;
+  private $original = null;
+  private $conjugation = null;
+  private $auml = null;
+  private $backVowelWord = null;
   
   // array of words
   public $words;
