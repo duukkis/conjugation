@@ -337,6 +337,9 @@ $words = array(
   "tarvike" => array("e",
                   "si" => array("kee", "kee", "keesee", "ett", "kee"),
                   "pl" => array("keide", "kei", "keisii", "keit", "kei")),
+  "ruiske" => array("e",
+                  "si" => array("ee", "ee", "eesee", "ett", "ee"),
+                  "pl" => array("eide", "ei", "eisii", "eit", "ei")),
   "suihke" => array("e",
                   "si" => array("ee", "ee", "eesee", "ett", "ee"),
                   "pl" => array("eide", "ei", "eisii", "eit", "ei")),
@@ -439,7 +442,7 @@ $words = array(
                   "pl" => array("eide", "ei", "eisii", "eit", "ei")),
   // -- ve
   "taive" => array("ve",
-                  "si" => array("pee", "pee", "peesee", "vet", "pee"),
+                  "si" => array("pee", "pee", "peesee", "vett", "pee"),
                   "pl" => array("peide", "pei", "peisii", "peit", "pei")),
   "viive" => array("ve",
                   "si" => array("pee", "pee", "peesee", "vett", "vee"),
@@ -1410,6 +1413,10 @@ $words = array(
   "numero" => array("o",
                   "si" => array("o", "o", "oo", "o", "o"),
                   "pl" => array("oide", "oi", "oihi", "oit", "oi")),
+  // -- so
+  "jakso" => array("o",
+                  "si" => array("o", "o", "oo", "o", "o"),
+                  "pl" => array("oide", "oi", "oihi", "oit", "oi")),
   // -- to
   "pato" => array("to",
                   "si" => array("do", "do", "too", "to", "to"),
@@ -1608,7 +1615,7 @@ $words = array(
                   "pl" => array("ksie", "ksi", "ksii", "ksist", "ksi")),
   // -- us
   "vapaus" => array("s",
-                  "si" => array("de", "de", "tee", "dest", "te"),
+                  "si" => array("de", "de", "tee", "tt", "te"),
                   "pl" => array("ksie", "ksi", "ksii", "ksist", "ksi")),
   "ohjaus" => array("s",
                   "si" => array("kse", "kse", "ksee", "ksest", "kse"),
@@ -1652,6 +1659,9 @@ $words = array(
   "runsaus" => array("s",
                   "si" => array("de", "de", "tee", "tt", "te"),
                   "pl" => array("ksie", "ksi", "ksii", "ksi", "ksi")),
+  "kuvaus" => array("s",
+                  "si" => array("kse", "kse", "ksee", "st", "kse"),
+                  "pl" => array("ksie", "ksi", "ksii", "ksist", "ksi")),
   "pilkahdus" => array("s",
                   "si" => array("kse", "kse", "ksee", "st", "kse"),
                   "pl" => array("ksie", "ksi", "ksii", "ksi", "ksi")),
@@ -1856,6 +1866,10 @@ $words = array(
   "koru" => array("u",
                   "si" => array("u", "u", "uu", "u", "u"),
                   "pl" => array("uje", "ui", "uihi", "uj", "ui")),
+  // -- su
+  "kutsu" => array("u",
+                  "si" => array("u", "u", "uu", "u", "u"),
+                  "pl" => array("uje", "ui", "uihi", "uj", "ui")),
   // -- tu
   "laatu" => array("tu",
                   "si" => array("du", "du", "tuu", "tu", "tu"),
@@ -1903,10 +1917,6 @@ $words = array(
   "puu" => array("u",
                   "si" => array("u", "u", "uhu", "ut", "u"),
                   "pl" => array("ide", "i", "ihi", "uit", "ui")),
-  // -- ay
-  "spray" => array("y",
-                  "si" => array("y", "y", "yhi", "yt", "y"),
-                  "pl" => array("yide", "y", "yheihi", "yt", "yi")),
   // -- ky
   "myrkky" => array("ky",
                   "si" => array("y", "y", "kyy", "ky", "ky"),
@@ -1944,6 +1954,10 @@ $words = array(
   "revyy" => array("y",
                   "si" => array("y", "y", "ysee", "yyt", "y"),
                   "pl" => array("ide", "i", "ihi", "yit", "yi")),
+  // -- ay
+  "spray" => array("y",
+                  "si" => array("y", "y", "yhi", "yt", "y"),
+                  "pl" => array("yide", "y", "yheihi", "yt", "yi")),
   // -- ä
   "myyjä" => array("jä",
                   "si" => array("jä", "jä", "jää", "jä", "jä"),
