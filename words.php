@@ -75,6 +75,10 @@ $words = array(
   "korkea" => array("a",
                   "si" => array("a", "a", "aa", "a", "a"),
                   "pl" => array("ide", "i", "isii", "it", "i")),
+  // -- ha
+  "kauha" => array("a",
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("oide", "oi", "oihi", "oit", "oi")),
   // -- ia
   "topografia" => array("a",
                   "si" => array("a", "a", "aa", "a", "a"),
@@ -685,6 +689,9 @@ $words = array(
   "tuuli" => array("i",
                   "si" => array("e", "e", "ee", "t", "e"),
                   "pl" => array("ie", "i", "ii", "i", "i")),
+  "vekkuli" => array("i",
+                  "si" => array("i", "i", "ii", "i", "i"),
+                  "pl" => array("ie", "ei", "eihi", "eit", "ei")),
   "sipuli" => array("i",
                   "si" => array("i", "i", "ii", "i", "i"),
                   "pl" => array("ie", "ei", "eihi", "eit", "ei")),
@@ -1767,7 +1774,7 @@ $words = array(
                   "si" => array("tie", "tie", "teihi", "tej", "tei"),
                   "pl" => array("tie", "dei", "teihi", "tej", "tei")),
   "tanssit" => array("it",
-                  "si" => array("ie", "ie", "eihi", "ej", "ei"),
+                  "si" => array("ie", "ei", "eihi", "ej", "ei"),
                   "pl" => array("ie", "ie", "eihi", "ej", "ei")),
   // -- ot
   "aivot" => array("ot",

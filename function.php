@@ -186,7 +186,23 @@ class Conjugate
     }
   }
   
+  /**
+  * nominative
+  */
+  public function nominative($word){
+    return array("match" => $word, "answer" => $word);
+  }
   
+  /**
+  * plural
+  */
+  public function plural($word){
+    $this->isBackWovelWord($word); // call this even not used so caching works
+    $this->matchWord($word);
+    $answer = $this->strRreplace($this->conjugation[0], $this->conjugation[1], $word)."t";
+    return array("match" => $word, "answer" => $answer);
+  }
+
   /**
   * genitive
   * @param string $word to conjugate
