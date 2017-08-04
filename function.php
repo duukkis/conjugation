@@ -369,6 +369,7 @@ class Conjugate
       // nullify
       $this->backVowelWord = null;
     }
+    
     $backVowelPos = -1;
     $apos = mb_strrpos($word, "a");
     if ($apos !== false) {
@@ -383,31 +384,29 @@ class Conjugate
       $backVowelPos = $upos;
     }
     
-    if ($backVowelPos >= 0) { // there is a, o or u
-      // we have to check for back wovels to see if the word is yhdyssana
-      $frontVowelPos = -1;
-
-      $apos = mb_strrpos($word, "ä");
-      if ($apos !== false) {
-        $frontVowelPos = $apos;
-      }
-      $opos = mb_strrpos($word, "ö");
-      if ($opos !== false && $opos > $frontVowelPos) {
-        $frontVowelPos = $opos;
-      }
-      $upos = mb_strrpos($word, "y");
-      if ($upos !== false && $upos > $frontVowelPos) {
-        $frontVowelPos = $upos;
-      }
-      
-      if ($frontVowelPos == -1) {
-        $this->backVowelWord = true;
-      } else if ($backVowelPos > $frontVowelPos) { // both present
-        $this->backVowelWord = true;
-      } else { // both present frontWovel later
-        $this->backVowelWord = false;
-      }
-    } else { // no a, o or u
+    $frontVowelPos = -1;
+    $apos = mb_strrpos($word, "ä");
+    if ($apos !== false) {
+      $frontVowelPos = $apos;
+    }
+    $opos = mb_strrpos($word, "ö");
+    if ($opos !== false && $opos > $frontVowelPos) {
+      $frontVowelPos = $opos;
+    }
+    $upos = mb_strrpos($word, "y");
+    if ($upos !== false && $upos > $frontVowelPos) {
+      $frontVowelPos = $upos;
+    }
+    
+    if ($frontVowelPos == -1 && $backVowelPos == -1) { // only i's and e's
+      $this->backVowelWord = false;
+    } else if ($backVowelPos >= 0 && $frontVowelPos == -1) { // there is a, o or u and no ä, ö or y
+      $this->backVowelWord = true;
+    } else if ($backVowelPos == -1 && $frontVowelPos >= 0) { // there is  ä, ö or y and no a, o or u
+      $this->backVowelWord = false;
+    } else if ($backVowelPos > $frontVowelPos) { // both present (combined word)
+      $this->backVowelWord = true;
+    } else if ($backVowelPos < $frontVowelPos){  // both present frontWovel later
       $this->backVowelWord = false;
     }
     return $this->backVowelWord;

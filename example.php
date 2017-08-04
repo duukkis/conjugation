@@ -100,7 +100,8 @@ $testSet = array(
     "ase" => "aseen", "sotilas" => "sotilaan", "koneisto" => "koneiston", "leipä" => "leivän",
     "karmi" => "karmin", "povinen" => "povisen", "verhoilu" => "verhoilun", "lupaus" => "lupauksen",
     "terrieri" => "terrierin", "muuri" => "muurin", "tuuri" => "tuurin", "loosi" => "loosin",
-    "filmi" => "filmin", "mittari" => "mittarin", "järvi" => "järven", "medaljonki" => "medaljongin", "nivel" => "nivelen", 
+    "filmi" => "filmin", "mittari" => "mittarin", "järvi" => "järven", "medaljonki" => "medaljongin", "nivel" => "nivelen",
+    "seksi" => "seksin", "outo" => "oudon", "tapaus" => "tapauksen",
   );
 // example
 
