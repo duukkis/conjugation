@@ -163,7 +163,7 @@ class Verbigate
   */
   public function PresentTenseThey($word){
     $this->isBackWovelWord($word);
-    return $this->conjugateWord($word, "vat", 1);
+    return $this->conjugateWord($word, "vat", 3);
   }
   
   /**
