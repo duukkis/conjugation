@@ -199,7 +199,7 @@ tr:nth-child(odd) {background: #FFF}
 </style>';
 print '<table>';
 foreach ($testSet as $i => $word) {
-/*  $me = $conjugate->presentTenseMe($word);
+  $me = $conjugate->presentTenseMe($word);
   $you = $conjugate->presentTenseYou($word);
   $she = $conjugate->presentTenseShe($word);
   $we = $conjugate->presentTenseWe($word);
@@ -215,7 +215,7 @@ foreach ($testSet as $i => $word) {
     <td>he ".$they["answer"]."</td>
     <td>".$me["match"]."</td>
   </tr>".PHP_EOL;
-  */
+  
   $me = $conjugate->imperfectMe($word);
   $you = $conjugate->imperfectYou($word);
   $she = $conjugate->imperfectShe($word);
@@ -223,7 +223,7 @@ foreach ($testSet as $i => $word) {
   $youp = $conjugate->imperfectYouP($word);
   $they = $conjugate->imperfectThey($word);
   print "<tr>
-    <td>".$word."</td>
+    <td></td>
     <td>minä ".$me["answer"]."</td>
     <td>sinä ".$you["answer"]."</td>
     <td>hän ".$she["answer"]."</td>
