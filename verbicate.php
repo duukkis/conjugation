@@ -162,8 +162,11 @@ class Verbigate
   * present tense you plural
   */
   public function PresentTenseThey($word){
-    $this->isBackWovelWord($word);
-    return $this->conjugateWord($word, "vat", 3);
+    if($this->isBackWovelWord($word)) {
+      return $this->conjugateWord($word, "vat", 3);
+    } else {
+      return $this->conjugateWord($word, "vät", 3);
+    }
   }
   
   /**

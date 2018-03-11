@@ -2,393 +2,186 @@
 header('Content-Type: text/html; charset=utf-8');
 
 $testSet = array(
-    "aakkostaa",
-    "aallota",
-    "aallottaa",
-    "aaltoilla",
-    "aateloida",
-    "aavikoitua",
-    "aavistaa",
-    "aavistella",
-    "abortoida",
-    "absorboida",
-    "absorboitua",
-    "abstrahoida",
-    "abstrahoitua",
-    "abstraktistaa",
-    "abstraktistua",
-    "adaptoida",
-    "adaptoitua",
-    "adoptoida",
-    "adsorboida",
-    "adsorboitua",
-    "affisioida",
-    "agitoida",
-    "ahavoittaa",
-    "ahavoitua",
-    "ahdata",
-    "ahdistaa",
-    "ahdistella",
-    "ahdistua",
-    "ahertaa",
-    "ahkeroida",
-    "ahmaista",
-    "ahmia",
-    "ahnehtia",
-    "ahtaa",
-    "ahtauttaa",
-    "ahtautua",
-    "ahtoutua",
-    "aidata",
-    "aidoittaa",
-    "aientaa",
-    "aiheellistaa",
-    "aiheellistua",
-    "aiheuttaa",
-    "aiheutua",
-    "aikailla",
-    "aikaistaa",
-    "aikaistua",
-    "aikatauluttaa",
-    "aikauttaa",
-    "aikoa",
-    "aikuistua",
-    "ailahdella",
-    "ailahtaa",
-    "aineellistaa",
-    "aineellistua",
-    "aineistaa",
-    "aineistua",
-    "aisata",
-    "aistia",
-    "aitoa",
-    "aivastaa",
-    "aivastella",
-    "aivastuttaa",
-    "ajaa",
-    "ajaantua",
-    "ajankohtaistaa",
-    "ajankohtaistua",
-    "ajanmukaistaa",
-    "ajanmukaistua",
-    "ajantasaistaa",
-    "ajastaa",
-    "ajatella",
-    "ajattaa",
-    "ajatteluttaa",
-    "ajautua",
-    "ajelehtia",
-    "ajella",
-    "ajeluttaa",
-    "ajettua",
-    "ajoittaa",
-    "ajoittua",
-    "akkautua",
-    "akklimatisoida",
-    "akklimatisoitua",
-    "akkreditoida",
-    "akoittua",
-    "akseptata",
-    "akseptoida",
-    "aktiivistaa",
-    "aktiivistua",
-    "aktivoida",
-    "aktivoitua",
-    "aktuaalistaa",
-    "aktuaalistua",
-    "aktualisoida",
-    "aktualisoitua",
-    "alentaa",
-    "alentua",
-    "aleta",
-    "alistaa",
-    "alistua",
-    "alittaa",
-    "alittua",
-    "alkaa",
-    "alkoholisoitua",
-    "allastaa",
-    "allergisoida",
-    "allergisoitua",
-    "allergistaa",
-    "allergistua",
-    "allokoida",
-    "aloitella",
-    "aloittaa",
-    "altistaa",
-    "altistua",
-    "aluminoida",
-    "alustaa",
-    "amerikkalaistua",
-    "ammatillistaa",
-    "ammatillistua",
-    "ammattilaistaa",
-    "ammattilaistua",
-    "ammentaa",
-    "ammottaa",
-    "ammua",
-    "ammuskella",
-    "ammuttaa",
-    "ampaista",
-    "ampua",
-    "ampuilla",
-    "amputoida",
-    "analysoida",
-    "anastaa",
-    "anella",
-    "ankkuroida",
-    "ankkuroitua",
-    "annella",
-    "anniskella",
-    "annostaa",
-    "annostella",
-    "anoa",
-    "ansaita",
-    "ansioitua",
-    "ansoittaa",
-    "antaa",
-    "antautua",
-    "apeutua",
-    "apinoida",
-    "aplodeerata",
-    "appaa",
-    "applikoida",
-    "aprikoida",
-    "aprillata",
-    "arastaa",
-    "arastella",
-    "argumentoida",
-    "aristaa",
-    "aristella",
-    "aristua",
-    "arkailla",
-    "arkipäiväistyä",
-    "arkipäiväistää",
-    "arkistoida",
-    "arkistua",
-    "armahtaa",
-    "armastella",
-    "arpeuttaa",
-    "arpeutua",
-    "arpoa",
-    "artikuloida",
-    "arvailla",
-    "arvata",
-    "arvauttaa",
-    "arvella",
-    "arveluttaa",
-    "arvettua",
-    "arvioida",
-    "arvioittaa",
-    "arvopaperistaa",
-    "arvopaperistua",
-    "arvostaa",
-    "arvostella",
-    "arvottaa",
-    "arvuuttaa",
-    "aseistaa",
-    "aseistautua",
-    "asemoida",
-    "asennoitua",
-    "asentaa",
-    "asetella",
-    "asettaa",
-    "asettautua",
-    "asettua",
-    "asfaltoida",
-    "asioida",
-    "askaroida",
-    "askarrella",
-    "askarruttaa",
-    "askarteluttaa",
-    "askeltaa",
-    "assimiloida",
-    "assimiloitua",
-    "assosioida",
-    "assosioitua",
-    "astahtaa",
-    "astella",
-    "astua",
-    "astuttaa",
-    "asua",
-    "asustaa",
-    "asustella",
-    "asuttaa",
-    "asvaltoida",
-    "aterioida",
-    "auditoida",
-    "aueta",
-    "aukaista",
-    "aukoa",
-    "aukottaa",
-    "auktorisoida",
-    "auktoroida",
-    "aurata",
-    "auskultoida",
-    "autella",
-    "autioittaa",
-    "autioitua",
-    "autoilla",
-    "autoistua",
-    "automaattistaa",
-    "automaattistua",
-    "automatisoida",
-    "automatisoitua",
-    "auttaa",
-    "autuuttaa",
-    "avartaa",
-    "avartua",
-    "avata",
-    "avautua",
-    "avioitua",
-    "avittaa",
-    "avustaa",
-    "bagatellisoida",
-    "bailata",
-    "balansoida",
-    "balsamoida",
-    "banaalistaa",
-    "banaalistua",
-    "banalisoida",
-    "banalisoitua",
-    "betonoida",
-    "lotota",
-    "bingota",
-    "bitumoida",
-    "blandata",
-    "blanseerata",
-    "blokata",
-    "blokkiintua",
-    "blokkiutua",
-    "blondata",
-    "bluffata",
-    "bodata",
-    "boikotoida",
-    "bongata",
-    "breikata",
-    "breseerata",
-    "briljeerata",
-    "brodeerata",
-    "budjetoida",
-    "buuata",
-    "buukata",
-    "byrokraattistaa",
-    "byrokraattistua",
-    "byrokratisoida",
-    "byrokratisoitua",
-    "chatata",
-    "dateerata",
-    "debytoida",
-    "definioida",
-    "degeneroitua",
-    "dekantoida",
-    "dekoodata",
-    "delata",
-    "delegoida",
-    "demagnetoida",
-    "dementoida",
-    "dementoitua",
-    "demilitarisoida",
-    "demobilisoida",
-    "demokraattistaa",
-    "demokraattistua",
-    "demokratisoida",
-    "demokratisoitua",
-    "demonstroida",
-    "demoralisoida",
-    "demoralisoitua",
-    "denaturoida",
-    "deponoida",
-    "derivoida",
-    "desentralisoida",
-    "desinfektoida",
-    "desinfioida",
-    "devalvoida",
-    "devalvoitua",
-    "diagnosoida",
-    "diarioida",
-    "dieselöidä",
-    "differentioida",
-    "differentioitua",
-    "digata",
-    "digitaalistaa",
-    "digitaalistua",
-    "digitalisoida",
-    "digitoida",
-    "diivailla",
-    "diivata",
-    "dipata",
-    "diskata",
-    "diskontata",
-    "diskota",
-    "diskriminoida",
-    "diskvalifioida",
-    "dissonoida",
-    "dokata",
-    "dokumentoida",
-    "dominoida",
-    "donkata",
-    "doupata",
-    "dramatisoida",
-    "drapeerata",
-    "dreijata",
-    "dubata",
-    "dubbata",
-    "dumpata",
-    "duunata",
-    "edellyttää",
-    "edeltää",
-    "edetä",
-    "edistyä",
-    "edistää",
-    "editoida",
-    "edustaa",
-    "edustua",
-    "ehdollistaa",
-    "ehdollistua",
-    "ehdotella",
-    "ehdottaa",
-    "ehdyttää",
-    "eheyttää",
-    "eheytyä",
-    "ehkäistyä",
-    "ehkäistä",
-    "ehostaa",
-    "ehtiä",
-    "ehtyä",
-    "ehättää",
-    "eksisteerata",
-    "eksistoida",
-    "eksyttää",
-    "eksyä",
-    "elehtiä",
-    "elellä",
-    "eliminoida",
-    "eliminoitua",
-    "elinkelpoistaa",
-    "ellottaa",
-    "eloksoida",
-    "elollistaa",
-    "elostella",
-    "elostua",
-    "elostuttaa",
-    "elpyä",
-    "eltaantua",
-    "elvistellä",
-    "elvyttää",
-    "elähdyttää",
-    "eläköityä",
-    "elämöidä",
-    "elätellä",
-    "elättää",
-    "elävöittää",
-    "elävöityä",
-    "eläytyä",
-    "elää",
-    "emaloida",
-    "emansipoida",
-    "emansipoitua",
-
+    "aakkostaa",       // 53
+    "aallota",         // 75
+    "aallottaa",       // 53
+    "aaltoilla",       // 67
+    "aateloida",       // 62
+    "aavikoitua",      // 52
+    "aavistaa",        // 53
+    "aavistella",      // 67
+    "abortoida",       // 62
+    "absorboida",      // 62
+    "absorboitua",     // 52
+    "abstrahoida",     // 62
+    "abstrahoitua",    // 52
+    "abstraktistaa",   // 53
+    "abstraktistua",   // 52
+    "adaptoida",       // 62
+    "adaptoitua",      // 52
+    "adoptoida",       // 62
+    "adsorboida",      // 62
+    "adsorboitua",     // 52
+    "aerobikata",      // 73
+    "affisioida",      // 62
+    "agitoida",        // 62
+    "ahavoittaa",      // 53
+    "ahavoitua",       // 52
+    "ahdata",          // 73
+    "ahdistaa",        // 53
+    "ahdistella",      // 67
+    "ahdistua",        // 52
+    "ahertaa",         // 54
+    "ahkeroida",       // 68
+    "ahmaista",        // 66
+    "ahmia",           // 61
+    "ahnehtia",        // 61
+    "ahtaa",           // 56
+    "ahtauttaa",       // 53
+    "ahtauttaa",       // 53
+    "ahtautua",        // 52
+    "ahtoutua",        // 52
+    "aidata",          // 73
+    "aidoittaa",       // 53
+    "aientaa",         // 54
+    "aiheellistaa",    // 53
+    "aikailla",        // 67
+    "ailahdella",      // 67
+    "aisata",          // 73
+    "aistia",          // 61
+    "aivastella",      // 67
+    "ajaa",            // 56
+    "ajatella",        // 67
+    "ajelehtia",       // 61
+    "ajella",          // 67
+    "akklimatisoida",  // 62
+    "akseptata",       // 73
+    "alentaa",         // 54
+    "aleta",           // 72
+    "alkaa",           // 56
+    "aloitella",       // 67
+    "ammentaa",        // 54
+    "ammuskella",      // 67
+    "ampaista",        // 66
+    "ansaita",         // 69
+    "antaa",           // 56
+    "aplodeerata",     // 73
+    "appaa",           // 56
+    "aprikoida",       // 68
+    "aprillata",       // 73
+    "arvata",          // 73
+    "asentaa",         // 54
+    "askeltaa",        // 54
+    "aterioida",       // 68
+    "aueta",           // 74
+    "aukaista",        // 66
+    "aurata",          // 73
+    "auttaa",          // 56
+    "avartaa",         // 54
+    "avata",           // 73
+    "bingota",         // 75
+    "diskota",         // 75
+    "edeltää",         // 54
+    "edetä",           // 72
+    "ehkäistä",        // 66
+    "ehtiä",           // 61
+    "elehtiä",         // 61
+    "empiä",           // 61
+    "emännöidä",       // 68
+    "enentää",         // 54
+    "enetä",           // 72
+    "englannintaa",    // 54
+    "entää",           // 55
+    "eritä",           // 75
+    "erkanee",         // 72
+    "erota",           // 74
+    "etsiä",           // 61
+    "fudia",           // 61
+    "funtsia",         // 61
+    "haaleta",         // 72
+    "haastaa",         // 56
+    "haista",          // 66
+    "haistaa",         // 56
+    "hajota",          // 74
+    "hakea",           // 58
+    "halaista",        // 66
+    "haljeta",         // 74
+    "halkaista",       // 66
+    "hallita",         // 69
+    "haluta",          // 75
+    "halveta",         // 72
+    "hamuta",          // 75
+    "hangota",         // 74
+    "hapata",          // 72
+    "haravoida",       // 68
+    "harkita",         // 69
+    "harmeta",         // 72
+    "harveta",         // 72
+    "havaita",         // 69
+    "havista",         // 66
+    "heilimöidä",      // 68
+    "hekumoida",       // 68
+    "helistä",         // 66
+    "hellitä",         // 75
+    "henkäistä",       // 66
+    "herjetä",         // 74
+    "hervota",         // 74
+    "hihhuloida",      // 68
+    "hillitä",         // 69
+    "hillota",         // 74
+    "himoita",         // 69
+    "himota",          // 74
+    "hiota",           // 74
+    "hirvitä",         // 75
+    "hokea",           // 58
+    "hulmuta",         // 75
+    "huolita",         // 69
+    "hyytää",          // 55
+    "häiritä",         // 69
+    "hälytä",          // 75
+    "häätää",          // 55
+    "ikävöidä",        // 68
+    "ilakoida",        // 68
+    "iloita",          // 69
+    "imeä",            // 58
+    "iskeä",           // 58
+    "itkeä",           // 58
+    "jakaa",           // 56
+    "jaksaa",          // 56
+    "juoda",           // 64
+    "juosta",          // 70
+    "jäädä",           // 63
+    "kaartaa",         // 57
+    "kaataa",          // 57
+    "kahlita",         // 69
+    "kaitsea",         // 58
+    "kiitää",          // 55
+    "kitkeä",          // 58
+    "kokea",           // 58
+    "koskea",          // 58
+    "kulkea",          // 58
+    "käydä",           // 65
+    "liitää",          // 55
+    "luoda",           // 64
+    "lyödä",           // 64
+    "lähteä",          // 60
+    "myydä",           // 63
+    "myödä",           // 64
+    "nähdä",           // 71
+    "piestä",          // 70
+    "saada",           // 63
+    "saartaa",         // 57
+    "soutaa",          // 55
+    "suoda",           // 64
+    "syödä",           // 64
+    "syöstä",          // 70
+    "taitaa",          // 76
+    "tehdä",           // 71
+    "tietää",          // 76
+    "tuntea",          // 59
+    "tuoda",           // 64
+    "viedä",           // 64
+    "yltää",           // 55
   );
 // example
 
