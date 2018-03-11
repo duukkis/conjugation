@@ -121,7 +121,7 @@ class Verbigate
   /**
   * 1st present tense
   */
-  public function PresentTenseMe($word){
+  public function presentTenseMe($word){
     $this->isBackWovelWord($word);
     return $this->conjugateWord($word, "n", 1);
   }
@@ -129,7 +129,7 @@ class Verbigate
   /**
   * 2nd present tense
   */
-  public function PresentTenseYou($word){
+  public function presentTenseYou($word){
     $this->isBackWovelWord($word);
     return $this->conjugateWord($word, "t", 1);
   }
@@ -137,7 +137,7 @@ class Verbigate
   /**
   * 3rd present tense
   */
-  public function PresentTenseShe($word){
+  public function presentTenseShe($word){
     $this->isBackWovelWord($word);
     return $this->conjugateWord($word, "", 2);
   }
@@ -145,7 +145,7 @@ class Verbigate
   /**
   * present tense we
   */
-  public function PresentTenseWe($word){
+  public function presentTenseWe($word){
     $this->isBackWovelWord($word);
     return $this->conjugateWord($word, "mme", 1);
   }
@@ -153,21 +153,73 @@ class Verbigate
   /**
   * present tense you plural
   */
-  public function PresentTenseYouP($word){
+  public function presentTenseYouP($word){
     $this->isBackWovelWord($word);
     return $this->conjugateWord($word, "tte", 1);
   }
   
   /**
-  * present tense you plural
+  * present tense they
   */
-  public function PresentTenseThey($word){
+  public function presentTenseThey($word){
     if($this->isBackWovelWord($word)) {
       return $this->conjugateWord($word, "vat", 3);
     } else {
       return $this->conjugateWord($word, "vät", 3);
     }
   }
+  
+  /**
+  * 1st imperfect
+  */
+  public function imperfectMe($word){
+    $this->isBackWovelWord($word);
+    return $this->conjugateWord($word, "n", 4);
+  }
+  
+  /**
+  * 2nd imperfect
+  */
+  public function imperfectYou($word){
+    $this->isBackWovelWord($word);
+    return $this->conjugateWord($word, "t", 4);
+  }
+  
+  /**
+  * 3rd imperfect
+  */
+  public function imperfectShe($word){
+    $this->isBackWovelWord($word);
+    return $this->conjugateWord($word, "", 5);
+  }
+  
+  /**
+  * imperfect we
+  */
+  public function imperfectWe($word){
+    $this->isBackWovelWord($word);
+    return $this->conjugateWord($word, "mme", 4);
+  }
+  
+  /**
+  * imperfect you plural
+  */
+  public function imperfectYouP($word){
+    $this->isBackWovelWord($word);
+    return $this->conjugateWord($word, "tte", 4);
+  }
+  
+  /**
+  * imperfect trey
+  */
+  public function imperfectThey($word){
+    if($this->isBackWovelWord($word)) {
+      return $this->conjugateWord($word, "vat", 5);
+    } else {
+      return $this->conjugateWord($word, "vät", 5);
+    }
+  }
+  
   
   /**
   * check if the word is frontWovel word

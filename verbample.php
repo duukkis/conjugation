@@ -199,12 +199,29 @@ tr:nth-child(odd) {background: #FFF}
 </style>';
 print '<table>';
 foreach ($testSet as $i => $word) {
-  $me = $conjugate->PresentTenseMe($word);
-  $you = $conjugate->PresentTenseYou($word);
-  $she = $conjugate->PresentTenseShe($word);
-  $we = $conjugate->PresentTenseWe($word);
-  $youp = $conjugate->PresentTenseYouP($word);
-  $they = $conjugate->PresentTenseThey($word);
+/*  $me = $conjugate->presentTenseMe($word);
+  $you = $conjugate->presentTenseYou($word);
+  $she = $conjugate->presentTenseShe($word);
+  $we = $conjugate->presentTenseWe($word);
+  $youp = $conjugate->presentTenseYouP($word);
+  $they = $conjugate->presentTenseThey($word);
+  print "<tr>
+    <td>".$word."</td>
+    <td>minä ".$me["answer"]."</td>
+    <td>sinä ".$you["answer"]."</td>
+    <td>hän ".$she["answer"]."</td>
+    <td>me ".$we["answer"]."</td>
+    <td>te ".$youp["answer"]."</td>
+    <td>he ".$they["answer"]."</td>
+    <td>".$me["match"]."</td>
+  </tr>".PHP_EOL;
+  */
+  $me = $conjugate->imperfectMe($word);
+  $you = $conjugate->imperfectYou($word);
+  $she = $conjugate->imperfectShe($word);
+  $we = $conjugate->imperfectWe($word);
+  $youp = $conjugate->imperfectYouP($word);
+  $they = $conjugate->imperfectThey($word);
   print "<tr>
     <td>".$word."</td>
     <td>minä ".$me["answer"]."</td>
