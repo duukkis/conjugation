@@ -38,8 +38,6 @@ $testSet = array(
     "ahnehtia",        // 61
     "ahtaa",           // 56
     "ahtauttaa",       // 53
-    "ahtauttaa",       // 53
-    "ahtautua",        // 52
     "ahtoutua",        // 52
     "aidata",          // 73
     "aidoittaa",       // 53
@@ -215,7 +213,6 @@ foreach ($testSet as $i => $word) {
     <td>he ".$they["answer"]."</td>
     <td>".$me["match"]."</td>
   </tr>".PHP_EOL;
-  
   $me = $conjugate->imperfectMe($word);
   $you = $conjugate->imperfectYou($word);
   $she = $conjugate->imperfectShe($word);
@@ -223,7 +220,7 @@ foreach ($testSet as $i => $word) {
   $youp = $conjugate->imperfectYouP($word);
   $they = $conjugate->imperfectThey($word);
   print "<tr>
-    <td></td>
+    <td><!--".$word."--></td>
     <td>minä ".$me["answer"]."</td>
     <td>sinä ".$you["answer"]."</td>
     <td>hän ".$she["answer"]."</td>

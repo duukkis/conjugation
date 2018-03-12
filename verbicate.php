@@ -380,18 +380,21 @@ class Verbigate
     $bestMatchLetters = 0;
     if (isset($this->indexed_words[$this->index])) {
       foreach ($this->indexed_words[$this->index] as $w => $useOnlyKeys) {
+        $body_end = $useOnlyKeys[0];
         $match = 0;
-        $shorterWord = min(mb_strlen($w), $wordLength);
-        for ($i = 0; $i < $shorterWord; $i++) {
-          if (mb_substr($w, $i, 1) == mb_substr($drow, $i, 1)) {
-            $match++;
-          } else {
-            $i = 1000; // out of for loop
+        if (mb_substr($word, 0-mb_strlen($body_end)) == $body_end) {
+          $shorterWord = min(mb_strlen($w), $wordLength);
+          for ($i = 0; $i < $shorterWord; $i++) {
+            if (mb_substr($w, $i, 1) == mb_substr($drow, $i, 1)) {
+              $match++;
+            } else {
+              $i = 1000; // out of for loop
+            }
           }
-        }
-        if ($match > $bestMatchLetters) {
-          $bestMatchLetters = $match;
-          $this->bestMatch = $w;
+          if ($match > $bestMatchLetters) {
+            $bestMatchLetters = $match;
+            $this->bestMatch = $w;
+          }
         }
       }
       $this->conjugation = $this->indexed_words[$this->index][$this->bestMatch];
