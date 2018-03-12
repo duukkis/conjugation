@@ -1,6 +1,8 @@
 # Conjugation
-PHP:lla tehty taivutuskirjasto suomen kielen substantiiveille.
-PHP Conjugation library for Finnish nouns.
+PHP Conjugation library for Finnish nouns and verbs.
+PHP:lla tehty taivutuskirjasto suomen kielen substantiiveille ja verbeille.
+
+## Nouns, substantiivit
 
 - Genetiivi - genitive (-n)
 - Translatiivi - translative (-ksi)
@@ -15,19 +17,36 @@ PHP Conjugation library for Finnish nouns.
 - Illatiivi - illative (-an, -en, -han, -seen)
 - Akkusatiivi - akkusative, not implemented, same as nominative/genetive, so returns nominative
 
-# Todo
-- Verbs
+```php
+include('function.php');
+$conj = new Conjugate();
+$result = $conj->essive("nalle");
+print $result["answer"];
+```
 
-# Demo
+## Introducing also verbs!
+- Present tense, preesens
+- Imperfect, imperfekti
+
+```php
+include('verbicate.php');
+$conjugate = new Verbigate(false);
+$me = $conjugate->presentTenseMe("taivuttaa");
+print "minä ".$me["answer"];
+```
+
+## Noun demo
 http://www.palomaki.info/apps/conjugation/
 
-# Tests
+## Tests
 PHP Codesniffer rules in ruleset.xml, run with:
 ```
 phpcs --standard=ruleset.xml *.php
 ```
 
-# Some material for conjugation
+## Helper material for conjugation
 
+Wordlist from Institute for the Languages of Finland
 KOTIMAISTEN KIELTEN KESKUKSEN NYKYSUOMEN SANALISTA
+
 http://kaino.kotus.fi/sanat/nykysuomi/
