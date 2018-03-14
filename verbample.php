@@ -180,6 +180,10 @@ $testSet = array(
     "tuoda",           // 64
     "viedä",           // 64
     "yltää",           // 55
+    "olla",
+    "tulla",
+    "mennä",
+    "säätää",
   );
 // example
 
