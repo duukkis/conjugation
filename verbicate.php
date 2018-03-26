@@ -79,21 +79,26 @@ class Verbicate
       case "la": // lä
         if(in_array($thirdlast, $this->wovels) && $w[$nos-2] == "tel"){ // haukotella
           $w[$nos-3] .= "t";
-        } else if ($thirdlast == "l" && $secondfirst == "l"){ // kiellellä
+        } else if ($thirdlast == "l" && $secondfirst == "l"){ // takellella
           $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
-        } else if ($thirdlast == "r" && $secondfirst == "r"){ // kiellellä
+        } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "k"){ // nakella
+          $w[$nos-2] = "k".$w[$nos-2];
+        } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "p"){ // tapella
+          $w[$nos-2] = "p".$w[$nos-2];
+        } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "t"){ // aatella
+          $w[$nos-2] = "t".$w[$nos-2];
+        } else if ($thirdlast == "r" && $secondfirst == "r"){ // kierrellä
           $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
         } else if ($thirdlast == "n" && $secondfirst == "n"){ // annella
           $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
+        } else if ($thirdlast == "m" && $secondfirst == "m"){ // annella
+          $w[$nos-2] = "p".mb_substr($w[$nos-2],1);
         } else if ($thirdlast == "h" && $secondfirst == "d"){ // hypähdellä
           $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
         } else if(in_array($thirdlast, $this->wovels) && $secondfirst == "d"){ // huudella
           $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
         }
-        if ($secondlast == "l") {
-          $w[$nos-1] = "en";
-        } else {
-        }
+        $w[$nos-1] = "en";
         break;
       case "ta": // tä
         // TODO
@@ -126,26 +131,32 @@ class Verbicate
       case "a": // ä
         if($thirdlast == "l" && $secondfirst == "p"){ // kylpeä
           $w[$nos-2] = "v".mb_substr($w[$nos-2],1);
-        } else if ($thirdlast == "m" && $secondfirst == "p"){ // empiä
+        } else if ($thirdlast == "m" && $secondfirst == "p"){ // empiä, ampua
           $w[$nos-2] = "m".mb_substr($w[$nos-2],1);
 
-        } else if ($thirdlast == "h" && $secondfirst == "t"){ // ahnehtia
+        } else if ($thirdlast == "h" && $secondfirst == "t"){ // ahnehtia, lähteä
           $w[$nos-2] = "d".mb_substr($w[$nos-2],1);
         } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "t"){ // potea, kutea, päteä
           $w[$nos-2] = "d".mb_substr($w[$nos-2],1);
+        } else if ($thirdlast == "n" && $secondfirst == "t"){ // jakaantua
+          $w[$nos-2] = "n".mb_substr($w[$nos-2],1);
+        } else if ($thirdlast == "r" && $secondfirst == "t"){ // kertoa 
+          $w[$nos-2] = "r".mb_substr($w[$nos-2],1);
+        } else if ($thirdlast == "l" && $secondfirst == "t"){ // paleltua 
+          $w[$nos-2] = "l".mb_substr($w[$nos-2],1);
         } else if ($thirdlast == "t" && $secondfirst == "t"){ // asettua
           $w[$nos-2] = mb_substr($w[$nos-2],1);
         } else if ($thirdlast == "s" && $secondfirst == "t"){ // arvopaperistua, poistua
           // stays the same
           
-        } else if ($thirdlast == "n" && $secondfirst == "k"){ // henkiä
+        } else if ($thirdlast == "n" && $secondfirst == "k"){ // henkiä, penkoa
           $w[$nos-2] = "g".mb_substr($w[$nos-2],1);
         } else if ($thirdlast == "l" && $secondfirst == "k"){ // hylkiä
           $w[$nos-2] = "j".mb_substr($w[$nos-2],1);
         } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "k"){ // hakea, kokea
           $w[$nos-2] = mb_substr($w[$nos-2],1);
           
-        } else if ($thirdlast == "p" && $secondfirst == "p"){ // harppia
+        } else if ($thirdlast == "p" && $secondfirst == "p"){ // harppoa, oppia
           $w[$nos-2] = mb_substr($w[$nos-2],1);
         } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "p"){ // hiipiä, kaapia, ruopia, ...
           $w[$nos-2] = "v".mb_substr($w[$nos-2],1);
@@ -157,8 +168,12 @@ class Verbicate
       case "paa": // lappaa, nappaa
         $w[$nos-1] = $a."n";
         break;
+      case "na": // mennä
+      case "ra": // purra
+        $w[$nos-1] = "en";
+        break;
       case "kaa": // alkaa, jakaa
-        if (in_array($secondlast, array("l", "a", "k"))) { // alkaa, jakaa, virkkaa
+        if (in_array($secondlast, array("l", "a", "r"))) { // alkaa, jakaa, purkaa
           $w[$nos-1] = mb_substr($w[$nos-1],1,-1)."n";
         } else { // jatkaa
           $w[$nos-1] = mb_substr($w[$nos-1],0,-1)."n";
