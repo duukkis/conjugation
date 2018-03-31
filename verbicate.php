@@ -101,7 +101,7 @@ class Verbicate
 
     switch($this->last_syllabus){
       case "taa": // tää
-        $w = $this->taaVerb($word, $w, $nos, $secondfirst, $secondlast, $thirdlast);
+        $w = $this->taaVerb($word, $w, $nos, $secondfirst, $secondlast, $thirdlast, $a);
         $w[$nos-1] .= $this->ender;
         break;
       case "da": // dä
@@ -251,7 +251,7 @@ class Verbicate
   }
   
   
-  private function taaVerb($word, $w, $nos, $secondfirst, $secondlast, $thirdlast) {
+  private function taaVerb($word, $w, $nos, $secondfirst, $secondlast, $thirdlast, $a) {
     if($secondlast == "t"){ // laittaa
       $w[$nos-1] = $a;
     } else if($secondlast == "h" || in_array($secondlast, $this->wovels)){ // johtaa
