@@ -46,13 +46,6 @@ class Verbicate
     return $this->conjugatePreesensWithGradation($word, $a, "e");
   }
   
-  public function imperfectMe($word) {
-    $word = $this->init($word);
-    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
-    $this->ender = "n";
-    return $this->conjugateImperfectWithGradation($word, $o, "i");
-  }
-
   public function preesensYou($word) {
     $word = $this->init($word);
     if($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
@@ -88,10 +81,46 @@ class Verbicate
     return $this->conjugatePreesensWithoutGradation($word, $a, "e");
   }
 
+  public function imperfectMe($word) {
+    $word = $this->init($word);
+    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    $this->ender = "n";
+    return $this->conjugateImperfectWithGradation($word, $o, "i");
+  }
+
+  public function imperfectYou($word) {
+    $word = $this->init($word);
+    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    $this->ender = "t";
+    return $this->conjugateImperfectWithGradation($word, $o, "i");
+  }
+
+  public function imperfectSHe($word) {
+    return "TODO";
+  }
+
+  public function imperfectPluralWe($word) {
+    $word = $this->init($word);
+    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    $this->ender = "mme";
+    return $this->conjugateImperfectWithGradation($word, $o, "i");
+  }
+
+  public function imperfectPluralYou($word) {
+    $word = $this->init($word);
+    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    $this->ender = "tte";
+    return $this->conjugateImperfectWithGradation($word, $o, "i");
+  }
+
+  public function imperfectPluralThey($word) {
+    return "TODO";
+  }
+
   /**
   * me, you, we, you
   */
-  public function conjugatePreesensWithGradation($word, $a, $e) {
+  private function conjugatePreesensWithGradation($word, $a, $e) {
     $w = $this->orig;
     $nos = $this->nbr_of_sylls;
     // aak-kos-taa
@@ -172,7 +201,7 @@ class Verbicate
   /**
   * he, she, they
   */
-  public function conjugatePreesensWithoutGradation($word, $a, $e) {
+  private function conjugatePreesensWithoutGradation($word, $a, $e) {
     $w = $this->orig;
     $nos = $this->nbr_of_sylls;
     // aak-kos-taa
@@ -253,7 +282,7 @@ class Verbicate
   /**
   * me, you, we, you
   */
-  public function conjugateImperfectWithGradation($word, $o, $i) {
+  private function conjugateImperfectWithGradation($word, $o, $i) {
     $w = $this->orig;
     $nos = $this->nbr_of_sylls;
     // aak-kos-taa
