@@ -302,6 +302,8 @@ class Verbicate
       case "taa": // tää
         if($secondlast == "t" && $thirdlast == "t"){ // laittaa
           $w[$nos-1] = $i;
+        } else if($this->sylls[$nos-2] == "tie"){ // tietää
+          $w[$nos-1] = "s".$i;
         } else if($secondlast == "h" || in_array($secondlast, $this->wovels)){ // johtaa
           $w[$nos-1] = "d".$i;
         } else if(in_array($this->sylls[$nos-2], array("an"))){
