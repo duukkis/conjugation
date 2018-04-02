@@ -96,7 +96,10 @@ class Verbicate
   }
 
   public function imperfectSHe($word) {
-    return "TODO";
+    $word = $this->init($word);
+    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    $this->ender = "";
+    return $this->conjugateImperfectWithoutGradation($word, $o, "i");
   }
 
   public function imperfectPluralWe($word) {
@@ -114,7 +117,9 @@ class Verbicate
   }
 
   public function imperfectPluralThey($word) {
-    return "TODO";
+    $word = $this->init($word);
+    if($this->backVowelWord){ $o = "o"; $this->ender = "vat"; } else { $o = "ö"; $this->ender = "vät"; }
+    return $this->conjugateImperfectWithoutGradation($word, $o, "i");
   }
 
   /**
@@ -302,14 +307,14 @@ class Verbicate
       case "taa": // tää
         if($secondlast == "t" && $thirdlast == "t"){ // laittaa
           $w[$nos-1] = $i;
-        } else if($this->sylls[$nos-2] == "tie"){ // tietää
+        } else if($w[$nos-2] == "tie"){ // tietää
           $w[$nos-1] = "s".$i;
         } else if($secondlast == "h" || in_array($secondlast, $this->wovels)){ // johtaa
           $w[$nos-1] = "d".$i;
-        } else if(in_array($this->sylls[$nos-2], array("an"))){
+        } else if(in_array($w[$nos-2], array("an"))){
           // antaa
           $w[$nos-1] = "n".$o.$i;
-        } else if(in_array($this->sylls[$nos-2], array("aut", "lait", "saat", "kat"))){
+        } else if(in_array($w[$nos-2], array("aut", "lait", "saat", "kat"))){
           // auttaa
           $w[$nos-1] = $o.$i;
         } else if($secondlast == "n"){ // juontaa
@@ -403,6 +408,108 @@ class Verbicate
       case "jaa": // ajaa
       default: // jaksaa, maksaa, jauhaa, kalvaa, nauraa, painaa
         $w[$nos-1] = mb_substr($w[$nos-1],0,1).$o.$i.$this->ender;
+        break;
+    }
+    
+    return $this->buildWord($w);
+  }
+  
+  /**
+  * he, they
+  */
+  private function conjugateImperfectWithoutGradation($word, $o, $i) {
+    $w = $this->orig;
+    $nos = $this->nbr_of_sylls;
+    // aak-kos-taa
+    // $secondlast = aakko(s)taa
+    // $secondfirst = aak(k)ostaa
+    // thirdlast = aa(k)kostaa
+    if($nos >= 3){
+      $thirdlast = mb_substr($this->sylls[$nos-3], -1);
+    } else {
+      $thirdlast = "";
+    }
+    $secondfirst = mb_substr($this->sylls[$nos-2], 0, 1);
+    $secondlast = mb_substr($this->sylls[$nos-2], -1);
+    $secondlasttwo = mb_substr($this->sylls[$nos-2], -2);
+
+    switch($this->last_syllabus){
+      case "taa": // tää
+        if(in_array($this->sylls[$nos-2], array("an", "ut", "lait", "saat", "kat"))){
+          $w[$nos-1] = "t".$o.$i.$this->ender;
+        } else if (in_array($secondlast, array("r", "n", "l"))) {
+          $w[$nos-1] = "s".$i.$this->ender;
+        } else {
+          $w[$nos-1] = "t".$i.$this->ender;
+        }
+        break;
+      case "da": // dä
+        $w[$nos-1] = $this->ender;
+
+        if ($secondlast == "h") { // tehdä, nähdä
+          $w[$nos-2] = mb_substr($w[$nos-2],0,-1);
+          $w[$nos-1] = "k".$i.$this->ender;
+        
+        } else if ($secondlasttwo == "ay") { // käydä
+          $w[$nos-2] = mb_substr($w[$nos-2],0,-1)."v".$i;
+        } else if ($secondlasttwo == "uo") { // juoda
+          $w[$nos-2] = mb_substr($w[$nos-2],0,1).$o.$i;
+        } else if ($secondlasttwo == "yo") { // lyödä
+          $w[$nos-2] = mb_substr($w[$nos-2],0,1).$o.$i;
+        } else if ($secondlasttwo == "ie") { // viedä
+          $w[$nos-2] = mb_substr($w[$nos-2],0,1)."e".$i;
+        } else if(in_array($secondlasttwo, array("aa", "ää", "oo", "uu", "yy"))) {
+          $w[$nos-2] = mb_substr($w[$nos-2], 0, -1);
+          $w[$nos-1] = $i.$this->ender;
+        } else if ($secondlast != $i) {
+          $w[$nos-1] = $i.$this->ender;
+        }
+        break;
+      case "la": // lä
+        $w = $this->laVerb($word, $w, $nos, $secondfirst, $secondlast, $thirdlast);
+        $w[$nos-1] = $i.$this->ender;
+        break;
+      case "ta": // tä
+        // verb match class 72
+        if ($this->isVerbClass72($word)) {
+          $w[$nos-1] = "";
+          $w = $this->taVerb72($word, $w, $nos, $secondfirst, $secondlast, $thirdlast);
+          // if last is wovel then nen, else en
+          if(in_array(mb_substr($w[$nos-2],-1), $this->wovels)) {
+            $w[$nos-1] = "n".$i.$this->ender;
+          } else {
+            $w[$nos-1] = $i.$this->ender;
+          }
+        } else { // verb class 74
+          $w = $this->taVerb74($word, $w, $nos, $secondfirst, $secondlast, $thirdlast);
+          $w[$nos-1] = "s".$i.$this->ender;
+        }
+        break;
+      case "a": // ä
+        if ($secondlast == "e"){
+          $w[$nos-2] = mb_substr($w[$nos-2],0,-1);
+          $w[$nos-1] = $i.$this->ender;
+        } else { // rest jäätyä > jäätyy, kaatua > kaatua
+          $w[$nos-1] = mb_substr($w[$nos-1],0,-1).$i;
+        }
+        break;
+      case "paa": // lappaa, nappaa
+        $w[$nos-1] = mb_substr($w[$nos-1],0,-1)."s".$i.$this->ender;
+        break;
+      case "na": // mennä
+      case "ra": // purra
+        $w[$nos-1] = $i.$this->ender;
+        break;
+      case "kaa": // alkaa, jakaa
+      case "jaa": // ajaa
+      case "nee": // tarkenee
+      case "laa": // palaa
+      default: // jaksaa, maksaa, jauhaa, kalvaa, nauraa, painaa
+        if ($w[$nos-2] == "e"){
+          $w[$nos-1] = mb_substr($w[$nos-1],0,1).$i.$this->ender;
+        } else {
+          $w[$nos-1] = mb_substr($w[$nos-1],0,1).$o.$i.$this->ender;
+        }
         break;
     }
     
