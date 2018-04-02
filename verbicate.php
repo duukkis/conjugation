@@ -490,7 +490,7 @@ class Verbicate
           $w[$nos-2] = mb_substr($w[$nos-2],0,-1);
           $w[$nos-1] = $i.$this->ender;
         } else { // rest jäätyä > jäätyy, kaatua > kaatua
-          $w[$nos-1] = mb_substr($w[$nos-1],0,-1).$i;
+          $w[$nos-1] = mb_substr($w[$nos-1],0,-1).$i.$this->ender;
         }
         break;
       case "paa": // lappaa, nappaa
