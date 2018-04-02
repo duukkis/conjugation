@@ -123,6 +123,7 @@ class Verbicate
   }
 
   /**
+  * PREESENS
   * me, you, we, you
   */
   private function conjugatePreesensWithGradation($word, $a, $e) {
@@ -204,6 +205,7 @@ class Verbicate
   }
   
   /**
+  * PREESENS
   * he, she, they
   */
   private function conjugatePreesensWithoutGradation($word, $a, $e) {
@@ -285,6 +287,7 @@ class Verbicate
   }
   
   /**
+  * IMPERFECT
   * me, you, we, you
   */
   private function conjugateImperfectWithGradation($word, $o, $i) {
@@ -415,6 +418,7 @@ class Verbicate
   }
   
   /**
+  * IMPERFECT
   * he, they
   */
   private function conjugateImperfectWithoutGradation($word, $o, $i) {
@@ -488,10 +492,12 @@ class Verbicate
       case "a": // ä
         if ($secondlast == "e"){
           $w[$nos-2] = mb_substr($w[$nos-2],0,-1);
-          $w[$nos-1] = $i.$this->ender;
-        } else { // rest jäätyä > jäätyy, kaatua > kaatua
-          $w[$nos-1] = mb_substr($w[$nos-1],0,-1).$i.$this->ender;
         }
+        $w[$nos-1] = "";
+        if(mb_substr($w[$nos-2],-1) != $i){
+          $w[$nos-1] = $i;
+        }
+        $w[$nos-1] .= $this->ender;
         break;
       case "paa": // lappaa, nappaa
         $w[$nos-1] = mb_substr($w[$nos-1],0,-1)."s".$i.$this->ender;
