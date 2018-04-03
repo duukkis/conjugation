@@ -59,6 +59,7 @@ PHPUnit
 ````
 wget -O phpunit https://phar.phpunit.de/phpunit-5.phar
 chmod +x phpunit
+./phpunit tests/NounTest.php
 ./phpunit tests/VerbTest.php
 ```
 
