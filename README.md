@@ -30,9 +30,21 @@ print $result["answer"];
 
 ```php
 include('verbicate.php');
-$conjugate = new Verbigate(false);
-$me = $conjugate->presentTenseMe("taivuttaa");
-print "minä ".$me["answer"];
+$conjugate = new Verbicate();
+$me = $conjugate->preesensMe("taivuttaa");
+print "minä ".$me;
+print "sinä ".$conjugate->preesensYou("taivuttaa");
+print "hän ".$conjugate->preesensSHe("taivuttaa");
+print "me ".$conjugate->preesensPluralWe("taivuttaa");
+print "te ".$conjugate->preesensPluralYou("taivuttaa");
+print "he ".$conjugate->preesensPluralThey("taivuttaa");
+
+print "minä ".$conjugate->imperfectMe("taivuttaa");
+print "sinä ".$conjugate->imperfectYou("taivuttaa");
+print "hän ".$conjugate->imperfectSHe("taivuttaa");
+print "me ".$conjugate->imperfectPluralWe("taivuttaa");
+print "te ".$conjugate->imperfectPluralYou("taivuttaa");
+print "he ".$conjugate->imperfectPluralThey("taivuttaa");
 ```
 
 ## Noun demo
@@ -42,6 +54,12 @@ http://www.palomaki.info/apps/conjugation/
 PHP Codesniffer rules in ruleset.xml, run with:
 ```
 phpcs --standard=ruleset.xml *.php
+```
+PHPUnit
+````
+wget -O phpunit https://phar.phpunit.de/phpunit-5.phar
+chmod +x phpunit
+./phpunit tests/VerbTest.php
 ```
 
 ## Helper material for conjugation
