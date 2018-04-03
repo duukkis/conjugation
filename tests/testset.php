@@ -559,7 +559,7 @@ $testSet = array(
     ),
 "kantaa" => array(
       "pre" => array("kannan", "kannat", "kantaa", "kannamme", "kannatte", "kantavat"),
-      "imp" => array("kansin", "kansit", "kansi", "kansimme", "kansitte", "kansivat")
+      "imp" => array("kannoin", "kannoit", "kantoi", "kannoimme", "kannoitte", "kantoivat")
     ),
 "karata" => array(
       "pre" => array("karkaan", "karkaat", "karkaa", "karkaamme", "karkaatte", "karkaavat"),
