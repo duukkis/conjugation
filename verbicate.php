@@ -41,84 +41,84 @@ class Verbicate
   
   public function preesensMe($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
+    if ($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
     $this->ender = "n";
     return $this->conjugatePreesensWithGradation($word, $a, "e");
   }
   
   public function preesensYou($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
+    if ($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
     $this->ender = "t";
     return $this->conjugatePreesensWithGradation($word, $a, "e");
   }
   
   public function preesensSHe($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $a = "aa"; } else { $a = "ää"; }
+    if ($this->backVowelWord){ $a = "aa"; } else { $a = "ää"; }
     $this->ender = "";
     return $this->conjugatePreesensWithoutGradation($word, $a, "ee");
   }
   
   public function preesensPluralWe($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
+    if ($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
     $this->ender = "mme";
     return $this->conjugatePreesensWithGradation($word, $a, "e");
   }
 
   public function preesensPluralYou($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
+    if ($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
     $this->ender = "tte";
     return $this->conjugatePreesensWithGradation($word, $a, "e");
   }
 
   public function preesensPluralThey($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
+    if ($this->backVowelWord){ $a = "a"; } else { $a = "ä"; }
     $this->ender = "v".$a."t";
     return $this->conjugatePreesensWithoutGradation($word, $a, "e");
   }
 
   public function imperfectMe($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    if ($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
     $this->ender = "n";
     return $this->conjugateImperfectWithGradation($word, $o, "i");
   }
 
   public function imperfectYou($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    if ($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
     $this->ender = "t";
     return $this->conjugateImperfectWithGradation($word, $o, "i");
   }
 
   public function imperfectSHe($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    if ($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
     $this->ender = "";
     return $this->conjugateImperfectWithoutGradation($word, $o, "i");
   }
 
   public function imperfectPluralWe($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    if ($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
     $this->ender = "mme";
     return $this->conjugateImperfectWithGradation($word, $o, "i");
   }
 
   public function imperfectPluralYou($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
+    if ($this->backVowelWord){ $o = "o"; } else { $o = "ö"; }
     $this->ender = "tte";
     return $this->conjugateImperfectWithGradation($word, $o, "i");
   }
 
   public function imperfectPluralThey($word) {
     $word = $this->init($word);
-    if($this->backVowelWord){ $o = "o"; $this->ender = "vat"; } else { $o = "ö"; $this->ender = "vät"; }
+    if ($this->backVowelWord){ $o = "o"; $this->ender = "vat"; } else { $o = "ö"; $this->ender = "vät"; }
     return $this->conjugateImperfectWithoutGradation($word, $o, "i");
   }
 
@@ -583,7 +583,7 @@ class Verbicate
     } else if ($thirdlast == "n" && $secondfirst == "t") { // kontata
       $w[$nos-2] = "t".$w[$nos-2];
     } else if ($thirdlast == "n" && $secondfirst == "n") { // rynnata
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
     } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "k") { // hakata
       $w[$nos-2] = "k".$w[$nos-2];
     } else if ($thirdlast == "r" && $secondfirst == "k") { // virkata
@@ -592,52 +592,48 @@ class Verbicate
 
     } else if (in_array($thirdlast, array("y", "e")) && mb_strlen($w[$nos-3]) == 2 && $secondfirst == "l") {
       // hylätä, pelätä
-      $w[$nos-2] = "lk".mb_substr($w[$nos-2],1);
+      $w[$nos-2] = "lk".mb_substr($w[$nos-2], 1);
     } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "p") { // hypätä
       $w[$nos-2] = "p".$w[$nos-2];
-
     } else if (in_array($thirdlast, $this->wovels) && mb_strlen($w[$nos-3]) == 2 && $w[$nos-2] == "vi") { // hävitä
       // nothing
     } else if (in_array($thirdlast, $this->wovels) && mb_strlen($w[$nos-3]) == 2 && $w[$nos-2] == "ve") { // ruveta
-      $w[$nos-2] = "p".mb_substr($w[$nos-2],1);
-
+      $w[$nos-2] = "p".mb_substr($w[$nos-2], 1);
     } else if ($secondfirst == "v" &&
        isset($w[$nos-3]) && in_array($w[$nos-3], array("le", "lu", "ta", "kai", "kel", "kii"))) {
-      $w[$nos-2] = "p".mb_substr($w[$nos-2],1);            
-
-    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "d"){ // aidata
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "r" && $secondfirst == "j"){ // herjetä / tarjota which way to go
-      // $w[$nos-2] = "k".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "h" && $secondfirst == "j" && mb_strlen($w[$nos-3]) == 3){ // puhjeta, exclude ohjata
-      $w[$nos-2] = "k".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "l" && $secondfirst == "j"){ // teljetä
-      $w[$nos-2] = "k".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "y" && $secondfirst == "e"){ // kyetä
+      $w[$nos-2] = "p".mb_substr($w[$nos-2], 1);
+    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "d") { // aidata
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "r" && $secondfirst == "j") { // herjetä / tarjota which way to go
+      // $w[$nos-2] = "k".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "h" && $secondfirst == "j" && mb_strlen($w[$nos-3]) == 3) { // puhjeta, exclude ohjata
+      $w[$nos-2] = "k".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "l" && $secondfirst == "j") { // teljetä
+      $w[$nos-2] = "k".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "y" && $secondfirst == "e") { // kyetä
       $w[$nos-2] = "k".$w[$nos-2];
-    } else if ($nos >= 3 && mb_strlen($w[$nos-3]) == 1 && $secondfirst == "h"){ // uhata
-      $w[$nos-2] = "hk".mb_substr($w[$nos-2],1);
-
+    } else if ($nos >= 3 && mb_strlen($w[$nos-3]) == 1 && $secondfirst == "h") { // uhata
+      $w[$nos-2] = "hk".mb_substr($w[$nos-2], 1);
     } else if ($thirdlast == "a" && mb_strlen($w[$nos-3]) == 2 && $secondfirst == "r") {
       // karata (not all vowels since kerätä), varata also bad
-      $w[$nos-2] = "rk".mb_substr($w[$nos-2],1);
+      $w[$nos-2] = "rk".mb_substr($w[$nos-2], 1);
     } else if ($thirdlast == "n" && $secondfirst == "g") { // hangata
-      $w[$nos-2] = "k".mb_substr($w[$nos-2],1);
+      $w[$nos-2] = "k".mb_substr($w[$nos-2], 1);
     } else if ($thirdlast == "r" && $secondfirst == "r") { // irrota
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
     } else if ($thirdlast == "l" && $secondfirst == "l") { // vallata
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
     } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "d") { // leudota
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
     } else if ($thirdlast == "h" && $secondfirst == "d") { // kohdata
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "m" && $secondfirst == "m"){ // kimmota
-      $w[$nos-2] = "p".mb_substr($w[$nos-2],1);
-    } else if($w[$nos-2] == "taa") { // taata
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "m" && $secondfirst == "m") { // kimmota
+      $w[$nos-2] = "p".mb_substr($w[$nos-2], 1);
+    } else if ($w[$nos-2] == "taa") { // taata
       $w[$nos-2] = "taka";
-    } else if($w[$nos-2] == "maa") { // maata
+    } else if ($w[$nos-2] == "maa") { // maata
       $w[$nos-2] = "maka";
-    } else if($w[$nos-2] == "koo") { // koota
+    } else if ($w[$nos-2] == "koo") { // koota
       $w[$nos-2] = "koko";
     }
     return $w;
@@ -646,45 +642,42 @@ class Verbicate
   /**
   * conjugation for a-verbs
   */
-  private function aVerb($word, $w, $nos, $secondfirst, $secondlast, $thirdlast){
-    if($thirdlast == "l" && $secondfirst == "p"){ // kylpeä
-      $w[$nos-2] = "v".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "m" && $secondfirst == "p"){ // empiä, ampua
-      $w[$nos-2] = "m".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "h" && $secondfirst == "t"){ // ahnehtia, lähteä
-      $w[$nos-2] = "d".mb_substr($w[$nos-2],1);
-    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "t"){ // potea, kutea, päteä
-      $w[$nos-2] = "d".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "n" && $secondfirst == "t"){ // jakaantua
-      $w[$nos-2] = "n".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "r" && $secondfirst == "t"){ // kertoa 
-      $w[$nos-2] = "r".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "l" && $secondfirst == "t"){ // paleltua 
-      $w[$nos-2] = "l".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "t" && $secondfirst == "t"){ // asettua
-      $w[$nos-2] = mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "s" && $secondfirst == "t"){ // arvopaperistua, poistua
+  private function aVerb($word, $w, $nos, $secondfirst, $secondlast, $thirdlast) {
+    if ($thirdlast == "l" && $secondfirst == "p") { // kylpeä
+      $w[$nos-2] = "v".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "m" && $secondfirst == "p") { // empiä, ampua
+      $w[$nos-2] = "m".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "h" && $secondfirst == "t") { // ahnehtia, lähteä
+      $w[$nos-2] = "d".mb_substr($w[$nos-2], 1);
+    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "t") { // potea, kutea, päteä
+      $w[$nos-2] = "d".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "n" && $secondfirst == "t") { // jakaantua
+      $w[$nos-2] = "n".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "r" && $secondfirst == "t") { // kertoa
+      $w[$nos-2] = "r".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "l" && $secondfirst == "t") { // paleltua
+      $w[$nos-2] = "l".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "t" && $secondfirst == "t") { // asettua
+      $w[$nos-2] = mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "s" && $secondfirst == "t") { // arvopaperistua, poistua
       // stays the same
-
-    } else if ($thirdlast == "n" && $secondfirst == "k"){ // henkiä, penkoa
-      $w[$nos-2] = "g".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "l" && $secondfirst == "k"){ // hylkiä
-      $w[$nos-2] = "j".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "r" && $secondfirst == "k"){ // särkeä, pyrkiä
-      $w[$nos-2] = mb_substr($w[$nos-2],1);
-    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "k"){ // hakea, kokea
-      $w[$nos-2] = mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "k" && $secondfirst == "k"){ // hankkia
-      $w[$nos-2] = mb_substr($w[$nos-2],1);
-
-
-    } else if ($thirdlast == "p" && $secondfirst == "p"){ // harppoa, oppia
-      $w[$nos-2] = mb_substr($w[$nos-2],1);
-    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "p"){ // hiipiä, kaapia, ruopia, ...
-      $w[$nos-2] = "v".mb_substr($w[$nos-2],1);
-    } else if ($this->sylls[$nos-2] == "tu"){ // kaatua
+    } else if ($thirdlast == "n" && $secondfirst == "k") { // henkiä, penkoa
+      $w[$nos-2] = "g".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "l" && $secondfirst == "k") { // hylkiä
+      $w[$nos-2] = "j".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "r" && $secondfirst == "k") { // särkeä, pyrkiä
+      $w[$nos-2] = mb_substr($w[$nos-2], 1);
+    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "k") { // hakea, kokea
+      $w[$nos-2] = mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "k" && $secondfirst == "k") { // hankkia
+      $w[$nos-2] = mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "p" && $secondfirst == "p") { // harppoa, oppia
+      $w[$nos-2] = mb_substr($w[$nos-2], 1);
+    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "p") { // hiipiä, kaapia, ruopia, ...
+      $w[$nos-2] = "v".mb_substr($w[$nos-2], 1);
+    } else if ($this->sylls[$nos-2] == "tu") { // kaatua
       $w[$nos-2] = "du";
-    } else if ($this->sylls[$nos-2] == "ty"){ // jäätyä
+    } else if ($this->sylls[$nos-2] == "ty") { // jäätyä
       $w[$nos-2] = "dy";
     }
     return $w;
@@ -693,27 +686,27 @@ class Verbicate
   /**
   * conjugation for la-verbs
   */
-  private function laVerb($word, $w, $nos, $secondfirst, $secondlast, $thirdlast){
-    if(in_array($thirdlast, $this->wovels) && $w[$nos-2] == "tel"){ // haukotella
+  private function laVerb($word, $w, $nos, $secondfirst, $secondlast, $thirdlast) {
+    if (in_array($thirdlast, $this->wovels) && $w[$nos-2] == "tel") { // haukotella
       $w[$nos-3] .= "t";
-    } else if ($thirdlast == "l" && $secondfirst == "l"){ // takellella
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
-    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "k"){ // nakella
-
-    } else if (in_array($thirdlast, $this->wovels) && mb_strlen($w[$nos-3]) > 1 && $secondfirst == "p"){ // tapella, exclude epäillä
+    } else if ($thirdlast == "l" && $secondfirst == "l") { // takellella
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
+    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "k") { // nakella
+      // nothing
+    } else if (in_array($thirdlast, $this->wovels) && mb_strlen($w[$nos-3]) > 1 && $secondfirst == "p") { // tapella, exclude epäillä
       $w[$nos-2] = "p".$w[$nos-2];
-    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "t"){ // aatella
+    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "t") { // aatella
       $w[$nos-2] = "t".$w[$nos-2];
-    } else if ($thirdlast == "r" && $secondfirst == "r"){ // kierrellä
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "n" && $secondfirst == "n"){ // annella
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "m" && $secondfirst == "m"){ // annella
-      $w[$nos-2] = "p".mb_substr($w[$nos-2],1);
-    } else if ($thirdlast == "h" && $secondfirst == "d"){ // hypähdellä
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
-    } else if(in_array($thirdlast, $this->wovels) && $secondfirst == "d"){ // huudella
-      $w[$nos-2] = "t".mb_substr($w[$nos-2],1);
+    } else if ($thirdlast == "r" && $secondfirst == "r") { // kierrellä
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "n" && $secondfirst == "n") { // annella
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "m" && $secondfirst == "m") { // annella
+      $w[$nos-2] = "p".mb_substr($w[$nos-2], 1);
+    } else if ($thirdlast == "h" && $secondfirst == "d") { // hypähdellä
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
+    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "d") { // huudella
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1);
     }
     return $w;
   }
@@ -721,20 +714,20 @@ class Verbicate
   /**
   * checks if the -ta verb conjugates like verb class 72
   */
-  private function isVerbClass72($word){
-    if (preg_match("/(hap|par|mad)ata/",$word) ||
+  private function isVerbClass72($word) {
+    if (preg_match("/(hap|par|mad)ata/", $word) ||
       // exclude fex. lanata
-      preg_match("/(.*)(l|n|p|h|y|s|a|lv|ai|aj|av|am|ed|ev|hk|hm|hv|id|ii|im|ir|iu|lm|lv|oj|or|nk|rj|rm|rk|yk|uj|ur)eta/",$word) ||
+      preg_match("/(.*)(l|n|p|h|y|s|a|lv|ai|aj|av|am|ed|ev|hk|hm|hv|id|ii|im|ir|iu|lm|lv|oj|or|nk|rj|rm|rk|yk|uj|ur)eta/", $word) ||
       // kyetä, paeta, norjeta, ranketa, edetä
-      preg_match("/(.*)(aks|eik|eud|eik)ota/",$word) ||
+      preg_match("/(.*)(aks|eik|eud|eik)ota/", $word) ||
       // heikota
-      preg_match("/(.*)(al|ir|in|ja|lk|ll|lo|om|sa|rk|rv|uk|va)ita/",$word) ||
+      preg_match("/(.*)(al|ir|in|ja|lk|ll|lo|om|sa|rk|rv|uk|va)ita/", $word) ||
       // ansaita, harkita, hallita, häiritä, iloita, lukita, mainita
-      preg_match("/(.*)(aa|ai|uo|ou|pe|pi)sta/",$word) ||
+      preg_match("/(.*)(aa|ai|uo|ou|pe|pi)sta/", $word) ||
       // ehkäistä
-      preg_match("/(.*)(arv|arj|eik|iev|imm|iuk|oiv|orj|ouk|urj|umm|ust|uum|val|yhj)eta/",$word) ||
+      preg_match("/(.*)(arv|arj|eik|iev|imm|iuk|oiv|orj|ouk|urj|umm|ust|uum|val|yhj)eta/", $word) ||
       // himmetä, norjeta, tyhjetä
-      preg_match("/(.*)(aks)uta/",$word)) {
+      preg_match("/(.*)(aks)uta/", $word)) {
       return true;
     }
     return false;
@@ -744,8 +737,8 @@ class Verbicate
   /**
   * return array with syllabuses
   */
-  private function syllabs($word){
-    if(empty($word)){
+  private function syllabs($word) {
+    if (empty($word)) {
       return array();
     }
     $this->orig = array();
@@ -770,50 +763,51 @@ class Verbicate
 
     // put the word here letters and -'s
     $com_word = array();
-    for($i = 0;$i < $loop;){
+    for ($i = 0; $i < $loop;) {
       $d = 1; // how many digits forward
-      if(in_array($w[$i], $cons)){
-        if(($i+1) >= $loop){ // if last is kons, remove the possible previous -
+      if (in_array($w[$i], $cons)) {
+        if (($i+1) >= $loop) { // if last is kons, remove the possible previous -
           $last = array_pop($com_word);
-          if($last != "-"){
+          if ($last != "-") {
             $com_word[] = $last;
           }
         }
         $com_word[] = $w[$i];
-      } else if(in_array($w[$i], $wovels)){
+      } else if (in_array($w[$i], $wovels)) {
         $com_word[] = $w[$i];
-        if(in_array($w[$i].$w[$i+1], $dif) || $w[$i] == $w[$i+1] || $w[$i+1] == "i"){ // next diftongi, same vokaali or "i" 
+        if (in_array($w[$i].$w[$i+1], $dif) || $w[$i] == $w[$i+1] || $w[$i+1] == "i") {
+          // next diftongi, same vokaali or "i"
           $com_word[] = $w[$i+1];
           $d = 2;
-          if(in_array($w[$i+2], $wovels)){
+          if (in_array($w[$i+2], $wovels)) {
             $com_word[] = "-";
-          } else if(in_array($w[$i+2], $cons) && in_array($w[$i+3], $cons) && in_array($w[$i+4], $cons)){
+          } else if (in_array($w[$i+2], $cons) && in_array($w[$i+3], $cons) && in_array($w[$i+4], $cons)) {
             $com_word[] = $w[$i+2];
             $com_word[] = $w[$i+3];
             $com_word[] = "-";
             $d = 4;
-          } else if(in_array($w[$i+2], $cons) && in_array($w[$i+3], $cons)){
+          } else if (in_array($w[$i+2], $cons) && in_array($w[$i+3], $cons)) {
             $com_word[] = $w[$i+2];
             $com_word[] = "-";
             $d = 3;
-          } else if(in_array($w[$i+2], $cons)){
+          } else if (in_array($w[$i+2], $cons)) {
             $com_word[] = "-";
             $d = 2;
           }
-        } else if(in_array($w[$i+1], $wovels)){
+        } else if (in_array($w[$i+1], $wovels)) {
           $com_word[] = "-";
           $d = 1;
         } else {
-          if(in_array($w[$i+1], $cons) && in_array($w[$i+2], $cons) && in_array($w[$i+3], $cons)){
+          if (in_array($w[$i+1], $cons) && in_array($w[$i+2], $cons) && in_array($w[$i+3], $cons)) {
             $com_word[] = $w[$i+1];
             $com_word[] = $w[$i+2];
             $com_word[] = "-";
             $d = 3;
-          } else if(in_array($w[$i+1], $cons) && in_array($w[$i+2], $cons)){
+          } else if (in_array($w[$i+1], $cons) && in_array($w[$i+2], $cons)) {
             $com_word[] = $w[$i+1];
             $com_word[] = "-";
             $d = 2;
-          } else if(in_array($w[$i+1], $cons)){
+          } else if (in_array($w[$i+1], $cons)) {
             $com_word[] = "-";
             $d = 1;
           }
@@ -825,10 +819,10 @@ class Verbicate
     $sylls = array();
     $tindex = 0;
     $windex = 0; // word index
-    foreach($com_word AS $in => $letter){
-      if($letter == "-"){
+    foreach ($com_word as $in => $letter) {
+      if ($letter == "-") {
         $tindex++;
-      } else if(isset($sylls[$tindex])){
+      } else if (isset($sylls[$tindex])) {
         $sylls[$tindex] .= $letter;
         $this->orig[$tindex] .= mb_substr($orig, $windex, 1);
         $windex++;
@@ -895,10 +889,9 @@ class Verbicate
       $this->backVowelWord = false;
     } else if ($backVowelPos > $frontVowelPos) { // both present (combined word)
       $this->backVowelWord = true;
-    } else if ($backVowelPos < $frontVowelPos){  // both present frontWovel later
+    } else if ($backVowelPos < $frontVowelPos) {  // both present frontWovel later
       $this->backVowelWord = false;
     }
     return $this->backVowelWord;
   }
-  
 } // end class

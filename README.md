@@ -53,10 +53,10 @@ http://www.palomaki.info/apps/conjugation/
 ## Tests
 PHP Codesniffer rules in ruleset.xml, run with:
 ```
-phpcs --standard=ruleset.xml *.php
+phpcs --standard=tests/ruleset.xml *.php
 ```
 PHPUnit
-````
+```
 wget -O phpunit https://phar.phpunit.de/phpunit-5.phar
 chmod +x phpunit
 ./phpunit tests/NounTest.php
