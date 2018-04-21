@@ -122,6 +122,12 @@ class Verbicate
     return $this->conjugateImperfectWithoutGradation($word, $this->o, "i");
   }
 
+  public function imperativeYou($word){
+    $word = $this->init($word);
+    $this->ender = "";
+    return $this->conjugatePreesensWithGradation($word, $this->a, "e");
+  }
+  
   /**
   * PREESENS
   * me, you, we, you
