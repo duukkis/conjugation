@@ -1291,6 +1291,9 @@ $words = array(
   "ien" => array("en",
                   "si" => array("kene", "kene", "kenee", "ent", "kene"),
                   "pl" => array("kenie", "keni", "kenii", "keni", "keni")),
+  "aakkonen" => array("nen",
+                  "si" => array("se", "se", "see", "st", "se"),
+                  "pl" => array("ste", "sei", "sii", "si", "si")),
   // -- in
   "kasvain" => array("in",
                   "si" => array("ime", "ime", "imee", "int", "ime"),
