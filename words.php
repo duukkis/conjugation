@@ -1954,6 +1954,12 @@ $words = array(
   "koru" => array("u",
                   "si" => array("u", "u", "uu", "u", "u"),
                   "pl" => array("uje", "ui", "uihi", "uj", "ui")),
+  "naru" => array("u",
+                  "si" => array("u", "u", "uu", "u", "u"),
+                  "pl" => array("uje", "ui", "uihi", "uj", "ui")),
+  "pieru" => array("u",
+                  "si" => array("u", "u", "uu", "u", "u"),
+                  "pl" => array("uje", "ui", "uihi", "uj", "ui")),
   // -- su
   "kutsu" => array("u",
                   "si" => array("u", "u", "uu", "u", "u"),
