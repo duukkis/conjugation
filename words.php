@@ -171,9 +171,9 @@ $words = array(
   "apila" => array("a",
                   "si" => array("a", "a", "aa", "a", "a"),
                   "pl" => array("oide", "oi", "oihi", "oit", "oi")),
-  "loitolla" => array("la",
-                  "si" => array("lamma", "lamma", "lammaa", "lampa", "lampa"),
-                  "pl" => array("lammaide", "lammi", "lammii", "lampi", "lampi")),
+  "loitolla" => array("lla",
+                  "si" => array("llamma", "llamma", "llammaa", "llampa", "llampa"),
+                  "pl" => array("llammaide", "llammi", "llammii", "llampi", "llampi")),
   // -- ma
   "asema" => array("a",
                   "si" => array("a", "a", "aa", "a", "a"),
@@ -1915,6 +1915,10 @@ $words = array(
   "kevät" => array("t",
                   "si" => array("ä", "ä", "äsee", "tt", "ää"),
                   "pl" => array("ide", "i", "äisii", "it", "äi")),
+  // -- hu
+  "mehu" => array("u",
+                  "si" => array("u", "u", "uu", "u", "u"),
+                  "pl" => array("uje", "ui", "uihi", "uj", "ui")),
   // -- iu
   "tiu" => array("u",
                   "si" => array("u", "u", "uhu", "ut", "u"),

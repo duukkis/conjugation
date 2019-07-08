@@ -531,7 +531,10 @@ class Conjugate
             $i = 1000; // out of for loop
           }
         }
-        if ($match > $bestMatchLetters) {
+        // $useOnlyKeys[0] has the ending which is used in conjugation
+        // mehut matches kuollut but does not contain "lut" at the end so > not a best match which should be used
+        $partToConjugate = $useOnlyKeys[0];
+        if ($match > $bestMatchLetters && mb_substr($word, 0 - strlen($partToConjugate)) == $partToConjugate) {
           $bestMatchLetters = $match;
           $this->bestMatch = $w;
         }
