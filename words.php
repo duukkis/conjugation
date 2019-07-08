@@ -1923,6 +1923,10 @@ $words = array(
   "tiu" => array("u",
                   "si" => array("u", "u", "uhu", "ut", "u"),
                   "pl" => array("u'uje" ,"u'ui", "uhuihi", "u'ukuj", "u'u")),
+  // -- ju
+  "ketju" => array("ju",
+                  "si" => array("ju", "ju", "juu", "ju", "ju"),
+                  "pl" => array("juje", "jui", "juihi", "juj", "jui")),
   // -- ku
   "haku" => array("ku",
                   "si" => array("u", "u", "kuu", "ku", "ku"),
