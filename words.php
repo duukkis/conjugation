@@ -148,6 +148,9 @@ $words = array(
   "honka" => array("ka",
                   "si" => array("ga", "ga", "kaa", "ka", "ka"),
                   "pl" => array("kie", "gi", "kii", "ki", "ki")),
+  "tuska" => array("a",
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("ie", "i", "ii", "i", "i")),
   // TODO make an exception on plural forming
   "joka" => array("ka",
                   "si" => array("", "", "ho", "t", ""),
@@ -181,6 +184,9 @@ $words = array(
   "vaikutelma" => array("ma",
                   "si" => array("ma", "ma", "maa", "ma", "ma"),
                   "pl" => array("mie", "mi", "mii", "mi", "mi")),
+  "maailma" => array("ma",
+                  "si" => array("ma", "ma", "maa", "ma", "ma"),
+                  "pl" => array("moje", "moi", "moihi", "moj", "moi")),
   // -- na
   "saatana" => array("a",
                   "si" => array("a", "a", "aa", "a", "a"),
@@ -302,6 +308,11 @@ $words = array(
   "herttua" => array("ua",
                   "si" => array("ua", "ua", "uaa", "ua", "ua"),
                   "pl" => array("uoide", "uoi", "uoihi", "uoit", "uoi")),
+  // -- va
+  "lihava" => array("a",
+                  "si" => array("a", "a", "aa", "a", "a"),
+                  "pl" => array("ie", "i", "ii", "i", "i")),
+
   // -- ab
   "kebab" => array("b",
                   "si" => array("bi", "bi", "bii", "bi", "bi"),
@@ -1836,6 +1847,7 @@ $words = array(
   "pylväs" => array("s",
                   "si" => array("ä", "ä", "äsee", "st", "ä"),
                   "pl" => array("ide", "i", "äisii", "it", "äi")),
+  // TODO remove plurals from here
   // -- at
   "tuhat" => array("at",
                   "si" => array("anne", "anne", "antee", "att", "ante"),
@@ -1893,9 +1905,6 @@ $words = array(
                   "si" => array("see", "see", "seesee", "sutt", "see"),
                   "pl" => array("seide", "sei", "seisii", "seit", "sei")),
   // -- yt
-  "pöksyt" => array("yt",
-                  "si" => array("yje", "yje", "yihi", "yj", "y"),
-                  "pl" => array("yje", "yi", "yihi", "yj", "yi")),
   "neitsyt" => array("yt",
                   "si" => array("ye", "ye", "yeesee", "ytt", "ye"),
                   "pl" => array("yeide", "yi", "yisii", "yit", "yei")),
@@ -2043,6 +2052,9 @@ $words = array(
                   "si" => array("y", "y", "kyy", "ky", "ky"),
                   "pl" => array("yje", "yi", "yihi", "yj", "yi")),
   "myrsky" => array("y",
+                  "si" => array("y", "y", "kyy", "ky", "ky"),
+                  "pl" => array("yje", "yi", "kyihi", "kyj", "kyi")),
+  "pöksy" => array("y",
                   "si" => array("y", "y", "kyy", "ky", "ky"),
                   "pl" => array("yje", "yi", "kyihi", "kyj", "kyi")),
   "kyky" => array("ky",
