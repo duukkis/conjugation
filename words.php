@@ -243,6 +243,9 @@ $words = array(
   "kisa" => array("sa",
                   "si" => array("sa", "sa", "saa", "sa", "sa"),
                   "pl" => array("soje", "soi", "soihi", "soj", "soi")),
+  "osa" => array("sa",
+                  "si" => array("sa", "sa", "saa", "sa", "sa"),
+                  "pl" => array("sie", "si", "sii", "si", "si")),
   // -- ta
   "pata" => array("ta",
                   "si" => array("da", "da", "taa", "ta", "ta"),
@@ -2036,6 +2039,9 @@ $words = array(
   "sänky" => array("ky",
                   "si" => array("gy", "gy", "kyy", "ky", "ky"),
                   "pl" => array("kyje", "gyi", "kyihi", "kyj", "kyi")),
+  "öljy" => array("y",
+                  "si" => array("y", "y", "kyy", "ky", "ky"),
+                  "pl" => array("yje", "yi", "yihi", "yj", "yi")),
   "myrsky" => array("y",
                   "si" => array("y", "y", "kyy", "ky", "ky"),
                   "pl" => array("yje", "yi", "kyihi", "kyj", "kyi")),
@@ -2049,6 +2055,10 @@ $words = array(
   "hyppy" => array("py",
                   "si" => array("y", "y", "pyy", "py", "py"),
                   "pl" => array("pyje", "yi", "pyihi", "pyj", "pyi")),
+  // -- py
+  "käsittely" => array("y",
+                  "si" => array("y", "y", "yy", "y", "y"),
+                  "pl" => array("yje", "yi", "yihi", "yj", "yi")),
   // -- ty
   "lyhty" => array("ty",
                   "si" => array("dy", "dy", "tyy", "ty", "ty"),
