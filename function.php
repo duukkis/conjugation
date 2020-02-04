@@ -109,9 +109,9 @@ class Conjugate
     $plurals = array();
     
     foreach ($this->words as $word => $conjugation) {
-      $word = str_replace(array("ä", "ö"), array("a", "o"), $word);
-      $conjugation[0] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation[0]);
-      $conjugation["si"][0] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation["si"][0]);
+//      $word = str_replace(array("ä", "ö"), array("a", "o"), $word);
+//      $conjugation[0] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation[0]);
+//      $conjugation["si"][0] = str_replace(array("ä", "ö"), array("a", "o"), $conjugation["si"][0]);
       // form a plural
       $plural = $this->strRreplace($conjugation[0], $conjugation["si"][0], $word)."t";
       $plural_postfix = $conjugation["si"][0]."t";
