@@ -1,9 +1,11 @@
 <?php
 
+namespace Conjugation;
+
 /**
 * class to handle all
 */
-class Conjugate
+class Noun
 {
   const WORD_FILE = "words.php";
   const CACHE_FILE = "words.inc";

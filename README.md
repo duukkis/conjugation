@@ -20,31 +20,63 @@ PHP:lla tehty taivutuskirjasto suomen kielen substantiiveille ja verbeille.
 ```php
 include('function.php');
 $conj = new Conjugate();
-$result = $conj->essive("nalle");
-print $result["answer"];
+print $conj->nominative("nalle")["answer"].PHP_EOL;
+print $conj->essive("nalle")["answer"].PHP_EOL;
+print $conj->essive("nalle")["answer"].PHP_EOL;
+print $conj->essive("nalle")["answer"].PHP_EOL;
+print $conj->essive("nalle")["answer"].PHP_EOL;
 ```
 
 ## Introducing also verbs!
 - Present tense, preesens
 - Imperfect, imperfekti
+- Perfect
+- Imperative
 
 ```php
 include('verbicate.php');
 $conjugate = new Verbicate();
 $me = $conjugate->preesensMe("taivuttaa");
-print "minä ".$me;
-print "sinä ".$conjugate->preesensYou("taivuttaa");
-print "hän ".$conjugate->preesensSHe("taivuttaa");
-print "me ".$conjugate->preesensPluralWe("taivuttaa");
-print "te ".$conjugate->preesensPluralYou("taivuttaa");
-print "he ".$conjugate->preesensPluralThey("taivuttaa");
+print "Minä ".$me.PHP_EOL;
+print "Sinä ".$conjugate->preesensYou("taivuttaa").PHP_EOL;
+print "Hän ".$conjugate->preesensSHe("taivuttaa").PHP_EOL;
+print "Me ".$conjugate->preesensPluralWe("taivuttaa").PHP_EOL;
+print "Te ".$conjugate->preesensPluralYou("taivuttaa").PHP_EOL;
+print "He ".$conjugate->preesensPluralThey("taivuttaa").PHP_EOL;
 
-print "minä ".$conjugate->imperfectMe("taivuttaa");
-print "sinä ".$conjugate->imperfectYou("taivuttaa");
-print "hän ".$conjugate->imperfectSHe("taivuttaa");
-print "me ".$conjugate->imperfectPluralWe("taivuttaa");
-print "te ".$conjugate->imperfectPluralYou("taivuttaa");
-print "he ".$conjugate->imperfectPluralThey("taivuttaa");
+print "Minä ".$conjugate->imperfectMe("taivuttaa").PHP_EOL;
+print "Sinä ".$conjugate->imperfectYou("taivuttaa").PHP_EOL;
+print "Hän ".$conjugate->imperfectSHe("taivuttaa").PHP_EOL;
+print "Me ".$conjugate->imperfectPluralWe("taivuttaa").PHP_EOL;
+print "Te ".$conjugate->imperfectPluralYou("taivuttaa").PHP_EOL;
+print "He ".$conjugate->imperfectPluralThey("taivuttaa").PHP_EOL;
+
+print "Minä olen ".$conjugate->perfectSingle("taivuttaa").PHP_EOL;
+print "Te olette ".$conjugate->perfectPlural("taivuttaa").PHP_EOL;
+
+print ucfirst($conjugate->imperativeSingle("taivuttaa")) . "!".PHP_EOL;
+print ucfirst($conjugate->imperativePlural("taivuttaa")) . "!".PHP_EOL;
+```
+
+Prints out
+
+```
+Minä taivutan
+Sinä taivutat
+Hän taivuttaa
+Me taivutamme
+Te taivutatte
+He taivuttavat
+Minä taivutin
+Sinä taivutit
+Hän taivutti
+Me taivutimme
+Te taivutitte
+He taivuttivat
+Minä olen taivuttanut
+Te olette taivuttaneet
+Taivuta!
+Taivuttakaa!
 ```
 
 ## Noun demo
@@ -57,10 +89,9 @@ phpcs --standard=tests/ruleset.xml *.php
 ```
 PHPUnit
 ```
-wget -O phpunit https://phar.phpunit.de/phpunit-5.phar
+wget -O phpunit https://phar.phpunit.de/phpunit-7.phar
 chmod +x phpunit
-./phpunit tests/NounTest.php
-./phpunit tests/VerbTest.php
+./phpunit tests/
 ```
 
 ## Helper material for conjugation

@@ -1,7 +1,7 @@
 <?php
 include(__DIR__.'/testset.php');
 include(__DIR__.'/../verbicate.php');
-$conjugate = new Verbicate();
+$conjugate = new Verb();
 
 /**
  * Helper for creating set
