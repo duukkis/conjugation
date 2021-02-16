@@ -9,27 +9,25 @@ class VerbTest extends TestCase
       include(__DIR__.'/../verbicate.php');
       $conjugate = new Verbicate();
       foreach($testSet AS $verb => $corr){
-        $this->assertSame($corr["pre"][0], $conjugate->preesensMe($verb));
-        $this->assertSame($corr["pre"][1], $conjugate->preesensYou($verb));
-        $this->assertSame($corr["pre"][2], $conjugate->preesensSHe($verb));
-        $this->assertSame($corr["pre"][3], $conjugate->preesensPluralWe($verb));
-        $this->assertSame($corr["pre"][4], $conjugate->preesensPluralYou($verb));
-        $this->assertSame($corr["pre"][5], $conjugate->preesensPluralThey($verb));
+        $this->assertSame($corr["preesens"][0], $conjugate->preesensMe($verb));
+        $this->assertSame($corr["preesens"][1], $conjugate->preesensYou($verb));
+        $this->assertSame($corr["preesens"][2], $conjugate->preesensSHe($verb));
+        $this->assertSame($corr["preesens"][3], $conjugate->preesensPluralWe($verb));
+        $this->assertSame($corr["preesens"][4], $conjugate->preesensPluralYou($verb));
+        $this->assertSame($corr["preesens"][5], $conjugate->preesensPluralThey($verb));
 
-        $this->assertSame($corr["imp"][0], $conjugate->imperfectMe($verb));
-        $this->assertSame($corr["imp"][1], $conjugate->imperfectYou($verb));
-        $this->assertSame($corr["imp"][2], $conjugate->imperfectSHe($verb));
-        $this->assertSame($corr["imp"][3], $conjugate->imperfectPluralWe($verb));
-        $this->assertSame($corr["imp"][4], $conjugate->imperfectPluralYou($verb));
-        $this->assertSame($corr["imp"][5], $conjugate->imperfectPluralThey($verb));
-        if (isset($corr["perfekti"][0])) {
-          $this->assertSame($corr["perfekti"][0], $conjugate->perfectSingle($verb));
-          $this->assertSame($corr["perfekti"][1], $conjugate->perfectPlural($verb));
-        }
-        if (isset($corr["imperatiivi"][0])) {
-          $this->assertSame($corr["imperatiivi"][0], $conjugate->imperativeSingle($verb));
-          $this->assertSame($corr["imperatiivi"][1], $conjugate->imperativePlural($verb));
-        }
+        $this->assertSame($corr["imperfect"][0], $conjugate->imperfectMe($verb));
+        $this->assertSame($corr["imperfect"][1], $conjugate->imperfectYou($verb));
+        $this->assertSame($corr["imperfect"][2], $conjugate->imperfectSHe($verb));
+        $this->assertSame($corr["imperfect"][3], $conjugate->imperfectPluralWe($verb));
+        $this->assertSame($corr["imperfect"][4], $conjugate->imperfectPluralYou($verb));
+        $this->assertSame($corr["imperfect"][5], $conjugate->imperfectPluralThey($verb));
+
+        $this->assertSame($corr["perfect"][0], $conjugate->perfectSingle($verb));
+        $this->assertSame($corr["perfect"][1], $conjugate->perfectPlural($verb));
+
+        $this->assertSame($corr["imperative"][0], $conjugate->imperativeSingle($verb));
+        $this->assertSame($corr["imperative"][1], $conjugate->imperativePlural($verb));
       }
     }
 }

@@ -2,2719 +2,3921 @@
 
 $testSet = [
   "aavistaa" => [
-    "pre" => ["aavistan", "aavistat", "aavistaa", "aavistamme", "aavistatte", "aavistavat"],
-    "imp" => ["aavistin", "aavistit", "aavisti", "aavistimme", "aavistitte", "aavistivat"],
-    "perfekti" => ["aavistanut", "aavistaneet"],
-    "imperatiivi" => ["aavista", "aavistakaa"],
+    "preesens" => ["aavistan", "aavistat", "aavistaa", "aavistamme", "aavistatte", "aavistavat"],
+    "imperfect" => ["aavistin", "aavistit", "aavisti", "aavistimme", "aavistitte", "aavistivat"],
+    "perfect" => ["aavistanut", "aavistaneet"],
+    "imperative" => ["aavista", "aavistakaa"],
   ],
   "aidata" => [
-    "pre" => ["aitaan", "aitaat", "aitaa", "aitaamme", "aitaatte", "aitaavat"],
-    "imp" => ["aitasin", "aitasit", "aitasi", "aitasimme", "aitasitte", "aitasivat"],
-    "perfekti" => ["aidannut", "aidanneet"],
-    "imperatiivi" => ["aitaa", "aidatkaa"],
+    "preesens" => ["aitaan", "aitaat", "aitaa", "aitaamme", "aitaatte", "aitaavat"],
+    "imperfect" => ["aitasin", "aitasit", "aitasi", "aitasimme", "aitasitte", "aitasivat"],
+    "perfect" => ["aidannut", "aidanneet"],
+    "imperative" => ["aitaa", "aidatkaa"],
   ],
   "aiheuttaa" => [
-    "pre" => ["aiheutan", "aiheutat", "aiheuttaa", "aiheutamme", "aiheutatte", "aiheuttavat"],
-    "imp" => ["aiheutin", "aiheutit", "aiheutti", "aiheutimme", "aiheutitte", "aiheuttivat"],
-    "perfekti" => ["aiheuttanut", "aiheuttaneet"],
-    "imperatiivi" => ["aiheuta", "aiheuttakaa"],
+    "preesens" => ["aiheutan", "aiheutat", "aiheuttaa", "aiheutamme", "aiheutatte", "aiheuttavat"],
+    "imperfect" => ["aiheutin", "aiheutit", "aiheutti", "aiheutimme", "aiheutitte", "aiheuttivat"],
+    "perfect" => ["aiheuttanut", "aiheuttaneet"],
+    "imperative" => ["aiheuta", "aiheuttakaa"],
   ],
   "aiheutua" => [
-    "pre" => ["aiheudun", "aiheudut", "aiheutuu", "aiheudumme", "aiheudutte", "aiheutuvat"],
-    "imp" => ["aiheuduin", "aiheuduit", "aiheutui", "aiheuduimme", "aiheuduitte", "aiheutuivat"],
+    "preesens" => ["aiheudun", "aiheudut", "aiheutuu", "aiheudumme", "aiheudutte", "aiheutuvat"],
+    "imperfect" => ["aiheuduin", "aiheuduit", "aiheutui", "aiheuduimme", "aiheuduitte", "aiheutuivat"],
+    "perfect" => ["aiheutunut", "aiheutuneet"],
+    "imperative" => ["aiheudu", "aiheutukaa"],
   ],
   "aikaansaada" => [
-    "pre" => ["aikaansaan", "aikaansaat", "aikaansaa", "aikaansaamme", "aikaansaatte", "aikaansaavat"],
-    "imp" => ["aikaansain", "aikaansait", "aikaansai", "aikaansaimme", "aikaansaitte", "aikaansaivat"],
-    "perfekti" => ["aikaansaanut", "aikaansaaneet"],
-    "imperatiivi" => ["aikaansaa", "aikaansaakaa"],
+    "preesens" => ["aikaansaan", "aikaansaat", "aikaansaa", "aikaansaamme", "aikaansaatte", "aikaansaavat"],
+    "imperfect" => ["aikaansain", "aikaansait", "aikaansai", "aikaansaimme", "aikaansaitte", "aikaansaivat"],
+    "perfect" => ["aikaansaanut", "aikaansaaneet"],
+    "imperative" => ["aikaansaa", "aikaansaakaa"],
   ],
   "aikoa" => [
-    "pre" => ["aion", "aiot", "aikoo", "aiomme", "aiotte", "aikovat"],
-    "imp" => ["aioin", "aioit", "aikoi", "aioimme", "aioitte", "aikoivat"],
-    "perfekti" => ["aikonut", "aikoneet"],
-    "imperatiivi" => ["aio", "aikokaa"],
+    "preesens" => ["aion", "aiot", "aikoo", "aiomme", "aiotte", "aikovat"],
+    "imperfect" => ["aioin", "aioit", "aikoi", "aioimme", "aioitte", "aikoivat"],
+    "perfect" => ["aikonut", "aikoneet"],
+    "imperative" => ["aio", "aikokaa"],
   ],
   "ajaa" => [
-    "pre" => ["ajan", "ajat", "ajaa", "ajamme", "ajatte", "ajavat"],
-    "imp" => ["ajoin", "ajoit", "ajoi", "ajoimme", "ajoitte", "ajoivat"],
-    "perfekti" => ["ajanut", "ajaneet"],
-    "imperatiivi" => ["aja", "ajakaa"],
+    "preesens" => ["ajan", "ajat", "ajaa", "ajamme", "ajatte", "ajavat"],
+    "imperfect" => ["ajoin", "ajoit", "ajoi", "ajoimme", "ajoitte", "ajoivat"],
+    "perfect" => ["ajanut", "ajaneet"],
+    "imperative" => ["aja", "ajakaa"],
   ],
   "ajatella" => [
-    "pre" => ["ajattelen", "ajattelet", "ajattelee", "ajattelemme", "ajattelette", "ajattelevat"],
-    "imp" => ["ajattelin", "ajattelit", "ajatteli", "ajattelimme", "ajattelitte", "ajattelivat"],
+    "preesens" => ["ajattelen", "ajattelet", "ajattelee", "ajattelemme", "ajattelette", "ajattelevat"],
+    "imperfect" => ["ajattelin", "ajattelit", "ajatteli", "ajattelimme", "ajattelitte", "ajattelivat"],
+    "perfect" => ["ajatellut", "ajatelleet"],
+    "imperative" => ["ajattele", "ajatelkaa"],
   ],
   "alentaa" => [
-    "pre" => ["alennan", "alennat", "alentaa", "alennamme", "alennatte", "alentavat"],
-    "imp" => ["alensin", "alensit", "alensi", "alensimme", "alensitte", "alensivat"],
-    "perfekti" => ["alentanut", "alentaneet"],
-    "imperatiivi" => ["alenna", "alentakaa"],
+    "preesens" => ["alennan", "alennat", "alentaa", "alennamme", "alennatte", "alentavat"],
+    "imperfect" => ["alensin", "alensit", "alensi", "alensimme", "alensitte", "alensivat"],
+    "perfect" => ["alentanut", "alentaneet"],
+    "imperative" => ["alenna", "alentakaa"],
   ],
   "alistaa" => [
-    "pre" => ["alistan", "alistat", "alistaa", "alistamme", "alistatte", "alistavat"],
-    "imp" => ["alistin", "alistit", "alisti", "alistimme", "alistitte", "alistivat"],
+    "preesens" => ["alistan", "alistat", "alistaa", "alistamme", "alistatte", "alistavat"],
+    "imperfect" => ["alistin", "alistit", "alisti", "alistimme", "alistitte", "alistivat"],
+    "perfect" => ["alistanut", "alistaneet"],
+    "imperative" => ["alista", "alistakaa"],
   ],
   "alistua" => [
-    "pre" => ["alistun", "alistut", "alistuu", "alistumme", "alistutte", "alistuvat"],
-    "imp" => ["alistuin", "alistuit", "alistui", "alistuimme", "alistuitte", "alistuivat"],
-    "perfekti" => ["alistunut", "alistuneet"],
-    "imperatiivi" => ["alistu", "alistukaa"],
+    "preesens" => ["alistun", "alistut", "alistuu", "alistumme", "alistutte", "alistuvat"],
+    "imperfect" => ["alistuin", "alistuit", "alistui", "alistuimme", "alistuitte", "alistuivat"],
+    "perfect" => ["alistunut", "alistuneet"],
+    "imperative" => ["alistu", "alistukaa"],
   ],
   "alkaa" => [
-    "pre" => ["alan", "alat", "alkaa", "alamme", "alatte", "alkaa"],
-    "imp" => ["aloin", "aloit", "alkoi", "aloimme", "aloitte", "alkoivat"],
+    "preesens" => ["alan", "alat", "alkaa", "alamme", "alatte", "alkaa"],
+    "imperfect" => ["aloin", "aloit", "alkoi", "aloimme", "aloitte", "alkoivat"],
+    "perfect" => ["alkanut", "alkaneet"],
+    "imperative" => ["ala", "alkakaa"],
   ],
   "allekirjoittaa" => [
-    "pre" => ["allekirjoitan", "allekirjoitat", "allekirjoittaa", "allekirjoitamme", "allekirjoitatte", "allekirjoittavat"],
-    "imp" => ["allekirjoitin", "allekirjoitit", "allekirjoitti", "allekirjoitimme", "allekirjoititte", "allekirjoittivat"],
+    "preesens" => ["allekirjoitan", "allekirjoitat", "allekirjoittaa", "allekirjoitamme", "allekirjoitatte", "allekirjoittavat"],
+    "imperfect" => ["allekirjoitin", "allekirjoitit", "allekirjoitti", "allekirjoitimme", "allekirjoititte", "allekirjoittivat"],
+    "perfect" => ["allekirjoittanut", "allekirjoittaneet"],
+    "imperative" => ["allekirjoita", "allekirjoittakaa"],
   ],
   "aloittaa" => [
-    "pre" => ["aloitan", "aloitat", "aloittaa", "aloitamme", "aloitatte", "aloittavat"],
-    "imp" => ["aloitin", "aloitit", "aloitti", "aloitimme", "aloititte", "aloittivat"],
+    "preesens" => ["aloitan", "aloitat", "aloittaa", "aloitamme", "aloitatte", "aloittavat"],
+    "imperfect" => ["aloitin", "aloitit", "aloitti", "aloitimme", "aloititte", "aloittivat"],
+    "perfect" => ["aloittanut", "aloittaneet"],
+    "imperative" => ["aloita", "aloittakaa"],
   ],
   "ampua" => [
-    "pre" => ["ammun", "ammut", "ampuu", "ammumme", "ammutte", "ampuvat"],
-    "imp" => ["ammuin", "ammuit", "ampui", "ammuimme", "ammuitte", "ampuivat"],
-    "perfekti" => ["ampunut", "ampuneet"],
-    "imperatiivi" => ["ammu", "ampukaa"],
+    "preesens" => ["ammun", "ammut", "ampuu", "ammumme", "ammutte", "ampuvat"],
+    "imperfect" => ["ammuin", "ammuit", "ampui", "ammuimme", "ammuitte", "ampuivat"],
+    "perfect" => ["ampunut", "ampuneet"],
+    "imperative" => ["ammu", "ampukaa"],
   ],
   "anoa" => [
-    "pre" => ["anon", "anot", "anoo", "anomme", "anotte", "anovat"],
-    "imp" => ["anoin", "anoit", "anoi", "anoimme", "anoitte", "anoivat"],
-    "perfekti" => ["anonut", "anoneet"],
-    "imperatiivi" => ["ano", "anokaa"],
+    "preesens" => ["anon", "anot", "anoo", "anomme", "anotte", "anovat"],
+    "imperfect" => ["anoin", "anoit", "anoi", "anoimme", "anoitte", "anoivat"],
+    "perfect" => ["anonut", "anoneet"],
+    "imperative" => ["ano", "anokaa"],
   ],
   "ansaita" => [
-    "pre" => ["ansaitsen", "ansaitset", "ansaitsee", "ansaitsemme", "ansaitsette", "ansaitsevat"],
-    "imp" => ["ansaitsin", "ansaitsit", "ansaitsi", "ansaitsimme", "ansaitsitte", "ansaitsivat"],
-    "perfekti" => ["ansainnut", "ansainneet"],
-    "imperatiivi" => ["ansaitse", "ansaitkaa"],
+    "preesens" => ["ansaitsen", "ansaitset", "ansaitsee", "ansaitsemme", "ansaitsette", "ansaitsevat"],
+    "imperfect" => ["ansaitsin", "ansaitsit", "ansaitsi", "ansaitsimme", "ansaitsitte", "ansaitsivat"],
+    "perfect" => ["ansainnut", "ansainneet"],
+    "imperative" => ["ansaitse", "ansaitkaa"],
   ],
   "antaa" => [
-    "pre" => ["annan", "annat", "antaa", "annamme", "annatte", "antavat"],
-    "imp" => ["annoin", "annoit", "antoi", "annoimme", "annoitte", "antoivat"],
+    "preesens" => ["annan", "annat", "antaa", "annamme", "annatte", "antavat"],
+    "imperfect" => ["annoin", "annoit", "antoi", "annoimme", "annoitte", "antoivat"],
+    "perfect" => ["antanut", "antaneet"],
+    "imperative" => ["anna", "antakaa"],
   ],
   "arvata" => [
-    "pre" => ["arvaan", "arvaat", "arvaa", "arvaamme", "arvaatte", "arvaavat"],
-    "imp" => ["arvasin", "arvasit", "arvasi", "arvasimme", "arvasitte", "arvasivat"],
-    "perfekti" => ["arvannut", "arvanneet"],
-    "imperatiivi" => ["arvaa", "arvatkaa"],
+    "preesens" => ["arvaan", "arvaat", "arvaa", "arvaamme", "arvaatte", "arvaavat"],
+    "imperfect" => ["arvasin", "arvasit", "arvasi", "arvasimme", "arvasitte", "arvasivat"],
+    "perfect" => ["arvannut", "arvanneet"],
+    "imperative" => ["arvaa", "arvatkaa"],
   ],
   "arvella" => [
-    "pre" => ["arvelen", "arvelet", "arvelee", "arvelemme", "arvelette", "arvelevat"],
-    "imp" => ["arvelin", "arvelit", "arveli", "arvelimme", "arvelitte", "arvelivat"],
+    "preesens" => ["arvelen", "arvelet", "arvelee", "arvelemme", "arvelette", "arvelevat"],
+    "imperfect" => ["arvelin", "arvelit", "arveli", "arvelimme", "arvelitte", "arvelivat"],
+    "perfect" => ["arvellut", "arvelleet"],
+    "imperative" => ["arvele", "arvelkaa"],
   ],
   "arvioida" => [
-    "pre" => ["arvioin", "arvioit", "arvioi", "arvioimme", "arvioitte", "arvioivat"],
-    "imp" => ["arvioin", "arvioit", "arvioi", "arvioimme", "arvioitte", "arvioivat"],
+    "preesens" => ["arvioin", "arvioit", "arvioi", "arvioimme", "arvioitte", "arvioivat"],
+    "imperfect" => ["arvioin", "arvioit", "arvioi", "arvioimme", "arvioitte", "arvioivat"],
+    "perfect" => ["arvioinut", "arvioineet"],
+    "imperative" => ["arvioi", "arvioikaa"],
   ],
   "arvostaa" => [
-    "pre" => ["arvostan", "arvostat", "arvostaa", "arvostamme", "arvostatte", "arvostavat"],
-    "imp" => ["arvostin", "arvostit", "arvosti", "arvostimme", "arvostitte", "arvostivat"],
-    "perfekti" => ["arvostanut", "arvostaneet"],
-    "imperatiivi" => ["arvosta", "arvostakaa"],
+    "preesens" => ["arvostan", "arvostat", "arvostaa", "arvostamme", "arvostatte", "arvostavat"],
+    "imperfect" => ["arvostin", "arvostit", "arvosti", "arvostimme", "arvostitte", "arvostivat"],
+    "perfect" => ["arvostanut", "arvostaneet"],
+    "imperative" => ["arvosta", "arvostakaa"],
   ],
   "arvostella" => [
-    "pre" => ["arvostelen", "arvostelet", "arvostelee", "arvostelemme", "arvostelette", "arvostelevat"],
-    "imp" => ["arvostelin", "arvostelit", "arvosteli", "arvostelimme", "arvostelitte", "arvostelivat"],
-    "perfekti" => ["arvostellut", "arvostelleet"],
-    "imperatiivi" => ["arvostele", "arvostelkaa"],
+    "preesens" => ["arvostelen", "arvostelet", "arvostelee", "arvostelemme", "arvostelette", "arvostelevat"],
+    "imperfect" => ["arvostelin", "arvostelit", "arvosteli", "arvostelimme", "arvostelitte", "arvostelivat"],
+    "perfect" => ["arvostellut", "arvostelleet"],
+    "imperative" => ["arvostele", "arvostelkaa"],
   ],
   "asennoitua" => [
-    "pre" => ["asennoidun", "asennoidut", "asennoituu", "asennoidumme", "asennoidutte", "asennoituvat"],
-    "imp" => ["asennoiduin", "asennoiduit", "asennoitui", "asennoiduimme", "asennoiduitte", "asennoituivat"],
+    "preesens" => ["asennoidun", "asennoidut", "asennoituu", "asennoidumme", "asennoidutte", "asennoituvat"],
+    "imperfect" => ["asennoiduin", "asennoiduit", "asennoitui", "asennoiduimme", "asennoiduitte", "asennoituivat"],
+    "perfect" => ["asennoitunut", "asennoituneet"],
+    "imperative" => ["asennoidu", "asennoitukaa"],
   ],
   "asentaa" => [
-    "pre" => ["asennan", "asennat", "asentaa", "asennamme", "asennatte", "asentavat"],
-    "imp" => ["asensin", "asensit", "asensi", "asensimme", "asensitte", "asensivat"],
-    "perfekti" => ["asentanut", "asentaneet"],
-    "imperatiivi" => ["asenna", "asentakaa"],
+    "preesens" => ["asennan", "asennat", "asentaa", "asennamme", "asennatte", "asentavat"],
+    "imperfect" => ["asensin", "asensit", "asensi", "asensimme", "asensitte", "asensivat"],
+    "perfect" => ["asentanut", "asentaneet"],
+    "imperative" => ["asenna", "asentakaa"],
   ],
   "asettaa" => [
-    "pre" => ["asetan", "asetat", "asettaa", "asetamme", "asetatte", "asettavat"],
-    "imp" => ["asetin", "asetit", "asetti", "asetimme", "asetitte", "asettivat"],
+    "preesens" => ["asetan", "asetat", "asettaa", "asetamme", "asetatte", "asettavat"],
+    "imperfect" => ["asetin", "asetit", "asetti", "asetimme", "asetitte", "asettivat"],
+    "perfect" => ["asettanut", "asettaneet"],
+    "imperative" => ["aseta", "asettakaa"],
   ],
   "asettua" => [
-    "pre" => ["asetun", "asetut", "asettuu", "asetumme", "asetutte", "asettuvat"],
-    "imp" => ["asetuin", "asetuit", "asettui", "asetuimme", "asetuitte", "asettuivat"],
+    "preesens" => ["asetun", "asetut", "asettuu", "asetumme", "asetutte", "asettuvat"],
+    "imperfect" => ["asetuin", "asetuit", "asettui", "asetuimme", "asetuitte", "asettuivat"],
+    "perfect" => ["asettunut", "asettuneet"],
+    "imperative" => ["asetu", "asettukaa"],
   ],
   "askarrella" => [
-    "pre" => ["askartelen", "askartelet", "askartelee", "askartelemme", "askartelette", "askartelevat"],
-    "imp" => ["askartelin", "askartelit", "askarteli", "askartelimme", "askartelitte", "askartelivat"],
-    "perfekti" => ["askarrellut", "askarrelleet"],
-    "imperatiivi" => ["askartele", "askarrelkaa"],
+    "preesens" => ["askartelen", "askartelet", "askartelee", "askartelemme", "askartelette", "askartelevat"],
+    "imperfect" => ["askartelin", "askartelit", "askarteli", "askartelimme", "askartelitte", "askartelivat"],
+    "perfect" => ["askarrellut", "askarrelleet"],
+    "imperative" => ["askartele", "askarrelkaa"],
   ],
   "astella" => [
-    "pre" => ["astelen", "astelet", "astelee", "astelemme", "astelette", "astelevat"],
-    "imp" => ["astelin", "astelit", "asteli", "astelimme", "astelitte", "astelivat"],
+    "preesens" => ["astelen", "astelet", "astelee", "astelemme", "astelette", "astelevat"],
+    "imperfect" => ["astelin", "astelit", "asteli", "astelimme", "astelitte", "astelivat"],
+    "perfect" => ["astellut", "astelleet"],
+    "imperative" => ["astele", "astelkaa"],
   ],
   "astua" => [
-    "pre" => ["astun", "astut", "astuu", "astumme", "astutte", "astuvat"],
-    "imp" => ["astuin", "astuit", "astui", "astuimme", "astuitte", "astuivat"],
-    "perfekti" => ["astunut", "astuneet"],
-    "imperatiivi" => ["astu", "astukaa"],
+    "preesens" => ["astun", "astut", "astuu", "astumme", "astutte", "astuvat"],
+    "imperfect" => ["astuin", "astuit", "astui", "astuimme", "astuitte", "astuivat"],
+    "perfect" => ["astunut", "astuneet"],
+    "imperative" => ["astu", "astukaa"],
   ],
   "asua" => [
-    "pre" => ["asun", "asut", "asuu", "asumme", "asutte", "asuvat"],
-    "imp" => ["asuin", "asuit", "asui", "asuimme", "asuitte", "asuivat"],
+    "preesens" => ["asun", "asut", "asuu", "asumme", "asutte", "asuvat"],
+    "imperfect" => ["asuin", "asuit", "asui", "asuimme", "asuitte", "asuivat"],
+    "perfect" => ["asunut", "asuneet"],
+    "imperative" => ["asu", "asukaa"],
   ],
   "auttaa" => [
-    "pre" => ["autan", "autat", "auttaa", "autamme", "autatte", "auttavat"],
-    "imp" => ["autin", "autit", "auttoi", "autimme", "autitte", "auttoivat"],
+    "preesens" => ["autan", "autat", "auttaa", "autamme", "autatte", "auttavat"],
+    "imperfect" => ["autin", "autit", "auttoi", "autimme", "autitte", "auttoivat"],
+    "perfect" => ["auttanut", "auttaneet"],
+    "imperative" => ["auta", "auttakaa"],
   ],
   "avata" => [
-    "pre" => ["avaan", "avaat", "avaa", "avaamme", "avaatte", "avaavat"],
-    "imp" => ["avasin", "avasit", "avasi", "avasimme", "avasitte", "avasivat"],
+    "preesens" => ["avaan", "avaat", "avaa", "avaamme", "avaatte", "avaavat"],
+    "imperfect" => ["avasin", "avasit", "avasi", "avasimme", "avasitte", "avasivat"],
+    "perfect" => ["avannut", "avanneet"],
+    "imperative" => ["avaa", "avatkaa"],
   ],
   "avautua" => [
-    "pre" => ["avaudun", "avaudut", "avautuu", "avaudumme", "avaudutte", "avautuvat"],
-    "imp" => ["avauduin", "avauduit", "avautui", "avauduimme", "avauduitte", "avautuivat"],
-    "perfekti" => ["avautunut", "avautuneet"],
-    "imperatiivi" => ["avaudu", "avautukaa"],
+    "preesens" => ["avaudun", "avaudut", "avautuu", "avaudumme", "avaudutte", "avautuvat"],
+    "imperfect" => ["avauduin", "avauduit", "avautui", "avauduimme", "avauduitte", "avautuivat"],
+    "perfect" => ["avautunut", "avautuneet"],
+    "imperative" => ["avaudu", "avautukaa"],
   ],
   "avustaa" => [
-    "pre" => ["avustan", "avustat", "avustaa", "avustamme", "avustatte", "avustavat"],
-    "imp" => ["avustin", "avustit", "avusti", "avustimme", "avustitte", "avustivat"]
+    "preesens" => ["avustan", "avustat", "avustaa", "avustamme", "avustatte", "avustavat"],
+    "imperfect" => ["avustin", "avustit", "avusti", "avustimme", "avustitte", "avustivat"],
+    "perfect" => ["avustanut", "avustaneet"],
+    "imperative" => ["avusta", "avustakaa"],
   ],
   "edellyttää" => [
-    "pre" => ["edellytän", "edellytät", "edellyttää", "edellytämme", "edellytätte", "edellyttävät"],
-    "imp" => ["edellytin", "edellytit", "edellytti", "edellytimme", "edellytitte", "edellyttivät"]
+    "preesens" => ["edellytän", "edellytät", "edellyttää", "edellytämme", "edellytätte", "edellyttävät"],
+    "imperfect" => ["edellytin", "edellytit", "edellytti", "edellytimme", "edellytitte", "edellyttivät"],
+    "perfect" => ["edellyttänyt", "edellyttäneet"],
+    "imperative" => ["edellytä", "edellyttäkää"],
   ],
   "edetä" => [
-    "pre" => ["etenen", "etenet", "etenee", "etenemme", "etenette", "etenevät"],
-    "imp" => ["etenin", "etenit", "eteni", "etenimme", "etenitte", "etenivät"]
+    "preesens" => ["etenen", "etenet", "etenee", "etenemme", "etenette", "etenevät"],
+    "imperfect" => ["etenin", "etenit", "eteni", "etenimme", "etenitte", "etenivät"],
+    "perfect" => ["etenyt", "eteneet"],
+    "imperative" => ["etene", "edetkää"],
   ],
   "edistyä" => [
-    "pre" => ["edistyn", "edistyt", "edistyy", "edistymme", "edistytte", "edistyvät"],
-    "imp" => ["edistyin", "edistyit", "edistyi", "edistyimme", "edistyitte", "edistyivät"],
-    "perfekti" => ["edistynyt", "edistyneet"],
+    "preesens" => ["edistyn", "edistyt", "edistyy", "edistymme", "edistytte", "edistyvät"],
+    "imperfect" => ["edistyin", "edistyit", "edistyi", "edistyimme", "edistyitte", "edistyivät"],
+    "perfect" => ["edistynyt", "edistyneet"],
+    "imperative" => ["edisty", "edistykää"],
   ],
   "edistää" => [
-    "pre" => ["edistän", "edistät", "edistää", "edistämme", "edistätte", "edistävät"],
-    "imp" => ["edistin", "edistit", "edisti", "edistimme", "edistitte", "edistivät"]
+    "preesens" => ["edistän", "edistät", "edistää", "edistämme", "edistätte", "edistävät"],
+    "imperfect" => ["edistin", "edistit", "edisti", "edistimme", "edistitte", "edistivät"],
+    "perfect" => ["edistänyt", "edistäneet"],
+    "imperative" => ["edistä", "edistäkää"],
   ],
   "edustaa" => [
-    "pre" => ["edustan", "edustat", "edustaa", "edustamme", "edustatte", "edustavat"],
-    "imp" => ["edustin", "edustit", "edusti", "edustimme", "edustitte", "edustivat"]
+    "preesens" => ["edustan", "edustat", "edustaa", "edustamme", "edustatte", "edustavat"],
+    "imperfect" => ["edustin", "edustit", "edusti", "edustimme", "edustitte", "edustivat"],
+    "perfect" => ["edustanut", "edustaneet"],
+    "imperative" => ["edusta", "edustakaa"],
   ],
   "ehdottaa" => [
-    "pre" => ["ehdotan", "ehdotat", "ehdottaa", "ehdotamme", "ehdotatte", "ehdottavat"],
-    "imp" => ["ehdotin", "ehdotit", "ehdotti", "ehdotimme", "ehdotitte", "ehdottivat"]
+    "preesens" => ["ehdotan", "ehdotat", "ehdottaa", "ehdotamme", "ehdotatte", "ehdottavat"],
+    "imperfect" => ["ehdotin", "ehdotit", "ehdotti", "ehdotimme", "ehdotitte", "ehdottivat"],
+    "perfect" => ["ehdottanut", "ehdottaneet"],
+    "imperative" => ["ehdota", "ehdottakaa"],
   ],
   "ehkäistä" => [
-    "pre" => ["ehkäisen", "ehkäiset", "ehkäisee", "ehkäisemme", "ehkäisette", "ehkäisevät"],
-    "imp" => ["ehkäisin", "ehkäisit", "ehkäisi", "ehkäisimme", "ehkäisitte", "ehkäisivät"],
-    "perfekti" => ["ehkäissyt", "ehkäisseet"],
-    "imperatiivi" => ["ehkäise", "ehkäiskää"],
+    "preesens" => ["ehkäisen", "ehkäiset", "ehkäisee", "ehkäisemme", "ehkäisette", "ehkäisevät"],
+    "imperfect" => ["ehkäisin", "ehkäisit", "ehkäisi", "ehkäisimme", "ehkäisitte", "ehkäisivät"],
+    "perfect" => ["ehkäissyt", "ehkäisseet"],
+    "imperative" => ["ehkäise", "ehkäiskää"],
   ],
   "ehtiä" => [
-    "pre" => ["ehdin", "ehdit", "ehtii", "ehdimme", "ehditte", "ehtivät"],
-    "imp" => ["ehdin", "ehdit", "ehti", "ehdimme", "ehditte", "ehtivät"],
-    "perfekti" => ["ehtinyt", "ehtineet"],
-    "imperatiivi" => ["ehdi", "ehtikää"],
+    "preesens" => ["ehdin", "ehdit", "ehtii", "ehdimme", "ehditte", "ehtivät"],
+    "imperfect" => ["ehdin", "ehdit", "ehti", "ehdimme", "ehditte", "ehtivät"],
+    "perfect" => ["ehtinyt", "ehtineet"],
+    "imperative" => ["ehdi", "ehtikää"],
   ],
   "eksyä" => [
-    "pre" => ["eksyn", "eksyt", "eksyy", "eksymme", "eksytte", "eksyvät"],
-    "imp" => ["eksyin", "eksyit", "eksyi", "eksyimme", "eksyitte", "eksyivät"]
+    "preesens" => ["eksyn", "eksyt", "eksyy", "eksymme", "eksytte", "eksyvät"],
+    "imperfect" => ["eksyin", "eksyit", "eksyi", "eksyimme", "eksyitte", "eksyivät"],
+    "perfect" => ["eksynyt", "eksyneet"],
+    "imperative" => ["eksy", "eksykää"],
   ],
   "elää" => [
-    "pre" => ["elän", "elät", "elää", "elämme", "elätte", "elävät"],
-    "imp" => ["elin", "elit", "eli", "elimme", "elitte", "elivät"],
-    "perfekti" => ["elänyt", "eläneet"],
-    "imperatiivi" => ["elä", "eläkää"],
+    "preesens" => ["elän", "elät", "elää", "elämme", "elätte", "elävät"],
+    "imperfect" => ["elin", "elit", "eli", "elimme", "elitte", "elivät"],
+    "perfect" => ["elänyt", "eläneet"],
+    "imperative" => ["elä", "eläkää"],
   ],
   "ennustaa" => [
-    "pre" => ["ennustan", "ennustat", "ennustaa", "ennustamme", "ennustatte", "ennustavat"],
-    "imp" => ["ennustin", "ennustit", "ennusti", "ennustimme", "ennustitte", "ennustivat"]
+    "preesens" => ["ennustan", "ennustat", "ennustaa", "ennustamme", "ennustatte", "ennustavat"],
+    "imperfect" => ["ennustin", "ennustit", "ennusti", "ennustimme", "ennustitte", "ennustivat"],
+    "perfect" => ["ennustanut", "ennustaneet"],
+    "imperative" => ["ennusta", "ennustakaa"],
   ],
   "ennättää" => [
-    "pre" => ["ennätän", "ennätät", "ennättää", "ennätämme", "ennätätte", "ennättävät"],
-    "imp" => ["ennätin", "ennätit", "ennätti", "ennätimme", "ennätitte", "ennättivät"]
+    "preesens" => ["ennätän", "ennätät", "ennättää", "ennätämme", "ennätätte", "ennättävät"],
+    "imperfect" => ["ennätin", "ennätit", "ennätti", "ennätimme", "ennätitte", "ennättivät"],
+    "perfect" => ["ennättänyt", "ennättäneet"],
+    "imperative" => ["ennätä", "ennättäkää"],
   ],
   "epäillä" => [
-    "pre" => ["epäilen", "epäilet", "epäilee", "epäilemme", "epäilette", "epäilevät"],
-    "imp" => ["epäilin", "epäilit", "epäili", "epäilimme", "epäilitte", "epäilivät"],
-    "perfekti" => ["epäillyt", "epäilleet"],
-    "imperatiivi" => ["epäile", "epäilkää"],
+    "preesens" => ["epäilen", "epäilet", "epäilee", "epäilemme", "epäilette", "epäilevät"],
+    "imperfect" => ["epäilin", "epäilit", "epäili", "epäilimme", "epäilitte", "epäilivät"],
+    "perfect" => ["epäillyt", "epäilleet"],
+    "imperative" => ["epäile", "epäilkää"],
   ],
   "epäonnistua" => [
-    "pre" => ["epäonnistun", "epäonnistut", "epäonnistuu", "epäonnistumme", "epäonnistutte", "epäonnistuvat"],
-    "imp" => ["epäonnistuin", "epäonnistuit", "epäonnistui", "epäonnistuimme", "epäonnistuitte", "epäonnistuivat"]
+    "preesens" => ["epäonnistun", "epäonnistut", "epäonnistuu", "epäonnistumme", "epäonnistutte", "epäonnistuvat"],
+    "imperfect" => ["epäonnistuin", "epäonnistuit", "epäonnistui", "epäonnistuimme", "epäonnistuitte", "epäonnistuivat"],
+    "perfect" => ["epäonnistunut", "epäonnistuneet"],
+    "imperative" => ["epäonnistu", "epäonnistukaa"],
   ],
   "erehtyä" => [
-    "pre" => ["erehdyn", "erehdyt", "erehtyy", "erehdymme", "erehdytte", "erehtyvät"],
-    "imp" => ["erehdyin", "erehdyit", "erehtyi", "erehdyimme", "erehdyitte", "erehtyivät"]
+    "preesens" => ["erehdyn", "erehdyt", "erehtyy", "erehdymme", "erehdytte", "erehtyvät"],
+    "imperfect" => ["erehdyin", "erehdyit", "erehtyi", "erehdyimme", "erehdyitte", "erehtyivät"],
+    "perfect" => ["erehtynyt", "erehtyneet"],
+    "imperative" => ["erehdy", "erehtykää"],
   ],
   "erikoistua" => [
-    "pre" => ["erikoistun", "erikoistut", "erikoistuu", "erikoistumme", "erikoistutte", "erikoistuvat"],
-    "imp" => ["erikoistuin", "erikoistuit", "erikoistui", "erikoistuimme", "erikoistuitte", "erikoistuivat"]
+    "preesens" => ["erikoistun", "erikoistut", "erikoistuu", "erikoistumme", "erikoistutte", "erikoistuvat"],
+    "imperfect" => ["erikoistuin", "erikoistuit", "erikoistui", "erikoistuimme", "erikoistuitte", "erikoistuivat"],
+    "perfect" => ["erikoistunut", "erikoistuneet"],
+    "imperative" => ["erikoistu", "erikoistukaa"],
   ],
   "eristää" => [
-    "pre" => ["eristän", "eristät", "eristää", "eristämme", "eristätte", "eristävät"],
-    "imp" => ["eristin", "eristit", "eristi", "eristimme", "eristitte", "eristivät"]
+    "preesens" => ["eristän", "eristät", "eristää", "eristämme", "eristätte", "eristävät"],
+    "imperfect" => ["eristin", "eristit", "eristi", "eristimme", "eristitte", "eristivät"],
+    "perfect" => ["eristänyt", "eristäneet"],
+    "imperative" => ["eristä", "eristäkää"],
   ],
   "erota" => [
-    "pre" => ["eroan", "eroat", "eroaa", "eroamme", "eroatte", "eroavat"],
-    "imp" => ["erosin", "erosit", "erosi", "erosimme", "erositte", "erosivat"],
-    "perfekti" => ["eronnut", "eronneet"],
-    "imperatiivi" => ["eroa", "erotkaa"],
+    "preesens" => ["eroan", "eroat", "eroaa", "eroamme", "eroatte", "eroavat"],
+    "imperfect" => ["erosin", "erosit", "erosi", "erosimme", "erositte", "erosivat"],
+    "perfect" => ["eronnut", "eronneet"],
+    "imperative" => ["eroa", "erotkaa"],
   ],
   "erottaa" => [
-    "pre" => ["erotan", "erotat", "erottaa", "erotamme", "erotatte", "erottavat"],
-    "imp" => ["erotin", "erotit", "erotti", "erotimme", "erotitte", "erottivat"]
+    "preesens" => ["erotan", "erotat", "erottaa", "erotamme", "erotatte", "erottavat"],
+    "imperfect" => ["erotin", "erotit", "erotti", "erotimme", "erotitte", "erottivat"],
+    "perfect" => ["erottanut", "erottaneet"],
+    "imperative" => ["erota", "erottakaa"],
   ],
   "esiintyä" => [
-    "pre" => ["esiinnyn", "esiinnyt", "esiintyy", "esiinnymme", "esiinnytte", "esiintyvät"],
-    "imp" => ["esiinnyin", "esiinnyit", "esiintyi", "esiinnyimme", "esiinnyitte", "esiintyivät"]
+    "preesens" => ["esiinnyn", "esiinnyt", "esiintyy", "esiinnymme", "esiinnytte", "esiintyvät"],
+    "imperfect" => ["esiinnyin", "esiinnyit", "esiintyi", "esiinnyimme", "esiinnyitte", "esiintyivät"],
+    "perfect" => ["esiintynyt", "esiintyneet"],
+    "imperative" => ["esiinny", "esiintykää"],
   ],
   "esitellä" => [
-    "pre" => ["esittelen", "esittelet", "esittelee", "esittelemme", "esittelette", "esittelevät"],
-    "imp" => ["esittelin", "esittelit", "esitteli", "esittelimme", "esittelitte", "esittelivät"]
+    "preesens" => ["esittelen", "esittelet", "esittelee", "esittelemme", "esittelette", "esittelevät"],
+    "imperfect" => ["esittelin", "esittelit", "esitteli", "esittelimme", "esittelitte", "esittelivät"],
+    "perfect" => ["esitellyt", "esitelleet"],
+    "imperative" => ["esittele", "esitelkää"],
   ],
   "esittää" => [
-    "pre" => ["esitän", "esität", "esittää", "esitämme", "esitätte", "esittävät"],
-    "imp" => ["esitin", "esitit", "esitti", "esitimme", "esititte", "esittivät"],
-    "perfekti" => ["esittänyt", "esittäneet"],
-    "imperatiivi" => ["esitä", "esittäkää"],
+    "preesens" => ["esitän", "esität", "esittää", "esitämme", "esitätte", "esittävät"],
+    "imperfect" => ["esitin", "esitit", "esitti", "esitimme", "esititte", "esittivät"],
+    "perfect" => ["esittänyt", "esittäneet"],
+    "imperative" => ["esitä", "esittäkää"],
   ],
   "estää" => [
-    "pre" => ["estän", "estät", "estää", "estämme", "estätte", "estävät"],
-    "imp" => ["estin", "estit", "esti", "estimme", "estitte", "estivät"],
-    "perfekti" => ["estänyt", "estäneet"],
-    "imperatiivi" => ["estä", "estäkää"],
+    "preesens" => ["estän", "estät", "estää", "estämme", "estätte", "estävät"],
+    "imperfect" => ["estin", "estit", "esti", "estimme", "estitte", "estivät"],
+    "perfect" => ["estänyt", "estäneet"],
+    "imperative" => ["estä", "estäkää"],
   ],
   "etsiä" => [
-    "pre" => ["etsin", "etsit", "etsii", "etsimme", "etsitte", "etsivät"],
-    "imp" => ["etsin", "etsit", "etsi", "etsimme", "etsitte", "etsivät"],
-    "perfekti" => ["etsinyt", "etsineet"],
-    "imperatiivi" => ["etsi", "etsikää"],
+    "preesens" => ["etsin", "etsit", "etsii", "etsimme", "etsitte", "etsivät"],
+    "imperfect" => ["etsin", "etsit", "etsi", "etsimme", "etsitte", "etsivät"],
+    "perfect" => ["etsinyt", "etsineet"],
+    "imperative" => ["etsi", "etsikää"],
   ],
   "haastatella" => [
-    "pre" => ["haastattelen", "haastattelet", "haastattelee", "haastattelemme", "haastattelette", "haastattelevat"],
-    "imp" => ["haastattelin", "haastattelit", "haastatteli", "haastattelimme", "haastattelitte", "haastattelivat"],
+    "preesens" => ["haastattelen", "haastattelet", "haastattelee", "haastattelemme", "haastattelette", "haastattelevat"],
+    "imperfect" => ["haastattelin", "haastattelit", "haastatteli", "haastattelimme", "haastattelitte", "haastattelivat"],
+    "perfect" => ["haastatellut", "haastatelleet"],
+    "imperative" => ["haastattele", "haastatelkaa"],
   ],
   "haavoittua" => [
-    "pre" => ["haavoitun", "haavoitut", "haavoittuu", "haavoitumme", "haavoitutte", "haavoittuvat"],
-    "imp" => ["haavoituin", "haavoituit", "haavoittui", "haavoituimme", "haavoituitte", "haavoittuivat"],
+    "preesens" => ["haavoitun", "haavoitut", "haavoittuu", "haavoitumme", "haavoitutte", "haavoittuvat"],
+    "imperfect" => ["haavoituin", "haavoituit", "haavoittui", "haavoituimme", "haavoituitte", "haavoittuivat"],
+    "perfect" => ["haavoittunut", "haavoittuneet"],
+    "imperative" => ["haavoitu", "haavoittukaa"],
   ],
   "hajota" => [
-    "pre" => ["hajoan", "hajoat", "hajoaa", "hajoamme", "hajoatte", "hajoavat"],
-    "imp" => ["hajosin", "hajosit", "hajosi", "hajosimme", "hajositte", "hajosivat"],
-    "perfekti" => ["hajonnut", "hajonneet"],
-    "imperatiivi" => ["hajoa", "hajotkaa"],
+    "preesens" => ["hajoan", "hajoat", "hajoaa", "hajoamme", "hajoatte", "hajoavat"],
+    "imperfect" => ["hajosin", "hajosit", "hajosi", "hajosimme", "hajositte", "hajosivat"],
+    "perfect" => ["hajonnut", "hajonneet"],
+    "imperative" => ["hajoa", "hajotkaa"],
   ],
   "hajottaa" => [
-    "pre" => ["hajotan", "hajotat", "hajottaa", "hajotamme", "hajotatte", "hajottavat"],
-    "imp" => ["hajotin", "hajotit", "hajotti", "hajotimme", "hajotitte", "hajottivat"],
-    "perfekti" => ["hajottanut", "hajottaneet"],
-    "imperatiivi" => ["hajota", "hajottakaa"],
+    "preesens" => ["hajotan", "hajotat", "hajottaa", "hajotamme", "hajotatte", "hajottavat"],
+    "imperfect" => ["hajotin", "hajotit", "hajotti", "hajotimme", "hajotitte", "hajottivat"],
+    "perfect" => ["hajottanut", "hajottaneet"],
+    "imperative" => ["hajota", "hajottakaa"],
   ],
   "hakata" => [
-    "pre" => ["hakkaan", "hakkaat", "hakkaa", "hakkaamme", "hakkaatte", "hakkaavat"],
-    "imp" => ["hakkasin", "hakkasit", "hakkasi", "hakkasimme", "hakkasitte", "hakkasivat"]
+    "preesens" => ["hakkaan", "hakkaat", "hakkaa", "hakkaamme", "hakkaatte", "hakkaavat"],
+    "imperfect" => ["hakkasin", "hakkasit", "hakkasi", "hakkasimme", "hakkasitte", "hakkasivat"],
+    "perfect" => ["hakannut", "hakanneet"],
+    "imperative" => ["hakkaa", "hakatkaa"],
   ],
   "hakea" => [
-    "pre" => ["haen", "haet", "hakee", "haemme", "haette", "hakevat"],
-    "imp" => ["hain", "hait", "haki", "haimme", "haitte", "hakivat"]
+    "preesens" => ["haen", "haet", "hakee", "haemme", "haette", "hakevat"],
+    "imperfect" => ["hain", "hait", "haki", "haimme", "haitte", "hakivat"],
+    "perfect" => ["hakenut", "hakeneet"],
+    "imperative" => ["hae", "hakekaa"],
   ],
   "hakeutua" => [
-    "pre" => ["hakeudun", "hakeudut", "hakeutuu", "hakeudumme", "hakeudutte", "hakeutuvat"],
-    "imp" => ["hakeuduin", "hakeuduit", "hakeutui", "hakeuduimme", "hakeuduitte", "hakeutuivat"]
+    "preesens" => ["hakeudun", "hakeudut", "hakeutuu", "hakeudumme", "hakeudutte", "hakeutuvat"],
+    "imperfect" => ["hakeuduin", "hakeuduit", "hakeutui", "hakeuduimme", "hakeuduitte", "hakeutuivat"],
+    "perfect" => ["hakeutunut", "hakeutuneet"],
+    "imperative" => ["hakeudu", "hakeutukaa"],
   ],
   "hallita" => [
-    "pre" => ["hallitsen", "hallitset", "hallitsee", "hallitsemme", "hallitsette", "hallitsevat"],
-    "imp" => ["hallitsin", "hallitsit", "hallitsi", "hallitsimme", "hallitsitte", "hallitsivat"]
+    "preesens" => ["hallitsen", "hallitset", "hallitsee", "hallitsemme", "hallitsette", "hallitsevat"],
+    "imperfect" => ["hallitsin", "hallitsit", "hallitsi", "hallitsimme", "hallitsitte", "hallitsivat"],
+    "perfect" => ["hallinnut", "hallinneet"],
+    "imperative" => ["hallitse", "hallitkaa"],
   ],
   "haluta" => [
-    "pre" => ["haluan", "haluat", "haluaa", "haluamme", "haluatte", "haluavat"],
-    "imp" => ["halusin", "halusit", "halusi", "halusimme", "halusitte", "halusivat"]
+    "preesens" => ["haluan", "haluat", "haluaa", "haluamme", "haluatte", "haluavat"],
+    "imperfect" => ["halusin", "halusit", "halusi", "halusimme", "halusitte", "halusivat"],
+    "perfect" => ["halunnut", "halunneet"],
+    "imperative" => ["halua", "halutkaa"],
   ],
   "hangata" => [
-    "pre" => ["hankaan", "hankaat", "hankaa", "hankaamme", "hankaatte", "hankaavat"],
-    "imp" => ["hankasin", "hankasit", "hankasi", "hankasimme", "hankasitte", "hankasivat"]
+    "preesens" => ["hankaan", "hankaat", "hankaa", "hankaamme", "hankaatte", "hankaavat"],
+    "imperfect" => ["hankasin", "hankasit", "hankasi", "hankasimme", "hankasitte", "hankasivat"],
+    "perfect" => ["hangannut", "hanganneet"],
+    "imperative" => ["hankaa", "hangatkaa"],
   ],
   "hankkia" => [
-    "pre" => ["hankin", "hankit", "hankkii", "hankimme", "hankitte", "hankkivat"],
-    "imp" => ["hankin", "hankit", "hankki", "hankimme", "hankitte", "hankkivat"]
+    "preesens" => ["hankin", "hankit", "hankkii", "hankimme", "hankitte", "hankkivat"],
+    "imperfect" => ["hankin", "hankit", "hankki", "hankimme", "hankitte", "hankkivat"],
+    "perfect" => ["hankkinut", "hankkineet"],
+    "imperative" => ["hanki", "hankkikaa"],
   ],
   "harjata" => [
-    "pre" => ["harjaan", "harjaat", "harjaa", "harjaamme", "harjaatte", "harjaavat"],
-    "imp" => ["harjasin", "harjasit", "harjasi", "harjasimme", "harjasitte", "harjasivat"]
+    "preesens" => ["harjaan", "harjaat", "harjaa", "harjaamme", "harjaatte", "harjaavat"],
+    "imperfect" => ["harjasin", "harjasit", "harjasi", "harjasimme", "harjasitte", "harjasivat"],
+    "perfect" => ["harjannut", "harjanneet"],
+    "imperative" => ["harjaa", "harjatkaa"],
   ],
   "harjoitella" => [
-    "pre" => ["harjoittelen", "harjoittelet", "harjoittelee", "harjoittelemme", "harjoittelette", "harjoittelevat"],
-    "imp" => ["harjoittelin", "harjoittelit", "harjoitteli", "harjoittelimme", "harjoittelitte", "harjoittelivat"]
+    "preesens" => ["harjoittelen", "harjoittelet", "harjoittelee", "harjoittelemme", "harjoittelette", "harjoittelevat"],
+    "imperfect" => ["harjoittelin", "harjoittelit", "harjoitteli", "harjoittelimme", "harjoittelitte", "harjoittelivat"],
+    "perfect" => ["harjoitellut", "harjoitelleet"],
+    "imperative" => ["harjoittele", "harjoitelkaa"],
   ],
   "harjoittaa" => [
-    "pre" => ["harjoitan", "harjoitat", "harjoittaa", "harjoitamme", "harjoitatte", "harjoittavat"],
-    "imp" => ["harjoitin", "harjoitit", "harjoitti", "harjoitimme", "harjoititte", "harjoittivat"],
+    "preesens" => ["harjoitan", "harjoitat", "harjoittaa", "harjoitamme", "harjoitatte", "harjoittavat"],
+    "imperfect" => ["harjoitin", "harjoitit", "harjoitti", "harjoitimme", "harjoititte", "harjoittivat"],
+    "perfect" => ["harjoittanut", "harjoittaneet"],
+    "imperative" => ["harjoita", "harjoittakaa"],
   ],
   "harkita" => [
-    "pre" => ["harkitsen", "harkitset", "harkitsee", "harkitsemme", "harkitsette", "harkitsevat"],
-    "imp" => ["harkitsin", "harkitsit", "harkitsi", "harkitsimme", "harkitsitte", "harkitsivat"],
-    "perfekti" => ["harkinnut", "harkinneet"],
-    "imperatiivi" => ["harkitse", "harkitkaa"],
+    "preesens" => ["harkitsen", "harkitset", "harkitsee", "harkitsemme", "harkitsette", "harkitsevat"],
+    "imperfect" => ["harkitsin", "harkitsit", "harkitsi", "harkitsimme", "harkitsitte", "harkitsivat"],
+    "perfect" => ["harkinnut", "harkinneet"],
+    "imperative" => ["harkitse", "harkitkaa"],
   ],
   "harppoa" => [
-    "pre" => ["harpon", "harpot", "harppoo", "harpomme", "harpotte", "harppovat"],
-    "imp" => ["harpoin", "harpoit", "harppoi", "harpoimme", "harpoitte", "harppoivat"],
-    "perfekti" => ["harpponut", "harpponeet"],
-    "imperatiivi" => ["harpo", "harppokaa"],
+    "preesens" => ["harpon", "harpot", "harppoo", "harpomme", "harpotte", "harppovat"],
+    "imperfect" => ["harpoin", "harpoit", "harppoi", "harpoimme", "harpoitte", "harppoivat"],
+    "perfect" => ["harpponut", "harpponeet"],
+    "imperative" => ["harpo", "harppokaa"],
   ],
   "harrastaa" => [
-    "pre" => ["harrastan", "harrastat", "harrastaa", "harrastamme", "harrastatte", "harrastavat"],
-    "imp" => ["harrastin", "harrastit", "harrasti", "harrastimme", "harrastitte", "harrastivat"],
-    "perfekti" => ["harrastanut", "harrastaneet"],
-    "imperatiivi" => ["harrasta", "harrastakaa"],
+    "preesens" => ["harrastan", "harrastat", "harrastaa", "harrastamme", "harrastatte", "harrastavat"],
+    "imperfect" => ["harrastin", "harrastit", "harrasti", "harrastimme", "harrastitte", "harrastivat"],
+    "perfect" => ["harrastanut", "harrastaneet"],
+    "imperative" => ["harrasta", "harrastakaa"],
   ],
   "haudata" => [
-    "pre" => ["hautaan", "hautaat", "hautaa", "hautaamme", "hautaatte", "hautaavat"],
-    "imp" => ["hautasin", "hautasit", "hautasi", "hautasimme", "hautasitte", "hautasivat"],
-    "perfekti" => ["haudannut", "haudanneet"],
-    "imperatiivi" => ["hautaa", "haudatkaa"],
+    "preesens" => ["hautaan", "hautaat", "hautaa", "hautaamme", "hautaatte", "hautaavat"],
+    "imperfect" => ["hautasin", "hautasit", "hautasi", "hautasimme", "hautasitte", "hautasivat"],
+    "perfect" => ["haudannut", "haudanneet"],
+    "imperative" => ["hautaa", "haudatkaa"],
   ],
   "havaita" => [
-    "pre" => ["havaitsen", "havaitset", "havaitsee", "havaitsemme", "havaitsette", "havaitsevat"],
-    "imp" => ["havaitsin", "havaitsit", "havaitsi", "havaitsimme", "havaitsitte", "havaitsivat"],
+    "preesens" => ["havaitsen", "havaitset", "havaitsee", "havaitsemme", "havaitsette", "havaitsevat"],
+    "imperfect" => ["havaitsin", "havaitsit", "havaitsi", "havaitsimme", "havaitsitte", "havaitsivat"],
+    "perfect" => ["hapainnut", "hapainneet"],
+    "imperative" => ["havaitse", "havaitkaa"],
   ],
   "heitellä" => [
-    "pre" => ["heittelen", "heittelet", "heittelee", "heittelemme", "heittelette", "heittelevät"],
-    "imp" => ["heittelin", "heittelit", "heitteli", "heittelimme", "heittelitte", "heittelivät"],
+    "preesens" => ["heittelen", "heittelet", "heittelee", "heittelemme", "heittelette", "heittelevät"],
+    "imperfect" => ["heittelin", "heittelit", "heitteli", "heittelimme", "heittelitte", "heittelivät"],
+    "perfect" => ["heitellyt", "heitelleet"],
+    "imperative" => ["heittele", "heitelkää"],
   ],
   "heittää" => [
-    "pre" => ["heitän", "heität", "heittää", "heitämme", "heitätte", "heittävät"],
-    "imp" => ["heitin", "heitit", "heitti", "heitimme", "heititte", "heittivät"],
+    "preesens" => ["heitän", "heität", "heittää", "heitämme", "heitätte", "heittävät"],
+    "imperfect" => ["heitin", "heitit", "heitti", "heitimme", "heititte", "heittivät"],
+    "perfect" => ["heittänyt", "heittäneet"],
+    "imperative" => ["heitä", "heittäkää"],
   ],
   "helpottaa" => [
-    "pre" => ["helpotan", "helpotat", "helpottaa", "helpotamme", "helpotatte", "helpottavat"],
-    "imp" => ["helpotin", "helpotit", "helpotti", "helpotimme", "helpotitte", "helpottivat"],
+    "preesens" => ["helpotan", "helpotat", "helpottaa", "helpotamme", "helpotatte", "helpottavat"],
+    "imperfect" => ["helpotin", "helpotit", "helpotti", "helpotimme", "helpotitte", "helpottivat"],
+    "perfect" => ["helpottanut", "helpottaneet"],
+    "imperative" => ["helpota", "helpottakaa"],
   ],
   "hengittää" => [
-    "pre" => ["hengitän", "hengität", "hengittää", "hengitämme", "hengitätte", "hengittävät"],
-    "imp" => ["hengitin", "hengitit", "hengitti", "hengitimme", "hengititte", "hengittivät"],
+    "preesens" => ["hengitän", "hengität", "hengittää", "hengitämme", "hengitätte", "hengittävät"],
+    "imperfect" => ["hengitin", "hengitit", "hengitti", "hengitimme", "hengititte", "hengittivät"],
+    "perfect" => ["hengittänyt", "hengittäneet"],
+    "imperative" => ["hengitä", "hengittäkää"],
   ],
   "herjetä" => [
-    "pre" => ["herkenen", "herkenet", "herkenee", "herkenemme", "herkenette", "herkenevät"],
-    "imp" => ["herkenin", "herkenit", "herkeni", "herkenimme", "herkenitte", "herkenivät"]
+    "preesens" => ["herkenen", "herkenet", "herkenee", "herkenemme", "herkenette", "herkenevät"],
+    "imperfect" => ["herkenin", "herkenit", "herkeni", "herkenimme", "herkenitte", "herkenivät"],
+    "perfect" => ["herkennyt", "herkenneet"],
+    "imperative" => ["herkene", "herjetkää"],
   ],
   "herättää" => [
-    "pre" => ["herätän", "herätät", "herättää", "herätämme", "herätätte", "herättävät"],
-    "imp" => ["herätin", "herätit", "herätti", "herätimme", "herätitte", "herättivät"]
+    "preesens" => ["herätän", "herätät", "herättää", "herätämme", "herätätte", "herättävät"],
+    "imperfect" => ["herätin", "herätit", "herätti", "herätimme", "herätitte", "herättivät"],
+    "perfect" => ["herättänyt", "herättäneet"],
+    "imperative" => ["herätä", "herättäkää"],
   ],
   "herätä" => [
-    "pre" => ["herään", "heräät", "herää", "heräämme", "heräätte", "heräävät"],
-    "imp" => ["heräsin", "heräsit", "heräsi", "heräsimme", "heräsitte", "heräsivät"]
+    "preesens" => ["herään", "heräät", "herää", "heräämme", "heräätte", "heräävät"],
+    "imperfect" => ["heräsin", "heräsit", "heräsi", "heräsimme", "heräsitte", "heräsivät"],
+    "perfect" => ["herännyt", "heränneet"],
+    "imperative" => ["herää", "herätkää"],
   ],
   "hirnua" => [
-    "pre" => ["hirnun", "hirnut", "hirnuu", "hirnumme", "hirnutte", "hirnuvat"],
-    "imp" => ["hirnuin", "hirnuit", "hirnui", "hirnuimme", "hirnuitte", "hirnuivat"],
+    "preesens" => ["hirnun", "hirnut", "hirnuu", "hirnumme", "hirnutte", "hirnuvat"],
+    "imperfect" => ["hirnuin", "hirnuit", "hirnui", "hirnuimme", "hirnuitte", "hirnuivat"],
+    "perfect" => ["hirnunut", "hirnuneet"],
+    "imperative" => ["hirnu", "hirnukaa"],
   ],
   "hiihtää" => [
-    "pre" => ["hiihdän", "hiihdät", "hiihtää", "hiihdämme", "hiihdätte", "hiihtävät"],
-    "imp" => ["hiihdin", "hiihdit", "hiihti", "hiihdimme", "hiihditte", "hiihtivät"],
+    "preesens" => ["hiihdän", "hiihdät", "hiihtää", "hiihdämme", "hiihdätte", "hiihtävät"],
+    "imperfect" => ["hiihdin", "hiihdit", "hiihti", "hiihdimme", "hiihditte", "hiihtivät"],
+    "perfect" => ["hiihtänyt", "hiihtäneet"],
+    "imperative" => ["hiihdä", "hiihtäkää"],
   ],
   "hoitaa" => [
-    "pre" => ["hoidan", "hoidat", "hoitaa", "hoidamme", "hoidatte", "hoitavat"],
-    "imp" => ["hoidin", "hoidit", "hoiti", "hoidimme", "hoiditte", "hoitivat"],
+    "preesens" => ["hoidan", "hoidat", "hoitaa", "hoidamme", "hoidatte", "hoitavat"],
+    "imperfect" => ["hoidin", "hoidit", "hoiti", "hoidimme", "hoiditte", "hoitivat"],
+    "perfect" => ["hoitanut", "hoitaneet"],
+    "imperative" => ["hoida", "hoitakaa"],
   ],
   "houkutella" => [
-    "pre" => ["houkuttelen", "houkuttelet", "houkuttelee", "houkuttelemme", "houkuttelette", "houkuttelevat"],
-    "imp" => ["houkuttelin", "houkuttelit", "houkutteli", "houkuttelimme", "houkuttelitte", "houkuttelivat"],
+    "preesens" => ["houkuttelen", "houkuttelet", "houkuttelee", "houkuttelemme", "houkuttelette", "houkuttelevat"],
+    "imperfect" => ["houkuttelin", "houkuttelit", "houkutteli", "houkuttelimme", "houkuttelitte", "houkuttelivat"],
+    "perfect" => ["houkutellut", "houkutelleet"],
+    "imperative" => ["houkuttele", "houkutelkaa"],
   ],
   "huolehtia" => [
-    "pre" => ["huolehdin", "huolehdit", "huolehtii", "huolehdimme", "huolehditte", "huolehtivat"],
-    "imp" => ["huolehdin", "huolehdit", "huolehti", "huolehdimme", "huolehditte", "huolehtivat"],
+    "preesens" => ["huolehdin", "huolehdit", "huolehtii", "huolehdimme", "huolehditte", "huolehtivat"],
+    "imperfect" => ["huolehdin", "huolehdit", "huolehti", "huolehdimme", "huolehditte", "huolehtivat"],
+    "perfect" => ["huolehtinut", "huolehtineet"],
+    "imperative" => ["huolehdi", "huolehtikaa"],
   ],
   "huolia" => [
-    "pre" => ["huolin", "huolit", "huolii", "huolimme", "huolitte", "huolivat"],
-    "imp" => ["huolin", "huolit", "huoli", "huolimme", "huolitte", "huolivat"],
-    "perfekti" => ["huolinut", "huolineet"],
+    "preesens" => ["huolin", "huolit", "huolii", "huolimme", "huolitte", "huolivat"],
+    "imperfect" => ["huolin", "huolit", "huoli", "huolimme", "huolitte", "huolivat"],
+    "perfect" => ["huolinut", "huolineet"],
+    "imperative" => ["huoli", "huolikaa"],
   ],
   "huomauttaa" => [
-    "pre" => ["huomautan", "huomautat", "huomauttaa", "huomautamme", "huomautatte", "huomauttavat"],
-    "imp" => ["huomautin", "huomautit", "huomauttoi", "huomautimme", "huomautitte", "huomauttoivat"]
+    "preesens" => ["huomautan", "huomautat", "huomauttaa", "huomautamme", "huomautatte", "huomauttavat"],
+    "imperfect" => ["huomautin", "huomautit", "huomauttoi", "huomautimme", "huomautitte", "huomauttoivat"],
+    "perfect" => ["huomauttanut", "huomauttaneet"],
+    "imperative" => ["huomauta", "huomauttakaa"],
   ],
   "huutaa" => [
-    "pre" => ["huudan", "huudat", "huutaa", "huudamme", "huudatte", "huutavat"],
-    "imp" => ["huudin", "huudit", "huuti", "huudimme", "huuditte", "huutivat"]
+    "preesens" => ["huudan", "huudat", "huutaa", "huudamme", "huudatte", "huutavat"],
+    "imperfect" => ["huudin", "huudit", "huuti", "huudimme", "huuditte", "huutivat"],
+    "perfect" => ["huutanut", "huutaneet"],
+    "imperative" => ["huuda", "huutakaa"],
   ],
   "hylätä" => [
-    "pre" => ["hylkään", "hylkäät", "hylkää", "hylkäämme", "hylkäätte", "hylkäävät"],
-    "imp" => ["hylkäsin", "hylkäsit", "hylkäsi", "hylkäsimme", "hylkäsitte", "hylkäsivät"]
+    "preesens" => ["hylkään", "hylkäät", "hylkää", "hylkäämme", "hylkäätte", "hylkäävät"],
+    "imperfect" => ["hylkäsin", "hylkäsit", "hylkäsi", "hylkäsimme", "hylkäsitte", "hylkäsivät"],
+    "perfect" => ["hylännyt", "hylänneet"],
+    "imperative" => ["hylkää", "hylätkää"],
   ],
   "hymyillä" => [
-    "pre" => ["hymyilen", "hymyilet", "hymyilee", "hymyilemme", "hymyilette", "hymyilevät"],
-    "imp" => ["hymyilin", "hymyilit", "hymyili", "hymyilimme", "hymyilitte", "hymyilivät"]
+    "preesens" => ["hymyilen", "hymyilet", "hymyilee", "hymyilemme", "hymyilette", "hymyilevät"],
+    "imperfect" => ["hymyilin", "hymyilit", "hymyili", "hymyilimme", "hymyilitte", "hymyilivät"],
+    "perfect" => ["hymyillyt", "hymyilleet"],
+    "imperative" => ["hymyile", "hymyilkää"],
   ],
   "hypätä" => [
-    "pre" => ["hyppään", "hyppäät", "hyppää", "hyppäämme", "hyppäätte", "hyppäävät"],
-    "imp" => ["hyppäsin", "hyppäsit", "hyppäsi", "hyppäsimme", "hyppäsitte", "hyppäsivät"]
+    "preesens" => ["hyppään", "hyppäät", "hyppää", "hyppäämme", "hyppäätte", "hyppäävät"],
+    "imperfect" => ["hyppäsin", "hyppäsit", "hyppäsi", "hyppäsimme", "hyppäsitte", "hyppäsivät"],
+    "perfect" => ["hypännyt", "hypänneet"],
+    "imperative" => ["hyppää", "hypätkää"],
   ],
   "hyväksyä" => [
-    "pre" => ["hyväksyn", "hyväksyt", "hyväksyy", "hyväksymme", "hyväksytte", "hyväksyvät"],
-    "imp" => ["hyväksyin", "hyväksyit", "hyväksyi", "hyväksyimme", "hyväksyitte", "hyväksyivät"]
+    "preesens" => ["hyväksyn", "hyväksyt", "hyväksyy", "hyväksymme", "hyväksytte", "hyväksyvät"],
+    "imperfect" => ["hyväksyin", "hyväksyit", "hyväksyi", "hyväksyimme", "hyväksyitte", "hyväksyivät"],
+    "perfect" => ["hyväksynyt", "hyväksyneet"],
+    "imperative" => ["hyväksy", "hyväksykää"],
   ],
   "hyökätä" => [
-    "pre" => ["hyökkään", "hyökkäät", "hyökkää", "hyökkäämme", "hyökkäätte", "hyökkäävät"],
-    "imp" => ["hyökkäsin", "hyökkäsit", "hyökkäsi", "hyökkäsimme", "hyökkäsitte", "hyökkäsivät"]
+    "preesens" => ["hyökkään", "hyökkäät", "hyökkää", "hyökkäämme", "hyökkäätte", "hyökkäävät"],
+    "imperfect" => ["hyökkäsin", "hyökkäsit", "hyökkäsi", "hyökkäsimme", "hyökkäsitte", "hyökkäsivät"],
+    "perfect" => ["hyökännyt", "hyökänneet"],
+    "imperative" => ["hyökkää", "hyökätkää"],
   ],
   "häiritä" => [
-    "pre" => ["häiritsen", "häiritset", "häiritsee", "häiritsemme", "häiritsette", "häiritsevät"],
-    "imp" => ["häiritsin", "häiritsit", "häiritsi", "häiritsimme", "häiritsitte", "häiritsivät"]
+    "preesens" => ["häiritsen", "häiritset", "häiritsee", "häiritsemme", "häiritsette", "häiritsevät"],
+    "imperfect" => ["häiritsin", "häiritsit", "häiritsi", "häiritsimme", "häiritsitte", "häiritsivät"],
+    "perfect" => ["häirinnyt", "häirinneet"],
+    "imperative" => ["häiritse", "häiritkää"],
   ],
   "hävittää" => [
-    "pre" => ["hävitän", "hävität", "hävittää", "hävitämme", "hävitätte", "hävittävät"],
-    "imp" => ["hävitin", "hävitit", "hävitti", "hävitimme", "hävititte", "hävittivät"]
+    "preesens" => ["hävitän", "hävität", "hävittää", "hävitämme", "hävitätte", "hävittävät"],
+    "imperfect" => ["hävitin", "hävitit", "hävitti", "hävitimme", "hävititte", "hävittivät"],
+    "perfect" => ["hävittänyt", "hävittäneet"],
+    "imperative" => ["hävitä", "hävittäkää"],
   ],
   "hävitä" => [
-    "pre" => ["häviän", "häviät", "häviää", "häviämme", "häviätte", "häviävät"],
-    "imp" => ["hävisin", "hävisit", "hävisi", "hävisimme", "hävisitte", "hävisivät"]
+    "preesens" => ["häviän", "häviät", "häviää", "häviämme", "häviätte", "häviävät"],
+    "imperfect" => ["hävisin", "hävisit", "hävisi", "hävisimme", "hävisitte", "hävisivät"],
+    "perfect" => ["hävinnyt", "hävinneet"],
+    "imperative" => ["häviä", "hävitkää"],
   ],
   "ihailla" => [
-    "pre" => ["ihailen", "ihailet", "ihailee", "ihailemme", "ihailette", "ihailevat"],
-    "imp" => ["ihailin", "ihailit", "ihaili", "ihailimme", "ihailitte", "ihailivat"]
+    "preesens" => ["ihailen", "ihailet", "ihailee", "ihailemme", "ihailette", "ihailevat"],
+    "imperfect" => ["ihailin", "ihailit", "ihaili", "ihailimme", "ihailitte", "ihailivat"],
+    "perfect" => ["ihaillut", "ihailleet"],
+    "imperative" => ["ihaile", "ihailkaa"],
   ],
   "ihastua" => [
-    "pre" => ["ihastun", "ihastut", "ihastuu", "ihastumme", "ihastutte", "ihastuvat"],
-    "imp" => ["ihastuin", "ihastuit", "ihastui", "ihastuimme", "ihastuitte", "ihastuivat"]
+    "preesens" => ["ihastun", "ihastut", "ihastuu", "ihastumme", "ihastutte", "ihastuvat"],
+    "imperfect" => ["ihastuin", "ihastuit", "ihastui", "ihastuimme", "ihastuitte", "ihastuivat"],
+    "perfect" => ["ihastunut", "ihastuneet"],
+    "imperative" => ["ihastu", "ihastukaa"],
   ],
   "ihmetellä" => [
-    "pre" => ["ihmettelen", "ihmettelet", "ihmettelee", "ihmettelemme", "ihmettelette", "ihmettelevät"],
-    "imp" => ["ihmettelin", "ihmettelit", "ihmetteli", "ihmettelimme", "ihmettelitte", "ihmettelivät"]
+    "preesens" => ["ihmettelen", "ihmettelet", "ihmettelee", "ihmettelemme", "ihmettelette", "ihmettelevät"],
+    "imperfect" => ["ihmettelin", "ihmettelit", "ihmetteli", "ihmettelimme", "ihmettelitte", "ihmettelivät"],
+    "perfect" => ["ihmetellyt", "ihmetelleet"],
+    "imperative" => ["ihmettele", "ihmetelkää"],
   ],
   "ilmaista" => [
-    "pre" => ["ilmaisen", "ilmaiset", "ilmaisee", "ilmaisemme", "ilmaisette", "ilmaisevat"],
-    "imp" => ["ilmaisin", "ilmaisit", "ilmaisi", "ilmaisimme", "ilmaisitte", "ilmaisivat"]
+    "preesens" => ["ilmaisen", "ilmaiset", "ilmaisee", "ilmaisemme", "ilmaisette", "ilmaisevat"],
+    "imperfect" => ["ilmaisin", "ilmaisit", "ilmaisi", "ilmaisimme", "ilmaisitte", "ilmaisivat"],
+    "perfect" => ["ilmaissut", "ilmaisseet"],
+    "imperative" => ["ilmaise", "ilmaiskaa"],
   ],
   "ilmestyä" => [
-    "pre" => ["ilmestyn", "ilmestyt", "ilmestyy", "ilmestymme", "ilmestytte", "ilmestyvät"],
-    "imp" => ["ilmestyin", "ilmestyit", "ilmestyi", "ilmestyimme", "ilmestyitte", "ilmestyivät"],
+    "preesens" => ["ilmestyn", "ilmestyt", "ilmestyy", "ilmestymme", "ilmestytte", "ilmestyvät"],
+    "imperfect" => ["ilmestyin", "ilmestyit", "ilmestyi", "ilmestyimme", "ilmestyitte", "ilmestyivät"],
+    "perfect" => ["ilmestynyt", "ilmestyneet"],
+    "imperative" => ["ilmesty", "ilmestykää"],
   ],
   "ilmoittaa" => [
-    "pre" => ["ilmoitan", "ilmoitat", "ilmoittaa", "ilmoitamme", "ilmoitatte", "ilmoittavat"],
-    "imp" => ["ilmoitin", "ilmoitit", "ilmoitti", "ilmoitimme", "ilmoititte", "ilmoittivat"]
+    "preesens" => ["ilmoitan", "ilmoitat", "ilmoittaa", "ilmoitamme", "ilmoitatte", "ilmoittavat"],
+    "imperfect" => ["ilmoitin", "ilmoitit", "ilmoitti", "ilmoitimme", "ilmoititte", "ilmoittivat"],
+    "perfect" => ["ilmoittanut", "ilmoittaneet"],
+    "imperative" => ["ilmoita", "ilmoittakaa"],
   ],
   "iloita" => [
-    "pre" => ["iloitsen", "iloitset", "iloitsee", "iloitsemme", "iloitsette", "iloitsevat"],
-    "imp" => ["iloitsin", "iloitsit", "iloitsi", "iloitsimme", "iloitsitte", "iloitsivat"]
+    "preesens" => ["iloitsen", "iloitset", "iloitsee", "iloitsemme", "iloitsette", "iloitsevat"],
+    "imperfect" => ["iloitsin", "iloitsit", "iloitsi", "iloitsimme", "iloitsitte", "iloitsivat"],
+    "perfect" => ["iloinnut", "iloinneet"],
+    "imperative" => ["iloitse", "iloitkaa"],
   ],
   "innostua" => [
-    "pre" => ["innostun", "innostut", "innostuu", "innostumme", "innostutte", "innostuvat"],
-    "imp" => ["innostuin", "innostuit", "innostui", "innostuimme", "innostuitte", "innostuivat"]
+    "preesens" => ["innostun", "innostut", "innostuu", "innostumme", "innostutte", "innostuvat"],
+    "imperfect" => ["innostuin", "innostuit", "innostui", "innostuimme", "innostuitte", "innostuivat"],
+    "perfect" => ["innostunut", "innostuneet"],
+    "imperative" => ["innostu", "innostukaa"],
   ],
   "irrota" => [
-    "pre" => ["irtoan", "irtoat", "irtoaa", "irtoamme", "irtoatte", "irtoavat"],
-    "imp" => ["irtosin", "irtosit", "irtosi", "irtosimme", "irtositte", "irtosivat"]
+    "preesens" => ["irtoan", "irtoat", "irtoaa", "irtoamme", "irtoatte", "irtoavat"],
+    "imperfect" => ["irtosin", "irtosit", "irtosi", "irtosimme", "irtositte", "irtosivat"],
+    "perfect" => ["irronnut", "irronneet"],
+    "imperative" => ["irtoa", "irrotkaa"],
   ],
   "irrottaa" => [
-    "pre" => ["irrotan", "irrotat", "irrottaa", "irrotamme", "irrotatte", "irrottavat"],
-    "imp" => ["irrotin", "irrotit", "irrotti", "irrotimme", "irrotitte", "irrottivat"]
+    "preesens" => ["irrotan", "irrotat", "irrottaa", "irrotamme", "irrotatte", "irrottavat"],
+    "imperfect" => ["irrotin", "irrotit", "irrotti", "irrotimme", "irrotitte", "irrottivat"],
+    "perfect" => ["irrottanut", "irrottaneet"],
+    "imperative" => ["irrota", "irrottakaa"],
   ],
   "irvistellä" => [
-    "pre" => ["irvistelen", "irvistelet", "irvistelee", "irvistelemme", "irvistelette", "irvistelevät"],
-    "imp" => ["irvistelin", "irvistelit", "irvisteli", "irvistelimme", "irvistelitte", "irvistelivät"]
+    "preesens" => ["irvistelen", "irvistelet", "irvistelee", "irvistelemme", "irvistelette", "irvistelevät"],
+    "imperfect" => ["irvistelin", "irvistelit", "irvisteli", "irvistelimme", "irvistelitte", "irvistelivät"],
+    "perfect" => ["irvistellyt", "irvistelleet"],
+    "imperative" => ["irvistele", "irvistelkää"],
   ],
   "iskeä" => [
-    "pre" => ["isken", "isket", "iskee", "iskemme", "iskette", "iskevät"],
-    "imp" => ["iskin", "iskit", "iski", "iskimme", "iskitte", "iskivät"],
-    "perfekti" => ["iskenyt", "iskeneet"],
+    "preesens" => ["isken", "isket", "iskee", "iskemme", "iskette", "iskevät"],
+    "imperfect" => ["iskin", "iskit", "iski", "iskimme", "iskitte", "iskivät"],
+    "perfect" => ["iskenyt", "iskeneet"],
+    "imperative" => ["iske", "iskekää"],
   ],
   "istua" => [
-    "pre" => ["istun", "istut", "istuu", "istumme", "istutte", "istuvat"],
-    "imp" => ["istuin", "istuit", "istui", "istuimme", "istuitte", "istuivat"]
+    "preesens" => ["istun", "istut", "istuu", "istumme", "istutte", "istuvat"],
+    "imperfect" => ["istuin", "istuit", "istui", "istuimme", "istuitte", "istuivat"],
+    "perfect" => ["istunut", "istuneet"],
+    "imperative" => ["istu", "istukaa"],
   ],
   "istuttaa" => [
-    "pre" => ["istutan", "istutat", "istuttaa", "istutamme", "istutatte", "istuttavat"],
-    "imp" => ["istutin", "istutit", "istutti", "istutimme", "istutitte", "istuttivat"]
+    "preesens" => ["istutan", "istutat", "istuttaa", "istutamme", "istutatte", "istuttavat"],
+    "imperfect" => ["istutin", "istutit", "istutti", "istutimme", "istutitte", "istuttivat"],
+    "perfect" => ["istuttanut", "istuttaneet"],
+    "imperative" => ["istuta", "istuttakaa"],
   ],
   "itkeä" => [
-    "pre" => ["itken", "itket", "itkee", "itkemme", "itkette", "itkevät"],
-    "imp" => ["itkin", "itkit", "itki", "itkimme", "itkitte", "itkivät"]
+    "preesens" => ["itken", "itket", "itkee", "itkemme", "itkette", "itkevät"],
+    "imperfect" => ["itkin", "itkit", "itki", "itkimme", "itkitte", "itkivät"],
+    "perfect" => ["itkenyt", "itkeneet"],
+    "imperative" => ["itke", "itkekää"],
   ],
   "jakaa" => [
-    "pre" => ["jaan", "jaat", "jakaa", "jaamme", "jaatte", "jakaa"],
-    "imp" => ["jaoin", "jaoit", "jakoi", "jaoimme", "jaoitte", "jakoivat"],
-    "perfekti" => ["jakanut", "jakaneet"],
+    "preesens" => ["jaan", "jaat", "jakaa", "jaamme", "jaatte", "jakaa"],
+    "imperfect" => ["jaoin", "jaoit", "jakoi", "jaoimme", "jaoitte", "jakoivat"],
+    "perfect" => ["jakanut", "jakaneet"],
+    "imperative" => ["jaa", "jakakaa"],
   ],
   "jaksaa" => [
-    "pre" => ["jaksan", "jaksat", "jaksaa", "jaksamme", "jaksatte", "jaksavat"],
-    "imp" => ["jaksoin", "jaksoit", "jaksoi", "jaksoimme", "jaksoitte", "jaksoivat"]
+    "preesens" => ["jaksan", "jaksat", "jaksaa", "jaksamme", "jaksatte", "jaksavat"],
+    "imperfect" => ["jaksoin", "jaksoit", "jaksoi", "jaksoimme", "jaksoitte", "jaksoivat"],
+    "perfect" => ["jaksanut", "jaksaneet"],
+    "imperative" => ["jaksa", "jaksakaa"],
   ],
   "jatkaa" => [
-    "pre" => ["jatkan", "jatkat", "jatkaa", "jatkamme", "jatkatte", "jatkaa"],
-    "imp" => ["jatkoin", "jatkoit", "jatkoi", "jatkoimme", "jatkoitte", "jatkoivat"]
+    "preesens" => ["jatkan", "jatkat", "jatkaa", "jatkamme", "jatkatte", "jatkaa"],
+    "imperfect" => ["jatkoin", "jatkoit", "jatkoi", "jatkoimme", "jatkoitte", "jatkoivat"],
+    "perfect" => ["jatkanut", "jatkaneet"],
+    "imperative" => ["jatka", "jatkakaa"],
   ],
   "jatkua" => [
-    "pre" => ["jatkun", "jatkut", "jatkuu", "jatkumme", "jatkutte", "jatkuvat"],
-    "imp" => ["jatkuin", "jatkuit", "jatkui", "jatkuimme", "jatkuitte", "jatkuivat"]
+    "preesens" => ["jatkun", "jatkut", "jatkuu", "jatkumme", "jatkutte", "jatkuvat"],
+    "imperfect" => ["jatkuin", "jatkuit", "jatkui", "jatkuimme", "jatkuitte", "jatkuivat"],
+    "perfect" => ["jatkunut", "jatkuneet"],
+    "imperative" => ["jatku", "jatkukaa"],
   ],
   "johtaa" => [
-    "pre" => ["johdan", "johdat", "johtaa", "johdamme", "johdatte", "johtavat"],
-    "imp" => ["johdin", "johdit", "johti", "johdimme", "johditte", "johtivat"]
+    "preesens" => ["johdan", "johdat", "johtaa", "johdamme", "johdatte", "johtavat"],
+    "imperfect" => ["johdin", "johdit", "johti", "johdimme", "johditte", "johtivat"],
+    "perfect" => ["johtanut", "johtaneet"],
+    "imperative" => ["johda", "johtakaa"],
   ],
   "johtua" => [
-    "pre" => ["johdun", "johdut", "johtuu", "johdumme", "johdutte", "johtuvat"],
-    "imp" => ["johduin", "johduit", "johtui", "johduimme", "johduitte", "johtuivat"]
+    "preesens" => ["johdun", "johdut", "johtuu", "johdumme", "johdutte", "johtuvat"],
+    "imperfect" => ["johduin", "johduit", "johtui", "johduimme", "johduitte", "johtuivat"],
+    "perfect" => ["johtunut", "johtuneet"],
+    "imperative" => ["johdu", "johtukaa"],
   ],
   "jouduttaa" => [
-    "pre" => ["joudutan", "joudutat", "jouduttaa", "joudutamme", "joudutatte", "jouduttavat"],
-    "imp" => ["joudutin", "joudutit", "joudutti", "joudutimme", "joudutitte", "jouduttivat"]
+    "preesens" => ["joudutan", "joudutat", "jouduttaa", "joudutamme", "joudutatte", "jouduttavat"],
+    "imperfect" => ["joudutin", "joudutit", "joudutti", "joudutimme", "joudutitte", "jouduttivat"],
+    "perfect" => ["jouduttanut", "jouduttaneet"],
+    "imperative" => ["jouduta", "jouduttakaa"],
   ],
   "joutua" => [
-    "pre" => ["joudun", "joudut", "joutuu", "joudumme", "joudutte", "joutuvat"],
-    "imp" => ["jouduin", "jouduit", "joutui", "jouduimme", "jouduitte", "joutuivat"]
+    "preesens" => ["joudun", "joudut", "joutuu", "joudumme", "joudutte", "joutuvat"],
+    "imperfect" => ["jouduin", "jouduit", "joutui", "jouduimme", "jouduitte", "joutuivat"],
+    "perfect" => ["joutunut", "joutuneet"],
+    "imperative" => ["joudu", "joutukaa"],
   ],
   "julistaa" => [
-    "pre" => ["julistan", "julistat", "julistaa", "julistamme", "julistatte", "julistavat"],
-    "imp" => ["julistin", "julistit", "julisti", "julistimme", "julistitte", "julistivat"]
+    "preesens" => ["julistan", "julistat", "julistaa", "julistamme", "julistatte", "julistavat"],
+    "imperfect" => ["julistin", "julistit", "julisti", "julistimme", "julistitte", "julistivat"],
+    "perfect" => ["julistanut", "julistaneet"],
+    "imperative" => ["julista", "julistakaa"],
   ],
   "julkaista" => [
-    "pre" => ["julkaisen", "julkaiset", "julkaisee", "julkaisemme", "julkaisette", "julkaisevat"],
-    "imp" => ["julkaisin", "julkaisit", "julkaisi", "julkaisimme", "julkaisitte", "julkaisivat"]
+    "preesens" => ["julkaisen", "julkaiset", "julkaisee", "julkaisemme", "julkaisette", "julkaisevat"],
+    "imperfect" => ["julkaisin", "julkaisit", "julkaisi", "julkaisimme", "julkaisitte", "julkaisivat"],
+    "perfect" => ["julkaissut", "julkaisseet"],
+    "imperative" => ["julkaise", "julkaiskaa"],
   ],
   "juoda" => [
-    "pre" => ["juon", "juot", "juo", "juomme", "juotte", "juovat"],
-    "imp" => ["join", "joit", "joi", "joimme", "joitte", "joivat"]
+    "preesens" => ["juon", "juot", "juo", "juomme", "juotte", "juovat"],
+    "imperfect" => ["join", "joit", "joi", "joimme", "joitte", "joivat"],
+    "perfect" => ["juonut", "juoneet"],
+    "imperative" => ["juo", "juokaa"],
   ],
   "juosta" => [
-    "pre" => ["juoksen", "juokset", "juoksee", "juoksemme", "juoksette", "juoksevat"],
-    "imp" => ["juoksin", "juoksit", "juoksi", "juoksimme", "juoksitte", "juoksivat"]
+    "preesens" => ["juoksen", "juokset", "juoksee", "juoksemme", "juoksette", "juoksevat"],
+    "imperfect" => ["juoksin", "juoksit", "juoksi", "juoksimme", "juoksitte", "juoksivat"],
+    "perfect" => ["juoksut", "juokseet"],
+    "imperative" => ["juokse", "juoskaa"],
   ],
   "järjestää" => [
-    "pre" => ["järjestän", "järjestät", "järjestää", "järjestämme", "järjestätte", "järjestävät"],
-    "imp" => ["järjestin", "järjestit", "järjesti", "järjestimme", "järjestitte", "järjestivät"]
+    "preesens" => ["järjestän", "järjestät", "järjestää", "järjestämme", "järjestätte", "järjestävät"],
+    "imperfect" => ["järjestin", "järjestit", "järjesti", "järjestimme", "järjestitte", "järjestivät"],
+    "perfect" => ["järjestänyt", "järjestäneet"],
+    "imperative" => ["järjestä", "järjestäkää"],
   ],
   "jättää" => [
-    "pre" => ["jätän", "jätät", "jättää", "jätämme", "jätätte", "jättävät"],
-    "imp" => ["jätin", "jätit", "jätti", "jätimme", "jätitte", "jättivät"]
+    "preesens" => ["jätän", "jätät", "jättää", "jätämme", "jätätte", "jättävät"],
+    "imperfect" => ["jätin", "jätit", "jätti", "jätimme", "jätitte", "jättivät"],
+    "perfect" => ["jättänyt", "jättäneet"],
+    "imperative" => ["jätä", "jättäkää"],
   ],
   "jäädä" => [
-    "pre" => ["jään", "jäät", "jää", "jäämme", "jäätte", "jäävät"],
-    "imp" => ["jäin", "jäit", "jäi", "jäimme", "jäitte", "jäivät"]
+    "preesens" => ["jään", "jäät", "jää", "jäämme", "jäätte", "jäävät"],
+    "imperfect" => ["jäin", "jäit", "jäi", "jäimme", "jäitte", "jäivät"],
+    "perfect" => ["jäänyt", "jääneet"],
+    "imperative" => ["jää", "jääkää"],
   ],
   "jäätyä" => [
-    "pre" => ["jäädyn", "jäädyt", "jäätyy", "jäädymme", "jäädytte", "jäätyvät"],
-    "imp" => ["jäädyin", "jäädyit", "jäätyi", "jäädyimme", "jäädyitte", "jäätyivät"]
+    "preesens" => ["jäädyn", "jäädyt", "jäätyy", "jäädymme", "jäädytte", "jäätyvät"],
+    "imperfect" => ["jäädyin", "jäädyit", "jäätyi", "jäädyimme", "jäädyitte", "jäätyivät"],
+    "perfect" => ["jäätynyt", "jäätyneet"],
+    "imperative" => ["jäädy", "jäätykää"],
   ],
   "kaataa" => [
-    "pre" => ["kaadan", "kaadat", "kaataa", "kaadamme", "kaadatte", "kaatavat"],
-    "imp" => ["kaadin", "kaadit", "kaati", "kaadimme", "kaaditte", "kaativat"]
+    "preesens" => ["kaadan", "kaadat", "kaataa", "kaadamme", "kaadatte", "kaatavat"],
+    "imperfect" => ["kaadin", "kaadit", "kaati", "kaadimme", "kaaditte", "kaativat"],
+    "perfect" => ["kaatanut", "kaataneet"],
+    "imperative" => ["kaada", "kaatakaa"],
   ],
   "kaatua" => [
-    "pre" => ["kaadun", "kaadut", "kaatuu", "kaadumme", "kaadutte", "kaatuvat"],
-    "imp" => ["kaaduin", "kaaduit", "kaatui", "kaaduimme", "kaaduitte", "kaatuivat"]
+    "preesens" => ["kaadun", "kaadut", "kaatuu", "kaadumme", "kaadutte", "kaatuvat"],
+    "imperfect" => ["kaaduin", "kaaduit", "kaatui", "kaaduimme", "kaaduitte", "kaatuivat"],
+    "perfect" => ["kaatunut", "kaatuneet"],
+    "imperative" => ["kaadu", "kaatukaa"],
   ],
   "kadota" => [
-    "pre" => ["katoan", "katoat", "katoaa", "katoamme", "katoatte", "katoavat"],
-    "imp" => ["katosin", "katosit", "katosi", "katosimme", "katositte", "katosivat"],
-    "perfekti" => ["kadonnut", "kadonneet"],
+    "preesens" => ["katoan", "katoat", "katoaa", "katoamme", "katoatte", "katoavat"],
+    "imperfect" => ["katosin", "katosit", "katosi", "katosimme", "katositte", "katosivat"],
+    "perfect" => ["kadonnut", "kadonneet"],
+    "imperative" => ["katoa", "kadotkaa"],
   ],
   "kaivaa" => [
-    "pre" => ["kaivan", "kaivat", "kaivaa", "kaivamme", "kaivatte", "kaivavat"],
-    "imp" => ["kaivoin", "kaivoit", "kaivoi", "kaivoimme", "kaivoitte", "kaivoivat"]
+    "preesens" => ["kaivan", "kaivat", "kaivaa", "kaivamme", "kaivatte", "kaivavat"],
+    "imperfect" => ["kaivoin", "kaivoit", "kaivoi", "kaivoimme", "kaivoitte", "kaivoivat"],
+    "perfect" => ["kaivanut", "kaivaneet"],
+    "imperative" => ["kaiva", "kaivakaa"],
   ],
   "kaivata" => [
-    "pre" => ["kaipaan", "kaipaat", "kaipaa", "kaipaamme", "kaipaatte", "kaipaavat"],
-    "imp" => ["kaipasin", "kaipasit", "kaipasi", "kaipasimme", "kaipasitte", "kaipasivat"],
+    "preesens" => ["kaipaan", "kaipaat", "kaipaa", "kaipaamme", "kaipaatte", "kaipaavat"],
+    "imperfect" => ["kaipasin", "kaipasit", "kaipasi", "kaipasimme", "kaipasitte", "kaipasivat"],
+    "perfect" => ["kaivannut", "kaivanneet"],
+    "imperative" => ["kaipaa", "kaivatkaa"],
   ],
   "kalastaa" => [
-    "pre" => ["kalastan", "kalastat", "kalastaa", "kalastamme", "kalastatte", "kalastavat"],
-    "imp" => ["kalastin", "kalastit", "kalasti", "kalastimme", "kalastitte", "kalastivat"]
+    "preesens" => ["kalastan", "kalastat", "kalastaa", "kalastamme", "kalastatte", "kalastavat"],
+    "imperfect" => ["kalastin", "kalastit", "kalasti", "kalastimme", "kalastitte", "kalastivat"],
+    "perfect" => ["kalastanut", "kalastaneet"],
+    "imperative" => ["kalasta", "kalastakaa"],
   ],
   "kammata" => [
-    "pre" => ["kampaan", "kampaat", "kampaa", "kampaamme", "kampaatte", "kampaavat"],
-    "imp" => ["kampasin", "kampasit", "kampasi", "kampasimme", "kampasitte", "kampasivat"],
+    "preesens" => ["kampaan", "kampaat", "kampaa", "kampaamme", "kampaatte", "kampaavat"],
+    "imperfect" => ["kampasin", "kampasit", "kampasi", "kampasimme", "kampasitte", "kampasivat"],
+    "perfect" => ["kammannut", "kammanneet"],
+    "imperative" => ["kampaa", "kammatkaa"],
   ],
   "kantaa" => [
-    "pre" => ["kannan", "kannat", "kantaa", "kannamme", "kannatte", "kantavat"],
-    "imp" => ["kannoin", "kannoit", "kantoi", "kannoimme", "kannoitte", "kantoivat"],
+    "preesens" => ["kannan", "kannat", "kantaa", "kannamme", "kannatte", "kantavat"],
+    "imperfect" => ["kannoin", "kannoit", "kantoi", "kannoimme", "kannoitte", "kantoivat"],
+    "perfect" => ["kantanut", "kantaneet"],
+    "imperative" => ["kanna", "kantakaa"],
   ],
   "karata" => [
-    "pre" => ["karkaan", "karkaat", "karkaa", "karkaamme", "karkaatte", "karkaavat"],
-    "imp" => ["karkasin", "karkasit", "karkasi", "karkasimme", "karkasitte", "karkasivat"],
-    "perfekti" => ["karannut", "karanneet"],
+    "preesens" => ["karkaan", "karkaat", "karkaa", "karkaamme", "karkaatte", "karkaavat"],
+    "imperfect" => ["karkasin", "karkasit", "karkasi", "karkasimme", "karkasitte", "karkasivat"],
+    "perfect" => ["karannut", "karanneet"],
+    "imperative" => ["karkaa", "karatkaa"],
   ],
   "kastaa" => [
-    "pre" => ["kastan", "kastat", "kastaa", "kastamme", "kastatte", "kastavat"],
-    "imp" => ["kastin", "kastit", "kasti", "kastimme", "kastitte", "kastivat"]
+    "preesens" => ["kastan", "kastat", "kastaa", "kastamme", "kastatte", "kastavat"],
+    "imperfect" => ["kastin", "kastit", "kasti", "kastimme", "kastitte", "kastivat"],
+    "perfect" => ["kastanut", "kastaneet"],
+    "imperative" => ["kasta", "kastakaa"],
   ],
   "kasvaa" => [
-    "pre" => ["kasvan", "kasvat", "kasvaa", "kasvamme", "kasvatte", "kasvavat"],
-    "imp" => ["kasvoin", "kasvoit", "kasvoi", "kasvoimme", "kasvoitte", "kasvoivat"]
+    "preesens" => ["kasvan", "kasvat", "kasvaa", "kasvamme", "kasvatte", "kasvavat"],
+    "imperfect" => ["kasvoin", "kasvoit", "kasvoi", "kasvoimme", "kasvoitte", "kasvoivat"],
+    "perfect" => ["kasvanut", "kasvaneet"],
+    "imperative" => ["kasva", "kasvakaa"],
   ],
   "kasvattaa" => [
-    "pre" => ["kasvatan", "kasvatat", "kasvattaa", "kasvatamme", "kasvatatte", "kasvattavat"],
-    "imp" => ["kasvatin", "kasvatit", "kasvatti", "kasvatimme", "kasvatitte", "kasvattivat"]
+    "preesens" => ["kasvatan", "kasvatat", "kasvattaa", "kasvatamme", "kasvatatte", "kasvattavat"],
+    "imperfect" => ["kasvatin", "kasvatit", "kasvatti", "kasvatimme", "kasvatitte", "kasvattivat"],
+    "perfect" => ["kasvattanut", "kasvattaneet"],
+    "imperative" => ["kasvata", "kasvattakaa"],
   ],
   "katkaista" => [
-    "pre" => ["katkaisen", "katkaiset", "katkaisee", "katkaisemme", "katkaisette", "katkaisevat"],
-    "imp" => ["katkaisin", "katkaisit", "katkaisi", "katkaisimme", "katkaisitte", "katkaisivat"]
+    "preesens" => ["katkaisen", "katkaiset", "katkaisee", "katkaisemme", "katkaisette", "katkaisevat"],
+    "imperfect" => ["katkaisin", "katkaisit", "katkaisi", "katkaisimme", "katkaisitte", "katkaisivat"],
+    "perfect" => ["katkaissut", "katkaisseet"],
+    "imperative" => ["katkaise", "katkaiskaa"],
   ],
   "katsella" => [
-    "pre" => ["katselen", "katselet", "katselee", "katselemme", "katselette", "katselevat"],
-    "imp" => ["katselin", "katselit", "katseli", "katselimme", "katselitte", "katselivat"],
-    "perfekti" => ["katsellut", "katselleet"],
+    "preesens" => ["katselen", "katselet", "katselee", "katselemme", "katselette", "katselevat"],
+    "imperfect" => ["katselin", "katselit", "katseli", "katselimme", "katselitte", "katselivat"],
+    "perfect" => ["katsellut", "katselleet"],
+    "imperative" => ["katsele", "katselkaa"],
   ],
   "katsoa" => [
-    "pre" => ["katson", "katsot", "katsoo", "katsomme", "katsotte", "katsovat"],
-    "imp" => ["katsoin", "katsoit", "katsoi", "katsoimme", "katsoitte", "katsoivat"]
+    "preesens" => ["katson", "katsot", "katsoo", "katsomme", "katsotte", "katsovat"],
+    "imperfect" => ["katsoin", "katsoit", "katsoi", "katsoimme", "katsoitte", "katsoivat"],
+    "perfect" => ["katsonut", "katsoneet"],
+    "imperative" => ["katso", "katsokaa"],
   ],
   "kattaa" => [
-    "pre" => ["katan", "katat", "kattaa", "katamme", "katatte", "kattavat"],
-    "imp" => ["katoin", "katoit", "kattoi", "katoimme", "katoitte", "kattoivat"]
+    "preesens" => ["katan", "katat", "kattaa", "katamme", "katatte", "kattavat"],
+    "imperfect" => ["katoin", "katoit", "kattoi", "katoimme", "katoitte", "kattoivat"],
+    "perfect" => ["kattanut", "kattaneet"],
+    "imperative" => ["kata", "kattakaa"],
   ],
   "kauhistua" => [
-    "pre" => ["kauhistun", "kauhistut", "kauhistuu", "kauhistumme", "kauhistutte", "kauhistuvat"],
-    "imp" => ["kauhistuin", "kauhistuit", "kauhistui", "kauhistuimme", "kauhistuitte", "kauhistuivat"]
+    "preesens" => ["kauhistun", "kauhistut", "kauhistuu", "kauhistumme", "kauhistutte", "kauhistuvat"],
+    "imperfect" => ["kauhistuin", "kauhistuit", "kauhistui", "kauhistuimme", "kauhistuitte", "kauhistuivat"],
+    "perfect" => ["kauhistunut", "kauhistuneet"],
+    "imperative" => ["kauhistu", "kauhistukaa"],
   ],
   "kaveta" => [
-    "pre" => ["kapenen", "kapenet", "kapenee", "kapenemme", "kapenette", "kapenevat"],
-    "imp" => ["kapenin", "kapenit", "kapeni", "kapenimme", "kapenitte", "kapenivat"]
+    "preesens" => ["kapenen", "kapenet", "kapenee", "kapenemme", "kapenette", "kapenevat"],
+    "imperfect" => ["kapenin", "kapenit", "kapeni", "kapenimme", "kapenitte", "kapenivat"],
+    "perfect" => ["kapennut", "kapenneet"],
+    "imperative" => ["kapene", "kavetkaa"],
   ],
   "kehitellä" => [
-    "pre" => ["kehittelen", "kehittelet", "kehittelee", "kehittelemme", "kehittelette", "kehittelevät"],
-    "imp" => ["kehittelin", "kehittelit", "kehitteli", "kehittelimme", "kehittelitte", "kehittelivät"]
+    "preesens" => ["kehittelen", "kehittelet", "kehittelee", "kehittelemme", "kehittelette", "kehittelevät"],
+    "imperfect" => ["kehittelin", "kehittelit", "kehitteli", "kehittelimme", "kehittelitte", "kehittelivät"],
+    "perfect" => ["kehitellyt", "kehitelleet"],
+    "imperative" => ["kehittele", "kehitelkää"],
   ],
   "kehittyä" => [
-    "pre" => ["kehityn", "kehityt", "kehittyy", "kehitymme", "kehitytte", "kehittyvät"],
-    "imp" => ["kehityin", "kehityit", "kehittyi", "kehityimme", "kehityitte", "kehittyivät"]
+    "preesens" => ["kehityn", "kehityt", "kehittyy", "kehitymme", "kehitytte", "kehittyvät"],
+    "imperfect" => ["kehityin", "kehityit", "kehittyi", "kehityimme", "kehityitte", "kehittyivät"],
+    "perfect" => ["kehittynyt", "kehittyneet"],
+    "imperative" => ["kehity", "kehittykää"],
   ],
   "kehittää" => [
-    "pre" => ["kehitän", "kehität", "kehittää", "kehitämme", "kehitätte", "kehittävät"],
-    "imp" => ["kehitin", "kehitit", "kehitti", "kehitimme", "kehititte", "kehittivät"]
+    "preesens" => ["kehitän", "kehität", "kehittää", "kehitämme", "kehitätte", "kehittävät"],
+    "imperfect" => ["kehitin", "kehitit", "kehitti", "kehitimme", "kehititte", "kehittivät"],
+    "perfect" => ["kehittänyt", "kehittäneet"],
+    "imperative" => ["kehitä", "kehittäkää"],
   ],
   "kehottaa" => [
-    "pre" => ["kehotan", "kehotat", "kehottaa", "kehotamme", "kehotatte", "kehottavat"],
-    "imp" => ["kehotin", "kehotit", "kehotti", "kehotimme", "kehotitte", "kehottivat"]
+    "preesens" => ["kehotan", "kehotat", "kehottaa", "kehotamme", "kehotatte", "kehottavat"],
+    "imperfect" => ["kehotin", "kehotit", "kehotti", "kehotimme", "kehotitte", "kehottivat"],
+    "perfect" => ["kehottanut", "kehottaneet"],
+    "imperative" => ["kehota", "kehottakaa"],
   ],
   "keittää" => [
-    "pre" => ["keitän", "keität", "keittää", "keitämme", "keitätte", "keittävät"],
-    "imp" => ["keitin", "keitit", "keitti", "keitimme", "keititte", "keittivät"]
+    "preesens" => ["keitän", "keität", "keittää", "keitämme", "keitätte", "keittävät"],
+    "imperfect" => ["keitin", "keitit", "keitti", "keitimme", "keititte", "keittivät"],
+    "perfect" => ["keittänyt", "keittäneet"],
+    "imperative" => ["keitä", "keittäkää"],
   ],
   "keksiä" => [
-    "pre" => ["keksin", "keksit", "keksii", "keksimme", "keksitte", "keksivät"],
-    "imp" => ["keksin", "keksit", "keksi", "keksimme", "keksitte", "keksivät"]
+    "preesens" => ["keksin", "keksit", "keksii", "keksimme", "keksitte", "keksivät"],
+    "imperfect" => ["keksin", "keksit", "keksi", "keksimme", "keksitte", "keksivät"],
+    "perfect" => ["keksinyt", "keksineet"],
+    "imperative" => ["keksi", "keksikää"],
   ],
   "kelvata" => [
-    "pre" => ["kelpaan", "kelpaat", "kelpaa", "kelpaamme", "kelpaatte", "kelpaavat"],
-    "imp" => ["kelpasin", "kelpasit", "kelpasi", "kelpasimme", "kelpasitte", "kelpasivat"]
+    "preesens" => ["kelpaan", "kelpaat", "kelpaa", "kelpaamme", "kelpaatte", "kelpaavat"],
+    "imperfect" => ["kelpasin", "kelpasit", "kelpasi", "kelpasimme", "kelpasitte", "kelpasivat"],
+    "perfect" => ["kelvannut", "kelvanneet"],
+    "imperative" => ["kelpaa", "kelvatkaa"],
   ],
   "kerrata" => [
-    "pre" => ["kertaan", "kertaat", "kertaa", "kertaamme", "kertaatte", "kertaavat"],
-    "imp" => ["kertasin", "kertasit", "kertasi", "kertasimme", "kertasitte", "kertasivat"]
+    "preesens" => ["kertaan", "kertaat", "kertaa", "kertaamme", "kertaatte", "kertaavat"],
+    "imperfect" => ["kertasin", "kertasit", "kertasi", "kertasimme", "kertasitte", "kertasivat"],
+    "perfect" => ["kerrannut", "kerranneet"],
+    "imperative" => ["kertaa", "kerratkaa"],
   ],
   "kertoa" => [
-    "pre" => ["kerron", "kerrot", "kertoo", "kerromme", "kerrotte", "kertovat"],
-    "imp" => ["kerroin", "kerroit", "kertoi", "kerroimme", "kerroitte", "kertoivat"]
+    "preesens" => ["kerron", "kerrot", "kertoo", "kerromme", "kerrotte", "kertovat"],
+    "imperfect" => ["kerroin", "kerroit", "kertoi", "kerroimme", "kerroitte", "kertoivat"],
+    "perfect" => ["kertonut", "kertoneet"],
+    "imperative" => ["kerro", "kertokaa"],
   ],
   "kerätä" => [
-    "pre" => ["kerään", "keräät", "kerää", "keräämme", "keräätte", "keräävät"],
-    "imp" => ["keräsin", "keräsit", "keräsi", "keräsimme", "keräsitte", "keräsivät"]
+    "preesens" => ["kerään", "keräät", "kerää", "keräämme", "keräätte", "keräävät"],
+    "imperfect" => ["keräsin", "keräsit", "keräsi", "keräsimme", "keräsitte", "keräsivät"],
+    "perfect" => ["kerännyt", "keränneet"],
+    "imperative" => ["kerää", "kerätkää"],
   ],
   "keskeyttää" => [
-    "pre" => ["keskeytän", "keskeytät", "keskeyttää", "keskeytämme", "keskeytätte", "keskeyttävät"],
-    "imp" => ["keskeytin", "keskeytit", "keskeytti", "keskeytimme", "keskeytitte", "keskeyttivät"]
+    "preesens" => ["keskeytän", "keskeytät", "keskeyttää", "keskeytämme", "keskeytätte", "keskeyttävät"],
+    "imperfect" => ["keskeytin", "keskeytit", "keskeytti", "keskeytimme", "keskeytitte", "keskeyttivät"],
+    "perfect" => ["keskeyttänyt", "keskeyttäneet"],
+    "imperative" => ["keskeytä", "keskeyttäkää"],
   ],
   "keskittyä" => [
-    "pre" => ["keskityn", "keskityt", "keskittyy", "keskitymme", "keskitytte", "keskittyvät"],
-    "imp" => ["keskityin", "keskityit", "keskittyi", "keskityimme", "keskityitte", "keskittyivät"]
+    "preesens" => ["keskityn", "keskityt", "keskittyy", "keskitymme", "keskitytte", "keskittyvät"],
+    "imperfect" => ["keskityin", "keskityit", "keskittyi", "keskityimme", "keskityitte", "keskittyivät"],
+    "perfect" => ["keskittynyt", "keskittyneet"],
+    "imperative" => ["keskity", "keskittykää"],
   ],
   "keskittää" => [
-    "pre" => ["keskitän", "keskität", "keskittää", "keskitämme", "keskitätte", "keskittävät"],
-    "imp" => ["keskitin", "keskitit", "keskitti", "keskitimme", "keskititte", "keskittivät"]
+    "preesens" => ["keskitän", "keskität", "keskittää", "keskitämme", "keskitätte", "keskittävät"],
+    "imperfect" => ["keskitin", "keskitit", "keskitti", "keskitimme", "keskititte", "keskittivät"],
+    "perfect" => ["keskittänyt", "keskittäneet"],
+    "imperative" => ["keskitä", "keskittäkää"],
   ],
   "keskustella" => [
-    "pre" => ["keskustelen", "keskustelet", "keskustelee", "keskustelemme", "keskustelette", "keskustelevat"],
-    "imp" => ["keskustelin", "keskustelit", "keskusteli", "keskustelimme", "keskustelitte", "keskustelivat"]
+    "preesens" => ["keskustelen", "keskustelet", "keskustelee", "keskustelemme", "keskustelette", "keskustelevat"],
+    "imperfect" => ["keskustelin", "keskustelit", "keskusteli", "keskustelimme", "keskustelitte", "keskustelivat"],
+    "perfect" => ["keskustellut", "keskustelleet"],
+    "imperative" => ["keskustele", "keskustelkaa"],
   ],
   "kestää" => [
-    "pre" => ["kestän", "kestät", "kestää", "kestämme", "kestätte", "kestävät"],
-    "imp" => ["kestin", "kestit", "kesti", "kestimme", "kestitte", "kestivät"]
+    "preesens" => ["kestän", "kestät", "kestää", "kestämme", "kestätte", "kestävät"],
+    "imperfect" => ["kestin", "kestit", "kesti", "kestimme", "kestitte", "kestivät"],
+    "perfect" => ["kestänyt", "kestäneet"],
+    "imperative" => ["kestä", "kestäkää"],
   ],
   "kieltäytyä" => [
-    "pre" => ["kieltäydyn", "kieltäydyt", "kieltäytyy", "kieltäydymme", "kieltäydytte", "kieltäytyvät"],
-    "imp" => ["kieltäydyin", "kieltäydyit", "kieltäytyi", "kieltäydyimme", "kieltäydyitte", "kieltäytyivät"]
+    "preesens" => ["kieltäydyn", "kieltäydyt", "kieltäytyy", "kieltäydymme", "kieltäydytte", "kieltäytyvät"],
+    "imperfect" => ["kieltäydyin", "kieltäydyit", "kieltäytyi", "kieltäydyimme", "kieltäydyitte", "kieltäytyivät"],
+    "perfect" => ["kieltäytynyt", "kieltäytyneet"],
+    "imperative" => ["kieltäydy", "kieltäytykää"],
   ],
   "kieltää" => [
-    "pre" => ["kiellän", "kiellät", "kieltää", "kiellämme", "kiellätte", "kieltävät"],
-    "imp" => ["kielsin", "kielsit", "kielsi", "kielsimme", "kielsitte", "kielsivät"]
+    "preesens" => ["kiellän", "kiellät", "kieltää", "kiellämme", "kiellätte", "kieltävät"],
+    "imperfect" => ["kielsin", "kielsit", "kielsi", "kielsimme", "kielsitte", "kielsivät"],
+    "perfect" => ["kieltänyt", "kieltäneet"],
+    "imperative" => ["kiellä", "kieltäkää"],
   ],
   "kierrellä" => [
-    "pre" => ["kiertelen", "kiertelet", "kiertelee", "kiertelemme", "kiertelette", "kiertelevät"],
-    "imp" => ["kiertelin", "kiertelit", "kierteli", "kiertelimme", "kiertelitte", "kiertelivät"]
+    "preesens" => ["kiertelen", "kiertelet", "kiertelee", "kiertelemme", "kiertelette", "kiertelevät"],
+    "imperfect" => ["kiertelin", "kiertelit", "kierteli", "kiertelimme", "kiertelitte", "kiertelivät"],
+    "perfect" => ["kierrellyt", "kierrelleet"],
+    "imperative" => ["kiertele", "kierrelkää"],
   ],
   "kiertää" => [
-    "pre" => ["kierrän", "kierrät", "kiertää", "kierrämme", "kierrätte", "kiertävät"],
-    "imp" => ["kiersin", "kiersit", "kiersi", "kiersimme", "kiersitte", "kiersivät"]
+    "preesens" => ["kierrän", "kierrät", "kiertää", "kierrämme", "kierrätte", "kiertävät"],
+    "imperfect" => ["kiersin", "kiersit", "kiersi", "kiersimme", "kiersitte", "kiersivät"],
+    "perfect" => ["kiertänyt", "kiertäneet"],
+    "imperative" => ["kierrä", "kiertäkää"],
   ],
   "kiihtyä" => [
-    "pre" => ["kiihdyn", "kiihdyt", "kiihtyy", "kiihdymme", "kiihdytte", "kiihtyvät"],
-    "imp" => ["kiihdyin", "kiihdyit", "kiihtyi", "kiihdyimme", "kiihdyitte", "kiihtyivät"]
+    "preesens" => ["kiihdyn", "kiihdyt", "kiihtyy", "kiihdymme", "kiihdytte", "kiihtyvät"],
+    "imperfect" => ["kiihdyin", "kiihdyit", "kiihtyi", "kiihdyimme", "kiihdyitte", "kiihtyivät"],
+    "perfect" => ["kiihtynyt", "kiihtyneet"],
+    "imperative" => ["kiihdy", "kiihtykää"],
   ],
   "kiinnittää" => [
-    "pre" => ["kiinnitän", "kiinnität", "kiinnittää", "kiinnitämme", "kiinnitätte", "kiinnittävät"],
-    "imp" => ["kiinnitin", "kiinnitit", "kiinnitti", "kiinnitimme", "kiinnititte", "kiinnittivät"]
+    "preesens" => ["kiinnitän", "kiinnität", "kiinnittää", "kiinnitämme", "kiinnitätte", "kiinnittävät"],
+    "imperfect" => ["kiinnitin", "kiinnitit", "kiinnitti", "kiinnitimme", "kiinnititte", "kiinnittivät"],
+    "perfect" => ["kiinnittänyt", "kiinnittäneet"],
+    "imperative" => ["kiinnitä", "kiinnittäkää"],
   ],
   "kiinnostua" => [
-    "pre" => ["kiinnostun", "kiinnostut", "kiinnostuu", "kiinnostumme", "kiinnostutte", "kiinnostuvat"],
-    "imp" => ["kiinnostuin", "kiinnostuit", "kiinnostui", "kiinnostuimme", "kiinnostuitte", "kiinnostuivat"]
+    "preesens" => ["kiinnostun", "kiinnostut", "kiinnostuu", "kiinnostumme", "kiinnostutte", "kiinnostuvat"],
+    "imperfect" => ["kiinnostuin", "kiinnostuit", "kiinnostui", "kiinnostuimme", "kiinnostuitte", "kiinnostuivat"],
+    "perfect" => ["kiinnostunut", "kiinnostuneet"],
+    "imperative" => ["kiinnostu", "kiinnostukaa"],
   ],
   "kiintyä" => [
-    "pre" => ["kiinnyn", "kiinnyt", "kiintyy", "kiinnymme", "kiinnytte", "kiintyvät"],
-    "imp" => ["kiinnyin", "kiinnyit", "kiintyi", "kiinnyimme", "kiinnyitte", "kiintyivät"]
+    "preesens" => ["kiinnyn", "kiinnyt", "kiintyy", "kiinnymme", "kiinnytte", "kiintyvät"],
+    "imperfect" => ["kiinnyin", "kiinnyit", "kiintyi", "kiinnyimme", "kiinnyitte", "kiintyivät"],
+    "perfect" => ["kiintynyt", "kiintyneet"],
+    "imperative" => ["kiinny", "kiintykää"],
   ],
   "kiittää" => [
-    "pre" => ["kiitän", "kiität", "kiittää", "kiitämme", "kiitätte", "kiittävät"],
-    "imp" => ["kiitin", "kiitit", "kiitti", "kiitimme", "kiititte", "kiittivät"]
+    "preesens" => ["kiitän", "kiität", "kiittää", "kiitämme", "kiitätte", "kiittävät"],
+    "imperfect" => ["kiitin", "kiitit", "kiitti", "kiitimme", "kiititte", "kiittivät"],
+    "perfect" => ["kiittänyt", "kiittäneet"],
+    "imperative" => ["kiitä", "kiittäkää"],
   ],
   "kiivetä" => [
-    "pre" => ["kiipeän", "kiipeät", "kiipeää", "kiipeämme", "kiipeätte", "kiipeävät"],
-    "imp" => ["kiipesin", "kiipesit", "kiipesi", "kiipesimme", "kiipesitte", "kiipesivät"]
+    "preesens" => ["kiipeän", "kiipeät", "kiipeää", "kiipeämme", "kiipeätte", "kiipeävät"],
+    "imperfect" => ["kiipesin", "kiipesit", "kiipesi", "kiipesimme", "kiipesitte", "kiipesivät"],
+    "perfect" => ["kiivennyt", "kiivenneet"],
+    "imperative" => ["kiipeä", "kiivetkää"],
   ],
   "kilpailla" => [
-    "pre" => ["kilpailen", "kilpailet", "kilpailee", "kilpailemme", "kilpailette", "kilpailevat"],
-    "imp" => ["kilpailin", "kilpailit", "kilpaili", "kilpailimme", "kilpailitte", "kilpailivat"]
+    "preesens" => ["kilpailen", "kilpailet", "kilpailee", "kilpailemme", "kilpailette", "kilpailevat"],
+    "imperfect" => ["kilpailin", "kilpailit", "kilpaili", "kilpailimme", "kilpailitte", "kilpailivat"],
+    "perfect" => ["kilpaillut", "kilpailleet"],
+    "imperative" => ["kilpaile", "kilpailkaa"],
   ],
   "kipittää" => [
-    "pre" => ["kipitän", "kipität", "kipittää", "kipitämme", "kipitätte", "kipittävät"],
-    "imp" => ["kipitin", "kipitit", "kipitti", "kipitimme", "kipititte", "kipittivät"]
+    "preesens" => ["kipitän", "kipität", "kipittää", "kipitämme", "kipitätte", "kipittävät"],
+    "imperfect" => ["kipitin", "kipitit", "kipitti", "kipitimme", "kipititte", "kipittivät"],
+    "perfect" => ["kipittänyt", "kipittäneet"],
+    "imperative" => ["kipitä", "kipittäkää"],
   ],
   "kiristyä" => [
-    "pre" => ["kiristyn", "kiristyt", "kiristyy", "kiristymme", "kiristytte", "kiristyvät"],
-    "imp" => ["kiristyin", "kiristyit", "kiristyi", "kiristyimme", "kiristyitte", "kiristyivät"]
+    "preesens" => ["kiristyn", "kiristyt", "kiristyy", "kiristymme", "kiristytte", "kiristyvät"],
+    "imperfect" => ["kiristyin", "kiristyit", "kiristyi", "kiristyimme", "kiristyitte", "kiristyivät"],
+    "perfect" => ["kiristynyt", "kiristyneet"],
+    "imperative" => ["kiristy", "kiristykää"],
   ],
   "kirjata" => [
-    "pre" => ["kirjaan", "kirjaat", "kirjaa", "kirjaamme", "kirjaatte", "kirjaavat"],
-    "imp" => ["kirjasin", "kirjasit", "kirjasi", "kirjasimme", "kirjasitte", "kirjasivat"]
+    "preesens" => ["kirjaan", "kirjaat", "kirjaa", "kirjaamme", "kirjaatte", "kirjaavat"],
+    "imperfect" => ["kirjasin", "kirjasit", "kirjasi", "kirjasimme", "kirjasitte", "kirjasivat"],
+    "perfect" => ["kirjannut", "kirjanneet"],
+    "imperative" => ["kirjaa", "kirjatkaa"],
   ],
   "kirjoittaa" => [
-    "pre" => ["kirjoitan", "kirjoitat", "kirjoittaa", "kirjoitamme", "kirjoitatte", "kirjoittavat"],
-    "imp" => ["kirjoitin", "kirjoitit", "kirjoitti", "kirjoitimme", "kirjoititte", "kirjoittivat"]
+    "preesens" => ["kirjoitan", "kirjoitat", "kirjoittaa", "kirjoitamme", "kirjoitatte", "kirjoittavat"],
+    "imperfect" => ["kirjoitin", "kirjoitit", "kirjoitti", "kirjoitimme", "kirjoititte", "kirjoittivat"],
+    "perfect" => ["kirjoittanut", "kirjoittaneet"],
+    "imperative" => ["kirjoita", "kirjoittakaa"],
   ],
   "kiusata" => [
-    "pre" => ["kiusaan", "kiusaat", "kiusaa", "kiusaamme", "kiusaatte", "kiusaavat"],
-    "imp" => ["kiusasin", "kiusasit", "kiusasi", "kiusasimme", "kiusasitte", "kiusasivat"]
+    "preesens" => ["kiusaan", "kiusaat", "kiusaa", "kiusaamme", "kiusaatte", "kiusaavat"],
+    "imperfect" => ["kiusasin", "kiusasit", "kiusasi", "kiusasimme", "kiusasitte", "kiusasivat"],
+    "perfect" => ["kiusannut", "kiusanneet"],
+    "imperative" => ["kiusaa", "kiusatkaa"],
   ],
   "koetella" => [
-    "pre" => ["koettelen", "koettelet", "koettelee", "koettelemme", "koettelette", "koettelevat"],
-    "imp" => ["koettelin", "koettelit", "koetteli", "koettelimme", "koettelitte", "koettelivat"]
+    "preesens" => ["koettelen", "koettelet", "koettelee", "koettelemme", "koettelette", "koettelevat"],
+    "imperfect" => ["koettelin", "koettelit", "koetteli", "koettelimme", "koettelitte", "koettelivat"],
+    "perfect" => ["koetellut", "koetelleet"],
+    "imperative" => ["koettele", "koetelkaa"],
   ],
   "koettaa" => [
-    "pre" => ["koetan", "koetat", "koettaa", "koetamme", "koetatte", "koettavat"],
-    "imp" => ["koetin", "koetit", "koetti", "koetimme", "koetitte", "koettivat"]
+    "preesens" => ["koetan", "koetat", "koettaa", "koetamme", "koetatte", "koettavat"],
+    "imperfect" => ["koetin", "koetit", "koetti", "koetimme", "koetitte", "koettivat"],
+    "perfect" => ["koettanut", "koettaneet"],
+    "imperative" => ["koeta", "koettakaa"],
   ],
   "kohdata" => [
-    "pre" => ["kohtaan", "kohtaat", "kohtaa", "kohtaamme", "kohtaatte", "kohtaavat"],
-    "imp" => ["kohtasin", "kohtasit", "kohtasi", "kohtasimme", "kohtasitte", "kohtasivat"]
+    "preesens" => ["kohtaan", "kohtaat", "kohtaa", "kohtaamme", "kohtaatte", "kohtaavat"],
+    "imperfect" => ["kohtasin", "kohtasit", "kohtasi", "kohtasimme", "kohtasitte", "kohtasivat"],
+    "perfect" => ["kohdannut", "kohdanneet"],
+    "imperative" => ["kohtaa", "kohdatkaa"],
   ],
   "kohdistaa" => [
-    "pre" => ["kohdistan", "kohdistat", "kohdistaa", "kohdistamme", "kohdistatte", "kohdistavat"],
-    "imp" => ["kohdistin", "kohdistit", "kohdisti", "kohdistimme", "kohdistitte", "kohdistivat"]
+    "preesens" => ["kohdistan", "kohdistat", "kohdistaa", "kohdistamme", "kohdistatte", "kohdistavat"],
+    "imperfect" => ["kohdistin", "kohdistit", "kohdisti", "kohdistimme", "kohdistitte", "kohdistivat"],
+    "perfect" => ["kohdistanut", "kohdistaneet"],
+    "imperative" => ["kohdista", "kohdistakaa"],
   ],
   "kohdistua" => [
-    "pre" => ["kohdistun", "kohdistut", "kohdistuu", "kohdistumme", "kohdistutte", "kohdistuvat"],
-    "imp" => ["kohdistuin", "kohdistuit", "kohdistui", "kohdistuimme", "kohdistuitte", "kohdistuivat"]
+    "preesens" => ["kohdistun", "kohdistut", "kohdistuu", "kohdistumme", "kohdistutte", "kohdistuvat"],
+    "imperfect" => ["kohdistuin", "kohdistuit", "kohdistui", "kohdistuimme", "kohdistuitte", "kohdistuivat"],
+    "perfect" => ["kohdistunut", "kohdistuneet"],
+    "imperative" => ["kohdistu", "kohdistukaa"],
   ],
   "kohota" => [
-    "pre" => ["kohoan", "kohoat", "kohoaa", "kohoamme", "kohoatte", "kohoavat"],
-    "imp" => ["kohosin", "kohosit", "kohosi", "kohosimme", "kohositte", "kohosivat"]
+    "preesens" => ["kohoan", "kohoat", "kohoaa", "kohoamme", "kohoatte", "kohoavat"],
+    "imperfect" => ["kohosin", "kohosit", "kohosi", "kohosimme", "kohositte", "kohosivat"],
+    "perfect" => ["kohonnut", "kohonneet"],
+    "imperative" => ["kohoa", "kohotkaa"],
   ],
   "kohottaa" => [
-    "pre" => ["kohotan", "kohotat", "kohottaa", "kohotamme", "kohotatte", "kohottavat"],
-    "imp" => ["kohotin", "kohotit", "kohotti", "kohotimme", "kohotitte", "kohottivat"]
+    "preesens" => ["kohotan", "kohotat", "kohottaa", "kohotamme", "kohotatte", "kohottavat"],
+    "imperfect" => ["kohotin", "kohotit", "kohotti", "kohotimme", "kohotitte", "kohottivat"],
+    "perfect" => ["kohottanut", "kohottaneet"],
+    "imperative" => ["kohota", "kohottakaa"],
   ],
   "kokea" => [
-    "pre" => ["koen", "koet", "kokee", "koemme", "koette", "kokevat"],
-    "imp" => ["koin", "koit", "koki", "koimme", "koitte", "kokivat"]
+    "preesens" => ["koen", "koet", "kokee", "koemme", "koette", "kokevat"],
+    "imperfect" => ["koin", "koit", "koki", "koimme", "koitte", "kokivat"],
+    "perfect" => ["kokenut", "kokeneet"],
+    "imperative" => ["koe", "kokekaa"],
   ],
   "kokeilla" => [
-    "pre" => ["kokeilen", "kokeilet", "kokeilee", "kokeilemme", "kokeilette", "kokeilevat"],
-    "imp" => ["kokeilin", "kokeilit", "kokeili", "kokeilimme", "kokeilitte", "kokeilivat"]
+    "preesens" => ["kokeilen", "kokeilet", "kokeilee", "kokeilemme", "kokeilette", "kokeilevat"],
+    "imperfect" => ["kokeilin", "kokeilit", "kokeili", "kokeilimme", "kokeilitte", "kokeilivat"],
+    "perfect" => ["kokeillut", "kokeilleet"],
+    "imperative" => ["kokeile", "kokeilkaa"],
   ],
   "kontata" => [
-    "pre" => ["konttaan", "konttaat", "konttaa", "konttaamme", "konttaatte", "konttaavat"],
-    "imp" => ["konttasin", "konttasit", "konttasi", "konttasimme", "konttasitte", "konttasivat"]
+    "preesens" => ["konttaan", "konttaat", "konttaa", "konttaamme", "konttaatte", "konttaavat"],
+    "imperfect" => ["konttasin", "konttasit", "konttasi", "konttasimme", "konttasitte", "konttasivat"],
+    "perfect" => ["kontannut", "kontanneet"],
+    "imperative" => ["konttaa", "kontatkaa"],
   ],
   "koota" => [
-    "pre" => ["kokoan", "kokoat", "kokoaa", "kokoamme", "kokoatte", "kokoavat"],
-    "imp" => ["kokosin", "kokosit", "kokosi", "kokosimme", "kokositte", "kokosivat"]
+    "preesens" => ["kokoan", "kokoat", "kokoaa", "kokoamme", "kokoatte", "kokoavat"],
+    "imperfect" => ["kokosin", "kokosit", "kokosi", "kokosimme", "kokositte", "kokosivat"],
+    "perfect" => ["koonnut", "koonneet"],
+    "imperative" => ["kokoa", "kootkaa"],
   ],
   "koskea" => [
-    "pre" => ["kosken", "kosket", "koskee", "koskemme", "koskette", "koskevat"],
-    "imp" => ["koskin", "koskit", "koski", "koskimme", "koskitte", "koskivat"]
+    "preesens" => ["kosken", "kosket", "koskee", "koskemme", "koskette", "koskevat"],
+    "imperfect" => ["koskin", "koskit", "koski", "koskimme", "koskitte", "koskivat"],
+    "perfect" => ["koskenut", "koskeneet"],
+    "imperative" => ["koske", "koskekaa"],
   ],
   "kosketella" => [
-    "pre" => ["koskettelen", "koskettelet", "koskettelee", "koskettelemme", "koskettelette", "koskettelevat"],
-    "imp" => ["koskettelin", "koskettelit", "kosketteli", "koskettelimme", "koskettelitte", "koskettelivat"]
+    "preesens" => ["koskettelen", "koskettelet", "koskettelee", "koskettelemme", "koskettelette", "koskettelevat"],
+    "imperfect" => ["koskettelin", "koskettelit", "kosketteli", "koskettelimme", "koskettelitte", "koskettelivat"],
+    "perfect" => ["kosketellut", "kosketelleet"],
+    "imperative" => ["koskettele", "kosketelkaa"],
   ],
   "koskettaa" => [
-    "pre" => ["kosketan", "kosketat", "koskettaa", "kosketamme", "kosketatte", "koskettavat"],
-    "imp" => ["kosketin", "kosketit", "kosketti", "kosketimme", "kosketitte", "koskettivat"]
+    "preesens" => ["kosketan", "kosketat", "koskettaa", "kosketamme", "kosketatte", "koskettavat"],
+    "imperfect" => ["kosketin", "kosketit", "kosketti", "kosketimme", "kosketitte", "koskettivat"],
+    "perfect" => ["koskettanut", "koskettaneet"],
+    "imperative" => ["kosketa", "koskettakaa"],
   ],
   "korjata" => [
-    "pre" => ["korjaan", "korjaat", "korjaa", "korjaamme", "korjaatte", "korjaavat"],
-    "imp" => ["korjasin", "korjasit", "korjasi", "korjasimme", "korjasitte", "korjasivat"]
+    "preesens" => ["korjaan", "korjaat", "korjaa", "korjaamme", "korjaatte", "korjaavat"],
+    "imperfect" => ["korjasin", "korjasit", "korjasi", "korjasimme", "korjasitte", "korjasivat"],
+    "perfect" => ["korjannut", "korjanneet"],
+    "imperative" => ["korjaa", "korjatkaa"],
   ],
   "korostaa" => [
-    "pre" => ["korostan", "korostat", "korostaa", "korostamme", "korostatte", "korostavat"],
-    "imp" => ["korostin", "korostit", "korosti", "korostimme", "korostitte", "korostivat"]
+    "preesens" => ["korostan", "korostat", "korostaa", "korostamme", "korostatte", "korostavat"],
+    "imperfect" => ["korostin", "korostit", "korosti", "korostimme", "korostitte", "korostivat"],
+    "perfect" => ["korostanut", "korostaneet"],
+    "imperative" => ["korosta", "korostakaa"],
   ],
   "korottaa" => [
-    "pre" => ["korotan", "korotat", "korottaa", "korotamme", "korotatte", "korottavat"],
-    "imp" => ["korotin", "korotit", "korotti", "korotimme", "korotitte", "korottivat"]
+    "preesens" => ["korotan", "korotat", "korottaa", "korotamme", "korotatte", "korottavat"],
+    "imperfect" => ["korotin", "korotit", "korotti", "korotimme", "korotitte", "korottivat"],
+    "perfect" => ["korottanut", "korottaneet"],
+    "imperative" => ["korota", "korottakaa"],
   ],
   "korvata" => [
-    "pre" => ["korvaan", "korvaat", "korvaa", "korvaamme", "korvaatte", "korvaavat"],
-    "imp" => ["korvasin", "korvasit", "korvasi", "korvasimme", "korvasitte", "korvasivat"]
+    "preesens" => ["korvaan", "korvaat", "korvaa", "korvaamme", "korvaatte", "korvaavat"],
+    "imperfect" => ["korvasin", "korvasit", "korvasi", "korvasimme", "korvasitte", "korvasivat"],
+    "perfect" => ["korvannut", "korvanneet"],
+    "imperative" => ["korvaa", "korvatkaa"],
   ],
   "kouluttaa" => [
-    "pre" => ["koulutan", "koulutat", "kouluttaa", "koulutamme", "koulutatte", "kouluttavat"],
-    "imp" => ["koulutin", "koulutit", "koulutti", "koulutimme", "koulutitte", "kouluttivat"]
+    "preesens" => ["koulutan", "koulutat", "kouluttaa", "koulutamme", "koulutatte", "kouluttavat"],
+    "imperfect" => ["koulutin", "koulutit", "koulutti", "koulutimme", "koulutitte", "kouluttivat"],
+    "perfect" => ["kouluttanut", "kouluttaneet"],
+    "imperative" => ["kouluta", "kouluttakaa"],
   ],
   "kuivata" => [
-    "pre" => ["kuivaan", "kuivaat", "kuivaa", "kuivaamme", "kuivaatte", "kuivaavat"],
-    "imp" => ["kuivasin", "kuivasit", "kuivasi", "kuivasimme", "kuivasitte", "kuivasivat"]
+    "preesens" => ["kuivaan", "kuivaat", "kuivaa", "kuivaamme", "kuivaatte", "kuivaavat"],
+    "imperfect" => ["kuivasin", "kuivasit", "kuivasi", "kuivasimme", "kuivasitte", "kuivasivat"],
+    "perfect" => ["kuivannut", "kuivanneet"],
+    "imperative" => ["kuivaa", "kuivatkaa"],
   ],
   "kuljettaa" => [
-    "pre" => ["kuljetan", "kuljetat", "kuljettaa", "kuljetamme", "kuljetatte", "kuljettavat"],
-    "imp" => ["kuljetin", "kuljetit", "kuljetti", "kuljetimme", "kuljetitte", "kuljettivat"]
+    "preesens" => ["kuljetan", "kuljetat", "kuljettaa", "kuljetamme", "kuljetatte", "kuljettavat"],
+    "imperfect" => ["kuljetin", "kuljetit", "kuljetti", "kuljetimme", "kuljetitte", "kuljettivat"],
+    "perfect" => ["kuljettanut", "kuljettaneet"],
+    "imperative" => ["kuljeta", "kuljettakaa"],
   ],
   "kulkea" => [
-    "pre" => ["kuljen", "kuljet", "kulkee", "kuljemme", "kuljette", "kulkevat"],
-    "imp" => ["kuljin", "kuljit", "kulki", "kuljimme", "kuljitte", "kulkivat"]
+    "preesens" => ["kuljen", "kuljet", "kulkee", "kuljemme", "kuljette", "kulkevat"],
+    "imperfect" => ["kuljin", "kuljit", "kulki", "kuljimme", "kuljitte", "kulkivat"],
+    "perfect" => ["kulkenut", "kulkeneet"],
+    "imperative" => ["kulje", "kulkekaa"],
   ],
   "kulkeutua" => [
-    "pre" => ["kulkeudun", "kulkeudut", "kulkeutuu", "kulkeudumme", "kulkeudutte", "kulkeutuvat"],
-    "imp" => ["kulkeuduin", "kulkeuduit", "kulkeutui", "kulkeuduimme", "kulkeuduitte", "kulkeutuivat"]
+    "preesens" => ["kulkeudun", "kulkeudut", "kulkeutuu", "kulkeudumme", "kulkeudutte", "kulkeutuvat"],
+    "imperfect" => ["kulkeuduin", "kulkeuduit", "kulkeutui", "kulkeuduimme", "kulkeuduitte", "kulkeutuivat"],
+    "perfect" => ["kulkeutunut", "kulkeutuneet"],
+    "imperative" => ["kulkeudu", "kulkeutukaa"],
   ],
   "kulua" => [
-    "pre" => ["kulun", "kulut", "kuluu", "kulumme", "kulutte", "kuluvat"],
-    "imp" => ["kuluin", "kuluit", "kului", "kuluimme", "kuluitte", "kuluivat"]
+    "preesens" => ["kulun", "kulut", "kuluu", "kulumme", "kulutte", "kuluvat"],
+    "imperfect" => ["kuluin", "kuluit", "kului", "kuluimme", "kuluitte", "kuluivat"],
+    "perfect" => ["kulunut", "kuluneet"],
+    "imperative" => ["kulu", "kulukaa"],
   ],
   "kuluttaa" => [
-    "pre" => ["kulutan", "kulutat", "kuluttaa", "kulutamme", "kulutatte", "kuluttavat"],
-    "imp" => ["kulutin", "kulutit", "kulutti", "kulutimme", "kulutitte", "kuluttivat"]
+    "preesens" => ["kulutan", "kulutat", "kuluttaa", "kulutamme", "kulutatte", "kuluttavat"],
+    "imperfect" => ["kulutin", "kulutit", "kulutti", "kulutimme", "kulutitte", "kuluttivat"],
+    "perfect" => ["kuluttanut", "kuluttaneet"],
+    "imperative" => ["kuluta", "kuluttakaa"],
   ],
   "kumartua" => [
-    "pre" => ["kumarrun", "kumarrut", "kumartuu", "kumarrumme", "kumarrutte", "kumartuvat"],
-    "imp" => ["kumarruin", "kumarruit", "kumartui", "kumarruimme", "kumarruitte", "kumartuivat"]
+    "preesens" => ["kumarrun", "kumarrut", "kumartuu", "kumarrumme", "kumarrutte", "kumartuvat"],
+    "imperfect" => ["kumarruin", "kumarruit", "kumartui", "kumarruimme", "kumarruitte", "kumartuivat"],
+    "perfect" => ["kumartunut", "kumartuneet"],
+    "imperative" => ["kumarru", "kumartukaa"],
   ],
   "kumota" => [
-    "pre" => ["kumoan", "kumoat", "kumoaa", "kumoamme", "kumoatte", "kumoavat"],
-    "imp" => ["kumosin", "kumosit", "kumosi", "kumosimme", "kumositte", "kumosivat"]
+    "preesens" => ["kumoan", "kumoat", "kumoaa", "kumoamme", "kumoatte", "kumoavat"],
+    "imperfect" => ["kumosin", "kumosit", "kumosi", "kumosimme", "kumositte", "kumosivat"],
+    "perfect" => ["kumonnut", "kumonneet"],
+    "imperative" => ["kumoa", "kumotkaa"],
   ],
   "kunnioittaa" => [
-    "pre" => ["kunnioitan", "kunnioitat", "kunnioittaa", "kunnioitamme", "kunnioitatte", "kunnioittavat"],
-    "imp" => ["kunnioitin", "kunnioitit", "kunnioitti", "kunnioitimme", "kunnioititte", "kunnioittivat"]
+    "preesens" => ["kunnioitan", "kunnioitat", "kunnioittaa", "kunnioitamme", "kunnioitatte", "kunnioittavat"],
+    "imperfect" => ["kunnioitin", "kunnioitit", "kunnioitti", "kunnioitimme", "kunnioititte", "kunnioittivat"],
+    "perfect" => ["kunnioittanut", "kunnioittaneet"],
+    "imperative" => ["kunnioita", "kunnioittakaa"],
   ],
   "kuunnella" => [
-    "pre" => ["kuuntelen", "kuuntelet", "kuuntelee", "kuuntelemme", "kuuntelette", "kuuntelevat"],
-    "imp" => ["kuuntelin", "kuuntelit", "kuunteli", "kuuntelimme", "kuuntelitte", "kuuntelivat"]
+    "preesens" => ["kuuntelen", "kuuntelet", "kuuntelee", "kuuntelemme", "kuuntelette", "kuuntelevat"],
+    "imperfect" => ["kuuntelin", "kuuntelit", "kuunteli", "kuuntelimme", "kuuntelitte", "kuuntelivat"],
+    "perfect" => ["kuunnellut", "kuunnelleet"],
+    "imperative" => ["kuuntele", "kuunnelkaa"],
   ],
   "kuvailla" => [
-    "pre" => ["kuvailen", "kuvailet", "kuvailee", "kuvailemme", "kuvailette", "kuvailevat"],
-    "imp" => ["kuvailin", "kuvailit", "kuvaili", "kuvailimme", "kuvailitte", "kuvailivat"]
+    "preesens" => ["kuvailen", "kuvailet", "kuvailee", "kuvailemme", "kuvailette", "kuvailevat"],
+    "imperfect" => ["kuvailin", "kuvailit", "kuvaili", "kuvailimme", "kuvailitte", "kuvailivat"],
+    "perfect" => ["kuvaillut", "kuvailleet"],
+    "imperative" => ["kuvaile", "kuvailkaa"],
   ],
   "kuvata" => [
-    "pre" => ["kuvaan", "kuvaat", "kuvaa", "kuvaamme", "kuvaatte", "kuvaavat"],
-    "imp" => ["kuvasin", "kuvasit", "kuvasi", "kuvasimme", "kuvasitte", "kuvasivat"]
+    "preesens" => ["kuvaan", "kuvaat", "kuvaa", "kuvaamme", "kuvaatte", "kuvaavat"],
+    "imperfect" => ["kuvasin", "kuvasit", "kuvasi", "kuvasimme", "kuvasitte", "kuvasivat"],
+    "perfect" => ["kuvannut", "kuvanneet"],
+    "imperative" => ["kuvaa", "kuvatkaa"],
   ],
   "kuvitella" => [
-    "pre" => ["kuvittelen", "kuvittelet", "kuvittelee", "kuvittelemme", "kuvittelette", "kuvittelevat"],
-    "imp" => ["kuvittelin", "kuvittelit", "kuvitteli", "kuvittelimme", "kuvittelitte", "kuvittelivat"]
+    "preesens" => ["kuvittelen", "kuvittelet", "kuvittelee", "kuvittelemme", "kuvittelette", "kuvittelevat"],
+    "imperfect" => ["kuvittelin", "kuvittelit", "kuvitteli", "kuvittelimme", "kuvittelitte", "kuvittelivat"],
+    "perfect" => ["kuvitellut", "kuvitelleet"],
+    "imperative" => ["kuvittele", "kuvitelkaa"],
   ],
   "kyetä" => [
-    "pre" => ["kykenen", "kykenet", "kykenee", "kykenemme", "kykenette", "kykenevät"],
-    "imp" => ["kykenin", "kykenit", "kykeni", "kykenimme", "kykenitte", "kykenivät"]
+    "preesens" => ["kykenen", "kykenet", "kykenee", "kykenemme", "kykenette", "kykenevät"],
+    "imperfect" => ["kykenin", "kykenit", "kykeni", "kykenimme", "kykenitte", "kykenivät"],
+    "perfect" => ["kyennyt", "kyenneet"],
+    "imperative" => ["kykene", "kyetkää"],
   ],
   "kylvää" => [
-    "pre" => ["kylvän", "kylvät", "kylvää", "kylvämme", "kylvätte", "kylvävät"],
-    "imp" => ["kylvöin", "kylvöit", "kylvöi", "kylvöimme", "kylvöitte", "kylvöivät"]
+    "preesens" => ["kylvän", "kylvät", "kylvää", "kylvämme", "kylvätte", "kylvävät"],
+    "imperfect" => ["kylvöin", "kylvöit", "kylvöi", "kylvöimme", "kylvöitte", "kylvöivät"],
+    "perfect" => ["kylvänyt", "kylväneet"],
+    "imperative" => ["kylvä", "kylväkää"],
   ],
   "kypsyä" => [
-    "pre" => ["kypsyn", "kypsyt", "kypsyy", "kypsymme", "kypsytte", "kypsyvät"],
-    "imp" => ["kypsyin", "kypsyit", "kypsyi", "kypsyimme", "kypsyitte", "kypsyivät"]
+    "preesens" => ["kypsyn", "kypsyt", "kypsyy", "kypsymme", "kypsytte", "kypsyvät"],
+    "imperfect" => ["kypsyin", "kypsyit", "kypsyi", "kypsyimme", "kypsyitte", "kypsyivät"],
+    "perfect" => ["kypsynyt", "kypsyneet"],
+    "imperative" => ["kypsy", "kypsykää"],
   ],
   "kysellä" => [
-    "pre" => ["kyselen", "kyselet", "kyselee", "kyselemme", "kyselette", "kyselevät"],
-    "imp" => ["kyselin", "kyselit", "kyseli", "kyselimme", "kyselitte", "kyselivät"]
+    "preesens" => ["kyselen", "kyselet", "kyselee", "kyselemme", "kyselette", "kyselevät"],
+    "imperfect" => ["kyselin", "kyselit", "kyseli", "kyselimme", "kyselitte", "kyselivät"],
+    "perfect" => ["kysellyt", "kyselleet"],
+    "imperative" => ["kysele", "kyselkää"],
   ],
   "kysyä" => [
-    "pre" => ["kysyn", "kysyt", "kysyy", "kysymme", "kysytte", "kysyvät"],
-    "imp" => ["kysyin", "kysyit", "kysyi", "kysyimme", "kysyitte", "kysyivät"]
+    "preesens" => ["kysyn", "kysyt", "kysyy", "kysymme", "kysytte", "kysyvät"],
+    "imperfect" => ["kysyin", "kysyit", "kysyi", "kysyimme", "kysyitte", "kysyivät"],
+    "perfect" => ["kysynyt", "kysyneet"],
+    "imperative" => ["kysy", "kysykää"],
   ],
   "kytkeä" => [
-    "pre" => ["kytken", "kytket", "kytkee", "kytkemme", "kytkette", "kytkevät"],
-    "imp" => ["kytkin", "kytkit", "kytki", "kytkimme", "kytkitte", "kytkivät"]
+    "preesens" => ["kytken", "kytket", "kytkee", "kytkemme", "kytkette", "kytkevät"],
+    "imperfect" => ["kytkin", "kytkit", "kytki", "kytkimme", "kytkitte", "kytkivät"],
+    "perfect" => ["kytkenyt", "kytkeneet"],
+    "imperative" => ["kytke", "kytkekää"],
   ],
   "kärsiä" => [
-    "pre" => ["kärsin", "kärsit", "kärsii", "kärsimme", "kärsitte", "kärsivät"],
-    "imp" => ["kärsin", "kärsit", "kärsi", "kärsimme", "kärsitte", "kärsivät"]
+    "preesens" => ["kärsin", "kärsit", "kärsii", "kärsimme", "kärsitte", "kärsivät"],
+    "imperfect" => ["kärsin", "kärsit", "kärsi", "kärsimme", "kärsitte", "kärsivät"],
+    "perfect" => ["kärsinyt", "kärsineet"],
+    "imperative" => ["kärsi", "kärsikää"],
   ],
   "käsitellä" => [
-    "pre" => ["käsittelen", "käsittelet", "käsittelee", "käsittelemme", "käsittelette", "käsittelevät"],
-    "imp" => ["käsittelin", "käsittelit", "käsitteli", "käsittelimme", "käsittelitte", "käsittelivät"]
+    "preesens" => ["käsittelen", "käsittelet", "käsittelee", "käsittelemme", "käsittelette", "käsittelevät"],
+    "imperfect" => ["käsittelin", "käsittelit", "käsitteli", "käsittelimme", "käsittelitte", "käsittelivät"],
+    "perfect" => ["käsitellyt", "käsitelleet"],
+    "imperative" => ["käsittele", "käsitelkää"],
   ],
   "käsittää" => [
-    "pre" => ["käsitän", "käsität", "käsittää", "käsitämme", "käsitätte", "käsittävät"],
-    "imp" => ["käsitin", "käsitit", "käsitti", "käsitimme", "käsititte", "käsittivät"]
+    "preesens" => ["käsitän", "käsität", "käsittää", "käsitämme", "käsitätte", "käsittävät"],
+    "imperfect" => ["käsitin", "käsitit", "käsitti", "käsitimme", "käsititte", "käsittivät"],
+    "perfect" => ["käsittänyt", "käsittäneet"],
+    "imperative" => ["käsitä", "käsittäkää"],
   ],
   "käskeä" => [
-    "pre" => ["käsken", "käsket", "käskee", "käskemme", "käskette", "käskevät"],
-    "imp" => ["käskin", "käskit", "käski", "käskimme", "käskitte", "käskivät"]
+    "preesens" => ["käsken", "käsket", "käskee", "käskemme", "käskette", "käskevät"],
+    "imperfect" => ["käskin", "käskit", "käski", "käskimme", "käskitte", "käskivät"],
+    "perfect" => ["käskenyt", "käskeneet"],
+    "imperative" => ["käske", "käskekää"],
   ],
   "kätkeä" => [
-    "pre" => ["kätken", "kätket", "kätkee", "kätkemme", "kätkette", "kätkevät"],
-    "imp" => ["kätkin", "kätkit", "kätki", "kätkimme", "kätkitte", "kätkivät"]
+    "preesens" => ["kätken", "kätket", "kätkee", "kätkemme", "kätkette", "kätkevät"],
+    "imperfect" => ["kätkin", "kätkit", "kätki", "kätkimme", "kätkitte", "kätkivät"],
+    "perfect" => ["kätkenyt", "kätkeneet"],
+    "imperative" => ["kätke", "kätkekää"],
   ],
   "kävellä" => [
-    "pre" => ["kävelen", "kävelet", "kävelee", "kävelemme", "kävelette", "kävelevät"],
-    "imp" => ["kävelin", "kävelit", "käveli", "kävelimme", "kävelitte", "kävelivät"]
+    "preesens" => ["kävelen", "kävelet", "kävelee", "kävelemme", "kävelette", "kävelevät"],
+    "imperfect" => ["kävelin", "kävelit", "käveli", "kävelimme", "kävelitte", "kävelivät"],
+    "perfect" => ["kävellyt", "kävelleet"],
+    "imperative" => ["kävele", "kävelkää"],
   ],
   "käydä" => [
-    "pre" => ["käyn", "käyt", "käy", "käymme", "käytte", "käyvät"],
-    "imp" => ["kävin", "kävit", "kävi", "kävimme", "kävitte", "kävivät"]
+    "preesens" => ["käyn", "käyt", "käy", "käymme", "käytte", "käyvät"],
+    "imperfect" => ["kävin", "kävit", "kävi", "kävimme", "kävitte", "kävivät"],
+    "perfect" => ["käynyt", "käyneet"],
+    "imperative" => ["käy", "käykää"],
   ],
   "käyttäytyä" => [
-    "pre" => ["käyttäydyn", "käyttäydyt", "käyttäytyy", "käyttäydymme", "käyttäydytte", "käyttäytyvät"],
-    "imp" => ["käyttäydyin", "käyttäydyit", "käyttäytyi", "käyttäydyimme", "käyttäydyitte", "käyttäytyivät"]
+    "preesens" => ["käyttäydyn", "käyttäydyt", "käyttäytyy", "käyttäydymme", "käyttäydytte", "käyttäytyvät"],
+    "imperfect" => ["käyttäydyin", "käyttäydyit", "käyttäytyi", "käyttäydyimme", "käyttäydyitte", "käyttäytyivät"],
+    "perfect" => ["käyttäytynyt", "käyttäytyneet"],
+    "imperative" => ["käyttäydy", "käyttäytykää"],
   ],
   "käyttää" => [
-    "pre" => ["käytän", "käytät", "käyttää", "käytämme", "käytätte", "käyttävät"],
-    "imp" => ["käytin", "käytit", "käytti", "käytimme", "käytitte", "käyttivät"]
+    "preesens" => ["käytän", "käytät", "käyttää", "käytämme", "käytätte", "käyttävät"],
+    "imperfect" => ["käytin", "käytit", "käytti", "käytimme", "käytitte", "käyttivät"],
+    "perfect" => ["käyttänyt", "käyttäneet"],
+    "imperative" => ["käytä", "käyttäkää"],
   ],
   "käännellä" => [
-    "pre" => ["kääntelen", "kääntelet", "kääntelee", "kääntelemme", "kääntelette", "kääntelevät"],
-    "imp" => ["kääntelin", "kääntelit", "käänteli", "kääntelimme", "kääntelitte", "kääntelivät"]
+    "preesens" => ["kääntelen", "kääntelet", "kääntelee", "kääntelemme", "kääntelette", "kääntelevät"],
+    "imperfect" => ["kääntelin", "kääntelit", "käänteli", "kääntelimme", "kääntelitte", "kääntelivät"],
+    "perfect" => ["käännellyt", "käännelleet"],
+    "imperative" => ["kääntele", "käännelkää"],
   ],
   "kääntyä" => [
-    "pre" => ["käännyn", "käännyt", "kääntyy", "käännymme", "käännytte", "kääntyvät"],
-    "imp" => ["käännyin", "käännyit", "kääntyi", "käännyimme", "käännyitte", "kääntyivät"]
+    "preesens" => ["käännyn", "käännyt", "kääntyy", "käännymme", "käännytte", "kääntyvät"],
+    "imperfect" => ["käännyin", "käännyit", "kääntyi", "käännyimme", "käännyitte", "kääntyivät"],
+    "perfect" => ["kääntynyt", "kääntyneet"],
+    "imperative" => ["käänny", "kääntykää"],
   ],
   "kääntää" => [
-    "pre" => ["käännän", "käännät", "kääntää", "käännämme", "käännätte", "kääntävät"],
-    "imp" => ["käänsin", "käänsit", "käänsi", "käänsimme", "käänsitte", "käänsivät"]
+    "preesens" => ["käännän", "käännät", "kääntää", "käännämme", "käännätte", "kääntävät"],
+    "imperfect" => ["käänsin", "käänsit", "käänsi", "käänsimme", "käänsitte", "käänsivät"],
+    "perfect" => ["kääntänyt", "kääntäneet"],
+    "imperative" => ["käännä", "kääntäkää"],
   ],
   "kääriä" => [
-    "pre" => ["käärin", "käärit", "käärii", "käärimme", "kääritte", "käärivät"],
-    "imp" => ["käärin", "käärit", "kääri", "käärimme", "kääritte", "käärivät"]
+    "preesens" => ["käärin", "käärit", "käärii", "käärimme", "kääritte", "käärivät"],
+    "imperfect" => ["käärin", "käärit", "kääri", "käärimme", "kääritte", "käärivät"],
+    "perfect" => ["käärinyt", "käärineet"],
+    "imperative" => ["kääri", "käärikää"],
   ],
   "laajentaa" => [
-    "pre" => ["laajennan", "laajennat", "laajentaa", "laajennamme", "laajennatte", "laajentavat"],
-    "imp" => ["laajensin", "laajensit", "laajensi", "laajensimme", "laajensitte", "laajensivat"]
+    "preesens" => ["laajennan", "laajennat", "laajentaa", "laajennamme", "laajennatte", "laajentavat"],
+    "imperfect" => ["laajensin", "laajensit", "laajensi", "laajensimme", "laajensitte", "laajensivat"],
+    "perfect" => ["laajentanut", "laajentaneet"],
+    "imperative" => ["laajenna", "laajentakaa"],
   ],
   "laatia" => [
-    "pre" => ["laadin", "laadit", "laatii", "laadimme", "laaditte", "laativat"],
-    "imp" => ["laadin", "laadit", "laati", "laadimme", "laaditte", "laativat"]
+    "preesens" => ["laadin", "laadit", "laatii", "laadimme", "laaditte", "laativat"],
+    "imperfect" => ["laadin", "laadit", "laati", "laadimme", "laaditte", "laativat"],
+    "perfect" => ["laatinut", "laatineet"],
+    "imperative" => ["laadi", "laatikaa"],
   ],
   "lahjoittaa" => [
-    "pre" => ["lahjoitan", "lahjoitat", "lahjoittaa", "lahjoitamme", "lahjoitatte", "lahjoittavat"],
-    "imp" => ["lahjoitin", "lahjoitit", "lahjoitti", "lahjoitimme", "lahjoititte", "lahjoittivat"]
+    "preesens" => ["lahjoitan", "lahjoitat", "lahjoittaa", "lahjoitamme", "lahjoitatte", "lahjoittavat"],
+    "imperfect" => ["lahjoitin", "lahjoitit", "lahjoitti", "lahjoitimme", "lahjoititte", "lahjoittivat"],
+    "perfect" => ["lahjoittanut", "lahjoittaneet"],
+    "imperative" => ["lahjoita", "lahjoittakaa"],
   ],
   "lainata" => [
-    "pre" => ["lainaan", "lainaat", "lainaa", "lainaamme", "lainaatte", "lainaavat"],
-    "imp" => ["lainasin", "lainasit", "lainasi", "lainasimme", "lainasitte", "lainasivat"]
+    "preesens" => ["lainaan", "lainaat", "lainaa", "lainaamme", "lainaatte", "lainaavat"],
+    "imperfect" => ["lainasin", "lainasit", "lainasi", "lainasimme", "lainasitte", "lainasivat"],
+    "perfect" => ["lainannut", "lainanneet"],
+    "imperative" => ["lainaa", "lainatkaa"],
   ],
   "laittaa" => [
-    "pre" => ["laitan", "laitat", "laittaa", "laitamme", "laitatte", "laittavat"],
-    "imp" => ["laitoin", "laitoit", "laittoi", "laitoimme", "laitoitte", "laittoivat"]
+    "preesens" => ["laitan", "laitat", "laittaa", "laitamme", "laitatte", "laittavat"],
+    "imperfect" => ["laitoin", "laitoit", "laittoi", "laitoimme", "laitoitte", "laittoivat"],
+    "perfect" => ["laittanut", "laittaneet"],
+    "imperative" => ["laita", "laittakaa"],
   ],
   "laskeutua" => [
-    "pre" => ["laskeudun", "laskeudut", "laskeutuu", "laskeudumme", "laskeudutte", "laskeutuvat"],
-    "imp" => ["laskeuduin", "laskeuduit", "laskeutui", "laskeuduimme", "laskeuduitte", "laskeutuivat"]
+    "preesens" => ["laskeudun", "laskeudut", "laskeutuu", "laskeudumme", "laskeudutte", "laskeutuvat"],
+    "imperfect" => ["laskeuduin", "laskeuduit", "laskeutui", "laskeuduimme", "laskeuduitte", "laskeutuivat"],
+    "perfect" => ["laskeutunut", "laskeutuneet"],
+    "imperative" => ["laskeudu", "laskeutukaa"],
   ],
   "lakata" => [
-    "pre" => ["lakkaan", "lakkaat", "lakkaa", "lakkaamme", "lakkaatte", "lakkaavat"],
-    "imp" => ["lakkasin", "lakkasit", "lakkasi", "lakkasimme", "lakkasitte", "lakkasivat"]
+    "preesens" => ["lakkaan", "lakkaat", "lakkaa", "lakkaamme", "lakkaatte", "lakkaavat"],
+    "imperfect" => ["lakkasin", "lakkasit", "lakkasi", "lakkasimme", "lakkasitte", "lakkasivat"],
+    "perfect" => ["lakannut", "lakanneet"],
+    "imperative" => ["lakkaa", "lakatkaa"],
   ],
   "langeta" => [
-    "pre" => ["lankean", "lankeat", "lankeaa", "lankeamme", "lankeatte", "lankeavat"],
-    "imp" => ["lankesin", "lankesit", "lankesi", "lankesimme", "lankesitte", "lankesivat"]
+    "preesens" => ["lankean", "lankeat", "lankeaa", "lankeamme", "lankeatte", "lankeavat"],
+    "imperfect" => ["lankesin", "lankesit", "lankesi", "lankesimme", "lankesitte", "lankesivat"],
+    "perfect" => ["langennut", "langenneet"],
+    "imperative" => ["lankea", "langetkaa"],
   ],
   "laskea" => [
-    "pre" => ["lasken", "lasket", "laskee", "laskemme", "laskette", "laskevat"],
-    "imp" => ["laskin", "laskit", "laski", "laskimme", "laskitte", "laskivat"]
+    "preesens" => ["lasken", "lasket", "laskee", "laskemme", "laskette", "laskevat"],
+    "imperfect" => ["laskin", "laskit", "laski", "laskimme", "laskitte", "laskivat"],
+    "perfect" => ["laskenut", "laskeneet"],
+    "imperative" => ["laske", "laskekaa"],
   ],
   "laukata" => [
-    "pre" => ["laukkaan", "laukkaat", "laukkaa", "laukkaamme", "laukkaatte", "laukkaavat"],
-    "imp" => ["laukkasin", "laukkasit", "laukkasi", "laukkasimme", "laukkasitte", "laukkasivat"]
+    "preesens" => ["laukkaan", "laukkaat", "laukkaa", "laukkaamme", "laukkaatte", "laukkaavat"],
+    "imperfect" => ["laukkasin", "laukkasit", "laukkasi", "laukkasimme", "laukkasitte", "laukkasivat"],
+    "perfect" => ["laukannut", "laukanneet"],
+    "imperative" => ["laukkaa", "laukatkaa"],
   ],
   "laulaa" => [
-    "pre" => ["laulan", "laulat", "laulaa", "laulamme", "laulatte", "laulavat"],
-    "imp" => ["lauloin", "lauloit", "lauloi", "lauloimme", "lauloitte", "lauloivat"]
+    "preesens" => ["laulan", "laulat", "laulaa", "laulamme", "laulatte", "laulavat"],
+    "imperfect" => ["lauloin", "lauloit", "lauloi", "lauloimme", "lauloitte", "lauloivat"],
+    "perfect" => ["laulanut", "laulaneet"],
+    "imperative" => ["laula", "laulakaa"],
   ],
   "lausua" => [
-    "pre" => ["lausun", "lausut", "lausuu", "lausumme", "lausutte", "lausuvat"],
-    "imp" => ["lausuin", "lausuit", "lausui", "lausuimme", "lausuitte", "lausuivat"]
+    "preesens" => ["lausun", "lausut", "lausuu", "lausumme", "lausutte", "lausuvat"],
+    "imperfect" => ["lausuin", "lausuit", "lausui", "lausuimme", "lausuitte", "lausuivat"],
+    "perfect" => ["lausunut", "lausuneet"],
+    "imperative" => ["lausu", "lausukaa"],
   ],
   "leikata" => [
-    "pre" => ["leikkaan", "leikkaat", "leikkaa", "leikkaamme", "leikkaatte", "leikkaavat"],
-    "imp" => ["leikkasin", "leikkasit", "leikkasi", "leikkasimme", "leikkasitte", "leikkasivat"]
+    "preesens" => ["leikkaan", "leikkaat", "leikkaa", "leikkaamme", "leikkaatte", "leikkaavat"],
+    "imperfect" => ["leikkasin", "leikkasit", "leikkasi", "leikkasimme", "leikkasitte", "leikkasivat"],
+    "perfect" => ["leikannut", "leikanneet"],
+    "imperative" => ["leikkaa", "leikatkaa"],
   ],
   "leikkiä" => [
-    "pre" => ["leikin", "leikit", "leikkii", "leikimme", "leikitte", "leikkivät"],
-    "imp" => ["leikin", "leikit", "leikki", "leikimme", "leikitte", "leikkivät"]
+    "preesens" => ["leikin", "leikit", "leikkii", "leikimme", "leikitte", "leikkivät"],
+    "imperfect" => ["leikin", "leikit", "leikki", "leikimme", "leikitte", "leikkivät"],
+    "perfect" => ["leikkinyt", "leikkineet"],
+    "imperative" => ["leiki", "leikkikää"],
   ],
   "leipoa" => [
-    "pre" => ["leivon", "leivot", "leipoo", "leivomme", "leivotte", "leipovat"],
-    "imp" => ["leivoin", "leivoit", "leipoi", "leivoimme", "leivoitte", "leipoivat"]
+    "preesens" => ["leivon", "leivot", "leipoo", "leivomme", "leivotte", "leipovat"],
+    "imperfect" => ["leivoin", "leivoit", "leipoi", "leivoimme", "leivoitte", "leipoivat"],
+    "perfect" => ["leiponut", "leiponeet"],
+    "imperative" => ["leivo", "leipokaa"],
   ],
   "lentää" => [
-    "pre" => ["lennän", "lennät", "lentää", "lennämme", "lennätte", "lentävät"],
-    "imp" => ["lensin", "lensit", "lensi", "lensimme", "lensitte", "lensivät"]
+    "preesens" => ["lennän", "lennät", "lentää", "lennämme", "lennätte", "lentävät"],
+    "imperfect" => ["lensin", "lensit", "lensi", "lensimme", "lensitte", "lensivät"],
+    "perfect" => ["lentänyt", "lentäneet"],
+    "imperative" => ["lennä", "lentäkää"],
   ],
   "levätä" => [
-    "pre" => ["lepään", "lepäät", "lepää", "lepäämme", "lepäätte", "lepäävät"],
-    "imp" => ["lepäsin", "lepäsit", "lepäsi", "lepäsimme", "lepäsitte", "lepäsivät"]
+    "preesens" => ["lepään", "lepäät", "lepää", "lepäämme", "lepäätte", "lepäävät"],
+    "imperfect" => ["lepäsin", "lepäsit", "lepäsi", "lepäsimme", "lepäsitte", "lepäsivät"],
+    "perfect" => ["levännyt", "levänneet"],
+    "imperative" => ["lepää", "levätkää"],
   ],
   "levittää" => [
-    "pre" => ["levitän", "levität", "levittää", "levitämme", "levitätte", "levittävät"],
-    "imp" => ["levitin", "levitit", "levitti", "levitimme", "levititte", "levittivät"]
+    "preesens" => ["levitän", "levität", "levittää", "levitämme", "levitätte", "levittävät"],
+    "imperfect" => ["levitin", "levitit", "levitti", "levitimme", "levititte", "levittivät"],
+    "perfect" => ["levittänyt", "levittäneet"],
+    "imperative" => ["levitä", "levittäkää"],
   ],
   "levitä" => [
-    "pre" => ["leviän", "leviät", "leviää", "leviämme", "leviätte", "leviävät"],
-    "imp" => ["levisin", "levisit", "levisi", "levisimme", "levisitte", "levisivät"]
+    "preesens" => ["leviän", "leviät", "leviää", "leviämme", "leviätte", "leviävät"],
+    "imperfect" => ["levisin", "levisit", "levisi", "levisimme", "levisitte", "levisivät"],
+    "perfect" => ["levinnyt", "levinneet"],
+    "imperative" => ["leviä", "levitkää"],
   ],
   "liikkua" => [
-    "pre" => ["liikun", "liikut", "liikkuu", "liikumme", "liikutte", "liikkuvat"],
-    "imp" => ["liikuin", "liikuit", "liikkui", "liikuimme", "liikuitte", "liikkuivat"]
+    "preesens" => ["liikun", "liikut", "liikkuu", "liikumme", "liikutte", "liikkuvat"],
+    "imperfect" => ["liikuin", "liikuit", "liikkui", "liikuimme", "liikuitte", "liikkuivat"],
+    "perfect" => ["liikkunut", "liikkuneet"],
+    "imperative" => ["liiku", "liikkukaa"],
   ],
   "liittyä" => [
-    "pre" => ["liityn", "liityt", "liittyy", "liitymme", "liitytte", "liittyvät"],
-    "imp" => ["liityin", "liityit", "liittyi", "liityimme", "liityitte", "liittyivät"]
+    "preesens" => ["liityn", "liityt", "liittyy", "liitymme", "liitytte", "liittyvät"],
+    "imperfect" => ["liityin", "liityit", "liittyi", "liityimme", "liityitte", "liittyivät"],
+    "perfect" => ["liittynyt", "liittyneet"],
+    "imperative" => ["liity", "liittykää"],
   ],
   "liittää" => [
-    "pre" => ["liitän", "liität", "liittää", "liitämme", "liitätte", "liittävät"],
-    "imp" => ["liitin", "liitit", "liitti", "liitimme", "liititte", "liittivät"]
+    "preesens" => ["liitän", "liität", "liittää", "liitämme", "liitätte", "liittävät"],
+    "imperfect" => ["liitin", "liitit", "liitti", "liitimme", "liititte", "liittivät"],
+    "perfect" => ["liittänyt", "liittäneet"],
+    "imperative" => ["liitä", "liittäkää"],
   ],
   "lisääntyä" => [
-    "pre" => ["lisäännyn", "lisäännyt", "lisääntyy", "lisäännymme", "lisäännytte", "lisääntyvät"],
-    "imp" => ["lisäännyin", "lisäännyit", "lisääntyi", "lisäännyimme", "lisäännyitte", "lisääntyivät"]
+    "preesens" => ["lisäännyn", "lisäännyt", "lisääntyy", "lisäännymme", "lisäännytte", "lisääntyvät"],
+    "imperfect" => ["lisäännyin", "lisäännyit", "lisääntyi", "lisäännyimme", "lisäännyitte", "lisääntyivät"],
+    "perfect" => ["lisääntynyt", "lisääntyneet"],
+    "imperative" => ["lisäänny", "lisääntykää"],
   ],
   "lisätä" => [
-    "pre" => ["lisään", "lisäät", "lisää", "lisäämme", "lisäätte", "lisäävät"],
-    "imp" => ["lisäsin", "lisäsit", "lisäsi", "lisäsimme", "lisäsitte", "lisäsivät"]
+    "preesens" => ["lisään", "lisäät", "lisää", "lisäämme", "lisäätte", "lisäävät"],
+    "imperfect" => ["lisäsin", "lisäsit", "lisäsi", "lisäsimme", "lisäsitte", "lisäsivät"],
+    "perfect" => ["lisännyt", "lisänneet"],
+    "imperative" => ["lisää", "lisätkää"],
   ],
   "liukua" => [
-    "pre" => ["liuun", "liuut", "liukuu", "liuumme", "liuutte", "liukuvat"],
-    "imp" => ["liuuin", "liuuit", "liukui", "liuuimme", "liuuitte", "liukuivat"]
+    "preesens" => ["liuun", "liuut", "liukuu", "liuumme", "liuutte", "liukuvat"],
+    "imperfect" => ["liuuin", "liuuit", "liukui", "liuuimme", "liuuitte", "liukuivat"],
+    "perfect" => ["liukunut", "liukuneet"],
+    "imperative" => ["liuu", "liukukaa"],
   ],
   "lohduttaa" => [
-    "pre" => ["lohdutan", "lohdutat", "lohduttaa", "lohdutamme", "lohdutatte", "lohduttavat"],
-    "imp" => ["lohdutin", "lohdutit", "lohdutti", "lohdutimme", "lohdutitte", "lohduttivat"]
+    "preesens" => ["lohdutan", "lohdutat", "lohduttaa", "lohdutamme", "lohdutatte", "lohduttavat"],
+    "imperfect" => ["lohdutin", "lohdutit", "lohdutti", "lohdutimme", "lohdutitte", "lohduttivat"],
+    "perfect" => ["lohduttanut", "lohduttaneet"],
+    "imperative" => ["lohduta", "lohduttakaa"],
   ],
   "lopettaa" => [
-    "pre" => ["lopetan", "lopetat", "lopettaa", "lopetamme", "lopetatte", "lopettavat"],
-    "imp" => ["lopetin", "lopetit", "lopetti", "lopetimme", "lopetitte", "lopettivat"]
+    "preesens" => ["lopetan", "lopetat", "lopettaa", "lopetamme", "lopetatte", "lopettavat"],
+    "imperfect" => ["lopetin", "lopetit", "lopetti", "lopetimme", "lopetitte", "lopettivat"],
+    "perfect" => ["lopettanut", "lopettaneet"],
+    "imperative" => ["lopeta", "lopettakaa"],
   ],
   "loukata" => [
-    "pre" => ["loukkaan", "loukkaat", "loukkaa", "loukkaamme", "loukkaatte", "loukkaavat"],
-    "imp" => ["loukkasin", "loukkasit", "loukkasi", "loukkasimme", "loukkasitte", "loukkasivat"]
+    "preesens" => ["loukkaan", "loukkaat", "loukkaa", "loukkaamme", "loukkaatte", "loukkaavat"],
+    "imperfect" => ["loukkasin", "loukkasit", "loukkasi", "loukkasimme", "loukkasitte", "loukkasivat"],
+    "perfect" => ["loukannut", "loukanneet"],
+    "imperative" => ["loukkaa", "loukatkaa"],
   ],
   "loukkaantua" => [
-    "pre" => ["loukkaannun", "loukkaannut", "loukkaantuu", "loukkaannumme", "loukkaannutte", "loukkaantuvat"],
-    "imp" => ["loukkaannuin", "loukkaannuit", "loukkaantui", "loukkaannuimme", "loukkaannuitte", "loukkaantuivat"]
+    "preesens" => ["loukkaannun", "loukkaannut", "loukkaantuu", "loukkaannumme", "loukkaannutte", "loukkaantuvat"],
+    "imperfect" => ["loukkaannuin", "loukkaannuit", "loukkaantui", "loukkaannuimme", "loukkaannuitte", "loukkaantuivat"],
+    "perfect" => ["loukkaantunut", "loukkaantuneet"],
+    "imperative" => ["loukkaannu", "loukkaantukaa"],
   ],
   "luetella" => [
-    "pre" => ["luettelen", "luettelet", "luettelee", "luettelemme", "luettelette", "luettelevat"],
-    "imp" => ["luettelin", "luettelit", "luetteli", "luettelimme", "luettelitte", "luettelivat"]
+    "preesens" => ["luettelen", "luettelet", "luettelee", "luettelemme", "luettelette", "luettelevat"],
+    "imperfect" => ["luettelin", "luettelit", "luetteli", "luettelimme", "luettelitte", "luettelivat"],
+    "perfect" => ["luetellut", "luetelleet"],
+    "imperative" => ["luettele", "luetelkaa"],
   ],
   "lukea" => [
-    "pre" => ["luen", "luet", "lukee", "luemme", "luette", "lukevat"],
-    "imp" => ["luin", "luit", "luki", "luimme", "luitte", "lukivat"]
+    "preesens" => ["luen", "luet", "lukee", "luemme", "luette", "lukevat"],
+    "imperfect" => ["luin", "luit", "luki", "luimme", "luitte", "lukivat"],
+    "perfect" => ["lukenut", "lukeneet"],
+    "imperative" => ["lue", "lukekaa"],
   ],
   "lukita" => [
-    "pre" => ["lukitsen", "lukitset", "lukitsee", "lukitsemme", "lukitsette", "lukitsevat"],
-    "imp" => ["lukitsin", "lukitsit", "lukitsi", "lukitsimme", "lukitsitte", "lukitsivat"]
+    "preesens" => ["lukitsen", "lukitset", "lukitsee", "lukitsemme", "lukitsette", "lukitsevat"],
+    "imperfect" => ["lukitsin", "lukitsit", "lukitsi", "lukitsimme", "lukitsitte", "lukitsivat"],
+    "perfect" => ["lukinnut", "lukinneet"],
+    "imperative" => ["lukitse", "lukitkaa"],
   ],
   "lunastaa" => [
-    "pre" => ["lunastan", "lunastat", "lunastaa", "lunastamme", "lunastatte", "lunastavat"],
-    "imp" => ["lunastin", "lunastit", "lunasti", "lunastimme", "lunastitte", "lunastivat"]
+    "preesens" => ["lunastan", "lunastat", "lunastaa", "lunastamme", "lunastatte", "lunastavat"],
+    "imperfect" => ["lunastin", "lunastit", "lunasti", "lunastimme", "lunastitte", "lunastivat"],
+    "perfect" => ["lunastanut", "lunastaneet"],
+    "imperative" => ["lunasta", "lunastakaa"],
   ],
   "luoda" => [
-    "pre" => ["luon", "luot", "luo", "luomme", "luotte", "luovat"],
-    "imp" => ["loin", "loit", "loi", "loimme", "loitte", "loivat"]
+    "preesens" => ["luon", "luot", "luo", "luomme", "luotte", "luovat"],
+    "imperfect" => ["loin", "loit", "loi", "loimme", "loitte", "loivat"],
+    "perfect" => ["luonut", "luoneet"],
+    "imperative" => ["luo", "luokaa"],
   ],
   "luottaa" => [
-    "pre" => ["luotan", "luotat", "luottaa", "luotamme", "luotatte", "luottavat"],
-    "imp" => ["luotin", "luotit", "luotti", "luotimme", "luotitte", "luottivat"]
+    "preesens" => ["luotan", "luotat", "luottaa", "luotamme", "luotatte", "luottavat"],
+    "imperfect" => ["luotin", "luotit", "luotti", "luotimme", "luotitte", "luottivat"],
+    "perfect" => ["luottanut", "luottaneet"],
+    "imperative" => ["luota", "luottakaa"],
   ],
   "luovuttaa" => [
-    "pre" => ["luovutan", "luovutat", "luovuttaa", "luovutamme", "luovutatte", "luovuttavat"],
-    "imp" => ["luovutin", "luovutit", "luovutti", "luovutimme", "luovutitte", "luovuttivat"]
+    "preesens" => ["luovutan", "luovutat", "luovuttaa", "luovutamme", "luovutatte", "luovuttavat"],
+    "imperfect" => ["luovutin", "luovutit", "luovutti", "luovutimme", "luovutitte", "luovuttivat"],
+    "perfect" => ["luovuttanut", "luovuttaneet"],
+    "imperative" => ["luovuta", "luovuttakaa"],
   ],
   "luulla" => [
-    "pre" => ["luulen", "luulet", "luulee", "luulemme", "luulette", "luulevat"],
-    "imp" => ["luulin", "luulit", "luuli", "luulimme", "luulitte", "luulivat"]
+    "preesens" => ["luulen", "luulet", "luulee", "luulemme", "luulette", "luulevat"],
+    "imperfect" => ["luulin", "luulit", "luuli", "luulimme", "luulitte", "luulivat"],
+    "perfect" => ["luullut", "luulleet"],
+    "imperative" => ["luule", "luulkaa"],
   ],
   "luvata" => [
-    "pre" => ["lupaan", "lupaat", "lupaa", "lupaamme", "lupaatte", "lupaavat"],
-    "imp" => ["lupasin", "lupasit", "lupasi", "lupasimme", "lupasitte", "lupasivat"]
+    "preesens" => ["lupaan", "lupaat", "lupaa", "lupaamme", "lupaatte", "lupaavat"],
+    "imperfect" => ["lupasin", "lupasit", "lupasi", "lupasimme", "lupasitte", "lupasivat"],
+    "perfect" => ["luvannut", "luvanneet"],
+    "imperative" => ["lupaa", "luvatkaa"],
   ],
   "lyllertää" => [
-    "pre" => ["lyllerrän", "lyllerrät", "lyllertää", "lyllerrämme", "lyllerrätte", "lyllertävät"],
-    "imp" => ["lyllersin", "lyllersit", "lyllersi", "lyllersimme", "lyllersitte", "lyllersivät"]
+    "preesens" => ["lyllerrän", "lyllerrät", "lyllertää", "lyllerrämme", "lyllerrätte", "lyllertävät"],
+    "imperfect" => ["lyllersin", "lyllersit", "lyllersi", "lyllersimme", "lyllersitte", "lyllersivät"],
+    "perfect" => ["lyllertänyt", "lyllertäneet"],
+    "imperative" => ["lyllerrä", "lyllertäkää"],
   ],
   "lyödä" => [
-    "pre" => ["lyön", "lyöt", "lyö", "lyömme", "lyötte", "lyövät"],
-    "imp" => ["löin", "löit", "löi", "löimme", "löitte", "löivät"]
+    "preesens" => ["lyön", "lyöt", "lyö", "lyömme", "lyötte", "lyövät"],
+    "imperfect" => ["löin", "löit", "löi", "löimme", "löitte", "löivät"],
+    "perfect" => ["lyönyt", "lyöneet"],
+    "imperative" => ["lyö", "lyökää"],
   ],
   "lähestyä" => [
-    "pre" => ["lähestyn", "lähestyt", "lähestyy", "lähestymme", "lähestytte", "lähestyvät"],
-    "imp" => ["lähestyin", "lähestyit", "lähestyi", "lähestyimme", "lähestyitte", "lähestyivät"]
+    "preesens" => ["lähestyn", "lähestyt", "lähestyy", "lähestymme", "lähestytte", "lähestyvät"],
+    "imperfect" => ["lähestyin", "lähestyit", "lähestyi", "lähestyimme", "lähestyitte", "lähestyivät"],
+    "perfect" => ["lähestynyt", "lähestyneet"],
+    "imperative" => ["lähesty", "lähestykää"],
   ],
   "lähettää" => [
-    "pre" => ["lähetän", "lähetät", "lähettää", "lähetämme", "lähetätte", "lähettävät"],
-    "imp" => ["lähetin", "lähetit", "lähetti", "lähetimme", "lähetitte", "lähettivät"]
+    "preesens" => ["lähetän", "lähetät", "lähettää", "lähetämme", "lähetätte", "lähettävät"],
+    "imperfect" => ["lähetin", "lähetit", "lähetti", "lähetimme", "lähetitte", "lähettivät"],
+    "perfect" => ["lähettänyt", "lähettäneet"],
+    "imperative" => ["lähetä", "lähettäkää"],
   ],
   "lähteä" => [
-    "pre" => ["lähden", "lähdet", "lähtee", "lähdemme", "lähdette", "lähtevät"],
-    "imp" => ["lähdin", "lähdit", "lähti", "lähdimme", "lähditte", "lähtivät"]
+    "preesens" => ["lähden", "lähdet", "lähtee", "lähdemme", "lähdette", "lähtevät"],
+    "imperfect" => ["lähdin", "lähdit", "lähti", "lähdimme", "lähditte", "lähtivät"],
+    "perfect" => ["lähtenyt", "lähteneet"],
+    "imperative" => ["lähde", "lähtekää"],
   ],
   "lämmetä" => [
-    "pre" => ["lämpeän", "lämpeät", "lämpeää", "lämpeämme", "lämpeätte", "lämpeävät"],
-    "imp" => ["lämpesin", "lämpesit", "lämpesi", "lämpesimme", "lämpesitte", "lämpesivät"]
+    "preesens" => ["lämpeän", "lämpeät", "lämpeää", "lämpeämme", "lämpeätte", "lämpeävät"],
+    "imperfect" => ["lämpesin", "lämpesit", "lämpesi", "lämpesimme", "lämpesitte", "lämpesivät"],
+    "perfect" => ["lämmennyt", "lämmenneet"],
+    "imperative" => ["lämpeä", "lämmetkää"],
   ],
   "lämmittää" => [
-    "pre" => ["lämmitän", "lämmität", "lämmittää", "lämmitämme", "lämmitätte", "lämmittävät"],
-    "imp" => ["lämmitin", "lämmitit", "lämmitti", "lämmitimme", "lämmititte", "lämmittivät"]
+    "preesens" => ["lämmitän", "lämmität", "lämmittää", "lämmitämme", "lämmitätte", "lämmittävät"],
+    "imperfect" => ["lämmitin", "lämmitit", "lämmitti", "lämmitimme", "lämmititte", "lämmittivät"],
+    "perfect" => ["lämmittänyt", "lämmittäneet"],
+    "imperative" => ["lämmitä", "lämmittäkää"],
   ],
   "löytyä" => [
-    "pre" => ["löydyn", "löydyt", "löytyy", "löydymme", "löydytte", "löytyvät"],
-    "imp" => ["löydyin", "löydyit", "löytyi", "löydyimme", "löydyitte", "löytyivät"]
+    "preesens" => ["löydyn", "löydyt", "löytyy", "löydymme", "löydytte", "löytyvät"],
+    "imperfect" => ["löydyin", "löydyit", "löytyi", "löydyimme", "löydyitte", "löytyivät"],
+    "perfect" => ["löytynyt", "löytyneet"],
+    "imperative" => ["löydy", "löytykää"],
   ],
   "löytää" => [
-    "pre" => ["löydän", "löydät", "löytää", "löydämme", "löydätte", "löytävät"],
-    "imp" => ["löydin", "löydit", "löysi", "löydimme", "löyditte", "löysivät"]
+    "preesens" => ["löydän", "löydät", "löytää", "löydämme", "löydätte", "löytävät"],
+    "imperfect" => ["löydin", "löydit", "löysi", "löydimme", "löyditte", "löysivät"],
+    "perfect" => ["löytänyt", "löytäneet"],
+    "imperative" => ["löydä", "löytäkää"],
   ],
   "maalata" => [
-    "pre" => ["maalaan", "maalaat", "maalaa", "maalaamme", "maalaatte", "maalaavat"],
-    "imp" => ["maalasin", "maalasit", "maalasi", "maalasimme", "maalasitte", "maalasivat"]
+    "preesens" => ["maalaan", "maalaat", "maalaa", "maalaamme", "maalaatte", "maalaavat"],
+    "imperfect" => ["maalasin", "maalasit", "maalasi", "maalasimme", "maalasitte", "maalasivat"],
+    "perfect" => ["maalannut", "maalanneet"],
+    "imperative" => ["maalaa", "maalatkaa"],
   ],
   "maata" => [
-    "pre" => ["makaan", "makaat", "makaa", "makaamme", "makaatte", "makaavat"],
-    "imp" => ["makasin", "makasit", "makasi", "makasimme", "makasitte", "makasivat"]
+    "preesens" => ["makaan", "makaat", "makaa", "makaamme", "makaatte", "makaavat"],
+    "imperfect" => ["makasin", "makasit", "makasi", "makasimme", "makasitte", "makasivat"],
+    "perfect" => ["maannut", "maanneet"],
+    "imperative" => ["makaa", "maatkaa"],
   ],
   "madella" => [
-    "pre" => ["matelen", "matelet", "matelee", "matelemme", "matelette", "matelevat"],
-    "imp" => ["matelin", "matelit", "mateli", "matelimme", "matelitte", "matelivat"]
+    "preesens" => ["matelen", "matelet", "matelee", "matelemme", "matelette", "matelevat"],
+    "imperfect" => ["matelin", "matelit", "mateli", "matelimme", "matelitte", "matelivat"],
+    "perfect" => ["madellut", "madelleet"],
+    "imperative" => ["matele", "madelkaa"],
   ],
   "mahtaa" => [
-    "pre" => ["mahdan", "mahdat", "mahtaa", "mahdamme", "mahdatte", "mahtavat"],
-    "imp" => ["mahdin", "mahdit", "mahtoi", "mahdimme", "mahditte", "mahtoivat"]
+    "preesens" => ["mahdan", "mahdat", "mahtaa", "mahdamme", "mahdatte", "mahtavat"],
+    "imperfect" => ["mahdin", "mahdit", "mahtoi", "mahdimme", "mahditte", "mahtoivat"],
+    "perfect" => ["mahtanut", "mahtaneet"],
+    "imperative" => ["mahda", "mahtakaa"],
   ],
   "mahtua" => [
-    "pre" => ["mahdun", "mahdut", "mahtuu", "mahdumme", "mahdutte", "mahtuvat"],
-    "imp" => ["mahduin", "mahduit", "mahtui", "mahduimme", "mahduitte", "mahtuivat"]
+    "preesens" => ["mahdun", "mahdut", "mahtuu", "mahdumme", "mahdutte", "mahtuvat"],
+    "imperfect" => ["mahduin", "mahduit", "mahtui", "mahduimme", "mahduitte", "mahtuivat"],
+    "perfect" => ["mahtunut", "mahtuneet"],
+    "imperative" => ["mahdu", "mahtukaa"],
   ],
   "mainita" => [
-    "pre" => ["mainitsen", "mainitset", "mainitsee", "mainitsemme", "mainitsette", "mainitsevat"],
-    "imp" => ["mainitsin", "mainitsit", "mainitsi", "mainitsimme", "mainitsitte", "mainitsivat"]
+    "preesens" => ["mainitsen", "mainitset", "mainitsee", "mainitsemme", "mainitsette", "mainitsevat"],
+    "imperfect" => ["mainitsin", "mainitsit", "mainitsi", "mainitsimme", "mainitsitte", "mainitsivat"],
+    "perfect" => ["maininnut", "maininneet"],
+    "imperative" => ["mainitse", "mainitkaa"],
   ],
   "maksaa" => [
-    "pre" => ["maksan", "maksat", "maksaa", "maksamme", "maksatte", "maksavat"],
-    "imp" => ["maksoin", "maksoit", "maksoi", "maksoimme", "maksoitte", "maksoivat"]
+    "preesens" => ["maksan", "maksat", "maksaa", "maksamme", "maksatte", "maksavat"],
+    "imperfect" => ["maksoin", "maksoit", "maksoi", "maksoimme", "maksoitte", "maksoivat"],
+    "perfect" => ["maksanut", "maksaneet"],
+    "imperative" => ["maksa", "maksakaa"],
   ],
   "marssia" => [
-    "pre" => ["marssin", "marssit", "marssii", "marssimme", "marssitte", "marssivat"],
-    "imp" => ["marssin", "marssit", "marssi", "marssimme", "marssitte", "marssivat"]
+    "preesens" => ["marssin", "marssit", "marssii", "marssimme", "marssitte", "marssivat"],
+    "imperfect" => ["marssin", "marssit", "marssi", "marssimme", "marssitte", "marssivat"],
+    "perfect" => ["marssinut", "marssineet"],
+    "imperative" => ["marssi", "marssikaa"],
   ],
   "matkustaa" => [
-    "pre" => ["matkustan", "matkustat", "matkustaa", "matkustamme", "matkustatte", "matkustavat"],
-    "imp" => ["matkustin", "matkustit", "matkusti", "matkustimme", "matkustitte", "matkustivat"]
+    "preesens" => ["matkustan", "matkustat", "matkustaa", "matkustamme", "matkustatte", "matkustavat"],
+    "imperfect" => ["matkustin", "matkustit", "matkusti", "matkustimme", "matkustitte", "matkustivat"],
+    "perfect" => ["matkustanut", "matkustaneet"],
+    "imperative" => ["matkusta", "matkustakaa"],
   ],
   "maustaa" => [
-    "pre" => ["maustan", "maustat", "maustaa", "maustamme", "maustatte", "maustavat"],
-    "imp" => ["maustin", "maustit", "mausti", "maustimme", "maustitte", "maustivat"]
+    "preesens" => ["maustan", "maustat", "maustaa", "maustamme", "maustatte", "maustavat"],
+    "imperfect" => ["maustin", "maustit", "mausti", "maustimme", "maustitte", "maustivat"],
+    "perfect" => ["maustanut", "maustaneet"],
+    "imperative" => ["mausta", "maustakaa"],
   ],
   "menestyä" => [
-    "pre" => ["menestyn", "menestyt", "menestyy", "menestymme", "menestytte", "menestyvät"],
-    "imp" => ["menestyin", "menestyit", "menestyi", "menestyimme", "menestyitte", "menestyivät"]
+    "preesens" => ["menestyn", "menestyt", "menestyy", "menestymme", "menestytte", "menestyvät"],
+    "imperfect" => ["menestyin", "menestyit", "menestyi", "menestyimme", "menestyitte", "menestyivät"],
+    "perfect" => ["menestynyt", "menestyneet"],
+    "imperative" => ["menesty", "menestykää"],
   ],
   "menetellä" => [
-    "pre" => ["menettelen", "menettelet", "menettelee", "menettelemme", "menettelette", "menettelevät"],
-    "imp" => ["menettelin", "menettelit", "menetteli", "menettelimme", "menettelitte", "menettelivät"]
+    "preesens" => ["menettelen", "menettelet", "menettelee", "menettelemme", "menettelette", "menettelevät"],
+    "imperfect" => ["menettelin", "menettelit", "menetteli", "menettelimme", "menettelitte", "menettelivät"],
+    "perfect" => ["menetellyt", "menetelleet"],
+    "imperative" => ["menettele", "menetelkää"],
   ],
   "menettää" => [
-    "pre" => ["menetän", "menetät", "menettää", "menetämme", "menetätte", "menettävät"],
-    "imp" => ["menetin", "menetit", "menetti", "menetimme", "menetitte", "menettivät"]
+    "preesens" => ["menetän", "menetät", "menettää", "menetämme", "menetätte", "menettävät"],
+    "imperfect" => ["menetin", "menetit", "menetti", "menetimme", "menetitte", "menettivät"],
+    "perfect" => ["menettänyt", "menettäneet"],
+    "imperative" => ["menetä", "menettäkää"],
   ],
   "mennä" => [
-    "pre" => ["menen", "menet", "menee", "menemme", "menette", "menevät"],
-    "imp" => ["menin", "menit", "meni", "menimme", "menitte", "menivät"]
+    "preesens" => ["menen", "menet", "menee", "menemme", "menette", "menevät"],
+    "imperfect" => ["menin", "menit", "meni", "menimme", "menitte", "menivät"],
+    "perfect" => ["mennyt", "menneet"],
+    "imperative" => ["mene", "mennää"],
   ],
   "merkitä" => [
-    "pre" => ["merkitsen", "merkitset", "merkitsee", "merkitsemme", "merkitsette", "merkitsevät"],
-    "imp" => ["merkitsin", "merkitsit", "merkitsi", "merkitsimme", "merkitsitte", "merkitsivät"]
+    "preesens" => ["merkitsen", "merkitset", "merkitsee", "merkitsemme", "merkitsette", "merkitsevät"],
+    "imperfect" => ["merkitsin", "merkitsit", "merkitsi", "merkitsimme", "merkitsitte", "merkitsivät"],
+    "perfect" => ["merkinnyt", "merkinneet"],
+    "imperative" => ["merkitse", "merkitkää"],
   ],
   "miettiä" => [
-    "pre" => ["mietin", "mietit", "miettii", "mietimme", "mietitte", "miettivät"],
-    "imp" => ["mietin", "mietit", "mietti", "mietimme", "mietitte", "miettivät"]
+    "preesens" => ["mietin", "mietit", "miettii", "mietimme", "mietitte", "miettivät"],
+    "imperfect" => ["mietin", "mietit", "mietti", "mietimme", "mietitte", "miettivät"],
+    "perfect" => ["miettinyt", "miettineet"],
+    "imperative" => ["mieti", "miettikää"],
   ],
   "mitata" => [
-    "pre" => ["mittaan", "mittaat", "mittaa", "mittaamme", "mittaatte", "mittaavat"],
-    "imp" => ["mittasin", "mittasit", "mittasi", "mittasimme", "mittasitte", "mittasivat"]
+    "preesens" => ["mittaan", "mittaat", "mittaa", "mittaamme", "mittaatte", "mittaavat"],
+    "imperfect" => ["mittasin", "mittasit", "mittasi", "mittasimme", "mittasitte", "mittasivat"],
+    "perfect" => ["mitannut", "mitanneet"],
+    "imperative" => ["mittaa", "mitatkaa"],
   ],
   "moittia" => [
-    "pre" => ["moitin", "moitit", "moittii", "moitimme", "moititte", "moittivat"],
-    "imp" => ["moitin", "moitit", "moitti", "moitimme", "moititte", "moittivat"]
+    "preesens" => ["moitin", "moitit", "moittii", "moitimme", "moititte", "moittivat"],
+    "imperfect" => ["moitin", "moitit", "moitti", "moitimme", "moititte", "moittivat"],
+    "perfect" => ["moittinut", "moittineet"],
+    "imperative" => ["moiti", "moittikaa"],
   ],
   "muistaa" => [
-    "pre" => ["muistan", "muistat", "muistaa", "muistamme", "muistatte", "muistavat"],
-    "imp" => ["muistin", "muistit", "muisti", "muistimme", "muistitte", "muistivat"]
+    "preesens" => ["muistan", "muistat", "muistaa", "muistamme", "muistatte", "muistavat"],
+    "imperfect" => ["muistin", "muistit", "muisti", "muistimme", "muistitte", "muistivat"],
+    "perfect" => ["muistanut", "muistaneet"],
+    "imperative" => ["muista", "muistakaa"],
   ],
   "muistella" => [
-    "pre" => ["muistelen", "muistelet", "muistelee", "muistelemme", "muistelette", "muistelevat"],
-    "imp" => ["muistelin", "muistelit", "muisteli", "muistelimme", "muistelitte", "muistelivat"]
+    "preesens" => ["muistelen", "muistelet", "muistelee", "muistelemme", "muistelette", "muistelevat"],
+    "imperfect" => ["muistelin", "muistelit", "muisteli", "muistelimme", "muistelitte", "muistelivat"],
+    "perfect" => ["muistellut", "muistelleet"],
+    "imperative" => ["muistele", "muistelkaa"],
   ],
   "muistuttaa" => [
-    "pre" => ["muistutan", "muistutat", "muistuttaa", "muistutamme", "muistutatte", "muistuttavat"],
-    "imp" => ["muistutin", "muistutit", "muistutti", "muistutimme", "muistutitte", "muistuttivat"]
+    "preesens" => ["muistutan", "muistutat", "muistuttaa", "muistutamme", "muistutatte", "muistuttavat"],
+    "imperfect" => ["muistutin", "muistutit", "muistutti", "muistutimme", "muistutitte", "muistuttivat"],
+    "perfect" => ["muistuttanut", "muistuttaneet"],
+    "imperative" => ["muistuta", "muistuttakaa"],
   ],
   "muodostaa" => [
-    "pre" => ["muodostan", "muodostat", "muodostaa", "muodostamme", "muodostatte", "muodostavat"],
-    "imp" => ["muodostin", "muodostit", "muodosti", "muodostimme", "muodostitte", "muodostivat"]
+    "preesens" => ["muodostan", "muodostat", "muodostaa", "muodostamme", "muodostatte", "muodostavat"],
+    "imperfect" => ["muodostin", "muodostit", "muodosti", "muodostimme", "muodostitte", "muodostivat"],
+    "perfect" => ["muodostanut", "muodostaneet"],
+    "imperative" => ["muodosta", "muodostakaa"],
   ],
   "muodostua" => [
-    "pre" => ["muodostun", "muodostut", "muodostuu", "muodostumme", "muodostutte", "muodostuvat"],
-    "imp" => ["muodostuin", "muodostuit", "muodostui", "muodostuimme", "muodostuitte", "muodostuivat"]
+    "preesens" => ["muodostun", "muodostut", "muodostuu", "muodostumme", "muodostutte", "muodostuvat"],
+    "imperfect" => ["muodostuin", "muodostuit", "muodostui", "muodostuimme", "muodostuitte", "muodostuivat"],
+    "perfect" => ["muodostunut", "muodostuneet"],
+    "imperative" => ["muodostu", "muodostukaa"],
   ],
   "muuttaa" => [
-    "pre" => ["muutan", "muutat", "muuttaa", "muutamme", "muutatte", "muuttavat"],
-    "imp" => ["muutin", "muutit", "muutti", "muutimme", "muutitte", "muuttivat"]
+    "preesens" => ["muutan", "muutat", "muuttaa", "muutamme", "muutatte", "muuttavat"],
+    "imperfect" => ["muutin", "muutit", "muutti", "muutimme", "muutitte", "muuttivat"],
+    "perfect" => ["muuttanut", "muuttaneet"],
+    "imperative" => ["muuta", "muuttakaa"],
   ],
   "muuttua" => [
-    "pre" => ["muutun", "muutut", "muuttuu", "muutumme", "muututte", "muuttuvat"],
-    "imp" => ["muutuin", "muutuit", "muuttui", "muutuimme", "muutuitte", "muuttuivat"]
+    "preesens" => ["muutun", "muutut", "muuttuu", "muutumme", "muututte", "muuttuvat"],
+    "imperfect" => ["muutuin", "muutuit", "muuttui", "muutuimme", "muutuitte", "muuttuivat"],
+    "perfect" => ["muuttunut", "muuttuneet"],
+    "imperative" => ["muutu", "muuttukaa"],
   ],
   "myydä" => [
-    "pre" => ["myyn", "myyt", "myy", "myymme", "myytte", "myyvät"],
-    "imp" => ["myin", "myit", "myi", "myimme", "myitte", "myivät"]
+    "preesens" => ["myyn", "myyt", "myy", "myymme", "myytte", "myyvät"],
+    "imperfect" => ["myin", "myit", "myi", "myimme", "myitte", "myivät"],
+    "perfect" => ["myynyt", "myyneet"],
+    "imperative" => ["myy", "myykää"],
   ],
   "myöntää" => [
-    "pre" => ["myönnän", "myönnät", "myöntää", "myönnämme", "myönnätte", "myöntävät"],
-    "imp" => ["myönsin", "myönsit", "myönsi", "myönsimme", "myönsitte", "myönsivät"]
+    "preesens" => ["myönnän", "myönnät", "myöntää", "myönnämme", "myönnätte", "myöntävät"],
+    "imperfect" => ["myönsin", "myönsit", "myönsi", "myönsimme", "myönsitte", "myönsivät"],
+    "perfect" => ["myöntänyt", "myöntäneet"],
+    "imperative" => ["myönnä", "myöntäkää"],
   ],
   "määritellä" => [
-    "pre" => ["määrittelen", "määrittelet", "määrittelee", "määrittelemme", "määrittelette", "määrittelevät"],
-    "imp" => ["määrittelin", "määrittelit", "määritteli", "määrittelimme", "määrittelitte", "määrittelivät"]
+    "preesens" => ["määrittelen", "määrittelet", "määrittelee", "määrittelemme", "määrittelette", "määrittelevät"],
+    "imperfect" => ["määrittelin", "määrittelit", "määritteli", "määrittelimme", "määrittelitte", "määrittelivät"],
+    "perfect" => ["määritellyt", "määritelleet"],
+    "imperative" => ["määrittele", "määritelkää"],
   ],
   "määrittää" => [
-    "pre" => ["määritän", "määrität", "määrittää", "määritämme", "määritätte", "määrittävät"],
-    "imp" => ["määritin", "määritit", "määritti", "määritimme", "määrititte", "määrittivät"]
+    "preesens" => ["määritän", "määrität", "määrittää", "määritämme", "määritätte", "määrittävät"],
+    "imperfect" => ["määritin", "määritit", "määritti", "määritimme", "määrititte", "määrittivät"],
+    "perfect" => ["määrittänyt", "määrittäneet"],
+    "imperative" => ["määritä", "määrittäkää"],
   ],
   "määrätä" => [
-    "pre" => ["määrään", "määräät", "määrää", "määräämme", "määräätte", "määräävät"],
-    "imp" => ["määräsin", "määräsit", "määräsi", "määräsimme", "määräsitte", "määräsivät"]
+    "preesens" => ["määrään", "määräät", "määrää", "määräämme", "määräätte", "määräävät"],
+    "imperfect" => ["määräsin", "määräsit", "määräsi", "määräsimme", "määräsitte", "määräsivät"],
+    "perfect" => ["määrännyt", "määränneet"],
+    "imperative" => ["määrää", "määrätkää"],
   ],
   "naulata" => [
-    "pre" => ["naulaan", "naulaat", "naulaa", "naulaamme", "naulaatte", "naulaavat"],
-    "imp" => ["naulasin", "naulasit", "naulasi", "naulasimme", "naulasitte", "naulasivat"]
+    "preesens" => ["naulaan", "naulaat", "naulaa", "naulaamme", "naulaatte", "naulaavat"],
+    "imperfect" => ["naulasin", "naulasit", "naulasi", "naulasimme", "naulasitte", "naulasivat"],
+    "perfect" => ["naulannut", "naulanneet"],
+    "imperative" => ["naulaa", "naulatkaa"],
   ],
   "nauraa" => [
-    "pre" => ["nauran", "naurat", "nauraa", "nauramme", "nauratte", "nauravat"],
-    "imp" => ["nauroin", "nauroit", "nauroi", "nauroimme", "nauroitte", "nauroivat"]
+    "preesens" => ["nauran", "naurat", "nauraa", "nauramme", "nauratte", "nauravat"],
+    "imperfect" => ["nauroin", "nauroit", "nauroi", "nauroimme", "nauroitte", "nauroivat"],
+    "perfect" => ["nauranut", "nauraneet"],
+    "imperative" => ["naura", "naurakaa"],
   ],
   "nauttia" => [
-    "pre" => ["nautin", "nautit", "nauttii", "nautimme", "nautitte", "nauttivat"],
-    "imp" => ["nautin", "nautit", "nautti", "nautimme", "nautitte", "nauttivat"]
+    "preesens" => ["nautin", "nautit", "nauttii", "nautimme", "nautitte", "nauttivat"],
+    "imperfect" => ["nautin", "nautit", "nautti", "nautimme", "nautitte", "nauttivat"],
+    "perfect" => ["nauttinut", "nauttineet"],
+    "imperative" => ["nauti", "nauttikaa"],
   ],
   "neuvoa" => [
-    "pre" => ["neuvon", "neuvot", "neuvoo", "neuvomme", "neuvotte", "neuvovat"],
-    "imp" => ["neuvoin", "neuvoit", "neuvoi", "neuvoimme", "neuvoitte", "neuvoivat"]
+    "preesens" => ["neuvon", "neuvot", "neuvoo", "neuvomme", "neuvotte", "neuvovat"],
+    "imperfect" => ["neuvoin", "neuvoit", "neuvoi", "neuvoimme", "neuvoitte", "neuvoivat"],
+    "perfect" => ["neuvonut", "neuvoneet"],
+    "imperative" => ["neuvo", "neuvokaa"],
   ],
   "neuvotella" => [
-    "pre" => ["neuvottelen", "neuvottelet", "neuvottelee", "neuvottelemme", "neuvottelette", "neuvottelevat"],
-    "imp" => ["neuvottelin", "neuvottelit", "neuvotteli", "neuvottelimme", "neuvottelitte", "neuvottelivat"]
+    "preesens" => ["neuvottelen", "neuvottelet", "neuvottelee", "neuvottelemme", "neuvottelette", "neuvottelevat"],
+    "imperfect" => ["neuvottelin", "neuvottelit", "neuvotteli", "neuvottelimme", "neuvottelitte", "neuvottelivat"],
+    "perfect" => ["neuvotellut", "neuvotelleet"],
+    "imperative" => ["neuvottele", "neuvotelkaa"],
   ],
   "nimittää" => [
-    "pre" => ["nimitän", "nimität", "nimittää", "nimitämme", "nimitätte", "nimittävät"],
-    "imp" => ["nimitin", "nimitit", "nimitti", "nimitimme", "nimititte", "nimittivät"]
+    "preesens" => ["nimitän", "nimität", "nimittää", "nimitämme", "nimitätte", "nimittävät"],
+    "imperfect" => ["nimitin", "nimitit", "nimitti", "nimitimme", "nimititte", "nimittivät"],
+    "perfect" => ["nimittänyt", "nimittäneet"],
+    "imperative" => ["nimitä", "nimittäkää"],
   ],
   "nojata" => [
-    "pre" => ["nojaan", "nojaat", "nojaa", "nojaamme", "nojaatte", "nojaavat"],
-    "imp" => ["nojasin", "nojasit", "nojasi", "nojasimme", "nojasitte", "nojasivat"]
+    "preesens" => ["nojaan", "nojaat", "nojaa", "nojaamme", "nojaatte", "nojaavat"],
+    "imperfect" => ["nojasin", "nojasit", "nojasi", "nojasimme", "nojasitte", "nojasivat"],
+    "perfect" => ["nojannut", "nojanneet"],
+    "imperative" => ["nojaa", "nojatkaa"],
   ],
   "nostaa" => [
-    "pre" => ["nostan", "nostat", "nostaa", "nostamme", "nostatte", "nostavat"],
-    "imp" => ["nostin", "nostit", "nosti", "nostimme", "nostitte", "nostivat"]
+    "preesens" => ["nostan", "nostat", "nostaa", "nostamme", "nostatte", "nostavat"],
+    "imperfect" => ["nostin", "nostit", "nosti", "nostimme", "nostitte", "nostivat"],
+    "perfect" => ["nostanut", "nostaneet"],
+    "imperative" => ["nosta", "nostakaa"],
   ],
   "noudattaa" => [
-    "pre" => ["noudatan", "noudatat", "noudattaa", "noudatamme", "noudatatte", "noudattavat"],
-    "imp" => ["noudatin", "noudatit", "noudatti", "noudatimme", "noudatitte", "noudattivat"]
+    "preesens" => ["noudatan", "noudatat", "noudattaa", "noudatamme", "noudatatte", "noudattavat"],
+    "imperfect" => ["noudatin", "noudatit", "noudatti", "noudatimme", "noudatitte", "noudattivat"],
+    "perfect" => ["noudattanut", "noudattaneet"],
+    "imperative" => ["noudata", "noudattakaa"],
   ],
   "nousta" => [
-    "pre" => ["nousen", "nouset", "nousee", "nousemme", "nousette", "nousevat"],
-    "imp" => ["nousin", "nousit", "nousi", "nousimme", "nousitte", "nousivat"]
+    "preesens" => ["nousen", "nouset", "nousee", "nousemme", "nousette", "nousevat"],
+    "imperfect" => ["nousin", "nousit", "nousi", "nousimme", "nousitte", "nousivat"],
+    "perfect" => ["noussut", "nousseet"],
+    "imperative" => ["nouse", "nouskaa"],
   ],
   "noutaa" => [
-    "pre" => ["noudan", "noudat", "noutaa", "noudamme", "noudatte", "noutavat"],
-    "imp" => ["noudin", "noudit", "nouti", "noudimme", "nouditte", "noutivat"]
+    "preesens" => ["noudan", "noudat", "noutaa", "noudamme", "noudatte", "noutavat"],
+    "imperfect" => ["noudin", "noudit", "nouti", "noudimme", "nouditte", "noutivat"],
+    "perfect" => ["noutanut", "noutaneet"],
+    "imperative" => ["nouda", "noutakaa"],
   ],
   "nukkua" => [
-    "pre" => ["nukun", "nukut", "nukkuu", "nukumme", "nukutte", "nukkuvat"],
-    "imp" => ["nukuin", "nukuit", "nukkui", "nukuimme", "nukuitte", "nukkuivat"]
+    "preesens" => ["nukun", "nukut", "nukkuu", "nukumme", "nukutte", "nukkuvat"],
+    "imperfect" => ["nukuin", "nukuit", "nukkui", "nukuimme", "nukuitte", "nukkuivat"],
+    "perfect" => ["nukkunut", "nukkuneet"],
+    "imperative" => ["nuku", "nukkukaa"],
   ],
   "nähdä" => [
-    "pre" => ["näen", "näet", "näkee", "näemme", "näette", "näkevät"],
-    "imp" => ["näin", "näit", "näki", "näimme", "näitte", "näkivät"]
+    "preesens" => ["näen", "näet", "näkee", "näemme", "näette", "näkevät"],
+    "imperfect" => ["näin", "näit", "näki", "näimme", "näitte", "näkivät"],
+    "perfect" => ["nähnyt", "nähneet"],
+    "imperative" => ["näe", "nähkää"],
   ],
   "näkyä" => [
-    "pre" => ["näyn", "näyt", "näkyy", "näymme", "näytte", "näkyvät"],
-    "imp" => ["näyin", "näyit", "näkyi", "näyimme", "näyitte", "näkyivät"]
+    "preesens" => ["näyn", "näyt", "näkyy", "näymme", "näytte", "näkyvät"],
+    "imperfect" => ["näyin", "näyit", "näkyi", "näyimme", "näyitte", "näkyivät"],
+    "perfect" => ["näkynyt", "näkyneet"],
+    "imperative" => ["näy", "näkykää"],
   ],
   "näytellä" => [
-    "pre" => ["näyttelen", "näyttelet", "näyttelee", "näyttelemme", "näyttelette", "näyttelevät"],
-    "imp" => ["näyttelin", "näyttelit", "näytteli", "näyttelimme", "näyttelitte", "näyttelivät"]
+    "preesens" => ["näyttelen", "näyttelet", "näyttelee", "näyttelemme", "näyttelette", "näyttelevät"],
+    "imperfect" => ["näyttelin", "näyttelit", "näytteli", "näyttelimme", "näyttelitte", "näyttelivät"],
+    "perfect" => ["näytellyt", "näytelleet"],
+    "imperative" => ["näyttele", "näytelkää"],
   ],
   "näyttää" => [
-    "pre" => ["näytän", "näytät", "näyttää", "näytämme", "näytätte", "näyttävät"],
-    "imp" => ["näytin", "näytit", "näytti", "näytimme", "näytitte", "näyttivät"]
+    "preesens" => ["näytän", "näytät", "näyttää", "näytämme", "näytätte", "näyttävät"],
+    "imperfect" => ["näytin", "näytit", "näytti", "näytimme", "näytitte", "näyttivät"],
+    "perfect" => ["näyttänyt", "näyttäneet"],
+    "imperative" => ["näytä", "näyttäkää"],
   ],
   "odotella" => [
-    "pre" => ["odottelen", "odottelet", "odottelee", "odottelemme", "odottelette", "odottelevat"],
-    "imp" => ["odottelin", "odottelit", "odotteli", "odottelimme", "odottelitte", "odottelivat"]
+    "preesens" => ["odottelen", "odottelet", "odottelee", "odottelemme", "odottelette", "odottelevat"],
+    "imperfect" => ["odottelin", "odottelit", "odotteli", "odottelimme", "odottelitte", "odottelivat"],
+    "perfect" => ["odotellut", "odotelleet"],
+    "imperative" => ["odottele", "odotelkaa"],
   ],
   "odottaa" => [
-    "pre" => ["odotan", "odotat", "odottaa", "odotamme", "odotatte", "odottavat"],
-    "imp" => ["odotin", "odotit", "odotti", "odotimme", "odotitte", "odottivat"]
+    "preesens" => ["odotan", "odotat", "odottaa", "odotamme", "odotatte", "odottavat"],
+    "imperfect" => ["odotin", "odotit", "odotti", "odotimme", "odotitte", "odottivat"],
+    "perfect" => ["odottanut", "odottaneet"],
+    "imperative" => ["odota", "odottakaa"],
   ],
   "ohittaa" => [
-    "pre" => ["ohitan", "ohitat", "ohittaa", "ohitamme", "ohitatte", "ohittavat"],
-    "imp" => ["ohitin", "ohitit", "ohitti", "ohitimme", "ohititte", "ohittivat"]
+    "preesens" => ["ohitan", "ohitat", "ohittaa", "ohitamme", "ohitatte", "ohittavat"],
+    "imperfect" => ["ohitin", "ohitit", "ohitti", "ohitimme", "ohititte", "ohittivat"],
+    "perfect" => ["ohittanut", "ohittaneet"],
+    "imperative" => ["ohita", "ohittakaa"],
   ],
   "ohjata" => [
-    "pre" => ["ohjaan", "ohjaat", "ohjaa", "ohjaamme", "ohjaatte", "ohjaavat"],
-    "imp" => ["ohjasin", "ohjasit", "ohjasi", "ohjasimme", "ohjasitte", "ohjasivat"]
+    "preesens" => ["ohjaan", "ohjaat", "ohjaa", "ohjaamme", "ohjaatte", "ohjaavat"],
+    "imperfect" => ["ohjasin", "ohjasit", "ohjasi", "ohjasimme", "ohjasitte", "ohjasivat"],
+    "perfect" => ["ohjannut", "ohjanneet"],
+    "imperative" => ["ohjaa", "ohjatkaa"],
   ],
   "oikaista" => [
-    "pre" => ["oikaisen", "oikaiset", "oikaisee", "oikaisemme", "oikaisette", "oikaisevat"],
-    "imp" => ["oikaisin", "oikaisit", "oikaisi", "oikaisimme", "oikaisitte", "oikaisivat"]
+    "preesens" => ["oikaisen", "oikaiset", "oikaisee", "oikaisemme", "oikaisette", "oikaisevat"],
+    "imperfect" => ["oikaisin", "oikaisit", "oikaisi", "oikaisimme", "oikaisitte", "oikaisivat"],
+    "perfect" => ["oikaissut", "oikaisseet"],
+    "imperative" => ["oikaise", "oikaiskaa"],
   ],
   "oikeuttaa" => [
-    "pre" => ["oikeutan", "oikeutat", "oikeuttaa", "oikeutamme", "oikeutatte", "oikeuttavat"],
-    "imp" => ["oikeutin", "oikeutit", "oikeutti", "oikeutimme", "oikeutitte", "oikeuttivat"]
+    "preesens" => ["oikeutan", "oikeutat", "oikeuttaa", "oikeutamme", "oikeutatte", "oikeuttavat"],
+    "imperfect" => ["oikeutin", "oikeutit", "oikeutti", "oikeutimme", "oikeutitte", "oikeuttivat"],
+    "perfect" => ["oikeuttanut", "oikeuttaneet"],
+    "imperative" => ["oikeuta", "oikeuttakaa"],
   ],
   "ojentaa" => [
-    "pre" => ["ojennan", "ojennat", "ojentaa", "ojennamme", "ojennatte", "ojentavat"],
-    "imp" => ["ojensin", "ojensit", "ojensi", "ojensimme", "ojensitte", "ojensivat"]
+    "preesens" => ["ojennan", "ojennat", "ojentaa", "ojennamme", "ojennatte", "ojentavat"],
+    "imperfect" => ["ojensin", "ojensit", "ojensi", "ojensimme", "ojensitte", "ojensivat"],
+    "perfect" => ["ojentanut", "ojentaneet"],
+    "imperative" => ["ojenna", "ojentakaa"],
   ],
   "oksettaa" => [
-    "pre" => ["oksetan", "oksetat", "oksettaa", "oksetamme", "oksetatte", "oksettavat"],
-    "imp" => ["oksetin", "oksetit", "oksetti", "oksetimme", "oksetitte", "oksettivat"]
+    "preesens" => ["oksetan", "oksetat", "oksettaa", "oksetamme", "oksetatte", "oksettavat"],
+    "imperfect" => ["oksetin", "oksetit", "oksetti", "oksetimme", "oksetitte", "oksettivat"],
+    "perfect" => ["oksettanut", "oksettaneet"],
+    "imperative" => ["okseta", "oksettakaa"],
   ],
   "olla" => [
-    "pre" => ["olen", "olet", "olee", "olemme", "olette", "olevat"],
-    "imp" => ["olin", "olit", "oli", "olimme", "olitte", "olivat"]
+    "preesens" => ["olen", "olet", "olee", "olemme", "olette", "olevat"],
+    "imperfect" => ["olin", "olit", "oli", "olimme", "olitte", "olivat"],
+    "perfect" => ["ollut", "olleet"],
+    "imperative" => ["ole", "olkaa"],
   ],
   "omaksua" => [
-    "pre" => ["omaksun", "omaksut", "omaksuu", "omaksumme", "omaksutte", "omaksuvat"],
-    "imp" => ["omaksuin", "omaksuit", "omaksui", "omaksuimme", "omaksuitte", "omaksuivat"]
+    "preesens" => ["omaksun", "omaksut", "omaksuu", "omaksumme", "omaksutte", "omaksuvat"],
+    "imperfect" => ["omaksuin", "omaksuit", "omaksui", "omaksuimme", "omaksuitte", "omaksuivat"],
+    "perfect" => ["omaksunut", "omaksuneet"],
+    "imperative" => ["omaksu", "omaksukaa"],
   ],
   "omata" => [
-    "pre" => ["omaan", "omaat", "omaa", "omaamme", "omaatte", "omaavat"],
-    "imp" => ["omasin", "omasit", "omasi", "omasimme", "omasitte", "omasivat"]
+    "preesens" => ["omaan", "omaat", "omaa", "omaamme", "omaatte", "omaavat"],
+    "imperfect" => ["omasin", "omasit", "omasi", "omasimme", "omasitte", "omasivat"],
+    "perfect" => ["omannut", "omanneet"],
+    "imperative" => ["omaa", "omatkaa"],
   ],
   "omistaa" => [
-    "pre" => ["omistan", "omistat", "omistaa", "omistamme", "omistatte", "omistavat"],
-    "imp" => ["omistin", "omistit", "omisti", "omistimme", "omistitte", "omistivat"]
+    "preesens" => ["omistan", "omistat", "omistaa", "omistamme", "omistatte", "omistavat"],
+    "imperfect" => ["omistin", "omistit", "omisti", "omistimme", "omistitte", "omistivat"],
+    "perfect" => ["omistanut", "omistaneet"],
+    "imperative" => ["omista", "omistakaa"],
   ],
   "ommella" => [
-    "pre" => ["ompelen", "ompelet", "ompelee", "ompelemme", "ompelette", "ompelevat"],
-    "imp" => ["ompelin", "ompelit", "ompeli", "ompelimme", "ompelitte", "ompelivat"]
+    "preesens" => ["ompelen", "ompelet", "ompelee", "ompelemme", "ompelette", "ompelevat"],
+    "imperfect" => ["ompelin", "ompelit", "ompeli", "ompelimme", "ompelitte", "ompelivat"],
+    "perfect" => ["ommellut", "ommelleet"],
+    "imperative" => ["ompele", "ommelkaa"],
   ],
   "onnistua" => [
-    "pre" => ["onnistun", "onnistut", "onnistuu", "onnistumme", "onnistutte", "onnistuvat"],
-    "imp" => ["onnistuin", "onnistuit", "onnistui", "onnistuimme", "onnistuitte", "onnistuivat"]
+    "preesens" => ["onnistun", "onnistut", "onnistuu", "onnistumme", "onnistutte", "onnistuvat"],
+    "imperfect" => ["onnistuin", "onnistuit", "onnistui", "onnistuimme", "onnistuitte", "onnistuivat"],
+    "perfect" => ["onnistunut", "onnistuneet"],
+    "imperative" => ["onnistu", "onnistukaa"],
   ],
   "opettaa" => [
-    "pre" => ["opetan", "opetat", "opettaa", "opetamme", "opetatte", "opettavat"],
-    "imp" => ["opetin", "opetit", "opetti", "opetimme", "opetitte", "opettivat"]
+    "preesens" => ["opetan", "opetat", "opettaa", "opetamme", "opetatte", "opettavat"],
+    "imperfect" => ["opetin", "opetit", "opetti", "opetimme", "opetitte", "opettivat"],
+    "perfect" => ["opettanut", "opettaneet"],
+    "imperative" => ["opeta", "opettakaa"],
   ],
   "opiskella" => [
-    "pre" => ["opiskelen", "opiskelet", "opiskelee", "opiskelemme", "opiskelette", "opiskelevat"],
-    "imp" => ["opiskelin", "opiskelit", "opiskeli", "opiskelimme", "opiskelitte", "opiskelivat"]
+    "preesens" => ["opiskelen", "opiskelet", "opiskelee", "opiskelemme", "opiskelette", "opiskelevat"],
+    "imperfect" => ["opiskelin", "opiskelit", "opiskeli", "opiskelimme", "opiskelitte", "opiskelivat"],
+    "perfect" => ["opiskellut", "opiskelleet"],
+    "imperative" => ["opiskele", "opiskelkaa"],
   ],
   "oppia" => [
-    "pre" => ["opin", "opit", "oppii", "opimme", "opitte", "oppivat"],
-    "imp" => ["opin", "opit", "oppi", "opimme", "opitte", "oppivat"]
+    "preesens" => ["opin", "opit", "oppii", "opimme", "opitte", "oppivat"],
+    "imperfect" => ["opin", "opit", "oppi", "opimme", "opitte", "oppivat"],
+    "perfect" => ["oppinut", "oppineet"],
+    "imperative" => ["opi", "oppikaa"],
   ],
   "osallistua" => [
-    "pre" => ["osallistun", "osallistut", "osallistuu", "osallistumme", "osallistutte", "osallistuvat"],
-    "imp" => ["osallistuin", "osallistuit", "osallistui", "osallistuimme", "osallistuitte", "osallistuivat"]
+    "preesens" => ["osallistun", "osallistut", "osallistuu", "osallistumme", "osallistutte", "osallistuvat"],
+    "imperfect" => ["osallistuin", "osallistuit", "osallistui", "osallistuimme", "osallistuitte", "osallistuivat"],
+    "perfect" => ["osallistunut", "osallistuneet"],
+    "imperative" => ["osallistu", "osallistukaa"],
   ],
   "osata" => [
-    "pre" => ["osaan", "osaat", "osaa", "osaamme", "osaatte", "osaavat"],
-    "imp" => ["osasin", "osasit", "osasi", "osasimme", "osasitte", "osasivat"]
+    "preesens" => ["osaan", "osaat", "osaa", "osaamme", "osaatte", "osaavat"],
+    "imperfect" => ["osasin", "osasit", "osasi", "osasimme", "osasitte", "osasivat"],
+    "perfect" => ["osannut", "osanneet"],
+    "imperative" => ["osaa", "osatkaa"],
   ],
   "osoittaa" => [
-    "pre" => ["osoitan", "osoitat", "osoittaa", "osoitamme", "osoitatte", "osoittavat"],
-    "imp" => ["osoitin", "osoitit", "osoitti", "osoitimme", "osoititte", "osoittivat"]
+    "preesens" => ["osoitan", "osoitat", "osoittaa", "osoitamme", "osoitatte", "osoittavat"],
+    "imperfect" => ["osoitin", "osoitit", "osoitti", "osoitimme", "osoititte", "osoittivat"],
+    "perfect" => ["osoittanut", "osoittaneet"],
+    "imperative" => ["osoita", "osoittakaa"],
   ],
   "osoittautua" => [
-    "pre" => ["osoittaudun", "osoittaudut", "osoittautuu", "osoittaudumme", "osoittaudutte", "osoittautuvat"],
-    "imp" => ["osoittauduin", "osoittauduit", "osoittautui", "osoittauduimme", "osoittauduitte", "osoittautuivat"]
+    "preesens" => ["osoittaudun", "osoittaudut", "osoittautuu", "osoittaudumme", "osoittaudutte", "osoittautuvat"],
+    "imperfect" => ["osoittauduin", "osoittauduit", "osoittautui", "osoittauduimme", "osoittauduitte", "osoittautuivat"],
+    "perfect" => ["osoittautunut", "osoittautuneet"],
+    "imperative" => ["osoittaudu", "osoittautukaa"],
   ],
   "ostaa" => [
-    "pre" => ["ostan", "ostat", "ostaa", "ostamme", "ostatte", "ostavat"],
-    "imp" => ["ostin", "ostit", "osti", "ostimme", "ostitte", "ostivat"]
+    "preesens" => ["ostan", "ostat", "ostaa", "ostamme", "ostatte", "ostavat"],
+    "imperfect" => ["ostin", "ostit", "osti", "ostimme", "ostitte", "ostivat"],
+    "perfect" => ["ostanut", "ostaneet"],
+    "imperative" => ["osta", "ostakaa"],
   ],
   "osua" => [
-    "pre" => ["osun", "osut", "osuu", "osumme", "osutte", "osuvat"],
-    "imp" => ["osuin", "osuit", "osui", "osuimme", "osuitte", "osuivat"]
+    "preesens" => ["osun", "osut", "osuu", "osumme", "osutte", "osuvat"],
+    "imperfect" => ["osuin", "osuit", "osui", "osuimme", "osuitte", "osuivat"],
+    "perfect" => ["osunut", "osuneet"],
+    "imperative" => ["osu", "osukaa"],
   ],
   "ottaa" => [
-    "pre" => ["otan", "otat", "ottaa", "otamme", "otatte", "ottavat"],
-    "imp" => ["otin", "otit", "otti", "otimme", "otitte", "ottivat"]
+    "preesens" => ["otan", "otat", "ottaa", "otamme", "otatte", "ottavat"],
+    "imperfect" => ["otin", "otit", "otti", "otimme", "otitte", "ottivat"],
+    "perfect" => ["ottanut", "ottaneet"],
+    "imperative" => ["ota", "ottakaa"],
   ],
   "paeta" => [
-    "pre" => ["pakenen", "pakenet", "pakenee", "pakenemme", "pakenette", "pakenevat"],
-    "imp" => ["pakenin", "pakenit", "pakeni", "pakenimme", "pakenitte", "pakenivat"]
+    "preesens" => ["pakenen", "pakenet", "pakenee", "pakenemme", "pakenette", "pakenevat"],
+    "imperfect" => ["pakenin", "pakenit", "pakeni", "pakenimme", "pakenitte", "pakenivat"],
+    "perfect" => ["paennut", "paenneet"],
+    "imperative" => ["pakene", "paetkaa"],
   ],
   "painaa" => [
-    "pre" => ["painan", "painat", "painaa", "painamme", "painatte", "painavat"],
-    "imp" => ["painoin", "painoit", "painoi", "painoimme", "painoitte", "painoivat"]
+    "preesens" => ["painan", "painat", "painaa", "painamme", "painatte", "painavat"],
+    "imperfect" => ["painoin", "painoit", "painoi", "painoimme", "painoitte", "painoivat"],
+    "perfect" => ["painanut", "painaneet"],
+    "imperative" => ["paina", "painakaa"],
   ],
   "painua" => [
-    "pre" => ["painun", "painut", "painuu", "painumme", "painutte", "painuvat"],
-    "imp" => ["painuin", "painuit", "painui", "painuimme", "painuitte", "painuivat"]
+    "preesens" => ["painun", "painut", "painuu", "painumme", "painutte", "painuvat"],
+    "imperfect" => ["painuin", "painuit", "painui", "painuimme", "painuitte", "painuivat"],
+    "perfect" => ["painunut", "painuneet"],
+    "imperative" => ["painu", "painukaa"],
   ],
   "paistaa" => [
-    "pre" => ["paistan", "paistat", "paistaa", "paistamme", "paistatte", "paistavat"],
-    "imp" => ["paistin", "paistit", "paisti", "paistimme", "paistitte", "paistivat"]
+    "preesens" => ["paistan", "paistat", "paistaa", "paistamme", "paistatte", "paistavat"],
+    "imperfect" => ["paistin", "paistit", "paisti", "paistimme", "paistitte", "paistivat"],
+    "perfect" => ["paistanut", "paistaneet"],
+    "imperative" => ["paista", "paistakaa"],
   ],
   "pakata" => [
-    "pre" => ["pakkaan", "pakkaat", "pakkaa", "pakkaamme", "pakkaatte", "pakkaavat"],
-    "imp" => ["pakkasin", "pakkasit", "pakkasi", "pakkasimme", "pakkasitte", "pakkasivat"]
+    "preesens" => ["pakkaan", "pakkaat", "pakkaa", "pakkaamme", "pakkaatte", "pakkaavat"],
+    "imperfect" => ["pakkasin", "pakkasit", "pakkasi", "pakkasimme", "pakkasitte", "pakkasivat"],
+    "perfect" => ["pakannut", "pakanneet"],
+    "imperative" => ["pakkaa", "pakatkaa"],
   ],
   "pakottaa" => [
-    "pre" => ["pakotan", "pakotat", "pakottaa", "pakotamme", "pakotatte", "pakottavat"],
-    "imp" => ["pakotin", "pakotit", "pakotti", "pakotimme", "pakotitte", "pakottivat"]
+    "preesens" => ["pakotan", "pakotat", "pakottaa", "pakotamme", "pakotatte", "pakottavat"],
+    "imperfect" => ["pakotin", "pakotit", "pakotti", "pakotimme", "pakotitte", "pakottivat"],
+    "perfect" => ["pakottanut", "pakottaneet"],
+    "imperative" => ["pakota", "pakottakaa"],
   ],
   "palata" => [
-    "pre" => ["palaan", "palaat", "palaa", "palaamme", "palaatte", "palaavat"],
-    "imp" => ["palasin", "palasit", "palasi", "palasimme", "palasitte", "palasivat"]
+    "preesens" => ["palaan", "palaat", "palaa", "palaamme", "palaatte", "palaavat"],
+    "imperfect" => ["palasin", "palasit", "palasi", "palasimme", "palasitte", "palasivat"],
+    "perfect" => ["palannut", "palanneet"],
+    "imperative" => ["palaa", "palatkaa"],
   ],
   "palella" => [
-    "pre" => ["palelen", "palelet", "palelee", "palelemme", "palelette", "palelevat"],
-    "imp" => ["palelin", "palelit", "paleli", "palelimme", "palelitte", "palelivat"]
+    "preesens" => ["palelen", "palelet", "palelee", "palelemme", "palelette", "palelevat"],
+    "imperfect" => ["palelin", "palelit", "paleli", "palelimme", "palelitte", "palelivat"],
+    "perfect" => ["palellut", "palelleet"],
+    "imperative" => ["palele", "palelkaa"],
   ],
   "palauttaa" => [
-    "pre" => ["palautan", "palautat", "palauttaa", "palautamme", "palautatte", "palauttavat"],
-    "imp" => ["palautin", "palautit", "palauttoi", "palautimme", "palautitte", "palauttoivat"]
+    "preesens" => ["palautan", "palautat", "palauttaa", "palautamme", "palautatte", "palauttavat"],
+    "imperfect" => ["palautin", "palautit", "palauttoi", "palautimme", "palautitte", "palauttoivat"],
+    "perfect" => ["palauttanut", "palauttaneet"],
+    "imperative" => ["palauta", "palauttakaa"],
   ],
   "paljastaa" => [
-    "pre" => ["paljastan", "paljastat", "paljastaa", "paljastamme", "paljastatte", "paljastavat"],
-    "imp" => ["paljastin", "paljastit", "paljasti", "paljastimme", "paljastitte", "paljastivat"]
+    "preesens" => ["paljastan", "paljastat", "paljastaa", "paljastamme", "paljastatte", "paljastavat"],
+    "imperfect" => ["paljastin", "paljastit", "paljasti", "paljastimme", "paljastitte", "paljastivat"],
+    "perfect" => ["paljastanut", "paljastaneet"],
+    "imperative" => ["paljasta", "paljastakaa"],
   ],
   "paljastua" => [
-    "pre" => ["paljastun", "paljastut", "paljastuu", "paljastumme", "paljastutte", "paljastuvat"],
-    "imp" => ["paljastuin", "paljastuit", "paljastui", "paljastuimme", "paljastuitte", "paljastuivat"]
+    "preesens" => ["paljastun", "paljastut", "paljastuu", "paljastumme", "paljastutte", "paljastuvat"],
+    "imperfect" => ["paljastuin", "paljastuit", "paljastui", "paljastuimme", "paljastuitte", "paljastuivat"],
+    "perfect" => ["paljastunut", "paljastuneet"],
+    "imperative" => ["paljastu", "paljastukaa"],
   ],
   "palkita" => [
-    "pre" => ["palkitsen", "palkitset", "palkitsee", "palkitsemme", "palkitsette", "palkitsevat"],
-    "imp" => ["palkitsin", "palkitsit", "palkitsi", "palkitsimme", "palkitsitte", "palkitsivat"]
+    "preesens" => ["palkitsen", "palkitset", "palkitsee", "palkitsemme", "palkitsette", "palkitsevat"],
+    "imperfect" => ["palkitsin", "palkitsit", "palkitsi", "palkitsimme", "palkitsitte", "palkitsivat"],
+    "perfect" => ["palkinnut", "palkinneet"],
+    "imperative" => ["palkitse", "palkitkaa"],
   ],
   "palvella" => [
-    "pre" => ["palvelen", "palvelet", "palvelee", "palvelemme", "palvelette", "palvelevat"],
-    "imp" => ["palvelin", "palvelit", "palveli", "palvelimme", "palvelitte", "palvelivat"]
+    "preesens" => ["palvelen", "palvelet", "palvelee", "palvelemme", "palvelette", "palvelevat"],
+    "imperfect" => ["palvelin", "palvelit", "palveli", "palvelimme", "palvelitte", "palvelivat"],
+    "perfect" => ["palvellut", "palvelleet"],
+    "imperative" => ["palvele", "palvelkaa"],
   ],
   "paneutua" => [
-    "pre" => ["paneudun", "paneudut", "paneutuu", "paneudumme", "paneudutte", "paneutuvat"],
-    "imp" => ["paneuduin", "paneuduit", "paneutui", "paneuduimme", "paneuduitte", "paneutuivat"]
+    "preesens" => ["paneudun", "paneudut", "paneutuu", "paneudumme", "paneudutte", "paneutuvat"],
+    "imperfect" => ["paneuduin", "paneuduit", "paneutui", "paneuduimme", "paneuduitte", "paneutuivat"],
+    "perfect" => ["paneutunut", "paneutuneet"],
+    "imperative" => ["paneudu", "paneutukaa"],
   ],
   "panna" => [
-    "pre" => ["panen", "panet", "panee", "panemme", "panette", "panevat"],
-    "imp" => ["panin", "panit", "pani", "panimme", "panitte", "panivat"]
+    "preesens" => ["panen", "panet", "panee", "panemme", "panette", "panevat"],
+    "imperfect" => ["panin", "panit", "pani", "panimme", "panitte", "panivat"],
+    "perfect" => ["pannut", "panneet"],
+    "imperative" => ["pane", "pannaa"],
   ],
   "parantaa" => [
-    "pre" => ["parannan", "parannat", "parantaa", "parannamme", "parannatte", "parantavat"],
-    "imp" => ["paransin", "paransit", "paransi", "paransimme", "paransitte", "paransivat"]
+    "preesens" => ["parannan", "parannat", "parantaa", "parannamme", "parannatte", "parantavat"],
+    "imperfect" => ["paransin", "paransit", "paransi", "paransimme", "paransitte", "paransivat"],
+    "perfect" => ["parantanut", "parantaneet"],
+    "imperative" => ["paranna", "parantakaa"],
   ],
   "parantua" => [
-    "pre" => ["parannun", "parannut", "parantuu", "parannumme", "parannutte", "parantuvat"],
-    "imp" => ["parannuin", "parannuit", "parantui", "parannuimme", "parannuitte", "parantuivat"]
+    "preesens" => ["parannun", "parannut", "parantuu", "parannumme", "parannutte", "parantuvat"],
+    "imperfect" => ["parannuin", "parannuit", "parantui", "parannuimme", "parannuitte", "parantuivat"],
+    "perfect" => ["parantunut", "parantuneet"],
+    "imperative" => ["parannu", "parantukaa"],
   ],
   "peittää" => [
-    "pre" => ["peitän", "peität", "peittää", "peitämme", "peitätte", "peittävät"],
-    "imp" => ["peitin", "peitit", "peitti", "peitimme", "peititte", "peittivät"]
+    "preesens" => ["peitän", "peität", "peittää", "peitämme", "peitätte", "peittävät"],
+    "imperfect" => ["peitin", "peitit", "peitti", "peitimme", "peititte", "peittivät"],
+    "perfect" => ["peittänyt", "peittäneet"],
+    "imperative" => ["peitä", "peittäkää"],
   ],
   "pelastaa" => [
-    "pre" => ["pelastan", "pelastat", "pelastaa", "pelastamme", "pelastatte", "pelastavat"],
-    "imp" => ["pelastin", "pelastit", "pelasti", "pelastimme", "pelastitte", "pelastivat"]
+    "preesens" => ["pelastan", "pelastat", "pelastaa", "pelastamme", "pelastatte", "pelastavat"],
+    "imperfect" => ["pelastin", "pelastit", "pelasti", "pelastimme", "pelastitte", "pelastivat"],
+    "perfect" => ["pelastanut", "pelastaneet"],
+    "imperative" => ["pelasta", "pelastakaa"],
   ],
   "pelastua" => [
-    "pre" => ["pelastun", "pelastut", "pelastuu", "pelastumme", "pelastutte", "pelastuvat"],
-    "imp" => ["pelastuin", "pelastuit", "pelastui", "pelastuimme", "pelastuitte", "pelastuivat"]
+    "preesens" => ["pelastun", "pelastut", "pelastuu", "pelastumme", "pelastutte", "pelastuvat"],
+    "imperfect" => ["pelastuin", "pelastuit", "pelastui", "pelastuimme", "pelastuitte", "pelastuivat"],
+    "perfect" => ["pelastunut", "pelastuneet"],
+    "imperative" => ["pelastu", "pelastukaa"],
   ],
   "pelätä" => [
-    "pre" => ["pelkään", "pelkäät", "pelkää", "pelkäämme", "pelkäätte", "pelkäävät"],
-    "imp" => ["pelkäsin", "pelkäsit", "pelkäsi", "pelkäsimme", "pelkäsitte", "pelkäsivät"]
+    "preesens" => ["pelkään", "pelkäät", "pelkää", "pelkäämme", "pelkäätte", "pelkäävät"],
+    "imperfect" => ["pelkäsin", "pelkäsit", "pelkäsi", "pelkäsimme", "pelkäsitte", "pelkäsivät"],
+    "perfect" => ["pelännyt", "pelänneet"],
+    "imperative" => ["pelkää", "pelätkää"],
   ],
   "pettää" => [
-    "pre" => ["petän", "petät", "pettää", "petämme", "petätte", "pettävät"],
-    "imp" => ["petin", "petit", "petti", "petimme", "petitte", "pettivät"]
+    "preesens" => ["petän", "petät", "pettää", "petämme", "petätte", "pettävät"],
+    "imperfect" => ["petin", "petit", "petti", "petimme", "petitte", "pettivät"],
+    "perfect" => ["pettänyt", "pettäneet"],
+    "imperative" => ["petä", "pettäkää"],
   ],
   "perehtyä" => [
-    "pre" => ["perehdyn", "perehdyt", "perehtyy", "perehdymme", "perehdytte", "perehtyvät"],
-    "imp" => ["perehdyin", "perehdyit", "perehtyi", "perehdyimme", "perehdyitte", "perehtyivät"]
+    "preesens" => ["perehdyn", "perehdyt", "perehtyy", "perehdymme", "perehdytte", "perehtyvät"],
+    "imperfect" => ["perehdyin", "perehdyit", "perehtyi", "perehdyimme", "perehdyitte", "perehtyivät"],
+    "perfect" => ["perehtynyt", "perehtyneet"],
+    "imperative" => ["perehdy", "perehtykää"],
   ],
   "periä" => [
-    "pre" => ["perin", "perit", "perii", "perimme", "peritte", "perivät"],
-    "imp" => ["perin", "perit", "peri", "perimme", "peritte", "perivät"]
+    "preesens" => ["perin", "perit", "perii", "perimme", "peritte", "perivät"],
+    "imperfect" => ["perin", "perit", "peri", "perimme", "peritte", "perivät"],
+    "perfect" => ["perinyt", "perineet"],
+    "imperative" => ["peri", "perikää"],
   ],
   "perustaa" => [
-    "pre" => ["perustan", "perustat", "perustaa", "perustamme", "perustatte", "perustavat"],
-    "imp" => ["perustin", "perustit", "perusti", "perustimme", "perustitte", "perustivat"]
+    "preesens" => ["perustan", "perustat", "perustaa", "perustamme", "perustatte", "perustavat"],
+    "imperfect" => ["perustin", "perustit", "perusti", "perustimme", "perustitte", "perustivat"],
+    "perfect" => ["perustanut", "perustaneet"],
+    "imperative" => ["perusta", "perustakaa"],
   ],
   "perustella" => [
-    "pre" => ["perustelen", "perustelet", "perustelee", "perustelemme", "perustelette", "perustelevat"],
-    "imp" => ["perustelin", "perustelit", "perusteli", "perustelimme", "perustelitte", "perustelivat"]
+    "preesens" => ["perustelen", "perustelet", "perustelee", "perustelemme", "perustelette", "perustelevat"],
+    "imperfect" => ["perustelin", "perustelit", "perusteli", "perustelimme", "perustelitte", "perustelivat"],
+    "perfect" => ["perustellut", "perustelleet"],
+    "imperative" => ["perustele", "perustelkaa"],
   ],
   "perustua" => [
-    "pre" => ["perustun", "perustut", "perustuu", "perustumme", "perustutte", "perustuvat"],
-    "imp" => ["perustuin", "perustuit", "perustui", "perustuimme", "perustuitte", "perustuivat"]
+    "preesens" => ["perustun", "perustut", "perustuu", "perustumme", "perustutte", "perustuvat"],
+    "imperfect" => ["perustuin", "perustuit", "perustui", "perustuimme", "perustuitte", "perustuivat"],
+    "perfect" => ["perustunut", "perustuneet"],
+    "imperative" => ["perustu", "perustukaa"],
   ],
   "peruuttaa" => [
-    "pre" => ["peruutan", "peruutat", "peruuttaa", "peruutamme", "peruutatte", "peruuttavat"],
-    "imp" => ["peruutin", "peruutit", "peruutti", "peruutimme", "peruutitte", "peruuttivat"]
+    "preesens" => ["peruutan", "peruutat", "peruuttaa", "peruutamme", "peruutatte", "peruuttavat"],
+    "imperfect" => ["peruutin", "peruutit", "peruutti", "peruutimme", "peruutitte", "peruuttivat"],
+    "perfect" => ["peruuttanut", "peruuttaneet"],
+    "imperative" => ["peruuta", "peruuttakaa"],
   ],
   "pestä" => [
-    "pre" => ["pesen", "peset", "pesee", "pesemme", "pesette", "pesevät"],
-    "imp" => ["pesin", "pesit", "pesi", "pesimme", "pesitte", "pesivät"]
+    "preesens" => ["pesen", "peset", "pesee", "pesemme", "pesette", "pesevät"],
+    "imperfect" => ["pesin", "pesit", "pesi", "pesimme", "pesitte", "pesivät"],
+    "perfect" => ["pessyt", "pesseet"],
+    "imperative" => ["pese", "peskää"],
   ],
   "pidetä" => [
-    "pre" => ["pitenen", "pitenet", "pitenee", "pitenemme", "pitenette", "pitenevät"],
-    "imp" => ["pitenin", "pitenit", "piteni", "pitenimme", "pitenitte", "pitenivät"]
+    "preesens" => ["pitenen", "pitenet", "pitenee", "pitenemme", "pitenette", "pitenevät"],
+    "imperfect" => ["pitenin", "pitenit", "piteni", "pitenimme", "pitenitte", "pitenivät"],
+    "perfect" => ["pitenyt", "piteneet"],
+    "imperative" => ["pitene", "pidetkää"],
   ],
   "pidättää" => [
-    "pre" => ["pidätän", "pidätät", "pidättää", "pidätämme", "pidätätte", "pidättävät"],
-    "imp" => ["pidätin", "pidätit", "pidätti", "pidätimme", "pidätitte", "pidättivät"]
+    "preesens" => ["pidätän", "pidätät", "pidättää", "pidätämme", "pidätätte", "pidättävät"],
+    "imperfect" => ["pidätin", "pidätit", "pidätti", "pidätimme", "pidätitte", "pidättivät"],
+    "perfect" => ["pidättänyt", "pidättäneet"],
+    "imperative" => ["pidätä", "pidättäkää"],
   ],
   "pienentää" => [
-    "pre" => ["pienennän", "pienennät", "pienentää", "pienennämme", "pienennätte", "pienentävät"],
-    "imp" => ["pienensin", "pienensit", "pienensi", "pienensimme", "pienensitte", "pienensivät"]
+    "preesens" => ["pienennän", "pienennät", "pienentää", "pienennämme", "pienennätte", "pienentävät"],
+    "imperfect" => ["pienensin", "pienensit", "pienensi", "pienensimme", "pienensitte", "pienensivät"],
+    "perfect" => ["pienentänyt", "pienentäneet"],
+    "imperative" => ["pienennä", "pienentäkää"],
   ],
   "piirtää" => [
-    "pre" => ["piirrän", "piirrät", "piirtää", "piirrämme", "piirrätte", "piirtävät"],
-    "imp" => ["piirsin", "piirsit", "piirsi", "piirsimme", "piirsitte", "piirsivät"]
+    "preesens" => ["piirrän", "piirrät", "piirtää", "piirrämme", "piirrätte", "piirtävät"],
+    "imperfect" => ["piirsin", "piirsit", "piirsi", "piirsimme", "piirsitte", "piirsivät"],
+    "perfect" => ["piirtänyt", "piirtäneet"],
+    "imperative" => ["piirrä", "piirtäkää"],
   ],
   "pilata" => [
-    "pre" => ["pilaan", "pilaat", "pilaa", "pilaamme", "pilaatte", "pilaavat"],
-    "imp" => ["pilasin", "pilasit", "pilasi", "pilasimme", "pilasitte", "pilasivat"]
+    "preesens" => ["pilaan", "pilaat", "pilaa", "pilaamme", "pilaatte", "pilaavat"],
+    "imperfect" => ["pilasin", "pilasit", "pilasi", "pilasimme", "pilasitte", "pilasivat"],
+    "perfect" => ["pilannut", "pilanneet"],
+    "imperative" => ["pilaa", "pilatkaa"],
   ],
   "pistäytyä" => [
-    "pre" => ["pistäydyn", "pistäydyt", "pistäytyy", "pistäydymme", "pistäydytte", "pistäytyvät"],
-    "imp" => ["pistäydyin", "pistäydyit", "pistäytyi", "pistäydyimme", "pistäydyitte", "pistäytyivät"]
+    "preesens" => ["pistäydyn", "pistäydyt", "pistäytyy", "pistäydymme", "pistäydytte", "pistäytyvät"],
+    "imperfect" => ["pistäydyin", "pistäydyit", "pistäytyi", "pistäydyimme", "pistäydyitte", "pistäytyivät"],
+    "perfect" => ["pistäytynyt", "pistäytyneet"],
+    "imperative" => ["pistäydy", "pistäytykää"],
   ],
   "pistää" => [
-    "pre" => ["pistän", "pistät", "pistää", "pistämme", "pistätte", "pistävät"],
-    "imp" => ["pistin", "pistit", "pisti", "pistimme", "pistitte", "pistivät"]
+    "preesens" => ["pistän", "pistät", "pistää", "pistämme", "pistätte", "pistävät"],
+    "imperfect" => ["pistin", "pistit", "pisti", "pistimme", "pistitte", "pistivät"],
+    "perfect" => ["pistänyt", "pistäneet"],
+    "imperative" => ["pistä", "pistäkää"],
   ],
   "pitää" => [
-    "pre" => ["pidän", "pidät", "pitää", "pidämme", "pidätte", "pitävät"],
-    "imp" => ["pidin", "pidit", "piti", "pidimme", "piditte", "pitivät"]
+    "preesens" => ["pidän", "pidät", "pitää", "pidämme", "pidätte", "pitävät"],
+    "imperfect" => ["pidin", "pidit", "piti", "pidimme", "piditte", "pitivät"],
+    "perfect" => ["pitänyt", "pitäneet"],
+    "imperative" => ["pidä", "pitäkää"],
   ],
   "pohtia" => [
-    "pre" => ["pohdin", "pohdit", "pohtii", "pohdimme", "pohditte", "pohtivat"],
-    "imp" => ["pohdin", "pohdit", "pohti", "pohdimme", "pohditte", "pohtivat"]
+    "preesens" => ["pohdin", "pohdit", "pohtii", "pohdimme", "pohditte", "pohtivat"],
+    "imperfect" => ["pohdin", "pohdit", "pohti", "pohdimme", "pohditte", "pohtivat"],
+    "perfect" => ["pohtinut", "pohtineet"],
+    "imperative" => ["pohdi", "pohtikaa"],
   ],
   "poiketa" => [
-    "pre" => ["poikkean", "poikkeat", "poikkeaa", "poikkeamme", "poikkeatte", "poikkeavat"],
-    "imp" => ["poikkesin", "poikkesit", "poikkesi", "poikkesimme", "poikkesitte", "poikkesivat"]
+    "preesens" => ["poikkean", "poikkeat", "poikkeaa", "poikkeamme", "poikkeatte", "poikkeavat"],
+    "imperfect" => ["poikkesin", "poikkesit", "poikkesi", "poikkesimme", "poikkesitte", "poikkesivat"],
+    "perfect" => ["poikennut", "poikenneet"],
+    "imperative" => ["poikkea", "poiketkaa"],
   ],
   "poimia" => [
-    "pre" => ["poimin", "poimit", "poimii", "poimimme", "poimitte", "poimivat"],
-    "imp" => ["poimin", "poimit", "poimi", "poimimme", "poimitte", "poimivat"]
+    "preesens" => ["poimin", "poimit", "poimii", "poimimme", "poimitte", "poimivat"],
+    "imperfect" => ["poimin", "poimit", "poimi", "poimimme", "poimitte", "poimivat"],
+    "perfect" => ["poiminut", "poimineet"],
+    "imperative" => ["poimi", "poimikaa"],
   ],
   "poistaa" => [
-    "pre" => ["poistan", "poistat", "poistaa", "poistamme", "poistatte", "poistavat"],
-    "imp" => ["poistin", "poistit", "poisti", "poistimme", "poistitte", "poistivat"]
+    "preesens" => ["poistan", "poistat", "poistaa", "poistamme", "poistatte", "poistavat"],
+    "imperfect" => ["poistin", "poistit", "poisti", "poistimme", "poistitte", "poistivat"],
+    "perfect" => ["poistanut", "poistaneet"],
+    "imperative" => ["poista", "poistakaa"],
   ],
   "poistua" => [
-    "pre" => ["poistun", "poistut", "poistuu", "poistumme", "poistutte", "poistuvat"],
-    "imp" => ["poistuin", "poistuit", "poistui", "poistuimme", "poistuitte", "poistuivat"]
+    "preesens" => ["poistun", "poistut", "poistuu", "poistumme", "poistutte", "poistuvat"],
+    "imperfect" => ["poistuin", "poistuit", "poistui", "poistuimme", "poistuitte", "poistuivat"],
+    "perfect" => ["poistunut", "poistuneet"],
+    "imperative" => ["poistu", "poistukaa"],
   ],
   "polkea" => [
-    "pre" => ["poljen", "poljet", "polkee", "poljemme", "poljette", "polkevat"],
-    "imp" => ["poljin", "poljit", "polki", "poljimme", "poljitte", "polkivat"]
+    "preesens" => ["poljen", "poljet", "polkee", "poljemme", "poljette", "polkevat"],
+    "imperfect" => ["poljin", "poljit", "polki", "poljimme", "poljitte", "polkivat"],
+    "perfect" => ["polkenut", "polkeneet"],
+    "imperative" => ["polje", "polkekaa"],
   ],
   "polttaa" => [
-    "pre" => ["poltan", "poltat", "polttaa", "poltamme", "poltatte", "polttavat"],
-    "imp" => ["poltin", "poltit", "poltti", "poltimme", "poltitte", "polttivat"]
+    "preesens" => ["poltan", "poltat", "polttaa", "poltamme", "poltatte", "polttavat"],
+    "imperfect" => ["poltin", "poltit", "poltti", "poltimme", "poltitte", "polttivat"],
+    "perfect" => ["polttanut", "polttaneet"],
+    "imperative" => ["polta", "polttakaa"],
   ],
   "potkaista" => [
-    "pre" => ["potkaisen", "potkaiset", "potkaisee", "potkaisemme", "potkaisette", "potkaisevat"],
-    "imp" => ["potkaisin", "potkaisit", "potkaisi", "potkaisimme", "potkaisitte", "potkaisivat"]
+    "preesens" => ["potkaisen", "potkaiset", "potkaisee", "potkaisemme", "potkaisette", "potkaisevat"],
+    "imperfect" => ["potkaisin", "potkaisit", "potkaisi", "potkaisimme", "potkaisitte", "potkaisivat"],
+    "perfect" => ["potkaissut", "potkaisseet"],
+    "imperative" => ["potkaise", "potkaiskaa"],
   ],
   "potkia" => [
-    "pre" => ["potkin", "potkit", "potkii", "potkimme", "potkitte", "potkivat"],
-    "imp" => ["potkin", "potkit", "potki", "potkimme", "potkitte", "potkivat"]
+    "preesens" => ["potkin", "potkit", "potkii", "potkimme", "potkitte", "potkivat"],
+    "imperfect" => ["potkin", "potkit", "potki", "potkimme", "potkitte", "potkivat"],
+    "perfect" => ["potkinut", "potkineet"],
+    "imperative" => ["potki", "potkikaa"],
   ],
   "pudota" => [
-    "pre" => ["putoan", "putoat", "putoaa", "putoamme", "putoatte", "putoavat"],
-    "imp" => ["putosin", "putosit", "putosi", "putosimme", "putositte", "putosivat"]
+    "preesens" => ["putoan", "putoat", "putoaa", "putoamme", "putoatte", "putoavat"],
+    "imperfect" => ["putosin", "putosit", "putosi", "putosimme", "putositte", "putosivat"],
+    "perfect" => ["pudonnut", "pudonneet"],
+    "imperative" => ["putoa", "pudotkaa"],
   ],
   "puhaltaa" => [
-    "pre" => ["puhallan", "puhallat", "puhaltaa", "puhallamme", "puhallatte", "puhaltavat"],
-    "imp" => ["puhalsin", "puhalsit", "puhalsi", "puhalsimme", "puhalsitte", "puhalsivat"]
+    "preesens" => ["puhallan", "puhallat", "puhaltaa", "puhallamme", "puhallatte", "puhaltavat"],
+    "imperfect" => ["puhalsin", "puhalsit", "puhalsi", "puhalsimme", "puhalsitte", "puhalsivat"],
+    "perfect" => ["puhaltanut", "puhaltaneet"],
+    "imperative" => ["puhalla", "puhaltakaa"],
   ],
   "puhdistaa" => [
-    "pre" => ["puhdistan", "puhdistat", "puhdistaa", "puhdistamme", "puhdistatte", "puhdistavat"],
-    "imp" => ["puhdistin", "puhdistit", "puhdisti", "puhdistimme", "puhdistitte", "puhdistivat"]
+    "preesens" => ["puhdistan", "puhdistat", "puhdistaa", "puhdistamme", "puhdistatte", "puhdistavat"],
+    "imperfect" => ["puhdistin", "puhdistit", "puhdisti", "puhdistimme", "puhdistitte", "puhdistivat"],
+    "perfect" => ["puhdistanut", "puhdistaneet"],
+    "imperative" => ["puhdista", "puhdistakaa"],
   ],
   "puhjeta" => [
-    "pre" => ["puhkean", "puhkeat", "puhkeaa", "puhkeamme", "puhkeatte", "puhkeavat"],
-    "imp" => ["puhkesin", "puhkesit", "puhkesi", "puhkesimme", "puhkesitte", "puhkesivat"]
+    "preesens" => ["puhkean", "puhkeat", "puhkeaa", "puhkeamme", "puhkeatte", "puhkeavat"],
+    "imperfect" => ["puhkesin", "puhkesit", "puhkesi", "puhkesimme", "puhkesitte", "puhkesivat"],
+    "perfect" => ["puhjennut", "puhjenneet"],
+    "imperative" => ["puhkea", "puhjetkaa"],
   ],
   "puhua" => [
-    "pre" => ["puhun", "puhut", "puhuu", "puhumme", "puhutte", "puhuvat"],
-    "imp" => ["puhuin", "puhuit", "puhui", "puhuimme", "puhuitte", "puhuivat"]
+    "preesens" => ["puhun", "puhut", "puhuu", "puhumme", "puhutte", "puhuvat"],
+    "imperfect" => ["puhuin", "puhuit", "puhui", "puhuimme", "puhuitte", "puhuivat"],
+    "perfect" => ["puhunut", "puhuneet"],
+    "imperative" => ["puhu", "puhukaa"],
   ],
   "pukea" => [
-    "pre" => ["puen", "puet", "pukee", "puemme", "puette", "pukevat"],
-    "imp" => ["puin", "puit", "puki", "puimme", "puitte", "pukivat"]
+    "preesens" => ["puen", "puet", "pukee", "puemme", "puette", "pukevat"],
+    "imperfect" => ["puin", "puit", "puki", "puimme", "puitte", "pukivat"],
+    "perfect" => ["pukenut", "pukeneet"],
+    "imperative" => ["pue", "pukekaa"],
   ],
   "pukeutua" => [
-    "pre" => ["pukeudun", "pukeudut", "pukeutuu", "pukeudumme", "pukeudutte", "pukeutuvat"],
-    "imp" => ["pukeuduin", "pukeuduit", "pukeutui", "pukeuduimme", "pukeuduitte", "pukeutuivat"]
+    "preesens" => ["pukeudun", "pukeudut", "pukeutuu", "pukeudumme", "pukeudutte", "pukeutuvat"],
+    "imperfect" => ["pukeuduin", "pukeuduit", "pukeutui", "pukeuduimme", "pukeuduitte", "pukeutuivat"],
+    "perfect" => ["pukeutunut", "pukeutuneet"],
+    "imperative" => ["pukeudu", "pukeutukaa"],
   ],
   "puolustaa" => [
-    "pre" => ["puolustan", "puolustat", "puolustaa", "puolustamme", "puolustatte", "puolustavat"],
-    "imp" => ["puolustin", "puolustit", "puolusti", "puolustimme", "puolustitte", "puolustivat"]
+    "preesens" => ["puolustan", "puolustat", "puolustaa", "puolustamme", "puolustatte", "puolustavat"],
+    "imperfect" => ["puolustin", "puolustit", "puolusti", "puolustimme", "puolustitte", "puolustivat"],
+    "perfect" => ["puolustanut", "puolustaneet"],
+    "imperative" => ["puolusta", "puolustakaa"],
   ],
   "puristaa" => [
-    "pre" => ["puristan", "puristat", "puristaa", "puristamme", "puristatte", "puristavat"],
-    "imp" => ["puristin", "puristit", "puristi", "puristimme", "puristitte", "puristivat"]
+    "preesens" => ["puristan", "puristat", "puristaa", "puristamme", "puristatte", "puristavat"],
+    "imperfect" => ["puristin", "puristit", "puristi", "puristimme", "puristitte", "puristivat"],
+    "perfect" => ["puristanut", "puristaneet"],
+    "imperative" => ["purista", "puristakaa"],
   ],
   "purkaa" => [
-    "pre" => ["puran", "purat", "purkaa", "puramme", "puratte", "purkaa"],
-    "imp" => ["purin", "purit", "purki", "purimme", "puritte", "purkivat"]
+    "preesens" => ["puran", "purat", "purkaa", "puramme", "puratte", "purkaa"],
+    "imperfect" => ["purin", "purit", "purki", "purimme", "puritte", "purkivat"],
+    "perfect" => ["purkanut", "purkaneet"],
+    "imperative" => ["pura", "purkakaa"],
   ],
   "purra" => [
-    "pre" => ["puren", "puret", "puree", "puremme", "purette", "purevat"],
-    "imp" => ["purin", "purit", "puri", "purimme", "puritte", "purivat"],
-    "perfekti" => ["purrut", "purreet"],
+    "preesens" => ["puren", "puret", "puree", "puremme", "purette", "purevat"],
+    "imperfect" => ["purin", "purit", "puri", "purimme", "puritte", "purivat"],
+    "perfect" => ["purrut", "purreet"],
+    "imperative" => ["pure", "purraa"],
   ],
   "puuttua" => [
-    "pre" => ["puutun", "puutut", "puuttuu", "puutumme", "puututte", "puuttuvat"],
-    "imp" => ["puutuin", "puutuit", "puuttui", "puutuimme", "puutuitte", "puuttuivat"],
+    "preesens" => ["puutun", "puutut", "puuttuu", "puutumme", "puututte", "puuttuvat"],
+    "imperfect" => ["puutuin", "puutuit", "puuttui", "puutuimme", "puutuitte", "puuttuivat"],
+    "perfect" => ["puuttunut", "puuttuneet"],
+    "imperative" => ["puutu", "puuttukaa"],
   ],
   "pyrkiä" => [
-    "pre" => ["pyrin", "pyrit", "pyrkii", "pyrimme", "pyritte", "pyrkivät"],
-    "imp" => ["pyrin", "pyrit", "pyrki", "pyrimme", "pyritte", "pyrkivät"]
+    "preesens" => ["pyrin", "pyrit", "pyrkii", "pyrimme", "pyritte", "pyrkivät"],
+    "imperfect" => ["pyrin", "pyrit", "pyrki", "pyrimme", "pyritte", "pyrkivät"],
+    "perfect" => ["pyrkinyt", "pyrkineet"],
+    "imperative" => ["pyri", "pyrkikää"],
   ],
   "pystytellä" => [
-    "pre" => ["pystyttelen", "pystyttelet", "pystyttelee", "pystyttelemme", "pystyttelette", "pystyttelevät"],
-    "imp" => ["pystyttelin", "pystyttelit", "pystytteli", "pystyttelimme", "pystyttelitte", "pystyttelivät"]
+    "preesens" => ["pystyttelen", "pystyttelet", "pystyttelee", "pystyttelemme", "pystyttelette", "pystyttelevät"],
+    "imperfect" => ["pystyttelin", "pystyttelit", "pystytteli", "pystyttelimme", "pystyttelitte", "pystyttelivät"],
+    "perfect" => ["pystytellyt", "pystytelleet"],
+    "imperative" => ["pystyttele", "pystytelkää"],
   ],
   "pystyttää" => [
-    "pre" => ["pystytän", "pystytät", "pystyttää", "pystytämme", "pystytätte", "pystyttävät"],
-    "imp" => ["pystytin", "pystytit", "pystytti", "pystytimme", "pystytitte", "pystyttivät"]
+    "preesens" => ["pystytän", "pystytät", "pystyttää", "pystytämme", "pystytätte", "pystyttävät"],
+    "imperfect" => ["pystytin", "pystytit", "pystytti", "pystytimme", "pystytitte", "pystyttivät"],
+    "perfect" => ["pystyttänyt", "pystyttäneet"],
+    "imperative" => ["pystytä", "pystyttäkää"],
   ],
   "pystyä" => [
-    "pre" => ["pystyn", "pystyt", "pystyy", "pystymme", "pystytte", "pystyvät"],
-    "imp" => ["pystyin", "pystyit", "pystyi", "pystyimme", "pystyitte", "pystyivät"]
+    "preesens" => ["pystyn", "pystyt", "pystyy", "pystymme", "pystytte", "pystyvät"],
+    "imperfect" => ["pystyin", "pystyit", "pystyi", "pystyimme", "pystyitte", "pystyivät"],
+    "perfect" => ["pystynyt", "pystyneet"],
+    "imperative" => ["pysty", "pystykää"],
   ],
   "pysyä" => [
-    "pre" => ["pysyn", "pysyt", "pysyy", "pysymme", "pysytte", "pysyvät"],
-    "imp" => ["pysyin", "pysyit", "pysyi", "pysyimme", "pysyitte", "pysyivät"],
-    "perfekti" => ["pysynyt", "pysyneet"],
+    "preesens" => ["pysyn", "pysyt", "pysyy", "pysymme", "pysytte", "pysyvät"],
+    "imperfect" => ["pysyin", "pysyit", "pysyi", "pysyimme", "pysyitte", "pysyivät"],
+    "perfect" => ["pysynyt", "pysyneet"],
+    "imperative" => ["pysy", "pysykää"],
   ],
   "pysähtyä" => [
-    "pre" => ["pysähdyn", "pysähdyt", "pysähtyy", "pysähdymme", "pysähdytte", "pysähtyvät"],
-    "imp" => ["pysähdyin", "pysähdyit", "pysähtyi", "pysähdyimme", "pysähdyitte", "pysähtyivät"]
+    "preesens" => ["pysähdyn", "pysähdyt", "pysähtyy", "pysähdymme", "pysähdytte", "pysähtyvät"],
+    "imperfect" => ["pysähdyin", "pysähdyit", "pysähtyi", "pysähdyimme", "pysähdyitte", "pysähtyivät"],
+    "perfect" => ["pysähtynyt", "pysähtyneet"],
+    "imperative" => ["pysähdy", "pysähtykää"],
   ],
   "pysäyttää" => [
-    "pre" => ["pysäytän", "pysäytät", "pysäyttää", "pysäytämme", "pysäytätte", "pysäyttävät"],
-    "imp" => ["pysäytin", "pysäytit", "pysäytti", "pysäytimme", "pysäytitte", "pysäyttivät"]
+    "preesens" => ["pysäytän", "pysäytät", "pysäyttää", "pysäytämme", "pysäytätte", "pysäyttävät"],
+    "imperfect" => ["pysäytin", "pysäytit", "pysäytti", "pysäytimme", "pysäytitte", "pysäyttivät"],
+    "perfect" => ["pysäyttänyt", "pysäyttäneet"],
+    "imperative" => ["pysäytä", "pysäyttäkää"],
   ],
   "pyyhkiä" => [
-    "pre" => ["pyyhkin", "pyyhkit", "pyyhkii", "pyyhkimme", "pyyhkitte", "pyyhkivät"],
-    "imp" => ["pyyhkin", "pyyhkit", "pyyhki", "pyyhkimme", "pyyhkitte", "pyyhkivät"]
+    "preesens" => ["pyyhkin", "pyyhkit", "pyyhkii", "pyyhkimme", "pyyhkitte", "pyyhkivät"],
+    "imperfect" => ["pyyhkin", "pyyhkit", "pyyhki", "pyyhkimme", "pyyhkitte", "pyyhkivät"],
+    "perfect" => ["pyyhkinyt", "pyyhkineet"],
+    "imperative" => ["pyyhki", "pyyhkikää"],
   ],
   "pyytää" => [
-    "pre" => ["pyydän", "pyydät", "pyytää", "pyydämme", "pyydätte", "pyytävät"],
-    "imp" => ["pyysin", "pyysit", "pyysi", "pyysimme", "pyysitte", "pyysivät"],
-    "perfekti" => ["pyytänyt", "pyytäneet"],
+    "preesens" => ["pyydän", "pyydät", "pyytää", "pyydämme", "pyydätte", "pyytävät"],
+    "imperfect" => ["pyysin", "pyysit", "pyysi", "pyysimme", "pyysitte", "pyysivät"],
+    "perfect" => ["pyytänyt", "pyytäneet"],
+    "imperative" => ["pyydä", "pyytäkää"],
   ],
   "pyöriä" => [
-    "pre" => ["pyörin", "pyörit", "pyörii", "pyörimme", "pyöritte", "pyörivät"],
-    "imp" => ["pyörin", "pyörit", "pyöri", "pyörimme", "pyöritte", "pyörivät"]
+    "preesens" => ["pyörin", "pyörit", "pyörii", "pyörimme", "pyöritte", "pyörivät"],
+    "imperfect" => ["pyörin", "pyörit", "pyöri", "pyörimme", "pyöritte", "pyörivät"],
+    "perfect" => ["pyörinyt", "pyörineet"],
+    "imperative" => ["pyöri", "pyörikää"],
   ],
   "pyöräillä" => [
-    "pre" => ["pyöräilen", "pyöräilet", "pyöräilee", "pyöräilemme", "pyöräilette", "pyöräilevät"],
-    "imp" => ["pyöräilin", "pyöräilit", "pyöräili", "pyöräilimme", "pyöräilitte", "pyöräilivät"]
+    "preesens" => ["pyöräilen", "pyöräilet", "pyöräilee", "pyöräilemme", "pyöräilette", "pyöräilevät"],
+    "imperfect" => ["pyöräilin", "pyöräilit", "pyöräili", "pyöräilimme", "pyöräilitte", "pyöräilivät"],
+    "perfect" => ["pyöräillyt", "pyöräilleet"],
+    "imperative" => ["pyöräile", "pyöräilkää"],
   ],
   "päästä" => [
-    "pre" => ["pääsen", "pääset", "pääsee", "pääsemme", "pääsette", "pääsevät"],
-    "imp" => ["pääsin", "pääsit", "pääsi", "pääsimme", "pääsitte", "pääsivät"]
+    "preesens" => ["pääsen", "pääset", "pääsee", "pääsemme", "pääsette", "pääsevät"],
+    "imperfect" => ["pääsin", "pääsit", "pääsi", "pääsimme", "pääsitte", "pääsivät"],
+    "perfect" => ["päässyt", "päässeet"],
+    "imperative" => ["pääse", "pääskää"],
   ],
   "päästää" => [
-    "pre" => ["päästän", "päästät", "päästää", "päästämme", "päästätte", "päästävät"],
-    "imp" => ["päästin", "päästit", "päästi", "päästimme", "päästitte", "päästivät"]
+    "preesens" => ["päästän", "päästät", "päästää", "päästämme", "päästätte", "päästävät"],
+    "imperfect" => ["päästin", "päästit", "päästi", "päästimme", "päästitte", "päästivät"],
+    "perfect" => ["päästänyt", "päästäneet"],
+    "imperative" => ["päästä", "päästäkää"],
   ],
   "päätellä" => [
-    "pre" => ["päättelen", "päättelet", "päättelee", "päättelemme", "päättelette", "päättelevät"],
-    "imp" => ["päättelin", "päättelit", "päätteli", "päättelimme", "päättelitte", "päättelivät"]
+    "preesens" => ["päättelen", "päättelet", "päättelee", "päättelemme", "päättelette", "päättelevät"],
+    "imperfect" => ["päättelin", "päättelit", "päätteli", "päättelimme", "päättelitte", "päättelivät"],
+    "perfect" => ["päätellyt", "päätelleet"],
+    "imperative" => ["päättele", "päätelkää"],
   ],
   "päättää" => [
-    "pre" => ["päätän", "päätät", "päättää", "päätämme", "päätätte", "päättävät"],
-    "imp" => ["päätin", "päätit", "päätti", "päätimme", "päätitte", "päättivät"]
+    "preesens" => ["päätän", "päätät", "päättää", "päätämme", "päätätte", "päättävät"],
+    "imperfect" => ["päätin", "päätit", "päätti", "päätimme", "päätitte", "päättivät"],
+    "perfect" => ["päättänyt", "päättäneet"],
+    "imperative" => ["päätä", "päättäkää"],
   ],
   "päätyä" => [
-    "pre" => ["päädyn", "päädyt", "päätyy", "päädymme", "päädytte", "päätyvät"],
-    "imp" => ["päädyin", "päädyit", "päätyi", "päädyimme", "päädyitte", "päätyivät"]
+    "preesens" => ["päädyn", "päädyt", "päätyy", "päädymme", "päädytte", "päätyvät"],
+    "imperfect" => ["päädyin", "päädyit", "päätyi", "päädyimme", "päädyitte", "päätyivät"],
+    "perfect" => ["päätynyt", "päätyneet"],
+    "imperative" => ["päädy", "päätykää"],
   ],
   "rahoittaa" => [
-    "pre" => ["rahoitan", "rahoitat", "rahoittaa", "rahoitamme", "rahoitatte", "rahoittavat"],
-    "imp" => ["rahoitin", "rahoitit", "rahoitti", "rahoitimme", "rahoititte", "rahoittivat"]
+    "preesens" => ["rahoitan", "rahoitat", "rahoittaa", "rahoitamme", "rahoitatte", "rahoittavat"],
+    "imperfect" => ["rahoitin", "rahoitit", "rahoitti", "rahoitimme", "rahoititte", "rahoittivat"],
+    "perfect" => ["rahoittanut", "rahoittaneet"],
+    "imperative" => ["rahoita", "rahoittakaa"],
   ],
   "rajoittaa" => [
-    "pre" => ["rajoitan", "rajoitat", "rajoittaa", "rajoitamme", "rajoitatte", "rajoittavat"],
-    "imp" => ["rajoitin", "rajoitit", "rajoitti", "rajoitimme", "rajoititte", "rajoittivat"],
-    "perfekti" => ["rajoittanut", "rajoittaneet"],
+    "preesens" => ["rajoitan", "rajoitat", "rajoittaa", "rajoitamme", "rajoitatte", "rajoittavat"],
+    "imperfect" => ["rajoitin", "rajoitit", "rajoitti", "rajoitimme", "rajoititte", "rajoittivat"],
+    "perfect" => ["rajoittanut", "rajoittaneet"],
+    "imperative" => ["rajoita", "rajoittakaa"],
   ],
   "rakentaa" => [
-    "pre" => ["rakennan", "rakennat", "rakentaa", "rakennamme", "rakennatte", "rakentavat"],
-    "imp" => ["rakensin", "rakensit", "rakensi", "rakensimme", "rakensitte", "rakensivat"]
+    "preesens" => ["rakennan", "rakennat", "rakentaa", "rakennamme", "rakennatte", "rakentavat"],
+    "imperfect" => ["rakensin", "rakensit", "rakensi", "rakensimme", "rakensitte", "rakensivat"],
+    "perfect" => ["rakentanut", "rakentaneet"],
+    "imperative" => ["rakenna", "rakentakaa"],
   ],
   "rakastaa" => [
-    "pre" => ["rakastan", "rakastat", "rakastaa", "rakastamme", "rakastatte", "rakastavat"],
-    "imp" => ["rakastin", "rakastit", "rakasti", "rakastimme", "rakastitte", "rakastivat"]
+    "preesens" => ["rakastan", "rakastat", "rakastaa", "rakastamme", "rakastatte", "rakastavat"],
+    "imperfect" => ["rakastin", "rakastit", "rakasti", "rakastimme", "rakastitte", "rakastivat"],
+    "perfect" => ["rakastanut", "rakastaneet"],
+    "imperative" => ["rakasta", "rakastakaa"],
   ],
   "ratkaista" => [
-    "pre" => ["ratkaisen", "ratkaiset", "ratkaisee", "ratkaisemme", "ratkaisette", "ratkaisevat"],
-    "imp" => ["ratkaisin", "ratkaisit", "ratkaisi", "ratkaisimme", "ratkaisitte", "ratkaisivat"]
+    "preesens" => ["ratkaisen", "ratkaiset", "ratkaisee", "ratkaisemme", "ratkaisette", "ratkaisevat"],
+    "imperfect" => ["ratkaisin", "ratkaisit", "ratkaisi", "ratkaisimme", "ratkaisitte", "ratkaisivat"],
+    "perfect" => ["ratkaissut", "ratkaisseet"],
+    "imperative" => ["ratkaise", "ratkaiskaa"],
   ],
   "ratsastaa" => [
-    "pre" => ["ratsastan", "ratsastat", "ratsastaa", "ratsastamme", "ratsastatte", "ratsastavat"],
-    "imp" => ["ratsastin", "ratsastit", "ratsasti", "ratsastimme", "ratsastitte", "ratsastivat"]
+    "preesens" => ["ratsastan", "ratsastat", "ratsastaa", "ratsastamme", "ratsastatte", "ratsastavat"],
+    "imperfect" => ["ratsastin", "ratsastit", "ratsasti", "ratsastimme", "ratsastitte", "ratsastivat"],
+    "perfect" => ["ratsastanut", "ratsastaneet"],
+    "imperative" => ["ratsasta", "ratsastakaa"],
   ],
   "rauhoittaa" => [
-    "pre" => ["rauhoitan", "rauhoitat", "rauhoittaa", "rauhoitamme", "rauhoitatte", "rauhoittavat"],
-    "imp" => ["rauhoitin", "rauhoitit", "rauhoitti", "rauhoitimme", "rauhoititte", "rauhoittivat"]
+    "preesens" => ["rauhoitan", "rauhoitat", "rauhoittaa", "rauhoitamme", "rauhoitatte", "rauhoittavat"],
+    "imperfect" => ["rauhoitin", "rauhoitit", "rauhoitti", "rauhoitimme", "rauhoititte", "rauhoittivat"],
+    "perfect" => ["rauhoittanut", "rauhoittaneet"],
+    "imperative" => ["rauhoita", "rauhoittakaa"],
   ],
   "raukaista" => [
-    "pre" => ["raukaisen", "raukaiset", "raukaisee", "raukaisemme", "raukaisette", "raukaisevat"],
-    "imp" => ["raukaisin", "raukaisit", "raukaisi", "raukaisimme", "raukaisitte", "raukaisivat"]
+    "preesens" => ["raukaisen", "raukaiset", "raukaisee", "raukaisemme", "raukaisette", "raukaisevat"],
+    "imperfect" => ["raukaisin", "raukaisit", "raukaisi", "raukaisimme", "raukaisitte", "raukaisivat"],
+    "perfect" => ["raukaissut", "raukaisseet"],
+    "imperative" => ["raukaise", "raukaiskaa"],
   ],
   "rekisteröidä" => [
-    "pre" => ["rekisteröin", "rekisteröit", "rekisteröi", "rekisteröimme", "rekisteröitte", "rekisteröivät"],
-    "imp" => ["rekisteröin", "rekisteröit", "rekisteröi", "rekisteröimme", "rekisteröitte", "rekisteröivät"]
+    "preesens" => ["rekisteröin", "rekisteröit", "rekisteröi", "rekisteröimme", "rekisteröitte", "rekisteröivät"],
+    "imperfect" => ["rekisteröin", "rekisteröit", "rekisteröi", "rekisteröimme", "rekisteröitte", "rekisteröivät"],
+    "perfect" => ["rekisteröinyt", "rekisteröineet"],
+    "imperative" => ["rekisteröi", "rekisteröikää"],
   ],
   "repäistä" => [
-    "pre" => ["repäisen", "repäiset", "repäisee", "repäisemme", "repäisette", "repäisevät"],
-    "imp" => ["repäisin", "repäisit", "repäisi", "repäisimme", "repäisitte", "repäisivät"]
+    "preesens" => ["repäisen", "repäiset", "repäisee", "repäisemme", "repäisette", "repäisevät"],
+    "imperfect" => ["repäisin", "repäisit", "repäisi", "repäisimme", "repäisitte", "repäisivät"],
+    "perfect" => ["repäissyt", "repäisseet"],
+    "imperative" => ["repäise", "repäiskää"],
   ],
   "rientää" => [
-    "pre" => ["riennän", "riennät", "rientää", "riennämme", "riennätte", "rientävät"],
-    "imp" => ["riensin", "riensit", "riensi", "riensimme", "riensitte", "riensivät"]
+    "preesens" => ["riennän", "riennät", "rientää", "riennämme", "riennätte", "rientävät"],
+    "imperfect" => ["riensin", "riensit", "riensi", "riensimme", "riensitte", "riensivät"],
+    "perfect" => ["rientänyt", "rientäneet"],
+    "imperative" => ["riennä", "rientäkää"],
   ],
   "riisua" => [
-    "pre" => ["riisun", "riisut", "riisuu", "riisumme", "riisutte", "riisuvat"],
-    "imp" => ["riisuin", "riisuit", "riisui", "riisuimme", "riisuitte", "riisuivat"]
+    "preesens" => ["riisun", "riisut", "riisuu", "riisumme", "riisutte", "riisuvat"],
+    "imperfect" => ["riisuin", "riisuit", "riisui", "riisuimme", "riisuitte", "riisuivat"],
+    "perfect" => ["riisunut", "riisuneet"],
+    "imperative" => ["riisu", "riisukaa"],
   ],
   "riistää" => [
-    "pre" => ["riistän", "riistät", "riistää", "riistämme", "riistätte", "riistävät"],
-    "imp" => ["riistin", "riistit", "riisti", "riistimme", "riistitte", "riistivät"]
+    "preesens" => ["riistän", "riistät", "riistää", "riistämme", "riistätte", "riistävät"],
+    "imperfect" => ["riistin", "riistit", "riisti", "riistimme", "riistitte", "riistivät"],
+    "perfect" => ["riistänyt", "riistäneet"],
+    "imperative" => ["riistä", "riistäkää"],
   ],
   "riittää" => [
-    "pre" => ["riitän", "riität", "riittää", "riitämme", "riitätte", "riittävät"],
-    "imp" => ["riitin", "riitit", "riitti", "riitimme", "riititte", "riittivät"]
+    "preesens" => ["riitän", "riität", "riittää", "riitämme", "riitätte", "riittävät"],
+    "imperfect" => ["riitin", "riitit", "riitti", "riitimme", "riititte", "riittivät"],
+    "perfect" => ["riittänyt", "riittäneet"],
+    "imperative" => ["riitä", "riittäkää"],
   ],
   "rikkoa" => [
-    "pre" => ["rikon", "rikot", "rikkoo", "rikomme", "rikotte", "rikkovat"],
-    "imp" => ["rikoin", "rikoit", "rikkoi", "rikoimme", "rikoitte", "rikkoivat"],
-    "perfekti" => ["rikkonut", "rikkoneet"],
+    "preesens" => ["rikon", "rikot", "rikkoo", "rikomme", "rikotte", "rikkovat"],
+    "imperfect" => ["rikoin", "rikoit", "rikkoi", "rikoimme", "rikoitte", "rikkoivat"],
+    "perfect" => ["rikkonut", "rikkoneet"],
+    "imperative" => ["riko", "rikkokaa"],
   ],
   "riuhtaista" => [
-    "pre" => ["riuhtaisen", "riuhtaiset", "riuhtaisee", "riuhtaisemme", "riuhtaisette", "riuhtaisevat"],
-    "imp" => ["riuhtaisin", "riuhtaisit", "riuhtaisi", "riuhtaisimme", "riuhtaisitte", "riuhtaisivat"]
+    "preesens" => ["riuhtaisen", "riuhtaiset", "riuhtaisee", "riuhtaisemme", "riuhtaisette", "riuhtaisevat"],
+    "imperfect" => ["riuhtaisin", "riuhtaisit", "riuhtaisi", "riuhtaisimme", "riuhtaisitte", "riuhtaisivat"],
+    "perfect" => ["riuhtaissut", "riuhtaisseet"],
+    "imperative" => ["riuhtaise", "riuhtaiskaa"],
   ],
   "rohjeta" => [
-    "pre" => ["rohkean", "rohkeat", "rohkeaa", "rohkeamme", "rohkeatte", "rohkeavat"],
-    "imp" => ["rohkesin", "rohkesit", "rohkesi", "rohkesimme", "rohkesitte", "rohkesivat"]
+    "preesens" => ["rohkean", "rohkeat", "rohkeaa", "rohkeamme", "rohkeatte", "rohkeavat"],
+    "imperfect" => ["rohkesin", "rohkesit", "rohkesi", "rohkesimme", "rohkesitte", "rohkesivat"],
+    "perfect" => ["rohjennut", "rohjenneet"],
+    "imperative" => ["rohkea", "rohjetkaa"],
   ],
   "rukoilla" => [
-    "pre" => ["rukoilen", "rukoilet", "rukoilee", "rukoilemme", "rukoilette", "rukoilevat"],
-    "imp" => ["rukoilin", "rukoilit", "rukoili", "rukoilimme", "rukoilitte", "rukoilivat"]
+    "preesens" => ["rukoilen", "rukoilet", "rukoilee", "rukoilemme", "rukoilette", "rukoilevat"],
+    "imperfect" => ["rukoilin", "rukoilit", "rukoili", "rukoilimme", "rukoilitte", "rukoilivat"],
+    "perfect" => ["rukoillut", "rukoilleet"],
+    "imperative" => ["rukoile", "rukoilkaa"],
   ],
   "ruveta" => [
-    "pre" => ["rupean", "rupeat", "rupeaa", "rupeamme", "rupeatte", "rupeavat"],
-    "imp" => ["rupesin", "rupesit", "rupesi", "rupesimme", "rupesitte", "rupesivat"]
+    "preesens" => ["rupean", "rupeat", "rupeaa", "rupeamme", "rupeatte", "rupeavat"],
+    "imperfect" => ["rupesin", "rupesit", "rupesi", "rupesimme", "rupesitte", "rupesivat"],
+    "perfect" => ["ruvennut", "ruvenneet"],
+    "imperative" => ["rupea", "ruvetkaa"],
   ],
   "ryhtyä" => [
-    "pre" => ["ryhdyn", "ryhdyt", "ryhtyy", "ryhdymme", "ryhdytte", "ryhtyvät"],
-    "imp" => ["ryhdyin", "ryhdyit", "ryhtyi", "ryhdyimme", "ryhdyitte", "ryhtyivät"]
+    "preesens" => ["ryhdyn", "ryhdyt", "ryhtyy", "ryhdymme", "ryhdytte", "ryhtyvät"],
+    "imperfect" => ["ryhdyin", "ryhdyit", "ryhtyi", "ryhdyimme", "ryhdyitte", "ryhtyivät"],
+    "perfect" => ["ryhtynyt", "ryhtyneet"],
+    "imperative" => ["ryhdy", "ryhtykää"],
   ],
   "rynnätä" => [
-    "pre" => ["ryntään", "ryntäät", "ryntää", "ryntäämme", "ryntäätte", "ryntäävät"],
-    "imp" => ["ryntäsin", "ryntäsit", "ryntäsi", "ryntäsimme", "ryntäsitte", "ryntäsivät"]
+    "preesens" => ["ryntään", "ryntäät", "ryntää", "ryntäämme", "ryntäätte", "ryntäävät"],
+    "imperfect" => ["ryntäsin", "ryntäsit", "ryntäsi", "ryntäsimme", "ryntäsitte", "ryntäsivät"],
+    "perfect" => ["rynnännyt", "rynnänneet"],
+    "imperative" => ["ryntää", "rynnätkää"],
   ],
   "saada" => [
-    "pre" => ["saan", "saat", "saa", "saamme", "saatte", "saavat"],
-    "imp" => ["sain", "sait", "sai", "saimme", "saitte", "saivat"]
+    "preesens" => ["saan", "saat", "saa", "saamme", "saatte", "saavat"],
+    "imperfect" => ["sain", "sait", "sai", "saimme", "saitte", "saivat"],
+    "perfect" => ["saanut", "saaneet"],
+    "imperative" => ["saa", "saakaa"],
   ],
   "saapua" => [
-    "pre" => ["saavun", "saavut", "saapuu", "saavumme", "saavutte", "saapuvat"],
-    "imp" => ["saavuin", "saavuit", "saapui", "saavuimme", "saavuitte", "saapuivat"]
+    "preesens" => ["saavun", "saavut", "saapuu", "saavumme", "saavutte", "saapuvat"],
+    "imperfect" => ["saavuin", "saavuit", "saapui", "saavuimme", "saavuitte", "saapuivat"],
+    "perfect" => ["saapunut", "saapuneet"],
+    "imperative" => ["saavu", "saapukaa"],
   ],
   "saattaa" => [
-    "pre" => ["saatan", "saatat", "saattaa", "saatamme", "saatatte", "saattavat"],
-    "imp" => ["saatoin", "saatoit", "saattoi", "saatoimme", "saatoitte", "saattoivat"]
+    "preesens" => ["saatan", "saatat", "saattaa", "saatamme", "saatatte", "saattavat"],
+    "imperfect" => ["saatoin", "saatoit", "saattoi", "saatoimme", "saatoitte", "saattoivat"],
+    "perfect" => ["saattanut", "saattaneet"],
+    "imperative" => ["saata", "saattakaa"],
   ],
   "saavuttaa" => [
-    "pre" => ["saavutan", "saavutat", "saavuttaa", "saavutamme", "saavutatte", "saavuttavat"],
-    "imp" => ["saavutin", "saavutit", "saavutti", "saavutimme", "saavutitte", "saavuttivat"]
+    "preesens" => ["saavutan", "saavutat", "saavuttaa", "saavutamme", "saavutatte", "saavuttavat"],
+    "imperfect" => ["saavutin", "saavutit", "saavutti", "saavutimme", "saavutitte", "saavuttivat"],
+    "perfect" => ["saavuttanut", "saavuttaneet"],
+    "imperative" => ["saavuta", "saavuttakaa"],
   ],
   "sairastua" => [
-    "pre" => ["sairastun", "sairastut", "sairastuu", "sairastumme", "sairastutte", "sairastuvat"],
-    "imp" => ["sairastuin", "sairastuit", "sairastui", "sairastuimme", "sairastuitte", "sairastuivat"]
+    "preesens" => ["sairastun", "sairastut", "sairastuu", "sairastumme", "sairastutte", "sairastuvat"],
+    "imperfect" => ["sairastuin", "sairastuit", "sairastui", "sairastuimme", "sairastuitte", "sairastuivat"],
+    "perfect" => ["sairastunut", "sairastuneet"],
+    "imperative" => ["sairastu", "sairastukaa"],
   ],
   "sallia" => [
-    "pre" => ["sallin", "sallit", "sallii", "sallimme", "sallitte", "sallivat"],
-    "imp" => ["sallin", "sallit", "salli", "sallimme", "sallitte", "sallivat"]
+    "preesens" => ["sallin", "sallit", "sallii", "sallimme", "sallitte", "sallivat"],
+    "imperfect" => ["sallin", "sallit", "salli", "sallimme", "sallitte", "sallivat"],
+    "perfect" => ["sallinut", "sallineet"],
+    "imperative" => ["salli", "sallikaa"],
   ],
   "sanketa" => [
-    "pre" => ["sankkenen", "sankkenet", "sankkenee", "sankkenemme", "sankkenette", "sankkenevat"],
-    "imp" => ["sankkenin", "sankkenit", "sankkeni", "sankkenimme", "sankkenitte", "sankkenivat"]
+    "preesens" => ["sankkenen", "sankkenet", "sankkenee", "sankkenemme", "sankkenette", "sankkenevat"],
+    "imperfect" => ["sankkenin", "sankkenit", "sankkeni", "sankkenimme", "sankkenitte", "sankkenivat"],
+    "perfect" => ["sankennut", "sankenneet"],
+    "imperative" => ["sankkene", "sanketkaa"],
   ],
   "sanoa" => [
-    "pre" => ["sanon", "sanot", "sanoo", "sanomme", "sanotte", "sanovat"],
-    "imp" => ["sanoin", "sanoit", "sanoi", "sanoimme", "sanoitte", "sanoivat"],
-    "perfekti" => ["sanonut", "sanoneet"],
+    "preesens" => ["sanon", "sanot", "sanoo", "sanomme", "sanotte", "sanovat"],
+    "imperfect" => ["sanoin", "sanoit", "sanoi", "sanoimme", "sanoitte", "sanoivat"],
+    "perfect" => ["sanonut", "sanoneet"],
+    "imperative" => ["sano", "sanokaa"],
   ],
   "seisoa" => [
-    "pre" => ["seison", "seisot", "seisoo", "seisomme", "seisotte", "seisovat"],
-    "imp" => ["seisoin", "seisoit", "seisoi", "seisoimme", "seisoitte", "seisoivat"]
+    "preesens" => ["seison", "seisot", "seisoo", "seisomme", "seisotte", "seisovat"],
+    "imperfect" => ["seisoin", "seisoit", "seisoi", "seisoimme", "seisoitte", "seisoivat"],
+    "perfect" => ["seisonut", "seisoneet"],
+    "imperative" => ["seiso", "seisokaa"],
   ],
   "sekoittaa" => [
-    "pre" => ["sekoitan", "sekoitat", "sekoittaa", "sekoitamme", "sekoitatte", "sekoittavat"],
-    "imp" => ["sekoitin", "sekoitit", "sekoitti", "sekoitimme", "sekoititte", "sekoittivat"]
+    "preesens" => ["sekoitan", "sekoitat", "sekoittaa", "sekoitamme", "sekoitatte", "sekoittavat"],
+    "imperfect" => ["sekoitin", "sekoitit", "sekoitti", "sekoitimme", "sekoititte", "sekoittivat"],
+    "perfect" => ["sekoittanut", "sekoittaneet"],
+    "imperative" => ["sekoita", "sekoittakaa"],
   ],
   "selittää" => [
-    "pre" => ["selitän", "selität", "selittää", "selitämme", "selitätte", "selittävät"],
-    "imp" => ["selitin", "selitit", "selitti", "selitimme", "selititte", "selittivät"]
+    "preesens" => ["selitän", "selität", "selittää", "selitämme", "selitätte", "selittävät"],
+    "imperfect" => ["selitin", "selitit", "selitti", "selitimme", "selititte", "selittivät"],
+    "perfect" => ["selittänyt", "selittäneet"],
+    "imperative" => ["selitä", "selittäkää"],
   ],
   "selostaa" => [
-    "pre" => ["selostan", "selostat", "selostaa", "selostamme", "selostatte", "selostavat"],
-    "imp" => ["selostin", "selostit", "selosti", "selostimme", "selostitte", "selostivat"]
+    "preesens" => ["selostan", "selostat", "selostaa", "selostamme", "selostatte", "selostavat"],
+    "imperfect" => ["selostin", "selostit", "selosti", "selostimme", "selostitte", "selostivat"],
+    "perfect" => ["selostanut", "selostaneet"],
+    "imperative" => ["selosta", "selostakaa"],
   ],
   "selvitellä" => [
-    "pre" => ["selvittelen", "selvittelet", "selvittelee", "selvittelemme", "selvittelette", "selvittelevät"],
-    "imp" => ["selvittelin", "selvittelit", "selvitteli", "selvittelimme", "selvittelitte", "selvittelivät"]
+    "preesens" => ["selvittelen", "selvittelet", "selvittelee", "selvittelemme", "selvittelette", "selvittelevät"],
+    "imperfect" => ["selvittelin", "selvittelit", "selvitteli", "selvittelimme", "selvittelitte", "selvittelivät"],
+    "perfect" => ["selvitellyt", "selvitelleet"],
+    "imperative" => ["selvittele", "selvitelkää"],
   ],
   "selvittää" => [
-    "pre" => ["selvitän", "selvität", "selvittää", "selvitämme", "selvitätte", "selvittävät"],
-    "imp" => ["selvitin", "selvitit", "selvitti", "selvitimme", "selvititte", "selvittivät"]
+    "preesens" => ["selvitän", "selvität", "selvittää", "selvitämme", "selvitätte", "selvittävät"],
+    "imperfect" => ["selvitin", "selvitit", "selvitti", "selvitimme", "selvititte", "selvittivät"],
+    "perfect" => ["selvittänyt", "selvittäneet"],
+    "imperative" => ["selvitä", "selvittäkää"],
   ],
   "selvitä" => [
-    "pre" => ["selviän", "selviät", "selviää", "selviämme", "selviätte", "selviävät"],
-    "imp" => ["selvisin", "selvisit", "selvisi", "selvisimme", "selvisitte", "selvisivät"]
+    "preesens" => ["selviän", "selviät", "selviää", "selviämme", "selviätte", "selviävät"],
+    "imperfect" => ["selvisin", "selvisit", "selvisi", "selvisimme", "selvisitte", "selvisivät"],
+    "perfect" => ["selvinnyt", "selvinneet"],
+    "imperative" => ["selviä", "selvitkää"],
   ],
   "selviytyä" => [
-    "pre" => ["selviydyn", "selviydyt", "selviytyy", "selviydymme", "selviydytte", "selviytyvät"],
-    "imp" => ["selviydyin", "selviydyit", "selviytyi", "selviydyimme", "selviydyitte", "selviytyivät"]
+    "preesens" => ["selviydyn", "selviydyt", "selviytyy", "selviydymme", "selviydytte", "selviytyvät"],
+    "imperfect" => ["selviydyin", "selviydyit", "selviytyi", "selviydyimme", "selviydyitte", "selviytyivät"],
+    "perfect" => ["selviytynyt", "selviytyneet"],
+    "imperative" => ["selviydy", "selviytykää"],
   ],
   "seurata" => [
-    "pre" => ["seuraan", "seuraat", "seuraa", "seuraamme", "seuraatte", "seuraavat"],
-    "imp" => ["seurasin", "seurasit", "seurasi", "seurasimme", "seurasitte", "seurasivat"]
+    "preesens" => ["seuraan", "seuraat", "seuraa", "seuraamme", "seuraatte", "seuraavat"],
+    "imperfect" => ["seurasin", "seurasit", "seurasi", "seurasimme", "seurasitte", "seurasivat"],
+    "perfect" => ["seurannut", "seuranneet"],
+    "imperative" => ["seuraa", "seuratkaa"],
   ],
   "siepata" => [
-    "pre" => ["sieppaan", "sieppaat", "sieppaa", "sieppaamme", "sieppaatte", "sieppaavat"],
-    "imp" => ["sieppasin", "sieppasit", "sieppasi", "sieppasimme", "sieppasitte", "sieppasivat"]
+    "preesens" => ["sieppaan", "sieppaat", "sieppaa", "sieppaamme", "sieppaatte", "sieppaavat"],
+    "imperfect" => ["sieppasin", "sieppasit", "sieppasi", "sieppasimme", "sieppasitte", "sieppasivat"],
+    "perfect" => ["siepannut", "siepanneet"],
+    "imperative" => ["sieppaa", "siepatkaa"],
   ],
   "sietää" => [
-    "pre" => ["siedän", "siedät", "sietää", "siedämme", "siedätte", "sietävät"],
-    "imp" => ["siedin", "siedit", "sieti", "siedimme", "sieditte", "sietivät"]
+    "preesens" => ["siedän", "siedät", "sietää", "siedämme", "siedätte", "sietävät"],
+    "imperfect" => ["siedin", "siedit", "sieti", "siedimme", "sieditte", "sietivät"],
+    "perfect" => ["sietänyt", "sietäneet"],
+    "imperative" => ["siedä", "sietäkää"],
   ],
   "siirtyä" => [
-    "pre" => ["siirryn", "siirryt", "siirtyy", "siirrymme", "siirrytte", "siirtyvät"],
-    "imp" => ["siirryin", "siirryit", "siirtyi", "siirryimme", "siirryitte", "siirtyivät"]
+    "preesens" => ["siirryn", "siirryt", "siirtyy", "siirrymme", "siirrytte", "siirtyvät"],
+    "imperfect" => ["siirryin", "siirryit", "siirtyi", "siirryimme", "siirryitte", "siirtyivät"],
+    "perfect" => ["siirtynyt", "siirtyneet"],
+    "imperative" => ["siirry", "siirtykää"],
   ],
   "siirtää" => [
-    "pre" => ["siirrän", "siirrät", "siirtää", "siirrämme", "siirrätte", "siirtävät"],
-    "imp" => ["siirsin", "siirsit", "siirsi", "siirsimme", "siirsitte", "siirsivät"]
+    "preesens" => ["siirrän", "siirrät", "siirtää", "siirrämme", "siirrätte", "siirtävät"],
+    "imperfect" => ["siirsin", "siirsit", "siirsi", "siirsimme", "siirsitte", "siirsivät"],
+    "perfect" => ["siirtänyt", "siirtäneet"],
+    "imperative" => ["siirrä", "siirtäkää"],
   ],
   "sijaita" => [
-    "pre" => ["sijaitsen", "sijaitset", "sijaitsee", "sijaitsemme", "sijaitsette", "sijaitsevat"],
-    "imp" => ["sijaitsin", "sijaitsit", "sijaitsi", "sijaitsimme", "sijaitsitte", "sijaitsivat"]
+    "preesens" => ["sijaitsen", "sijaitset", "sijaitsee", "sijaitsemme", "sijaitsette", "sijaitsevat"],
+    "imperfect" => ["sijaitsin", "sijaitsit", "sijaitsi", "sijaitsimme", "sijaitsitte", "sijaitsivat"],
+    "perfect" => ["sijainnut", "sijainneet"],
+    "imperative" => ["sijaitse", "sijaitkaa"],
   ],
   "sijoittaa" => [
-    "pre" => ["sijoitan", "sijoitat", "sijoittaa", "sijoitamme", "sijoitatte", "sijoittavat"],
-    "imp" => ["sijoitin", "sijoitit", "sijoitti", "sijoitimme", "sijoititte", "sijoittivat"]
+    "preesens" => ["sijoitan", "sijoitat", "sijoittaa", "sijoitamme", "sijoitatte", "sijoittavat"],
+    "imperfect" => ["sijoitin", "sijoitit", "sijoitti", "sijoitimme", "sijoititte", "sijoittivat"],
+    "perfect" => ["sijoittanut", "sijoittaneet"],
+    "imperative" => ["sijoita", "sijoittakaa"],
   ],
   "sijoittua" => [
-    "pre" => ["sijoitun", "sijoitut", "sijoittuu", "sijoitumme", "sijoitutte", "sijoittuvat"],
-    "imp" => ["sijoituin", "sijoituit", "sijoittui", "sijoituimme", "sijoituitte", "sijoittuivat"]
+    "preesens" => ["sijoitun", "sijoitut", "sijoittuu", "sijoitumme", "sijoitutte", "sijoittuvat"],
+    "imperfect" => ["sijoituin", "sijoituit", "sijoittui", "sijoituimme", "sijoituitte", "sijoittuivat"],
+    "perfect" => ["sijoittunut", "sijoittuneet"],
+    "imperative" => ["sijoitu", "sijoittukaa"],
   ],
   "sisältää" => [
-    "pre" => ["sisällän", "sisällät", "sisältää", "sisällämme", "sisällätte", "sisältävät"],
-    "imp" => ["sisälsin", "sisälsit", "sisälsi", "sisälsimme", "sisälsitte", "sisälsivät"]
+    "preesens" => ["sisällän", "sisällät", "sisältää", "sisällämme", "sisällätte", "sisältävät"],
+    "imperfect" => ["sisälsin", "sisälsit", "sisälsi", "sisälsimme", "sisälsitte", "sisälsivät"],
+    "perfect" => ["sisältänyt", "sisältäneet"],
+    "imperative" => ["sisällä", "sisältäkää"],
   ],
   "sisältyä" => [
-    "pre" => ["sisällyn", "sisällyt", "sisältyy", "sisällymme", "sisällytte", "sisältyvät"],
-    "imp" => ["sisällyin", "sisällyit", "sisältyi", "sisällyimme", "sisällyitte", "sisältyivät"]
+    "preesens" => ["sisällyn", "sisällyt", "sisältyy", "sisällymme", "sisällytte", "sisältyvät"],
+    "imperfect" => ["sisällyin", "sisällyit", "sisältyi", "sisällyimme", "sisällyitte", "sisältyivät"],
+    "perfect" => ["sisältynyt", "sisältyneet"],
+    "imperative" => ["sisälly", "sisältykää"],
   ],
   "sitoutua" => [
-    "pre" => ["sitoudun", "sitoudut", "sitoutuu", "sitoudumme", "sitoudutte", "sitoutuvat"],
-    "imp" => ["sitouduin", "sitouduit", "sitoutui", "sitouduimme", "sitouduitte", "sitoutuivat"],
+    "preesens" => ["sitoudun", "sitoudut", "sitoutuu", "sitoudumme", "sitoudutte", "sitoutuvat"],
+    "imperfect" => ["sitouduin", "sitouduit", "sitoutui", "sitouduimme", "sitouduitte", "sitoutuivat"],
+    "perfect" => ["sitoutunut", "sitoutuneet"],
+    "imperative" => ["sitoudu", "sitoutukaa"],
   ],
   "sitoa" => [
-    "pre" => ["sidon", "sidot", "sitoo", "sidomme", "sidotte", "sitovat"],
-    "imp" => ["sidoin", "sidoit", "sitoi", "sidoimme", "sidoitte", "sitoivat"],
-    "perfekti" => ["sitonut", "sitoneet"],
+    "preesens" => ["sidon", "sidot", "sitoo", "sidomme", "sidotte", "sitovat"],
+    "imperfect" => ["sidoin", "sidoit", "sitoi", "sidoimme", "sidoitte", "sitoivat"],
+    "perfect" => ["sitonut", "sitoneet"],
+    "imperative" => ["sido", "sitokaa"],
   ],
   "siunata" => [
-    "pre" => ["siunaan", "siunaat", "siunaa", "siunaamme", "siunaatte", "siunaavat"],
-    "imp" => ["siunasin", "siunasit", "siunasi", "siunasimme", "siunasitte", "siunasivat"]
+    "preesens" => ["siunaan", "siunaat", "siunaa", "siunaamme", "siunaatte", "siunaavat"],
+    "imperfect" => ["siunasin", "siunasit", "siunasi", "siunasimme", "siunasitte", "siunasivat"],
+    "perfect" => ["siunannut", "siunanneet"],
+    "imperative" => ["siunaa", "siunatkaa"],
   ],
   "sivellä" => [
-    "pre" => ["sivelen", "sivelet", "sivelee", "sivelemme", "sivelette", "sivelevät"],
-    "imp" => ["sivelin", "sivelit", "siveli", "sivelimme", "sivelitte", "sivelivät"]
+    "preesens" => ["sivelen", "sivelet", "sivelee", "sivelemme", "sivelette", "sivelevät"],
+    "imperfect" => ["sivelin", "sivelit", "siveli", "sivelimme", "sivelitte", "sivelivät"],
+    "perfect" => ["sivellyt", "sivelleet"],
+    "imperative" => ["sivele", "sivelkää"],
   ],
   "sivuuttaa" => [
-    "pre" => ["sivuutan", "sivuutat", "sivuuttaa", "sivuutamme", "sivuutatte", "sivuuttavat"],
-    "imp" => ["sivuutin", "sivuutit", "sivuutti", "sivuutimme", "sivuutitte", "sivuuttivat"]
+    "preesens" => ["sivuutan", "sivuutat", "sivuuttaa", "sivuutamme", "sivuutatte", "sivuuttavat"],
+    "imperfect" => ["sivuutin", "sivuutit", "sivuutti", "sivuutimme", "sivuutitte", "sivuuttivat"],
+    "perfect" => ["sivuuttanut", "sivuuttaneet"],
+    "imperative" => ["sivuuta", "sivuuttakaa"],
   ],
   "soittaa" => [
-    "pre" => ["soitan", "soitat", "soittaa", "soitamme", "soitatte", "soittavat"],
-    "imp" => ["soitin", "soitit", "soitti", "soitimme", "soititte", "soittivat"]
+    "preesens" => ["soitan", "soitat", "soittaa", "soitamme", "soitatte", "soittavat"],
+    "imperfect" => ["soitin", "soitit", "soitti", "soitimme", "soititte", "soittivat"],
+    "perfect" => ["soittanut", "soittaneet"],
+    "imperative" => ["soita", "soittakaa"],
   ],
   "solmia" => [
-    "pre" => ["solmin", "solmit", "solmii", "solmimme", "solmitte", "solmivat"],
-    "imp" => ["solmin", "solmit", "solmi", "solmimme", "solmitte", "solmivat"]
+    "preesens" => ["solmin", "solmit", "solmii", "solmimme", "solmitte", "solmivat"],
+    "imperfect" => ["solmin", "solmit", "solmi", "solmimme", "solmitte", "solmivat"],
+    "perfect" => ["solminut", "solmineet"],
+    "imperative" => ["solmi", "solmikaa"],
   ],
   "sopia" => [
-    "pre" => ["sovin", "sovit", "sopii", "sovimme", "sovitte", "sopivat"],
-    "imp" => ["sovin", "sovit", "sopi", "sovimme", "sovitte", "sopivat"]
+    "preesens" => ["sovin", "sovit", "sopii", "sovimme", "sovitte", "sopivat"],
+    "imperfect" => ["sovin", "sovit", "sopi", "sovimme", "sovitte", "sopivat"],
+    "perfect" => ["sopinut", "sopineet"],
+    "imperative" => ["sovi", "sopikaa"],
   ],
   "soveltaa" => [
-    "pre" => ["sovellan", "sovellat", "soveltaa", "sovellamme", "sovellatte", "soveltavat"],
-    "imp" => ["sovelsin", "sovelsit", "sovelsi", "sovelsimme", "sovelsitte", "sovelsivat"]
+    "preesens" => ["sovellan", "sovellat", "soveltaa", "sovellamme", "sovellatte", "soveltavat"],
+    "imperfect" => ["sovelsin", "sovelsit", "sovelsi", "sovelsimme", "sovelsitte", "sovelsivat"],
+    "perfect" => ["soveltanut", "soveltaneet"],
+    "imperative" => ["sovella", "soveltakaa"],
   ],
   "soveltua" => [
-    "pre" => ["sovellun", "sovellut", "soveltuu", "sovellumme", "sovellutte", "soveltuvat"],
-    "imp" => ["sovelluin", "sovelluit", "soveltui", "sovelluimme", "sovelluitte", "soveltuivat"]
+    "preesens" => ["sovellun", "sovellut", "soveltuu", "sovellumme", "sovellutte", "soveltuvat"],
+    "imperfect" => ["sovelluin", "sovelluit", "soveltui", "sovelluimme", "sovelluitte", "soveltuivat"],
+    "perfect" => ["soveltunut", "soveltuneet"],
+    "imperative" => ["sovellu", "soveltukaa"],
   ],
   "sovittaa" => [
-    "pre" => ["sovitan", "sovitat", "sovittaa", "sovitamme", "sovitatte", "sovittavat"],
-    "imp" => ["sovitin", "sovitit", "sovitti", "sovitimme", "sovititte", "sovittivat"]
+    "preesens" => ["sovitan", "sovitat", "sovittaa", "sovitamme", "sovitatte", "sovittavat"],
+    "imperfect" => ["sovitin", "sovitit", "sovitti", "sovitimme", "sovititte", "sovittivat"],
+    "perfect" => ["sovittanut", "sovittaneet"],
+    "imperative" => ["sovita", "sovittakaa"],
   ],
   "suhtautua" => [
-    "pre" => ["suhtaudun", "suhtaudut", "suhtautuu", "suhtaudumme", "suhtaudutte", "suhtautuvat"],
-    "imp" => ["suhtauduin", "suhtauduit", "suhtautui", "suhtauduimme", "suhtauduitte", "suhtautuivat"]
+    "preesens" => ["suhtaudun", "suhtaudut", "suhtautuu", "suhtaudumme", "suhtaudutte", "suhtautuvat"],
+    "imperfect" => ["suhtauduin", "suhtauduit", "suhtautui", "suhtauduimme", "suhtauduitte", "suhtautuivat"],
+    "perfect" => ["suhtautunut", "suhtautuneet"],
+    "imperative" => ["suhtaudu", "suhtautukaa"],
   ],
   "suipeta" => [
-    "pre" => ["suippenen", "suippenet", "suippenee", "suippenemme", "suippenette", "suippenevat"],
-    "imp" => ["suippenin", "suippenit", "suippeni", "suippenimme", "suippenitte", "suippenivat"]
+    "preesens" => ["suippenen", "suippenet", "suippenee", "suippenemme", "suippenette", "suippenevat"],
+    "imperfect" => ["suippenin", "suippenit", "suippeni", "suippenimme", "suippenitte", "suippenivat"],
+    "perfect" => ["suippennut", "suippenneet"],
+    "imperative" => ["suippene", "suipetkaa"],
   ],
   "sukeltaa" => [
-    "pre" => ["sukellan", "sukellat", "sukeltaa", "sukellamme", "sukellatte", "sukeltavat"],
-    "imp" => ["sukelsin", "sukelsit", "sukelsi", "sukelsimme", "sukelsitte", "sukelsivat"]
+    "preesens" => ["sukellan", "sukellat", "sukeltaa", "sukellamme", "sukellatte", "sukeltavat"],
+    "imperfect" => ["sukelsin", "sukelsit", "sukelsi", "sukelsimme", "sukelsitte", "sukelsivat"],
+    "perfect" => ["sukeltanut", "sukeltaneet"],
+    "imperative" => ["sukella", "sukeltakaa"],
   ],
   "sulkea" => [
-    "pre" => ["suljen", "suljet", "sulkee", "suljemme", "suljette", "sulkevat"],
-    "imp" => ["suljin", "suljit", "sulki", "suljimme", "suljitte", "sulkivat"]
+    "preesens" => ["suljen", "suljet", "sulkee", "suljemme", "suljette", "sulkevat"],
+    "imperfect" => ["suljin", "suljit", "sulki", "suljimme", "suljitte", "sulkivat"],
+    "perfect" => ["sulkenut", "sulkeneet"],
+    "imperative" => ["sulje", "sulkekaa"],
   ],
   "suoda" => [
-    "pre" => ["suon", "suot", "suo", "suomme", "suotte", "suovat"],
-    "imp" => ["soin", "soit", "soi", "soimme", "soitte", "soivat"]
+    "preesens" => ["suon", "suot", "suo", "suomme", "suotte", "suovat"],
+    "imperfect" => ["soin", "soit", "soi", "soimme", "soitte", "soivat"],
+    "perfect" => ["suonut", "suoneet"],
+    "imperative" => ["suo", "suokaa"],
   ],
   "suojata" => [
-    "pre" => ["suojaan", "suojaat", "suojaa", "suojaamme", "suojaatte", "suojaavat"],
-    "imp" => ["suojasin", "suojasit", "suojasi", "suojasimme", "suojasitte", "suojasivat"]
+    "preesens" => ["suojaan", "suojaat", "suojaa", "suojaamme", "suojaatte", "suojaavat"],
+    "imperfect" => ["suojasin", "suojasit", "suojasi", "suojasimme", "suojasitte", "suojasivat"],
+    "perfect" => ["suojannut", "suojanneet"],
+    "imperative" => ["suojaa", "suojatkaa"],
   ],
   "suojella" => [
-    "pre" => ["suojelen", "suojelet", "suojelee", "suojelemme", "suojelette", "suojelevat"],
-    "imp" => ["suojelin", "suojelit", "suojeli", "suojelimme", "suojelitte", "suojelivat"]
+    "preesens" => ["suojelen", "suojelet", "suojelee", "suojelemme", "suojelette", "suojelevat"],
+    "imperfect" => ["suojelin", "suojelit", "suojeli", "suojelimme", "suojelitte", "suojelivat"],
+    "perfect" => ["suojellut", "suojelleet"],
+    "imperative" => ["suojele", "suojelkaa"],
   ],
   "suorittaa" => [
-    "pre" => ["suoritan", "suoritat", "suorittaa", "suoritamme", "suoritatte", "suorittavat"],
-    "imp" => ["suoritin", "suoritit", "suoritti", "suoritimme", "suorititte", "suorittivat"]
+    "preesens" => ["suoritan", "suoritat", "suorittaa", "suoritamme", "suoritatte", "suorittavat"],
+    "imperfect" => ["suoritin", "suoritit", "suoritti", "suoritimme", "suorititte", "suorittivat"],
+    "perfect" => ["suorittanut", "suorittaneet"],
+    "imperative" => ["suorita", "suorittakaa"],
   ],
   "suosia" => [
-    "pre" => ["suosin", "suosit", "suosii", "suosimme", "suositte", "suosivat"],
-    "imp" => ["suosin", "suosit", "suosi", "suosimme", "suositte", "suosivat"]
+    "preesens" => ["suosin", "suosit", "suosii", "suosimme", "suositte", "suosivat"],
+    "imperfect" => ["suosin", "suosit", "suosi", "suosimme", "suositte", "suosivat"],
+    "perfect" => ["suosinut", "suosineet"],
+    "imperative" => ["suosi", "suosikaa"],
   ],
   "suositella" => [
-    "pre" => ["suosittelen", "suosittelet", "suosittelee", "suosittelemme", "suosittelette", "suosittelevat"],
-    "imp" => ["suosittelin", "suosittelit", "suositteli", "suosittelimme", "suosittelitte", "suosittelivat"]
+    "preesens" => ["suosittelen", "suosittelet", "suosittelee", "suosittelemme", "suosittelette", "suosittelevat"],
+    "imperfect" => ["suosittelin", "suosittelit", "suositteli", "suosittelimme", "suosittelitte", "suosittelivat"],
+    "perfect" => ["suositellut", "suositelleet"],
+    "imperative" => ["suosittele", "suositelkaa"],
   ],
   "suostua" => [
-    "pre" => ["suostun", "suostut", "suostuu", "suostumme", "suostutte", "suostuvat"],
-    "imp" => ["suostuin", "suostuit", "suostui", "suostuimme", "suostuitte", "suostuivat"],
-    "perfekti" => ["suostunut", "suostuneet"],
+    "preesens" => ["suostun", "suostut", "suostuu", "suostumme", "suostutte", "suostuvat"],
+    "imperfect" => ["suostuin", "suostuit", "suostui", "suostuimme", "suostuitte", "suostuivat"],
+    "perfect" => ["suostunut", "suostuneet"],
+    "imperative" => ["suostu", "suostukaa"],
   ],
   "supistaa" => [
-    "pre" => ["supistan", "supistat", "supistaa", "supistamme", "supistatte", "supistavat"],
-    "imp" => ["supistin", "supistit", "supisti", "supistimme", "supistitte", "supistivat"]
+    "preesens" => ["supistan", "supistat", "supistaa", "supistamme", "supistatte", "supistavat"],
+    "imperfect" => ["supistin", "supistit", "supisti", "supistimme", "supistitte", "supistivat"],
+    "perfect" => ["supistanut", "supistaneet"],
+    "imperative" => ["supista", "supistakaa"],
   ],
   "surmata" => [
-    "pre" => ["surmaan", "surmaat", "surmaa", "surmaamme", "surmaatte", "surmaavat"],
-    "imp" => ["surmasin", "surmasit", "surmasi", "surmasimme", "surmasitte", "surmasivat"]
+    "preesens" => ["surmaan", "surmaat", "surmaa", "surmaamme", "surmaatte", "surmaavat"],
+    "imperfect" => ["surmasin", "surmasit", "surmasi", "surmasimme", "surmasitte", "surmasivat"],
+    "perfect" => ["surmannut", "surmanneet"],
+    "imperative" => ["surmaa", "surmatkaa"],
   ],
   "suunnata" => [
-    "pre" => ["suuntaan", "suuntaat", "suuntaa", "suuntaamme", "suuntaatte", "suuntaavat"],
-    "imp" => ["suuntasin", "suuntasit", "suuntasi", "suuntasimme", "suuntasitte", "suuntasivat"]
+    "preesens" => ["suuntaan", "suuntaat", "suuntaa", "suuntaamme", "suuntaatte", "suuntaavat"],
+    "imperfect" => ["suuntasin", "suuntasit", "suuntasi", "suuntasimme", "suuntasitte", "suuntasivat"],
+    "perfect" => ["suunnannut", "suunnanneet"],
+    "imperative" => ["suuntaa", "suunnatkaa"],
   ],
   "suunnitella" => [
-    "pre" => ["suunnittelen", "suunnittelet", "suunnittelee", "suunnittelemme", "suunnittelette", "suunnittelevat"],
-    "imp" => ["suunnittelin", "suunnittelit", "suunnitteli", "suunnittelimme", "suunnittelitte", "suunnittelivat"]
+    "preesens" => ["suunnittelen", "suunnittelet", "suunnittelee", "suunnittelemme", "suunnittelette", "suunnittelevat"],
+    "imperfect" => ["suunnittelin", "suunnittelit", "suunnitteli", "suunnittelimme", "suunnittelitte", "suunnittelivat"],
+    "perfect" => ["suunnitellut", "suunnitelleet"],
+    "imperative" => ["suunnittele", "suunnitelkaa"],
   ],
   "suuntautua" => [
-    "pre" => ["suuntaudun", "suuntaudut", "suuntautuu", "suuntaudumme", "suuntaudutte", "suuntautuvat"],
-    "imp" => ["suuntauduin", "suuntauduit", "suuntautui", "suuntauduimme", "suuntauduitte", "suuntautuivat"]
+    "preesens" => ["suuntaudun", "suuntaudut", "suuntautuu", "suuntaudumme", "suuntaudutte", "suuntautuvat"],
+    "imperfect" => ["suuntauduin", "suuntauduit", "suuntautui", "suuntauduimme", "suuntauduitte", "suuntautuivat"],
+    "perfect" => ["suuntautunut", "suuntautuneet"],
+    "imperative" => ["suuntaudu", "suuntautukaa"],
   ],
   "suuttua" => [
-    "pre" => ["suutun", "suutut", "suuttuu", "suutumme", "suututte", "suuttuvat"],
-    "imp" => ["suutuin", "suutuit", "suuttui", "suutuimme", "suutuitte", "suuttuivat"],
-    "perfekti" => ["suuttunut", "suuttuneet"],
+    "preesens" => ["suutun", "suutut", "suuttuu", "suutumme", "suututte", "suuttuvat"],
+    "imperfect" => ["suutuin", "suutuit", "suuttui", "suutuimme", "suutuitte", "suuttuivat"],
+    "perfect" => ["suuttunut", "suuttuneet"],
+    "imperative" => ["suutu", "suuttukaa"],
   ],
   "synnyttää" => [
-    "pre" => ["synnytän", "synnytät", "synnyttää", "synnytämme", "synnytätte", "synnyttävät"],
-    "imp" => ["synnytin", "synnytit", "synnytti", "synnytimme", "synnytitte", "synnyttivät"]
+    "preesens" => ["synnytän", "synnytät", "synnyttää", "synnytämme", "synnytätte", "synnyttävät"],
+    "imperfect" => ["synnytin", "synnytit", "synnytti", "synnytimme", "synnytitte", "synnyttivät"],
+    "perfect" => ["synnyttänyt", "synnyttäneet"],
+    "imperative" => ["synnytä", "synnyttäkää"],
   ],
   "syntyä" => [
-    "pre" => ["synnyn", "synnyt", "syntyy", "synnymme", "synnytte", "syntyvät"],
-    "imp" => ["synnyin", "synnyit", "syntyi", "synnyimme", "synnyitte", "syntyivät"]
+    "preesens" => ["synnyn", "synnyt", "syntyy", "synnymme", "synnytte", "syntyvät"],
+    "imperfect" => ["synnyin", "synnyit", "syntyi", "synnyimme", "synnyitte", "syntyivät"],
+    "perfect" => ["syntynyt", "syntyneet"],
+    "imperative" => ["synny", "syntykää"],
   ],
   "sytyttää" => [
-    "pre" => ["sytytän", "sytytät", "sytyttää", "sytytämme", "sytytätte", "sytyttävät"],
-    "imp" => ["sytytin", "sytytit", "sytytti", "sytytimme", "sytytitte", "sytyttivät"]
+    "preesens" => ["sytytän", "sytytät", "sytyttää", "sytytämme", "sytytätte", "sytyttävät"],
+    "imperfect" => ["sytytin", "sytytit", "sytytti", "sytytimme", "sytytitte", "sytyttivät"],
+    "perfect" => ["sytyttänyt", "sytyttäneet"],
+    "imperative" => ["sytytä", "sytyttäkää"],
   ],
   "syventyä" => [
-    "pre" => ["syvennyn", "syvennyt", "syventyy", "syvennymme", "syvennytte", "syventyvät"],
-    "imp" => ["syvennyin", "syvennyit", "syventyi", "syvennyimme", "syvennyitte", "syventyivät"]
+    "preesens" => ["syvennyn", "syvennyt", "syventyy", "syvennymme", "syvennytte", "syventyvät"],
+    "imperfect" => ["syvennyin", "syvennyit", "syventyi", "syvennyimme", "syvennyitte", "syventyivät"],
+    "perfect" => ["syventynyt", "syventyneet"],
+    "imperative" => ["syvenny", "syventykää"],
   ],
   "syyttää" => [
-    "pre" => ["syytän", "syytät", "syyttää", "syytämme", "syytätte", "syyttävät"],
-    "imp" => ["syytin", "syytit", "syytti", "syytimme", "syytitte", "syyttivät"]
+    "preesens" => ["syytän", "syytät", "syyttää", "syytämme", "syytätte", "syyttävät"],
+    "imperfect" => ["syytin", "syytit", "syytti", "syytimme", "syytitte", "syyttivät"],
+    "perfect" => ["syyttänyt", "syyttäneet"],
+    "imperative" => ["syytä", "syyttäkää"],
   ],
   "syödä" => [
-    "pre" => ["syön", "syöt", "syö", "syömme", "syötte", "syövät"],
-    "imp" => ["söin", "söit", "söi", "söimme", "söitte", "söivät"]
+    "preesens" => ["syön", "syöt", "syö", "syömme", "syötte", "syövät"],
+    "imperfect" => ["söin", "söit", "söi", "söimme", "söitte", "söivät"],
+    "perfect" => ["syönyt", "syöneet"],
+    "imperative" => ["syö", "syökää"],
   ],
   "syöksyä" => [
-    "pre" => ["syöksyn", "syöksyt", "syöksyy", "syöksymme", "syöksytte", "syöksyvät"],
-    "imp" => ["syöksyin", "syöksyit", "syöksyi", "syöksyimme", "syöksyitte", "syöksyivät"]
+    "preesens" => ["syöksyn", "syöksyt", "syöksyy", "syöksymme", "syöksytte", "syöksyvät"],
+    "imperfect" => ["syöksyin", "syöksyit", "syöksyi", "syöksyimme", "syöksyitte", "syöksyivät"],
+    "perfect" => ["syöksynyt", "syöksyneet"],
+    "imperative" => ["syöksy", "syöksykää"],
   ],
   "säilyttää" => [
-    "pre" => ["säilytän", "säilytät", "säilyttää", "säilytämme", "säilytätte", "säilyttävät"],
-    "imp" => ["säilytin", "säilytit", "säilytti", "säilytimme", "säilytitte", "säilyttivät"]
+    "preesens" => ["säilytän", "säilytät", "säilyttää", "säilytämme", "säilytätte", "säilyttävät"],
+    "imperfect" => ["säilytin", "säilytit", "säilytti", "säilytimme", "säilytitte", "säilyttivät"],
+    "perfect" => ["säilyttänyt", "säilyttäneet"],
+    "imperative" => ["säilytä", "säilyttäkää"],
   ],
   "säilyä" => [
-    "pre" => ["säilyn", "säilyt", "säilyy", "säilymme", "säilytte", "säilyvät"],
-    "imp" => ["säilyin", "säilyit", "säilyi", "säilyimme", "säilyitte", "säilyivät"],
-    "perfekti" => ["säilynyt", "säilyneet"],
+    "preesens" => ["säilyn", "säilyt", "säilyy", "säilymme", "säilytte", "säilyvät"],
+    "imperfect" => ["säilyin", "säilyit", "säilyi", "säilyimme", "säilyitte", "säilyivät"],
+    "perfect" => ["säilynyt", "säilyneet"],
+    "imperative" => ["säily", "säilykää"],
   ],
   "särkeä" => [
-    "pre" => ["sären", "säret", "särkee", "säremme", "särette", "särkevät"],
-    "imp" => ["särin", "särit", "särki", "särimme", "säritte", "särkivät"]
+    "preesens" => ["sären", "säret", "särkee", "säremme", "särette", "särkevät"],
+    "imperfect" => ["särin", "särit", "särki", "särimme", "säritte", "särkivät"],
+    "perfect" => ["särkenyt", "särkeneet"],
+    "imperative" => ["säre", "särkekää"],
   ],
   "säästää" => [
-    "pre" => ["säästän", "säästät", "säästää", "säästämme", "säästätte", "säästävät"],
-    "imp" => ["säästin", "säästit", "säästi", "säästimme", "säästitte", "säästivät"]
+    "preesens" => ["säästän", "säästät", "säästää", "säästämme", "säästätte", "säästävät"],
+    "imperfect" => ["säästin", "säästit", "säästi", "säästimme", "säästitte", "säästivät"],
+    "perfect" => ["säästänyt", "säästäneet"],
+    "imperative" => ["säästä", "säästäkää"],
   ],
   "säätää" => [
-    "pre" => ["säädän", "säädät", "säätää", "säädämme", "säädätte", "säätävät"],
-    "imp" => ["säädin", "säädit", "sääti", "säädimme", "sääditte", "säätivät"]
+    "preesens" => ["säädän", "säädät", "säätää", "säädämme", "säädätte", "säätävät"],
+    "imperfect" => ["säädin", "säädit", "sääti", "säädimme", "sääditte", "säätivät"],
+    "perfect" => ["säätänyt", "säätäneet"],
+    "imperative" => ["säädä", "säätäkää"],
   ],
   "taata" => [
-    "pre" => ["takaan", "takaat", "takaa", "takaamme", "takaatte", "takaavat"],
-    "imp" => ["takasin", "takasit", "takasi", "takasimme", "takasitte", "takasivat"]
+    "preesens" => ["takaan", "takaat", "takaa", "takaamme", "takaatte", "takaavat"],
+    "imperfect" => ["takasin", "takasit", "takasi", "takasimme", "takasitte", "takasivat"],
+    "perfect" => ["taannut", "taanneet"],
+    "imperative" => ["takaa", "taatkaa"],
   ],
   "tahtoa" => [
-    "pre" => ["tahdon", "tahdot", "tahtoo", "tahdomme", "tahdotte", "tahtovat"],
-    "imp" => ["tahdoin", "tahdoit", "tahtoi", "tahdoimme", "tahdoitte", "tahtoivat"]
+    "preesens" => ["tahdon", "tahdot", "tahtoo", "tahdomme", "tahdotte", "tahtovat"],
+    "imperfect" => ["tahdoin", "tahdoit", "tahtoi", "tahdoimme", "tahdoitte", "tahtoivat"],
+    "perfect" => ["tahtonut", "tahtoneet"],
+    "imperative" => ["tahdo", "tahtokaa"],
   ],
   "taistella" => [
-    "pre" => ["taistelen", "taistelet", "taistelee", "taistelemme", "taistelette", "taistelevat"],
-    "imp" => ["taistelin", "taistelit", "taisteli", "taistelimme", "taistelitte", "taistelivat"]
+    "preesens" => ["taistelen", "taistelet", "taistelee", "taistelemme", "taistelette", "taistelevat"],
+    "imperfect" => ["taistelin", "taistelit", "taisteli", "taistelimme", "taistelitte", "taistelivat"],
+    "perfect" => ["taistellut", "taistelleet"],
+    "imperative" => ["taistele", "taistelkaa"],
   ],
   "taitaa" => [
-    "pre" => ["taidan", "taidat", "taitaa", "taidamme", "taidatte", "taitavat"],
-    "imp" => ["taisin", "taisit", "taisi", "taisimme", "taisitte", "taisivat"]
+    "preesens" => ["taidan", "taidat", "taitaa", "taidamme", "taidatte", "taitavat"],
+    "imperfect" => ["taisin", "taisit", "taisi", "taisimme", "taisitte", "taisivat"],
+    "perfect" => ["taitanut", "taitaneet"],
+    "imperative" => ["taida", "taitakaa"],
   ],
   "tajuta" => [
-    "pre" => ["tajuan", "tajuat", "tajuaa", "tajuamme", "tajuatte", "tajuavat"],
-    "imp" => ["tajusin", "tajusit", "tajusi", "tajusimme", "tajusitte", "tajusivat"],
-    "perfekti" => ["tajunnut", "tajunneet"],
+    "preesens" => ["tajuan", "tajuat", "tajuaa", "tajuamme", "tajuatte", "tajuavat"],
+    "imperfect" => ["tajusin", "tajusit", "tajusi", "tajusimme", "tajusitte", "tajusivat"],
+    "perfect" => ["tajunnut", "tajunneet"],
+    "imperative" => ["tajua", "tajutkaa"],
   ],
   "tanssia" => [
-    "pre" => ["tanssin", "tanssit", "tanssii", "tanssimme", "tanssitte", "tanssivat"],
-    "imp" => ["tanssin", "tanssit", "tanssi", "tanssimme", "tanssitte", "tanssivat"]
+    "preesens" => ["tanssin", "tanssit", "tanssii", "tanssimme", "tanssitte", "tanssivat"],
+    "imperfect" => ["tanssin", "tanssit", "tanssi", "tanssimme", "tanssitte", "tanssivat"],
+    "perfect" => ["tanssinut", "tanssineet"],
+    "imperative" => ["tanssi", "tanssikaa"],
   ],
   "tapella" => [
-    "pre" => ["tappelen", "tappelet", "tappelee", "tappelemme", "tappelette", "tappelevat"],
-    "imp" => ["tappelin", "tappelit", "tappeli", "tappelimme", "tappelitte", "tappelivat"]
+    "preesens" => ["tappelen", "tappelet", "tappelee", "tappelemme", "tappelette", "tappelevat"],
+    "imperfect" => ["tappelin", "tappelit", "tappeli", "tappelimme", "tappelitte", "tappelivat"],
+    "perfect" => ["tapellut", "tapelleet"],
+    "imperative" => ["tappele", "tapelkaa"],
   ],
   "tappaa" => [
-    "pre" => ["tapan", "tapat", "tapaa", "tapamme", "tapatte", "tapavat"],
-    "imp" => ["tappasin", "tappasit", "tappasi", "tappasimme", "tappasitte", "tappasivat"]
+    "preesens" => ["tapan", "tapat", "tapaa", "tapamme", "tapatte", "tapavat"],
+    "imperfect" => ["tappasin", "tappasit", "tappasi", "tappasimme", "tappasitte", "tappasivat"],
+    "perfect" => ["tappanut", "tappaneet"],
+    "imperative" => ["tapa", "tappakaa"],
   ],
   "tarjeta" => [
-    "pre" => ["tarkenen", "tarkenet", "tarkenee", "tarkenemme", "tarkenette", "tarkenevat"],
-    "imp" => ["tarkenin", "tarkenit", "tarkeni", "tarkenimme", "tarkenitte", "tarkenivat"]
+    "preesens" => ["tarkenen", "tarkenet", "tarkenee", "tarkenemme", "tarkenette", "tarkenevat"],
+    "imperfect" => ["tarkenin", "tarkenit", "tarkeni", "tarkenimme", "tarkenitte", "tarkenivat"],
+    "perfect" => ["tarkennut", "tarkenneet"],
+    "imperative" => ["tarkene", "tarjetkaa"],
   ],
   "tarjota" => [
-    "pre" => ["tarjoan", "tarjoat", "tarjoaa", "tarjoamme", "tarjoatte", "tarjoavat"],
-    "imp" => ["tarjosin", "tarjosit", "tarjosi", "tarjosimme", "tarjositte", "tarjosivat"]
+    "preesens" => ["tarjoan", "tarjoat", "tarjoaa", "tarjoamme", "tarjoatte", "tarjoavat"],
+    "imperfect" => ["tarjosin", "tarjosit", "tarjosi", "tarjosimme", "tarjositte", "tarjosivat"],
+    "perfect" => ["tarjonnut", "tarjonneet"],
+    "imperative" => ["tarjoa", "tarjotkaa"],
   ],
   "tarkastaa" => [
-    "pre" => ["tarkastan", "tarkastat", "tarkastaa", "tarkastamme", "tarkastatte", "tarkastavat"],
-    "imp" => ["tarkastin", "tarkastit", "tarkasti", "tarkastimme", "tarkastitte", "tarkastivat"]
+    "preesens" => ["tarkastan", "tarkastat", "tarkastaa", "tarkastamme", "tarkastatte", "tarkastavat"],
+    "imperfect" => ["tarkastin", "tarkastit", "tarkasti", "tarkastimme", "tarkastitte", "tarkastivat"],
+    "perfect" => ["tarkastanut", "tarkastaneet"],
+    "imperative" => ["tarkasta", "tarkastakaa"],
   ],
   "tarkastella" => [
-    "pre" => ["tarkastelen", "tarkastelet", "tarkastelee", "tarkastelemme", "tarkastelette", "tarkastelevat"],
-    "imp" => ["tarkastelin", "tarkastelit", "tarkasteli", "tarkastelimme", "tarkastelitte", "tarkastelivat"]
+    "preesens" => ["tarkastelen", "tarkastelet", "tarkastelee", "tarkastelemme", "tarkastelette", "tarkastelevat"],
+    "imperfect" => ["tarkastelin", "tarkastelit", "tarkasteli", "tarkastelimme", "tarkastelitte", "tarkastelivat"],
+    "perfect" => ["tarkastellut", "tarkastelleet"],
+    "imperative" => ["tarkastele", "tarkastelkaa"],
   ],
   "tarkistaa" => [
-    "pre" => ["tarkistan", "tarkistat", "tarkistaa", "tarkistamme", "tarkistatte", "tarkistavat"],
-    "imp" => ["tarkistin", "tarkistit", "tarkisti", "tarkistimme", "tarkistitte", "tarkistivat"]
+    "preesens" => ["tarkistan", "tarkistat", "tarkistaa", "tarkistamme", "tarkistatte", "tarkistavat"],
+    "imperfect" => ["tarkistin", "tarkistit", "tarkisti", "tarkistimme", "tarkistitte", "tarkistivat"],
+    "perfect" => ["tarkistanut", "tarkistaneet"],
+    "imperative" => ["tarkista", "tarkistakaa"],
   ],
   "tarkkailla" => [
-    "pre" => ["tarkkailen", "tarkkailet", "tarkkailee", "tarkkailemme", "tarkkailette", "tarkkailevat"],
-    "imp" => ["tarkkailin", "tarkkailit", "tarkkaili", "tarkkailimme", "tarkkailitte", "tarkkailivat"]
+    "preesens" => ["tarkkailen", "tarkkailet", "tarkkailee", "tarkkailemme", "tarkkailette", "tarkkailevat"],
+    "imperfect" => ["tarkkailin", "tarkkailit", "tarkkaili", "tarkkailimme", "tarkkailitte", "tarkkailivat"],
+    "perfect" => ["tarkkaillut", "tarkkailleet"],
+    "imperative" => ["tarkkaile", "tarkkailkaa"],
   ],
   "tarkoittaa" => [
-    "pre" => ["tarkoitan", "tarkoitat", "tarkoittaa", "tarkoitamme", "tarkoitatte", "tarkoittavat"],
-    "imp" => ["tarkoitin", "tarkoitit", "tarkoitti", "tarkoitimme", "tarkoititte", "tarkoittivat"]
+    "preesens" => ["tarkoitan", "tarkoitat", "tarkoittaa", "tarkoitamme", "tarkoitatte", "tarkoittavat"],
+    "imperfect" => ["tarkoitin", "tarkoitit", "tarkoitti", "tarkoitimme", "tarkoititte", "tarkoittivat"],
+    "perfect" => ["tarkoittanut", "tarkoittaneet"],
+    "imperative" => ["tarkoita", "tarkoittakaa"],
   ],
   "tarttua" => [
-    "pre" => ["tartun", "tartut", "tarttuu", "tartumme", "tartutte", "tarttuvat"],
-    "imp" => ["tartuin", "tartuit", "tarttui", "tartuimme", "tartuitte", "tarttuivat"]
+    "preesens" => ["tartun", "tartut", "tarttuu", "tartumme", "tartutte", "tarttuvat"],
+    "imperfect" => ["tartuin", "tartuit", "tarttui", "tartuimme", "tartuitte", "tarttuivat"],
+    "perfect" => ["tarttunut", "tarttuneet"],
+    "imperative" => ["tartu", "tarttukaa"],
   ],
   "tarvita" => [
-    "pre" => ["tarvitsen", "tarvitset", "tarvitsee", "tarvitsemme", "tarvitsette", "tarvitsevat"],
-    "imp" => ["tarvitsin", "tarvitsit", "tarvitsi", "tarvitsimme", "tarvitsitte", "tarvitsivat"]
+    "preesens" => ["tarvitsen", "tarvitset", "tarvitsee", "tarvitsemme", "tarvitsette", "tarvitsevat"],
+    "imperfect" => ["tarvitsin", "tarvitsit", "tarvitsi", "tarvitsimme", "tarvitsitte", "tarvitsivat"],
+    "perfect" => ["tarvinnut", "tarvinneet"],
+    "imperative" => ["tarvitse", "tarvitkaa"],
   ],
   "tasoittaa" => [
-    "pre" => ["tasoitan", "tasoitat", "tasoittaa", "tasoitamme", "tasoitatte", "tasoittavat"],
-    "imp" => ["tasoitin", "tasoitit", "tasoitti", "tasoitimme", "tasoititte", "tasoittivat"]
+    "preesens" => ["tasoitan", "tasoitat", "tasoittaa", "tasoitamme", "tasoitatte", "tasoittavat"],
+    "imperfect" => ["tasoitin", "tasoitit", "tasoitti", "tasoitimme", "tasoititte", "tasoittivat"],
+    "perfect" => ["tasoittanut", "tasoittaneet"],
+    "imperative" => ["tasoita", "tasoittakaa"],
   ],
   "tavata" => [
-    "pre" => ["tapaan", "tapaat", "tapaa", "tapaamme", "tapaatte", "tapaavat"],
-    "imp" => ["tapasin", "tapasit", "tapasi", "tapasimme", "tapasitte", "tapasivat"],
-    "perfekti" => ["tavannut", "tavanneet"],
+    "preesens" => ["tapaan", "tapaat", "tapaa", "tapaamme", "tapaatte", "tapaavat"],
+    "imperfect" => ["tapasin", "tapasit", "tapasi", "tapasimme", "tapasitte", "tapasivat"],
+    "perfect" => ["tavannut", "tavanneet"],
+    "imperative" => ["tapaa", "tavatkaa"],
   ],
   "tavoitella" => [
-    "pre" => ["tavoittelen", "tavoittelet", "tavoittelee", "tavoittelemme", "tavoittelette", "tavoittelevat"],
-    "imp" => ["tavoittelin", "tavoittelit", "tavoitteli", "tavoittelimme", "tavoittelitte", "tavoittelivat"]
+    "preesens" => ["tavoittelen", "tavoittelet", "tavoittelee", "tavoittelemme", "tavoittelette", "tavoittelevat"],
+    "imperfect" => ["tavoittelin", "tavoittelit", "tavoitteli", "tavoittelimme", "tavoittelitte", "tavoittelivat"],
+    "perfect" => ["tavoitellut", "tavoitelleet"],
+    "imperative" => ["tavoittele", "tavoitelkaa"],
   ],
   "tavoittaa" => [
-    "pre" => ["tavoitan", "tavoitat", "tavoittaa", "tavoitamme", "tavoitatte", "tavoittavat"],
-    "imp" => ["tavoitin", "tavoitit", "tavoitti", "tavoitimme", "tavoititte", "tavoittivat"]
+    "preesens" => ["tavoitan", "tavoitat", "tavoittaa", "tavoitamme", "tavoitatte", "tavoittavat"],
+    "imperfect" => ["tavoitin", "tavoitit", "tavoitti", "tavoitimme", "tavoititte", "tavoittivat"],
+    "perfect" => ["tavoittanut", "tavoittaneet"],
+    "imperative" => ["tavoita", "tavoittakaa"],
   ],
   "tehdä" => [
-    "pre" => ["teen", "teet", "tekee", "teemme", "teette", "tekevät"],
-    "imp" => ["tein", "teit", "teki", "teimme", "teitte", "tekivät"],
-    "perfekti" => ["tehnyt", "tehneet"],
-    "imperatiivi" => ["tee", "tehkää"],
+    "preesens" => ["teen", "teet", "tekee", "teemme", "teette", "tekevät"],
+    "imperfect" => ["tein", "teit", "teki", "teimme", "teitte", "tekivät"],
+    "perfect" => ["tehnyt", "tehneet"],
+    "imperative" => ["tee", "tehkää"],
   ],
   "tehostaa" => [
-    "pre" => ["tehostan", "tehostat", "tehostaa", "tehostamme", "tehostatte", "tehostavat"],
-    "imp" => ["tehostin", "tehostit", "tehosti", "tehostimme", "tehostitte", "tehostivat"]
+    "preesens" => ["tehostan", "tehostat", "tehostaa", "tehostamme", "tehostatte", "tehostavat"],
+    "imperfect" => ["tehostin", "tehostit", "tehosti", "tehostimme", "tehostitte", "tehostivat"],
+    "perfect" => ["tehostanut", "tehostaneet"],
+    "imperative" => ["tehosta", "tehostakaa"],
   ],
   "teljetä" => [
-    "pre" => ["telkeän", "telkeät", "telkeää", "telkeämme", "telkeätte", "telkeävät"],
-    "imp" => ["telkesin", "telkesit", "telkesi", "telkesimme", "telkesitte", "telkesivät"]
+    "preesens" => ["telkeän", "telkeät", "telkeää", "telkeämme", "telkeätte", "telkeävät"],
+    "imperfect" => ["telkesin", "telkesit", "telkesi", "telkesimme", "telkesitte", "telkesivät"],
+    "perfect" => ["teljennyt", "teljenneet"],
+    "imperative" => ["telkeä", "teljetkää"],
   ],
   "tervehtiä" => [
-    "pre" => ["tervehdin", "tervehdit", "tervehtii", "tervehdimme", "tervehditte", "tervehtivät"],
-    "imp" => ["tervehdin", "tervehdit", "tervehti", "tervehdimme", "tervehditte", "tervehtivät"]
+    "preesens" => ["tervehdin", "tervehdit", "tervehtii", "tervehdimme", "tervehditte", "tervehtivät"],
+    "imperfect" => ["tervehdin", "tervehdit", "tervehti", "tervehdimme", "tervehditte", "tervehtivät"],
+    "perfect" => ["tervehtinyt", "tervehtineet"],
+    "imperative" => ["tervehdi", "tervehtikää"],
   ],
   "tiedustella" => [
-    "pre" => ["tiedustelen", "tiedustelet", "tiedustelee", "tiedustelemme", "tiedustelette", "tiedustelevat"],
-    "imp" => ["tiedustelin", "tiedustelit", "tiedusteli", "tiedustelimme", "tiedustelitte", "tiedustelivat"]
+    "preesens" => ["tiedustelen", "tiedustelet", "tiedustelee", "tiedustelemme", "tiedustelette", "tiedustelevat"],
+    "imperfect" => ["tiedustelin", "tiedustelit", "tiedusteli", "tiedustelimme", "tiedustelitte", "tiedustelivat"],
+    "perfect" => ["tiedustellut", "tiedustelleet"],
+    "imperative" => ["tiedustele", "tiedustelkaa"],
   ],
   "tietää" => [
-    "pre" => ["tiedän", "tiedät", "tietää", "tiedämme", "tiedätte", "tietävät"],
-    "imp" => ["tiesin", "tiesit", "tiesi", "tiesimme", "tiesitte", "tiesivät"]
+    "preesens" => ["tiedän", "tiedät", "tietää", "tiedämme", "tiedätte", "tietävät"],
+    "imperfect" => ["tiesin", "tiesit", "tiesi", "tiesimme", "tiesitte", "tiesivät"],
+    "perfect" => ["tietänyt", "tietäneet"],
+    "imperative" => ["tiedä", "tietäkää"],
   ],
   "tilata" => [
-    "pre" => ["tilaan", "tilaat", "tilaa", "tilaamme", "tilaatte", "tilaavat"],
-    "imp" => ["tilasin", "tilasit", "tilasi", "tilasimme", "tilasitte", "tilasivat"]
+    "preesens" => ["tilaan", "tilaat", "tilaa", "tilaamme", "tilaatte", "tilaavat"],
+    "imperfect" => ["tilasin", "tilasit", "tilasi", "tilasimme", "tilasitte", "tilasivat"],
+    "perfect" => ["tilannut", "tilanneet"],
+    "imperative" => ["tilaa", "tilatkaa"],
   ],
   "todeta" => [
-    "pre" => ["totean", "toteat", "toteaa", "toteamme", "toteatte", "toteavat"],
-    "imp" => ["totesin", "totesit", "totesi", "totesimme", "totesitte", "totesivat"]
+    "preesens" => ["totean", "toteat", "toteaa", "toteamme", "toteatte", "toteavat"],
+    "imperfect" => ["totesin", "totesit", "totesi", "totesimme", "totesitte", "totesivat"],
+    "perfect" => ["todennut", "todenneet"],
+    "imperative" => ["totea", "todetkaa"],
   ],
   "todistaa" => [
-    "pre" => ["todistan", "todistat", "todistaa", "todistamme", "todistatte", "todistavat"],
-    "imp" => ["todistin", "todistit", "todisti", "todistimme", "todistitte", "todistivat"]
+    "preesens" => ["todistan", "todistat", "todistaa", "todistamme", "todistatte", "todistavat"],
+    "imperfect" => ["todistin", "todistit", "todisti", "todistimme", "todistitte", "todistivat"],
+    "perfect" => ["todistanut", "todistaneet"],
+    "imperative" => ["todista", "todistakaa"],
   ],
   "toimia" => [
-    "pre" => ["toimin", "toimit", "toimii", "toimimme", "toimitte", "toimivat"],
-    "imp" => ["toimin", "toimit", "toimi", "toimimme", "toimitte", "toimivat"]
+    "preesens" => ["toimin", "toimit", "toimii", "toimimme", "toimitte", "toimivat"],
+    "imperfect" => ["toimin", "toimit", "toimi", "toimimme", "toimitte", "toimivat"],
+    "perfect" => ["toiminut", "toimineet"],
+    "imperative" => ["toimi", "toimikaa"],
   ],
   "toimittaa" => [
-    "pre" => ["toimitan", "toimitat", "toimittaa", "toimitamme", "toimitatte", "toimittavat"],
-    "imp" => ["toimitin", "toimitit", "toimitti", "toimitimme", "toimititte", "toimittivat"]
+    "preesens" => ["toimitan", "toimitat", "toimittaa", "toimitamme", "toimitatte", "toimittavat"],
+    "imperfect" => ["toimitin", "toimitit", "toimitti", "toimitimme", "toimititte", "toimittivat"],
+    "perfect" => ["toimittanut", "toimittaneet"],
+    "imperative" => ["toimita", "toimittakaa"],
   ],
   "toistaa" => [
-    "pre" => ["toistan", "toistat", "toistaa", "toistamme", "toistatte", "toistavat"],
-    "imp" => ["toistin", "toistit", "toisti", "toistimme", "toistitte", "toistivat"],
-    "perfekti" => ["toistanut", "toistaneet"],
-    "imperatiivi" => ["toista", "toistakaa"],
+    "preesens" => ["toistan", "toistat", "toistaa", "toistamme", "toistatte", "toistavat"],
+    "imperfect" => ["toistin", "toistit", "toisti", "toistimme", "toistitte", "toistivat"],
+    "perfect" => ["toistanut", "toistaneet"],
+    "imperative" => ["toista", "toistakaa"],
   ],
   "toivoa" => [
-    "pre" => ["toivon", "toivot", "toivoo", "toivomme", "toivotte", "toivovat"],
-    "imp" => ["toivoin", "toivoit", "toivoi", "toivoimme", "toivoitte", "toivoivat"]
+    "preesens" => ["toivon", "toivot", "toivoo", "toivomme", "toivotte", "toivovat"],
+    "imperfect" => ["toivoin", "toivoit", "toivoi", "toivoimme", "toivoitte", "toivoivat"],
+    "perfect" => ["toivonut", "toivoneet"],
+    "imperative" => ["toivo", "toivokaa"],
   ],
   "torjua" => [
-    "pre" => ["torjun", "torjut", "torjuu", "torjumme", "torjutte", "torjuvat"],
-    "imp" => ["torjuin", "torjuit", "torjui", "torjuimme", "torjuitte", "torjuivat"]
+    "preesens" => ["torjun", "torjut", "torjuu", "torjumme", "torjutte", "torjuvat"],
+    "imperfect" => ["torjuin", "torjuit", "torjui", "torjuimme", "torjuitte", "torjuivat"],
+    "perfect" => ["torjunut", "torjuneet"],
+    "imperative" => ["torju", "torjukaa"],
   ],
   "totella" => [
-    "pre" => ["tottelen", "tottelet", "tottelee", "tottelemme", "tottelette", "tottelevat"],
-    "imp" => ["tottelin", "tottelit", "totteli", "tottelimme", "tottelitte", "tottelivat"]
+    "preesens" => ["tottelen", "tottelet", "tottelee", "tottelemme", "tottelette", "tottelevat"],
+    "imperfect" => ["tottelin", "tottelit", "totteli", "tottelimme", "tottelitte", "tottelivat"],
+    "perfect" => ["totellut", "totelleet"],
+    "imperative" => ["tottele", "totelkaa"],
   ],
   "toteuttaa" => [
-    "pre" => ["toteutan", "toteutat", "toteuttaa", "toteutamme", "toteutatte", "toteuttavat"],
-    "imp" => ["toteutin", "toteutit", "toteutti", "toteutimme", "toteutitte", "toteuttivat"]
+    "preesens" => ["toteutan", "toteutat", "toteuttaa", "toteutamme", "toteutatte", "toteuttavat"],
+    "imperfect" => ["toteutin", "toteutit", "toteutti", "toteutimme", "toteutitte", "toteuttivat"],
+    "perfect" => ["toteuttanut", "toteuttaneet"],
+    "imperative" => ["toteuta", "toteuttakaa"],
   ],
   "tottua" => [
-    "pre" => ["totun", "totut", "tottuu", "totumme", "totutte", "tottuvat"],
-    "imp" => ["totuin", "totuit", "tottui", "totuimme", "totuitte", "tottuivat"]
+    "preesens" => ["totun", "totut", "tottuu", "totumme", "totutte", "tottuvat"],
+    "imperfect" => ["totuin", "totuit", "tottui", "totuimme", "totuitte", "tottuivat"],
+    "perfect" => ["tottunut", "tottuneet"],
+    "imperative" => ["totu", "tottukaa"],
   ],
   "tuhota" => [
-    "pre" => ["tuhoan", "tuhoat", "tuhoaa", "tuhoamme", "tuhoatte", "tuhoavat"],
-    "imp" => ["tuhosin", "tuhosit", "tuhosi", "tuhosimme", "tuhositte", "tuhosivat"]
+    "preesens" => ["tuhoan", "tuhoat", "tuhoaa", "tuhoamme", "tuhoatte", "tuhoavat"],
+    "imperfect" => ["tuhosin", "tuhosit", "tuhosi", "tuhosimme", "tuhositte", "tuhosivat"],
+    "perfect" => ["tuhonnut", "tuhonneet"],
+    "imperative" => ["tuhoa", "tuhotkaa"],
   ],
   "tuijottaa" => [
-    "pre" => ["tuijotan", "tuijotat", "tuijottaa", "tuijotamme", "tuijotatte", "tuijottavat"],
-    "imp" => ["tuijotin", "tuijotit", "tuijotti", "tuijotimme", "tuijotitte", "tuijottivat"]
+    "preesens" => ["tuijotan", "tuijotat", "tuijottaa", "tuijotamme", "tuijotatte", "tuijottavat"],
+    "imperfect" => ["tuijotin", "tuijotit", "tuijotti", "tuijotimme", "tuijotitte", "tuijottivat"],
+    "perfect" => ["tuijottanut", "tuijottaneet"],
+    "imperative" => ["tuijota", "tuijottakaa"],
   ],
   "tukea" => [
-    "pre" => ["tuen", "tuet", "tukee", "tuemme", "tuette", "tukevat"],
-    "imp" => ["tuin", "tuit", "tuki", "tuimme", "tuitte", "tukivat"],
-    "perfekti" => ["tukenut", "tukeneet"],
+    "preesens" => ["tuen", "tuet", "tukee", "tuemme", "tuette", "tukevat"],
+    "imperfect" => ["tuin", "tuit", "tuki", "tuimme", "tuitte", "tukivat"],
+    "perfect" => ["tukenut", "tukeneet"],
+    "imperative" => ["tue", "tukekaa"],
   ],
   "tulkita" => [
-    "pre" => ["tulkitsen", "tulkitset", "tulkitsee", "tulkitsemme", "tulkitsette", "tulkitsevat"],
-    "imp" => ["tulkitsin", "tulkitsit", "tulkitsi", "tulkitsimme", "tulkitsitte", "tulkitsivat"]
+    "preesens" => ["tulkitsen", "tulkitset", "tulkitsee", "tulkitsemme", "tulkitsette", "tulkitsevat"],
+    "imperfect" => ["tulkitsin", "tulkitsit", "tulkitsi", "tulkitsimme", "tulkitsitte", "tulkitsivat"],
+    "perfect" => ["tulkinnut", "tulkinneet"],
+    "imperative" => ["tulkitse", "tulkitkaa"],
   ],
   "tulla" => [
-    "pre" => ["tulen", "tulet", "tulee", "tulemme", "tulette", "tulevat"],
-    "imp" => ["tulin", "tulit", "tuli", "tulimme", "tulitte", "tulivat"]
+    "preesens" => ["tulen", "tulet", "tulee", "tulemme", "tulette", "tulevat"],
+    "imperfect" => ["tulin", "tulit", "tuli", "tulimme", "tulitte", "tulivat"],
+    "perfect" => ["tullut", "tulleet"],
+    "imperative" => ["tule", "tulkaa"],
   ],
   "tunkea" => [
-    "pre" => ["tungen", "tunget", "tunkee", "tungemme", "tungette", "tunkevat"],
-    "imp" => ["tungin", "tungit", "tunki", "tungimme", "tungitte", "tunkivat"]
+    "preesens" => ["tungen", "tunget", "tunkee", "tungemme", "tungette", "tunkevat"],
+    "imperfect" => ["tungin", "tungit", "tunki", "tungimme", "tungitte", "tunkivat"],
+    "perfect" => ["tunkenut", "tunkeneet"],
+    "imperative" => ["tunge", "tunkekaa"],
   ],
   "tunkeutua" => [
-    "pre" => ["tunkeudun", "tunkeudut", "tunkeutuu", "tunkeudumme", "tunkeudutte", "tunkeutuvat"],
-    "imp" => ["tunkeuduin", "tunkeuduit", "tunkeutui", "tunkeuduimme", "tunkeuduitte", "tunkeutuivat"]
+    "preesens" => ["tunkeudun", "tunkeudut", "tunkeutuu", "tunkeudumme", "tunkeudutte", "tunkeutuvat"],
+    "imperfect" => ["tunkeuduin", "tunkeuduit", "tunkeutui", "tunkeuduimme", "tunkeuduitte", "tunkeutuivat"],
+    "perfect" => ["tunkeutunut", "tunkeutuneet"],
+    "imperative" => ["tunkeudu", "tunkeutukaa"],
   ],
   "tunnustaa" => [
-    "pre" => ["tunnustan", "tunnustat", "tunnustaa", "tunnustamme", "tunnustatte", "tunnustavat"],
-    "imp" => ["tunnustin", "tunnustit", "tunnusti", "tunnustimme", "tunnustitte", "tunnustivat"]
+    "preesens" => ["tunnustan", "tunnustat", "tunnustaa", "tunnustamme", "tunnustatte", "tunnustavat"],
+    "imperfect" => ["tunnustin", "tunnustit", "tunnusti", "tunnustimme", "tunnustitte", "tunnustivat"],
+    "perfect" => ["tunnustanut", "tunnustaneet"],
+    "imperative" => ["tunnusta", "tunnustakaa"],
   ],
   "tuntea" => [
-    "pre" => ["tunnen", "tunnet", "tuntee", "tunnemme", "tunnette", "tuntevat"],
-    "imp" => ["tunsin", "tunsit", "tunsi", "tunsimme", "tunsitte", "tunsivat"],
-    "perfekti" => ["tuntenut", "tunteneet"],
+    "preesens" => ["tunnen", "tunnet", "tuntee", "tunnemme", "tunnette", "tuntevat"],
+    "imperfect" => ["tunsin", "tunsit", "tunsi", "tunsimme", "tunsitte", "tunsivat"],
+    "perfect" => ["tuntenut", "tunteneet"],
+    "imperative" => ["tunne", "tuntekaa"],
   ],
   "tuoda" => [
-    "pre" => ["tuon", "tuot", "tuo", "tuomme", "tuotte", "tuovat"],
-    "imp" => ["toin", "toit", "toi", "toimme", "toitte", "toivat"]
+    "preesens" => ["tuon", "tuot", "tuo", "tuomme", "tuotte", "tuovat"],
+    "imperfect" => ["toin", "toit", "toi", "toimme", "toitte", "toivat"],
+    "perfect" => ["tuonut", "tuoneet"],
+    "imperative" => ["tuo", "tuokaa"],
   ],
   "tuomita" => [
-    "pre" => ["tuomitsen", "tuomitset", "tuomitsee", "tuomitsemme", "tuomitsette", "tuomitsevat"],
-    "imp" => ["tuomitsin", "tuomitsit", "tuomitsi", "tuomitsimme", "tuomitsitte", "tuomitsivat"]
+    "preesens" => ["tuomitsen", "tuomitset", "tuomitsee", "tuomitsemme", "tuomitsette", "tuomitsevat"],
+    "imperfect" => ["tuomitsin", "tuomitsit", "tuomitsi", "tuomitsimme", "tuomitsitte", "tuomitsivat"],
+    "perfect" => ["tuominnut", "tuominneet"],
+    "imperative" => ["tuomitse", "tuomitkaa"],
   ],
   "tuottaa" => [
-    "pre" => ["tuotan", "tuotat", "tuottaa", "tuotamme", "tuotatte", "tuottavat"],
-    "imp" => ["tuotin", "tuotit", "tuotti", "tuotimme", "tuotitte", "tuottivat"]
+    "preesens" => ["tuotan", "tuotat", "tuottaa", "tuotamme", "tuotatte", "tuottavat"],
+    "imperfect" => ["tuotin", "tuotit", "tuotti", "tuotimme", "tuotitte", "tuottivat"],
+    "perfect" => ["tuottanut", "tuottaneet"],
+    "imperative" => ["tuota", "tuottakaa"],
   ],
   "turvata" => [
-    "pre" => ["turvaan", "turvaat", "turvaa", "turvaamme", "turvaatte", "turvaavat"],
-    "imp" => ["turvasin", "turvasit", "turvasi", "turvasimme", "turvasitte", "turvasivat"]
+    "preesens" => ["turvaan", "turvaat", "turvaa", "turvaamme", "turvaatte", "turvaavat"],
+    "imperfect" => ["turvasin", "turvasit", "turvasi", "turvasimme", "turvasitte", "turvasivat"],
+    "perfect" => ["turvannut", "turvanneet"],
+    "imperative" => ["turvaa", "turvatkaa"],
   ],
   "turvautua" => [
-    "pre" => ["turvaudun", "turvaudut", "turvautuu", "turvaudumme", "turvaudutte", "turvautuvat"],
-    "imp" => ["turvauduin", "turvauduit", "turvautui", "turvauduimme", "turvauduitte", "turvautuivat"]
+    "preesens" => ["turvaudun", "turvaudut", "turvautuu", "turvaudumme", "turvaudutte", "turvautuvat"],
+    "imperfect" => ["turvauduin", "turvauduit", "turvautui", "turvauduimme", "turvauduitte", "turvautuivat"],
+    "perfect" => ["turvautunut", "turvautuneet"],
+    "imperative" => ["turvaudu", "turvautukaa"],
   ],
   "tutkia" => [
-    "pre" => ["tutkin", "tutkit", "tutkii", "tutkimme", "tutkitte", "tutkivat"],
-    "imp" => ["tutkin", "tutkit", "tutki", "tutkimme", "tutkitte", "tutkivat"],
-    "perfekti" => ["tutkinut", "tutkineet"],
+    "preesens" => ["tutkin", "tutkit", "tutkii", "tutkimme", "tutkitte", "tutkivat"],
+    "imperfect" => ["tutkin", "tutkit", "tutki", "tutkimme", "tutkitte", "tutkivat"],
+    "perfect" => ["tutkinut", "tutkineet"],
+    "imperative" => ["tutki", "tutkikaa"],
   ],
   "tutustua" => [
-    "pre" => ["tutustun", "tutustut", "tutustuu", "tutustumme", "tutustutte", "tutustuvat"],
-    "imp" => ["tutustuin", "tutustuit", "tutustui", "tutustuimme", "tutustuitte", "tutustuivat"]
+    "preesens" => ["tutustun", "tutustut", "tutustuu", "tutustumme", "tutustutte", "tutustuvat"],
+    "imperfect" => ["tutustuin", "tutustuit", "tutustui", "tutustuimme", "tutustuitte", "tutustuivat"],
+    "perfect" => ["tutustunut", "tutustuneet"],
+    "imperative" => ["tutustu", "tutustukaa"],
   ],
   "tyydyttää" => [
-    "pre" => ["tyydytän", "tyydytät", "tyydyttää", "tyydytämme", "tyydytätte", "tyydyttävät"],
-    "imp" => ["tyydytin", "tyydytit", "tyydytti", "tyydytimme", "tyydytitte", "tyydyttivät"]
+    "preesens" => ["tyydytän", "tyydytät", "tyydyttää", "tyydytämme", "tyydytätte", "tyydyttävät"],
+    "imperfect" => ["tyydytin", "tyydytit", "tyydytti", "tyydytimme", "tyydytitte", "tyydyttivät"],
+    "perfect" => ["tyydyttänyt", "tyydyttäneet"],
+    "imperative" => ["tyydytä", "tyydyttäkää"],
   ],
   "tyytyä" => [
-    "pre" => ["tyydyn", "tyydyt", "tyytyy", "tyydymme", "tyydytte", "tyytyvät"],
-    "imp" => ["tyydyin", "tyydyit", "tyytyi", "tyydyimme", "tyydyitte", "tyytyivät"]
+    "preesens" => ["tyydyn", "tyydyt", "tyytyy", "tyydymme", "tyydytte", "tyytyvät"],
+    "imperfect" => ["tyydyin", "tyydyit", "tyytyi", "tyydyimme", "tyydyitte", "tyytyivät"],
+    "perfect" => ["tyytynyt", "tyytyneet"],
+    "imperative" => ["tyydy", "tyytykää"],
   ],
   "työntää" => [
-    "pre" => ["työnnän", "työnnät", "työntää", "työnnämme", "työnnätte", "työntävät"],
-    "imp" => ["työnsin", "työnsit", "työnsi", "työnsimme", "työnsitte", "työnsivät"]
+    "preesens" => ["työnnän", "työnnät", "työntää", "työnnämme", "työnnätte", "työntävät"],
+    "imperfect" => ["työnsin", "työnsit", "työnsi", "työnsimme", "työnsitte", "työnsivät"],
+    "perfect" => ["työntänyt", "työntäneet"],
+    "imperative" => ["työnnä", "työntäkää"],
   ],
   "työskennellä" => [
-    "pre" => ["työskentelen", "työskentelet", "työskentelee", "työskentelemme", "työskentelette", "työskentelevät"],
-    "imp" => ["työskentelin", "työskentelit", "työskenteli", "työskentelimme", "työskentelitte", "työskentelivät"]
+    "preesens" => ["työskentelen", "työskentelet", "työskentelee", "työskentelemme", "työskentelette", "työskentelevät"],
+    "imperfect" => ["työskentelin", "työskentelit", "työskenteli", "työskentelimme", "työskentelitte", "työskentelivät"],
+    "perfect" => ["työskennellyt", "työskennelleet"],
+    "imperative" => ["työskentele", "työskennelkää"],
   ],
   "tähdentää" => [
-    "pre" => ["tähdennän", "tähdennät", "tähdentää", "tähdennämme", "tähdennätte", "tähdentävät"],
-    "imp" => ["tähdensin", "tähdensit", "tähdensi", "tähdensimme", "tähdensitte", "tähdensivät"]
+    "preesens" => ["tähdennän", "tähdennät", "tähdentää", "tähdennämme", "tähdennätte", "tähdentävät"],
+    "imperfect" => ["tähdensin", "tähdensit", "tähdensi", "tähdensimme", "tähdensitte", "tähdensivät"],
+    "perfect" => ["tähdentänyt", "tähdentäneet"],
+    "imperative" => ["tähdennä", "tähdentäkää"],
   ],
   "tähdätä" => [
-    "pre" => ["tähtään", "tähtäät", "tähtää", "tähtäämme", "tähtäätte", "tähtäävät"],
-    "imp" => ["tähtäsin", "tähtäsit", "tähtäsi", "tähtäsimme", "tähtäsitte", "tähtäsivät"]
+    "preesens" => ["tähtään", "tähtäät", "tähtää", "tähtäämme", "tähtäätte", "tähtäävät"],
+    "imperfect" => ["tähtäsin", "tähtäsit", "tähtäsi", "tähtäsimme", "tähtäsitte", "tähtäsivät"],
+    "perfect" => ["tähdännyt", "tähdänneet"],
+    "imperative" => ["tähtää", "tähdätkää"],
   ],
   "täydentää" => [
-    "pre" => ["täydennän", "täydennät", "täydentää", "täydennämme", "täydennätte", "täydentävät"],
-    "imp" => ["täydensin", "täydensit", "täydensi", "täydensimme", "täydensitte", "täydensivät"]
+    "preesens" => ["täydennän", "täydennät", "täydentää", "täydennämme", "täydennätte", "täydentävät"],
+    "imperfect" => ["täydensin", "täydensit", "täydensi", "täydensimme", "täydensitte", "täydensivät"],
+    "perfect" => ["täydentänyt", "täydentäneet"],
+    "imperative" => ["täydennä", "täydentäkää"],
   ],
   "täyttää" => [
-    "pre" => ["täytän", "täytät", "täyttää", "täytämme", "täytätte", "täyttävät"],
-    "imp" => ["täytin", "täytit", "täytti", "täytimme", "täytitte", "täyttivät"],
-    "perfekti" => ["täyttänyt", "täyttäneet"],
-    "imperatiivi" => ["täytä", "täyttäkää"],
+    "preesens" => ["täytän", "täytät", "täyttää", "täytämme", "täytätte", "täyttävät"],
+    "imperfect" => ["täytin", "täytit", "täytti", "täytimme", "täytitte", "täyttivät"],
+    "perfect" => ["täyttänyt", "täyttäneet"],
+    "imperative" => ["täytä", "täyttäkää"],
   ],
   "täytyä" => [
-    "pre" => ["täydyn", "täydyt", "täytyy", "täydymme", "täydytte", "täytyvät"],
-    "imp" => ["täydyin", "täydyit", "täytyi", "täydyimme", "täydyitte", "täytyivät"]
+    "preesens" => ["täydyn", "täydyt", "täytyy", "täydymme", "täydytte", "täytyvät"],
+    "imperfect" => ["täydyin", "täydyit", "täytyi", "täydyimme", "täydyitte", "täytyivät"],
+    "perfect" => ["täytynyt", "täytyneet"],
+    "imperative" => ["täydy", "täytykää"],
   ],
   "törmätä" => [
-    "pre" => ["törmään", "törmäät", "törmää", "törmäämme", "törmäätte", "törmäävät"],
-    "imp" => ["törmäsin", "törmäsit", "törmäsi", "törmäsimme", "törmäsitte", "törmäsivät"]
+    "preesens" => ["törmään", "törmäät", "törmää", "törmäämme", "törmäätte", "törmäävät"],
+    "imperfect" => ["törmäsin", "törmäsit", "törmäsi", "törmäsimme", "törmäsitte", "törmäsivät"],
+    "perfect" => ["törmännyt", "törmänneet"],
+    "imperative" => ["törmää", "törmätkää"],
   ],
   "uhata" => [
-    "pre" => ["uhkaan", "uhkaat", "uhkaa", "uhkaamme", "uhkaatte", "uhkaavat"],
-    "imp" => ["uhkasin", "uhkasit", "uhkasi", "uhkasimme", "uhkasitte", "uhkasivat"]
+    "preesens" => ["uhkaan", "uhkaat", "uhkaa", "uhkaamme", "uhkaatte", "uhkaavat"],
+    "imperfect" => ["uhkasin", "uhkasit", "uhkasi", "uhkasimme", "uhkasitte", "uhkasivat"],
+    "perfect" => ["uhannut", "uhanneet"],
+    "imperative" => ["uhkaa", "uhatkaa"],
   ],
   "uida" => [
-    "pre" => ["uin", "uit", "ui", "uimme", "uitte", "uivat"],
-    "imp" => ["uin", "uit", "ui", "uimme", "uitte", "uivat"],
-    "perfekti" => ["uinut", "uineet"],
+    "preesens" => ["uin", "uit", "ui", "uimme", "uitte", "uivat"],
+    "imperfect" => ["uin", "uit", "ui", "uimme", "uitte", "uivat"],
+    "perfect" => ["uinut", "uineet"],
+    "imperative" => ["ui", "uikaa"],
   ],
   "ulottua" => [
-    "pre" => ["ulotun", "ulotut", "ulottuu", "ulotumme", "ulotutte", "ulottuvat"],
-    "imp" => ["ulotuin", "ulotuit", "ulottui", "ulotuimme", "ulotuitte", "ulottuivat"]
+    "preesens" => ["ulotun", "ulotut", "ulottuu", "ulotumme", "ulotutte", "ulottuvat"],
+    "imperfect" => ["ulotuin", "ulotuit", "ulottui", "ulotuimme", "ulotuitte", "ulottuivat"],
+    "perfect" => ["ulottunut", "ulottuneet"],
+    "imperative" => ["ulotu", "ulottukaa"],
   ],
   "unohtaa" => [
-    "pre" => ["unohdan", "unohdat", "unohtaa", "unohdamme", "unohdatte", "unohtavat"],
-    "imp" => ["unohdin", "unohdit", "unohti", "unohdimme", "unohditte", "unohtivat"]
+    "preesens" => ["unohdan", "unohdat", "unohtaa", "unohdamme", "unohdatte", "unohtavat"],
+    "imperfect" => ["unohdin", "unohdit", "unohti", "unohdimme", "unohditte", "unohtivat"],
+    "perfect" => ["unohtanut", "unohtaneet"],
+    "imperative" => ["unohda", "unohtakaa"],
   ],
   "uskaltaa" => [
-    "pre" => ["uskallan", "uskallat", "uskaltaa", "uskallamme", "uskallatte", "uskaltavat"],
-    "imp" => ["uskalsin", "uskalsit", "uskalsi", "uskalsimme", "uskalsitte", "uskalsivat"]
+    "preesens" => ["uskallan", "uskallat", "uskaltaa", "uskallamme", "uskallatte", "uskaltavat"],
+    "imperfect" => ["uskalsin", "uskalsit", "uskalsi", "uskalsimme", "uskalsitte", "uskalsivat"],
+    "perfect" => ["uskaltanut", "uskaltaneet"],
+    "imperative" => ["uskalla", "uskaltakaa"],
   ],
   "uskoa" => [
-    "pre" => ["uskon", "uskot", "uskoo", "uskomme", "uskotte", "uskovat"],
-    "imp" => ["uskoin", "uskoit", "uskoi", "uskoimme", "uskoitte", "uskoivat"]
+    "preesens" => ["uskon", "uskot", "uskoo", "uskomme", "uskotte", "uskovat"],
+    "imperfect" => ["uskoin", "uskoit", "uskoi", "uskoimme", "uskoitte", "uskoivat"],
+    "perfect" => ["uskonut", "uskoneet"],
+    "imperative" => ["usko", "uskokaa"],
   ],
   "uudistaa" => [
-    "pre" => ["uudistan", "uudistat", "uudistaa", "uudistamme", "uudistatte", "uudistavat"],
-    "imp" => ["uudistin", "uudistit", "uudisti", "uudistimme", "uudistitte", "uudistivat"]
+    "preesens" => ["uudistan", "uudistat", "uudistaa", "uudistamme", "uudistatte", "uudistavat"],
+    "imperfect" => ["uudistin", "uudistit", "uudisti", "uudistimme", "uudistitte", "uudistivat"],
+    "perfect" => ["uudistanut", "uudistaneet"],
+    "imperative" => ["uudista", "uudistakaa"],
   ],
   "uurtaa" => [
-    "pre" => ["uurran", "uurrat", "uurtaa", "uurramme", "uurratte", "uurtavat"],
-    "imp" => ["uursin", "uursit", "uursi", "uursimme", "uursitte", "uursivat"]
+    "preesens" => ["uurran", "uurrat", "uurtaa", "uurramme", "uurratte", "uurtavat"],
+    "imperfect" => ["uursin", "uursit", "uursi", "uursimme", "uursitte", "uursivat"],
+    "perfect" => ["uurtanut", "uurtaneet"],
+    "imperative" => ["uurra", "uurtakaa"],
   ],
   "uusia" => [
-    "pre" => ["uusin", "uusit", "uusii", "uusimme", "uusitte", "uusivat"],
-    "imp" => ["uusin", "uusit", "uusi", "uusimme", "uusitte", "uusivat"]
+    "preesens" => ["uusin", "uusit", "uusii", "uusimme", "uusitte", "uusivat"],
+    "imperfect" => ["uusin", "uusit", "uusi", "uusimme", "uusitte", "uusivat"],
+    "perfect" => ["uusinut", "uusineet"],
+    "imperative" => ["uusi", "uusikaa"],
   ],
   "vaalia" => [
-    "pre" => ["vaalin", "vaalit", "vaalii", "vaalimme", "vaalitte", "vaalivat"],
-    "imp" => ["vaalin", "vaalit", "vaali", "vaalimme", "vaalitte", "vaalivat"]
+    "preesens" => ["vaalin", "vaalit", "vaalii", "vaalimme", "vaalitte", "vaalivat"],
+    "imperfect" => ["vaalin", "vaalit", "vaali", "vaalimme", "vaalitte", "vaalivat"],
+    "perfect" => ["vaalinut", "vaalineet"],
+    "imperative" => ["vaali", "vaalikaa"],
   ],
   "vaatia" => [
-    "pre" => ["vaadin", "vaadit", "vaatii", "vaadimme", "vaaditte", "vaativat"],
-    "imp" => ["vaadin", "vaadit", "vaati", "vaadimme", "vaaditte", "vaativat"],
-    "perfekti" => ["vaatinut", "vaatineet"],
+    "preesens" => ["vaadin", "vaadit", "vaatii", "vaadimme", "vaaditte", "vaativat"],
+    "imperfect" => ["vaadin", "vaadit", "vaati", "vaadimme", "vaaditte", "vaativat"],
+    "perfect" => ["vaatinut", "vaatineet"],
+    "imperative" => ["vaadi", "vaatikaa"],
   ],
   "vahvistaa" => [
-    "pre" => ["vahvistan", "vahvistat", "vahvistaa", "vahvistamme", "vahvistatte", "vahvistavat"],
-    "imp" => ["vahvistin", "vahvistit", "vahvisti", "vahvistimme", "vahvistitte", "vahvistivat"]
+    "preesens" => ["vahvistan", "vahvistat", "vahvistaa", "vahvistamme", "vahvistatte", "vahvistavat"],
+    "imperfect" => ["vahvistin", "vahvistit", "vahvisti", "vahvistimme", "vahvistitte", "vahvistivat"],
+    "perfect" => ["vahvistanut", "vahvistaneet"],
+    "imperative" => ["vahvista", "vahvistakaa"],
   ],
   "vaeltaa" => [
-    "pre" => ["vaellan", "vaellat", "vaeltaa", "vaellamme", "vaellatte", "vaeltavat"],
-    "imp" => ["vaelsin", "vaelsit", "vaelsi", "vaelsimme", "vaelsitte", "vaelsivat"]
+    "preesens" => ["vaellan", "vaellat", "vaeltaa", "vaellamme", "vaellatte", "vaeltavat"],
+    "imperfect" => ["vaelsin", "vaelsit", "vaelsi", "vaelsimme", "vaelsitte", "vaelsivat"],
+    "perfect" => ["vaeltanut", "vaeltaneet"],
+    "imperative" => ["vaella", "vaeltakaa"],
   ],
   "vaieta" => [
-    "pre" => ["vaikenen", "vaikenet", "vaikenee", "vaikenemme", "vaikenette", "vaikenevat"],
-    "imp" => ["vaikenin", "vaikenit", "vaikeni", "vaikenimme", "vaikenitte", "vaikenivat"]
+    "preesens" => ["vaikenen", "vaikenet", "vaikenee", "vaikenemme", "vaikenette", "vaikenevat"],
+    "imperfect" => ["vaikenin", "vaikenit", "vaikeni", "vaikenimme", "vaikenitte", "vaikenivat"],
+    "perfect" => ["vaiennut", "vaienneet"],
+    "imperative" => ["vaikene", "vaietkaa"],
   ],
   "vaihdella" => [
-    "pre" => ["vaihtelen", "vaihtelet", "vaihtelee", "vaihtelemme", "vaihtelette", "vaihtelevat"],
-    "imp" => ["vaihtelin", "vaihtelit", "vaihteli", "vaihtelimme", "vaihtelitte", "vaihtelivat"]
+    "preesens" => ["vaihtelen", "vaihtelet", "vaihtelee", "vaihtelemme", "vaihtelette", "vaihtelevat"],
+    "imperfect" => ["vaihtelin", "vaihtelit", "vaihteli", "vaihtelimme", "vaihtelitte", "vaihtelivat"],
+    "perfect" => ["vaihdellut", "vaihdelleet"],
+    "imperative" => ["vaihtele", "vaihdelkaa"],
   ],
   "vaihtaa" => [
-    "pre" => ["vaihdan", "vaihdat", "vaihtaa", "vaihdamme", "vaihdatte", "vaihtavat"],
-    "imp" => ["vaihdoin", "vaihdoit", "vaihtoi", "vaihdoimme", "vaihdoitte", "vaihtoivat"]
+    "preesens" => ["vaihdan", "vaihdat", "vaihtaa", "vaihdamme", "vaihdatte", "vaihtavat"],
+    "imperfect" => ["vaihdoin", "vaihdoit", "vaihtoi", "vaihdoimme", "vaihdoitte", "vaihtoivat"],
+    "perfect" => ["vaihtanut", "vaihtaneet"],
+    "imperative" => ["vaihda", "vaihtakaa"],
   ],
   "vaihtua" => [
-    "pre" => ["vaihdun", "vaihdut", "vaihtuu", "vaihdumme", "vaihdutte", "vaihtuvat"],
-    "imp" => ["vaihduin", "vaihduit", "vaihtui", "vaihduimme", "vaihduitte", "vaihtuivat"]
+    "preesens" => ["vaihdun", "vaihdut", "vaihtuu", "vaihdumme", "vaihdutte", "vaihtuvat"],
+    "imperfect" => ["vaihduin", "vaihduit", "vaihtui", "vaihduimme", "vaihduitte", "vaihtuivat"],
+    "perfect" => ["vaihtunut", "vaihtuneet"],
+    "imperative" => ["vaihdu", "vaihtukaa"],
   ],
   "vaikuttaa" => [
-    "pre" => ["vaikutan", "vaikutat", "vaikuttaa", "vaikutamme", "vaikutatte", "vaikuttavat"],
-    "imp" => ["vaikutin", "vaikutit", "vaikutti", "vaikutimme", "vaikutitte", "vaikuttivat"]
+    "preesens" => ["vaikutan", "vaikutat", "vaikuttaa", "vaikutamme", "vaikutatte", "vaikuttavat"],
+    "imperfect" => ["vaikutin", "vaikutit", "vaikutti", "vaikutimme", "vaikutitte", "vaikuttivat"],
+    "perfect" => ["vaikuttanut", "vaikuttaneet"],
+    "imperative" => ["vaikuta", "vaikuttakaa"],
   ],
   "vaivata" => [
-    "pre" => ["vaivaan", "vaivaat", "vaivaa", "vaivaamme", "vaivaatte", "vaivaavat"],
-    "imp" => ["vaivasin", "vaivasit", "vaivasi", "vaivasimme", "vaivasitte", "vaivasivat"]
+    "preesens" => ["vaivaan", "vaivaat", "vaivaa", "vaivaamme", "vaivaatte", "vaivaavat"],
+    "imperfect" => ["vaivasin", "vaivasit", "vaivasi", "vaivasimme", "vaivasitte", "vaivasivat"],
+    "perfect" => ["vaivannut", "vaivanneet"],
+    "imperative" => ["vaivaa", "vaivatkaa"],
   ],
   "vakiintua" => [
-    "pre" => ["vakiinnun", "vakiinnut", "vakiintuu", "vakiinnumme", "vakiinnutte", "vakiintuvat"],
-    "imp" => ["vakiinnuin", "vakiinnuit", "vakiintui", "vakiinnuimme", "vakiinnuitte", "vakiintuivat"]
+    "preesens" => ["vakiinnun", "vakiinnut", "vakiintuu", "vakiinnumme", "vakiinnutte", "vakiintuvat"],
+    "imperfect" => ["vakiinnuin", "vakiinnuit", "vakiintui", "vakiinnuimme", "vakiinnuitte", "vakiintuivat"],
+    "perfect" => ["vakiintunut", "vakiintuneet"],
+    "imperative" => ["vakiinnu", "vakiintukaa"],
   ],
   "vakuuttaa" => [
-    "pre" => ["vakuutan", "vakuutat", "vakuuttaa", "vakuutamme", "vakuutatte", "vakuuttavat"],
-    "imp" => ["vakuutin", "vakuutit", "vakuutti", "vakuutimme", "vakuutitte", "vakuuttivat"],
-    "perfekti" => ["vakuuttanut", "vakuuttaneet"],
+    "preesens" => ["vakuutan", "vakuutat", "vakuuttaa", "vakuutamme", "vakuutatte", "vakuuttavat"],
+    "imperfect" => ["vakuutin", "vakuutit", "vakuutti", "vakuutimme", "vakuutitte", "vakuuttivat"],
+    "perfect" => ["vakuuttanut", "vakuuttaneet"],
+    "imperative" => ["vakuuta", "vakuuttakaa"],
   ],
   "valaista" => [
-    "pre" => ["valaisen", "valaiset", "valaisee", "valaisemme", "valaisette", "valaisevat"],
-    "imp" => ["valaisin", "valaisit", "valaisi", "valaisimme", "valaisitte", "valaisivat"]
+    "preesens" => ["valaisen", "valaiset", "valaisee", "valaisemme", "valaisette", "valaisevat"],
+    "imperfect" => ["valaisin", "valaisit", "valaisi", "valaisimme", "valaisitte", "valaisivat"],
+    "perfect" => ["valaissut", "valaisseet"],
+    "imperative" => ["valaise", "valaiskaa"],
   ],
   "valehdella" => [
-    "pre" => ["valehtelen", "valehtelet", "valehtelee", "valehtelemme", "valehtelette", "valehtelevat"],
-    "imp" => ["valehtelin", "valehtelit", "valehteli", "valehtelimme", "valehtelitte", "valehtelivat"]
+    "preesens" => ["valehtelen", "valehtelet", "valehtelee", "valehtelemme", "valehtelette", "valehtelevat"],
+    "imperfect" => ["valehtelin", "valehtelit", "valehteli", "valehtelimme", "valehtelitte", "valehtelivat"],
+    "perfect" => ["valehdellut", "valehdelleet"],
+    "imperative" => ["valehtele", "valehdelkaa"],
   ],
   "valita" => [
-    "pre" => ["valitsen", "valitset", "valitsee", "valitsemme", "valitsette", "valitsevat"],
-    "imp" => ["valitsin", "valitsit", "valitsi", "valitsimme", "valitsitte", "valitsivat"]
+    "preesens" => ["valitsen", "valitset", "valitsee", "valitsemme", "valitsette", "valitsevat"],
+    "imperfect" => ["valitsin", "valitsit", "valitsi", "valitsimme", "valitsitte", "valitsivat"],
+    "perfect" => ["valinnut", "valinneet"],
+    "imperative" => ["valitse", "valitkaa"],
   ],
   "välittää" => [
-    "pre" => ["välitän", "välität", "välittää", "välitämme", "välitätte", "välittävät"],
-    "imp" => ["välitin", "välitit", "välitti", "välitimme", "välititte", "välittivät"]
+    "preesens" => ["välitän", "välität", "välittää", "välitämme", "välitätte", "välittävät"],
+    "imperfect" => ["välitin", "välitit", "välitti", "välitimme", "välititte", "välittivät"],
+    "perfect" => ["välittänyt", "välittäneet"],
+    "imperative" => ["välitä", "välittäkää"],
   ],
   "valjeta" => [
-    "pre" => ["valkean", "valkeat", "valkeaa", "valkeamme", "valkeatte", "valkeavat"],
-    "imp" => ["valkesin", "valkesit", "valkesi", "valkesimme", "valkesitte", "valkesivat"]
+    "preesens" => ["valkean", "valkeat", "valkeaa", "valkeamme", "valkeatte", "valkeavat"],
+    "imperfect" => ["valkesin", "valkesit", "valkesi", "valkesimme", "valkesitte", "valkesivat"],
+    "perfect" => ["valjennut", "valjenneet"],
+    "imperative" => ["valkea", "valjetkaa"],
   ],
   "vallata" => [
-    "pre" => ["valtaan", "valtaat", "valtaa", "valtaamme", "valtaatte", "valtaavat"],
-    "imp" => ["valtasin", "valtasit", "valtasi", "valtasimme", "valtasitte", "valtasivat"]
+    "preesens" => ["valtaan", "valtaat", "valtaa", "valtaamme", "valtaatte", "valtaavat"],
+    "imperfect" => ["valtasin", "valtasit", "valtasi", "valtasimme", "valtasitte", "valtasivat"],
+    "perfect" => ["vallannut", "vallanneet"],
+    "imperative" => ["valtaa", "vallatkaa"],
   ],
   "vallita" => [
-    "pre" => ["vallitsen", "vallitset", "vallitsee", "vallitsemme", "vallitsette", "vallitsevat"],
-    "imp" => ["vallitsin", "vallitsit", "vallitsi", "vallitsimme", "vallitsitte", "vallitsivat"]
+    "preesens" => ["vallitsen", "vallitset", "vallitsee", "vallitsemme", "vallitsette", "vallitsevat"],
+    "imperfect" => ["vallitsin", "vallitsit", "vallitsi", "vallitsimme", "vallitsitte", "vallitsivat"],
+    "perfect" => ["vallinnut", "vallinneet"],
+    "imperative" => ["vallitse", "vallitkaa"],
   ],
   "valmistaa" => [
-    "pre" => ["valmistan", "valmistat", "valmistaa", "valmistamme", "valmistatte", "valmistavat"],
-    "imp" => ["valmistin", "valmistit", "valmisti", "valmistimme", "valmistitte", "valmistivat"]
+    "preesens" => ["valmistan", "valmistat", "valmistaa", "valmistamme", "valmistatte", "valmistavat"],
+    "imperfect" => ["valmistin", "valmistit", "valmisti", "valmistimme", "valmistitte", "valmistivat"],
+    "perfect" => ["valmistanut", "valmistaneet"],
+    "imperative" => ["valmista", "valmistakaa"],
   ],
   "valmistautua" => [
-    "pre" => ["valmistaudun", "valmistaudut", "valmistautuu", "valmistaudumme", "valmistaudutte", "valmistautuvat"],
-    "imp" => ["valmistauduin", "valmistauduit", "valmistautui", "valmistauduimme", "valmistauduitte", "valmistautuivat"]
+    "preesens" => ["valmistaudun", "valmistaudut", "valmistautuu", "valmistaudumme", "valmistaudutte", "valmistautuvat"],
+    "imperfect" => ["valmistauduin", "valmistauduit", "valmistautui", "valmistauduimme", "valmistauduitte", "valmistautuivat"],
+    "perfect" => ["valmistautunut", "valmistautuneet"],
+    "imperative" => ["valmistaudu", "valmistautukaa"],
   ],
   "valmistella" => [
-    "pre" => ["valmistelen", "valmistelet", "valmistelee", "valmistelemme", "valmistelette", "valmistelevat"],
-    "imp" => ["valmistelin", "valmistelit", "valmisteli", "valmistelimme", "valmistelitte", "valmistelivat"]
+    "preesens" => ["valmistelen", "valmistelet", "valmistelee", "valmistelemme", "valmistelette", "valmistelevat"],
+    "imperfect" => ["valmistelin", "valmistelit", "valmisteli", "valmistelimme", "valmistelitte", "valmistelivat"],
+    "perfect" => ["valmistellut", "valmistelleet"],
+    "imperative" => ["valmistele", "valmistelkaa"],
   ],
   "valmistua" => [
-    "pre" => ["valmistun", "valmistut", "valmistuu", "valmistumme", "valmistutte", "valmistuvat"],
-    "imp" => ["valmistuin", "valmistuit", "valmistui", "valmistuimme", "valmistuitte", "valmistuivat"]
+    "preesens" => ["valmistun", "valmistut", "valmistuu", "valmistumme", "valmistutte", "valmistuvat"],
+    "imperfect" => ["valmistuin", "valmistuit", "valmistui", "valmistuimme", "valmistuitte", "valmistuivat"],
+    "perfect" => ["valmistunut", "valmistuneet"],
+    "imperative" => ["valmistu", "valmistukaa"],
   ],
   "valvoa" => [
-    "pre" => ["valvon", "valvot", "valvoo", "valvomme", "valvotte", "valvovat"],
-    "imp" => ["valvoin", "valvoit", "valvoi", "valvoimme", "valvoitte", "valvoivat"]
+    "preesens" => ["valvon", "valvot", "valvoo", "valvomme", "valvotte", "valvovat"],
+    "imperfect" => ["valvoin", "valvoit", "valvoi", "valvoimme", "valvoitte", "valvoivat"],
+    "perfect" => ["valvonut", "valvoneet"],
+    "imperative" => ["valvo", "valvokaa"],
   ],
   "vanheta" => [
-    "pre" => ["vanhenen", "vanhenet", "vanhenee", "vanhenemme", "vanhenette", "vanhenevat"],
-    "imp" => ["vanhenin", "vanhenit", "vanheni", "vanhenimme", "vanhenitte", "vanhenivat"]
+    "preesens" => ["vanhenen", "vanhenet", "vanhenee", "vanhenemme", "vanhenette", "vanhenevat"],
+    "imperfect" => ["vanhenin", "vanhenit", "vanheni", "vanhenimme", "vanhenitte", "vanhenivat"],
+    "perfect" => ["vanhennut", "vanhenneet"],
+    "imperative" => ["vanhene", "vanhetkaa"],
   ],
   "vapauttaa" => [
-    "pre" => ["vapautan", "vapautat", "vapauttaa", "vapautamme", "vapautatte", "vapauttavat"],
-    "imp" => ["vapautin", "vapautit", "vapauttoi", "vapautimme", "vapautitte", "vapauttoivat"]
+    "preesens" => ["vapautan", "vapautat", "vapauttaa", "vapautamme", "vapautatte", "vapauttavat"],
+    "imperfect" => ["vapautin", "vapautit", "vapauttoi", "vapautimme", "vapautitte", "vapauttoivat"],
+    "perfect" => ["vapauttanut", "vapauttaneet"],
+    "imperative" => ["vapauta", "vapauttakaa"],
   ],
   "vapautua" => [
-    "pre" => ["vapaudun", "vapaudut", "vapautuu", "vapaudumme", "vapaudutte", "vapautuvat"],
-    "imp" => ["vapauduin", "vapauduit", "vapautui", "vapauduimme", "vapauduitte", "vapautuivat"]
+    "preesens" => ["vapaudun", "vapaudut", "vapautuu", "vapaudumme", "vapaudutte", "vapautuvat"],
+    "imperfect" => ["vapauduin", "vapauduit", "vapautui", "vapauduimme", "vapauduitte", "vapautuivat"],
+    "perfect" => ["vapautunut", "vapautuneet"],
+    "imperative" => ["vapaudu", "vapautukaa"],
   ],
   "vapista" => [
-    "pre" => ["vapisen", "vapiset", "vapisee", "vapisemme", "vapisette", "vapisevat"],
-    "imp" => ["vapisin", "vapisit", "vapisi", "vapisimme", "vapisitte", "vapisivat"]
+    "preesens" => ["vapisen", "vapiset", "vapisee", "vapisemme", "vapisette", "vapisevat"],
+    "imperfect" => ["vapisin", "vapisit", "vapisi", "vapisimme", "vapisitte", "vapisivat"],
+    "perfect" => ["vapissut", "vapisseet"],
+    "imperative" => ["vapise", "vapiskaa"],
   ],
   "vastaanottaa" => [
-    "pre" => ["vastaanotan", "vastaanotat", "vastaanottaa", "vastaanotamme", "vastaanotatte", "vastaanottavat"],
-    "imp" => ["vastaanotin", "vastaanotit", "vastaanotti", "vastaanotimme", "vastaanotitte", "vastaanottivat"]
+    "preesens" => ["vastaanotan", "vastaanotat", "vastaanottaa", "vastaanotamme", "vastaanotatte", "vastaanottavat"],
+    "imperfect" => ["vastaanotin", "vastaanotit", "vastaanotti", "vastaanotimme", "vastaanotitte", "vastaanottivat"],
+    "perfect" => ["vastaanottanut", "vastaanottaneet"],
+    "imperative" => ["vastaanota", "vastaanottakaa"],
   ],
   "vastata" => [
-    "pre" => ["vastaan", "vastaat", "vastaa", "vastaamme", "vastaatte", "vastaavat"],
-    "imp" => ["vastasin", "vastasit", "vastasi", "vastasimme", "vastasitte", "vastasivat"]
+    "preesens" => ["vastaan", "vastaat", "vastaa", "vastaamme", "vastaatte", "vastaavat"],
+    "imperfect" => ["vastasin", "vastasit", "vastasi", "vastasimme", "vastasitte", "vastasivat"],
+    "perfect" => ["vastannut", "vastanneet"],
+    "imperative" => ["vastaa", "vastatkaa"],
   ],
   "vastustaa" => [
-    "pre" => ["vastustan", "vastustat", "vastustaa", "vastustamme", "vastustatte", "vastustavat"],
-    "imp" => ["vastustin", "vastustit", "vastusti", "vastustimme", "vastustitte", "vastustivat"]
+    "preesens" => ["vastustan", "vastustat", "vastustaa", "vastustamme", "vastustatte", "vastustavat"],
+    "imperfect" => ["vastustin", "vastustit", "vastusti", "vastustimme", "vastustitte", "vastustivat"],
+    "perfect" => ["vastustanut", "vastustaneet"],
+    "imperative" => ["vastusta", "vastustakaa"],
   ],
   "varata" => [
-    "pre" => ["varaan", "varaat", "varaa", "varaamme", "varaatte", "varaavat"],
-    "imp" => ["varasin", "varasit", "varasi", "varasimme", "varasitte", "varasivat"]
+    "preesens" => ["varaan", "varaat", "varaa", "varaamme", "varaatte", "varaavat"],
+    "imperfect" => ["varasin", "varasit", "varasi", "varasimme", "varasitte", "varasivat"],
+    "perfect" => ["varannut", "varanneet"],
+    "imperative" => ["varaa", "varatkaa"],
   ],
   "varmistaa" => [
-    "pre" => ["varmistan", "varmistat", "varmistaa", "varmistamme", "varmistatte", "varmistavat"],
-    "imp" => ["varmistin", "varmistit", "varmisti", "varmistimme", "varmistitte", "varmistivat"]
+    "preesens" => ["varmistan", "varmistat", "varmistaa", "varmistamme", "varmistatte", "varmistavat"],
+    "imperfect" => ["varmistin", "varmistit", "varmisti", "varmistimme", "varmistitte", "varmistivat"],
+    "perfect" => ["varmistanut", "varmistaneet"],
+    "imperative" => ["varmista", "varmistakaa"],
   ],
   "varoa" => [
-    "pre" => ["varon", "varot", "varoo", "varomme", "varotte", "varovat"],
-    "imp" => ["varoin", "varoit", "varoi", "varoimme", "varoitte", "varoivat"]
+    "preesens" => ["varon", "varot", "varoo", "varomme", "varotte", "varovat"],
+    "imperfect" => ["varoin", "varoit", "varoi", "varoimme", "varoitte", "varoivat"],
+    "perfect" => ["varonut", "varoneet"],
+    "imperative" => ["varo", "varokaa"],
   ],
   "varoittaa" => [
-    "pre" => ["varoitan", "varoitat", "varoittaa", "varoitamme", "varoitatte", "varoittavat"],
-    "imp" => ["varoitin", "varoitit", "varoitti", "varoitimme", "varoititte", "varoittivat"]
+    "preesens" => ["varoitan", "varoitat", "varoittaa", "varoitamme", "varoitatte", "varoittavat"],
+    "imperfect" => ["varoitin", "varoitit", "varoitti", "varoitimme", "varoititte", "varoittivat"],
+    "perfect" => ["varoittanut", "varoittaneet"],
+    "imperative" => ["varoita", "varoittakaa"],
   ],
   "varttua" => [
-    "pre" => ["vartun", "vartut", "varttuu", "vartumme", "vartutte", "varttuvat"],
-    "imp" => ["vartuin", "vartuit", "varttui", "vartuimme", "vartuitte", "varttuivat"]
+    "preesens" => ["vartun", "vartut", "varttuu", "vartumme", "vartutte", "varttuvat"],
+    "imperfect" => ["vartuin", "vartuit", "varttui", "vartuimme", "vartuitte", "varttuivat"],
+    "perfect" => ["varttunut", "varttuneet"],
+    "imperative" => ["vartu", "varttukaa"],
   ],
   "varustaa" => [
-    "pre" => ["varustan", "varustat", "varustaa", "varustamme", "varustatte", "varustavat"],
-    "imp" => ["varustin", "varustit", "varusti", "varustimme", "varustitte", "varustivat"]
+    "preesens" => ["varustan", "varustat", "varustaa", "varustamme", "varustatte", "varustavat"],
+    "imperfect" => ["varustin", "varustit", "varusti", "varustimme", "varustitte", "varustivat"],
+    "perfect" => ["varustanut", "varustaneet"],
+    "imperative" => ["varusta", "varustakaa"],
   ],
   "vedota" => [
-    "pre" => ["vetoan", "vetoat", "vetoaa", "vetoamme", "vetoatte", "vetoavat"],
-    "imp" => ["vetosin", "vetosit", "vetosi", "vetosimme", "vetositte", "vetosivat"]
+    "preesens" => ["vetoan", "vetoat", "vetoaa", "vetoamme", "vetoatte", "vetoavat"],
+    "imperfect" => ["vetosin", "vetosit", "vetosi", "vetosimme", "vetositte", "vetosivat"],
+    "perfect" => ["vedonnut", "vedonneet"],
+    "imperative" => ["vetoa", "vedotkaa"],
   ],
   "velvoittaa" => [
-    "pre" => ["velvoitan", "velvoitat", "velvoittaa", "velvoitamme", "velvoitatte", "velvoittavat"],
-    "imp" => ["velvoitin", "velvoitit", "velvoitti", "velvoitimme", "velvoititte", "velvoittivat"]
+    "preesens" => ["velvoitan", "velvoitat", "velvoittaa", "velvoitamme", "velvoitatte", "velvoittavat"],
+    "imperfect" => ["velvoitin", "velvoitit", "velvoitti", "velvoitimme", "velvoititte", "velvoittivat"],
+    "perfect" => ["velvoittanut", "velvoittaneet"],
+    "imperative" => ["velvoita", "velvoittakaa"],
   ],
   "verottaa" => [
-    "pre" => ["verotan", "verotat", "verottaa", "verotamme", "verotatte", "verottavat"],
-    "imp" => ["verotin", "verotit", "verotti", "verotimme", "verotitte", "verottivat"]
+    "preesens" => ["verotan", "verotat", "verottaa", "verotamme", "verotatte", "verottavat"],
+    "imperfect" => ["verotin", "verotit", "verotti", "verotimme", "verotitte", "verottivat"],
+    "perfect" => ["verottanut", "verottaneet"],
+    "imperative" => ["verota", "verottakaa"],
   ],
   "verrata" => [
-    "pre" => ["vertaan", "vertaat", "vertaa", "vertaamme", "vertaatte", "vertaavat"],
-    "imp" => ["vertasin", "vertasit", "vertasi", "vertasimme", "vertasitte", "vertasivat"]
+    "preesens" => ["vertaan", "vertaat", "vertaa", "vertaamme", "vertaatte", "vertaavat"],
+    "imperfect" => ["vertasin", "vertasit", "vertasi", "vertasimme", "vertasitte", "vertasivat"],
+    "perfect" => ["verrannut", "verranneet"],
+    "imperative" => ["vertaa", "verratkaa"],
   ],
   "vertailla" => [
-    "pre" => ["vertailen", "vertailet", "vertailee", "vertailemme", "vertailette", "vertailevat"],
-    "imp" => ["vertailin", "vertailit", "vertaili", "vertailimme", "vertailitte", "vertailivat"]
+    "preesens" => ["vertailen", "vertailet", "vertailee", "vertailemme", "vertailette", "vertailevat"],
+    "imperfect" => ["vertailin", "vertailit", "vertaili", "vertailimme", "vertailitte", "vertailivat"],
+    "perfect" => ["vertaillut", "vertailleet"],
+    "imperative" => ["vertaile", "vertailkaa"],
   ],
   "vetäistä" => [
-    "pre" => ["vetäisen", "vetäiset", "vetäisee", "vetäisemme", "vetäisette", "vetäisevät"],
-    "imp" => ["vetäisin", "vetäisit", "vetäisi", "vetäisimme", "vetäisitte", "vetäisivät"]
+    "preesens" => ["vetäisen", "vetäiset", "vetäisee", "vetäisemme", "vetäisette", "vetäisevät"],
+    "imperfect" => ["vetäisin", "vetäisit", "vetäisi", "vetäisimme", "vetäisitte", "vetäisivät"],
+    "perfect" => ["vetäissyt", "vetäisseet"],
+    "imperative" => ["vetäise", "vetäiskää"],
   ],
   "vetäytyä" => [
-    "pre" => ["vetäydyn", "vetäydyt", "vetäytyy", "vetäydymme", "vetäydytte", "vetäytyvät"],
-    "imp" => ["vetäydyin", "vetäydyit", "vetäytyi", "vetäydyimme", "vetäydyitte", "vetäytyivät"]
+    "preesens" => ["vetäydyn", "vetäydyt", "vetäytyy", "vetäydymme", "vetäydytte", "vetäytyvät"],
+    "imperfect" => ["vetäydyin", "vetäydyit", "vetäytyi", "vetäydyimme", "vetäydyitte", "vetäytyivät"],
+    "perfect" => ["vetäytynyt", "vetäytyneet"],
+    "imperative" => ["vetäydy", "vetäytykää"],
   ],
   "vetää" => [
-    "pre" => ["vedän", "vedät", "vetää", "vedämme", "vedätte", "vetävät"],
-    "imp" => ["vedin", "vedit", "veti", "vedimme", "veditte", "vetivät"]
+    "preesens" => ["vedän", "vedät", "vetää", "vedämme", "vedätte", "vetävät"],
+    "imperfect" => ["vedin", "vedit", "veti", "vedimme", "veditte", "vetivät"],
+    "perfect" => ["vetänyt", "vetäneet"],
+    "imperative" => ["vedä", "vetäkää"],
   ],
   "viedä" => [
-    "pre" => ["vien", "viet", "vie", "viemme", "viette", "vievät"],
-    "imp" => ["vein", "veit", "vei", "veimme", "veitte", "veivät"],
+    "preesens" => ["vien", "viet", "vie", "viemme", "viette", "vievät"],
+    "imperfect" => ["vein", "veit", "vei", "veimme", "veitte", "veivät"],
+    "perfect" => ["vienyt", "vieneet"],
+    "imperative" => ["vie", "viekää"],
   ],
   "vierailla" => [
-    "pre" => ["vierailen", "vierailet", "vierailee", "vierailemme", "vierailette", "vierailevat"],
-    "imp" => ["vierailin", "vierailit", "vieraili", "vierailimme", "vierailitte", "vierailivat"],
+    "preesens" => ["vierailen", "vierailet", "vierailee", "vierailemme", "vierailette", "vierailevat"],
+    "imperfect" => ["vierailin", "vierailit", "vieraili", "vierailimme", "vierailitte", "vierailivat"],
+    "perfect" => ["vieraillut", "vierailleet"],
+    "imperative" => ["vieraile", "vierailkaa"],
   ],
   "viettää" => [
-    "pre" => ["vietän", "vietät", "viettää", "vietämme", "vietätte", "viettävät"],
-    "imp" => ["vietin", "vietit", "vietti", "vietimme", "vietitte", "viettivät"],
+    "preesens" => ["vietän", "vietät", "viettää", "vietämme", "vietätte", "viettävät"],
+    "imperfect" => ["vietin", "vietit", "vietti", "vietimme", "vietitte", "viettivät"],
+    "perfect" => ["viettänyt", "viettäneet"],
+    "imperative" => ["vietä", "viettäkää"],
   ],
   "vihata" => [
-    "pre" => ["vihaan", "vihaat", "vihaa", "vihaamme", "vihaatte", "vihaavat"],
-    "imp" => ["vihasin", "vihasit", "vihasi", "vihasimme", "vihasitte", "vihasivat"],
+    "preesens" => ["vihaan", "vihaat", "vihaa", "vihaamme", "vihaatte", "vihaavat"],
+    "imperfect" => ["vihasin", "vihasit", "vihasi", "vihasimme", "vihasitte", "vihasivat"],
+    "perfect" => ["vihannut", "vihanneet"],
+    "imperative" => ["vihaa", "vihatkaa"],
   ],
   "viihtyä" => [
-    "pre" => ["viihdyn", "viihdyt", "viihtyy", "viihdymme", "viihdytte", "viihtyvät"],
-    "imp" => ["viihdyin", "viihdyit", "viihtyi", "viihdyimme", "viihdyitte", "viihtyivät"],
+    "preesens" => ["viihdyn", "viihdyt", "viihtyy", "viihdymme", "viihdytte", "viihtyvät"],
+    "imperfect" => ["viihdyin", "viihdyit", "viihtyi", "viihdyimme", "viihdyitte", "viihtyivät"],
+    "perfect" => ["viihtynyt", "viihtyneet"],
+    "imperative" => ["viihdy", "viihtykää"],
   ],
   "viipyä" => [
-    "pre" => ["viivyn", "viivyt", "viipyy", "viivymme", "viivytte", "viipyvät"],
-    "imp" => ["viivyin", "viivyit", "viipyi", "viivyimme", "viivyitte", "viipyivät"],
+    "preesens" => ["viivyn", "viivyt", "viipyy", "viivymme", "viivytte", "viipyvät"],
+    "imperfect" => ["viivyin", "viivyit", "viipyi", "viivyimme", "viivyitte", "viipyivät"],
+    "perfect" => ["viipynyt", "viipyneet"],
+    "imperative" => ["viivy", "viipykää"],
   ],
   "viitata" => [
-    "pre" => ["viittaan", "viittaat", "viittaa", "viittaamme", "viittaatte", "viittaavat"],
-    "imp" => ["viittasin", "viittasit", "viittasi", "viittasimme", "viittasitte", "viittasivat"],
+    "preesens" => ["viittaan", "viittaat", "viittaa", "viittaamme", "viittaatte", "viittaavat"],
+    "imperfect" => ["viittasin", "viittasit", "viittasi", "viittasimme", "viittasitte", "viittasivat"],
+    "perfect" => ["viitannut", "viitanneet"],
+    "imperative" => ["viittaa", "viitatkaa"],
   ],
   "viitsiä" => [
-    "pre" => ["viitsin", "viitsit", "viitsii", "viitsimme", "viitsitte", "viitsivät"],
-    "imp" => ["viitsin", "viitsit", "viitsi", "viitsimme", "viitsitte", "viitsivät"],
+    "preesens" => ["viitsin", "viitsit", "viitsii", "viitsimme", "viitsitte", "viitsivät"],
+    "imperfect" => ["viitsin", "viitsit", "viitsi", "viitsimme", "viitsitte", "viitsivät"],
+    "perfect" => ["viitsinyt", "viitsineet"],
+    "imperative" => ["viitsi", "viitsikää"],
   ],
   "viljellä" => [
-    "pre" => ["viljelen", "viljelet", "viljelee", "viljelemme", "viljelette", "viljelevät"],
-    "imp" => ["viljelin", "viljelit", "viljeli", "viljelimme", "viljelitte", "viljelivät"],
-    "perfekti" => ["viljellyt", "viljelleet"],
-    "imperatiivi" => ["viljele", "viljelkää"],
+    "preesens" => ["viljelen", "viljelet", "viljelee", "viljelemme", "viljelette", "viljelevät"],
+    "imperfect" => ["viljelin", "viljelit", "viljeli", "viljelimme", "viljelitte", "viljelivät"],
+    "perfect" => ["viljellyt", "viljelleet"],
+    "imperative" => ["viljele", "viljelkää"],
   ],
   "virkata" => [
-    "pre" => ["virkkaan", "virkkaat", "virkkaa", "virkkaamme", "virkkaatte", "virkkaavat"],
-    "imp" => ["virkkasin", "virkkasit", "virkkasi", "virkkasimme", "virkkasitte", "virkkasivat"],
+    "preesens" => ["virkkaan", "virkkaat", "virkkaa", "virkkaamme", "virkkaatte", "virkkaavat"],
+    "imperfect" => ["virkkasin", "virkkasit", "virkkasi", "virkkasimme", "virkkasitte", "virkkasivat"],
+    "perfect" => ["virkannut", "virkanneet"],
+    "imperative" => ["virkkaa", "virkatkaa"],
   ],
   "voida" => [
-    "pre" => ["voin", "voit", "voi", "voimme", "voitte", "voivat"],
-    "imp" => ["voin", "voit", "voi", "voimme", "voitte", "voivat"],
-    "perfekti" => ["voinut", "voineet"],
-    "imperatiivi" => ["voi", "voikaa"],
+    "preesens" => ["voin", "voit", "voi", "voimme", "voitte", "voivat"],
+    "imperfect" => ["voin", "voit", "voi", "voimme", "voitte", "voivat"],
+    "perfect" => ["voinut", "voineet"],
+    "imperative" => ["voi", "voikaa"],
   ],
   "voittaa" => [
-    "pre" => ["voitan", "voitat", "voittaa", "voitamme", "voitatte", "voittavat"],
-    "imp" => ["voitin", "voitit", "voitti", "voitimme", "voititte", "voittivat"],
+    "preesens" => ["voitan", "voitat", "voittaa", "voitamme", "voitatte", "voittavat"],
+    "imperfect" => ["voitin", "voitit", "voitti", "voitimme", "voititte", "voittivat"],
+    "perfect" => ["voittanut", "voittaneet"],
+    "imperative" => ["voita", "voittakaa"],
   ],
   "vähentää" => [
-    "pre" => ["vähennän", "vähennät", "vähentää", "vähennämme", "vähennätte", "vähentävät"],
-    "imp" => ["vähensin", "vähensit", "vähensi", "vähensimme", "vähensitte", "vähensivät"],
+    "preesens" => ["vähennän", "vähennät", "vähentää", "vähennämme", "vähennätte", "vähentävät"],
+    "imperfect" => ["vähensin", "vähensit", "vähensi", "vähensimme", "vähensitte", "vähensivät"],
+    "perfect" => ["vähentänyt", "vähentäneet"],
+    "imperative" => ["vähennä", "vähentäkää"],
   ],
   "väittää" => [
-    "pre" => ["väitän", "väität", "väittää", "väitämme", "väitätte", "väittävät"],
-    "imp" => ["väitin", "väitit", "väitti", "väitimme", "väititte", "väittivät"],
+    "preesens" => ["väitän", "väität", "väittää", "väitämme", "väitätte", "väittävät"],
+    "imperfect" => ["väitin", "väitit", "väitti", "väitimme", "väititte", "väittivät"],
+    "perfect" => ["väittänyt", "väittäneet"],
+    "imperative" => ["väitä", "väittäkää"],
   ],
   "välttyä" => [
-    "pre" => ["vältyn", "vältyt", "välttyy", "vältymme", "vältytte", "välttyvät"],
-    "imp" => ["vältyin", "vältyit", "välttyi", "vältyimme", "vältyitte", "välttyivät"],
+    "preesens" => ["vältyn", "vältyt", "välttyy", "vältymme", "vältytte", "välttyvät"],
+    "imperfect" => ["vältyin", "vältyit", "välttyi", "vältyimme", "vältyitte", "välttyivät"],
+    "perfect" => ["välttynyt", "välttyneet"],
+    "imperative" => ["välty", "välttykää"],
   ],
   "välttää" => [
-    "pre" => ["vältän", "vältät", "välttää", "vältämme", "vältätte", "välttävät"],
-    "imp" => ["vältin", "vältit", "vältti", "vältimme", "vältitte", "välttivät"],
+    "preesens" => ["vältän", "vältät", "välttää", "vältämme", "vältätte", "välttävät"],
+    "imperfect" => ["vältin", "vältit", "vältti", "vältimme", "vältitte", "välttivät"],
+    "perfect" => ["välttänyt", "välttäneet"],
+    "imperative" => ["vältä", "välttäkää"],
   ],
   "väsyä" => [
-    "pre" => ["väsyn", "väsyt", "väsyy", "väsymme", "väsytte", "väsyvät"],
-    "imp" => ["väsyin", "väsyit", "väsyi", "väsyimme", "väsyitte", "väsyivät"],
+    "preesens" => ["väsyn", "väsyt", "väsyy", "väsymme", "väsytte", "väsyvät"],
+    "imperfect" => ["väsyin", "väsyit", "väsyi", "väsyimme", "väsyitte", "väsyivät"],
+    "perfect" => ["väsynyt", "väsyneet"],
+    "imperative" => ["väsy", "väsykää"],
   ],
   "yhdistää" => [
-    "pre" => ["yhdistän", "yhdistät", "yhdistää", "yhdistämme", "yhdistätte", "yhdistävät"],
-    "imp" => ["yhdistin", "yhdistit", "yhdisti", "yhdistimme", "yhdistitte", "yhdistivät"],
+    "preesens" => ["yhdistän", "yhdistät", "yhdistää", "yhdistämme", "yhdistätte", "yhdistävät"],
+    "imperfect" => ["yhdistin", "yhdistit", "yhdisti", "yhdistimme", "yhdistitte", "yhdistivät"],
+    "perfect" => ["yhdistänyt", "yhdistäneet"],
+    "imperative" => ["yhdistä", "yhdistäkää"],
   ],
   "yhtyä" => [
-    "pre" => ["yhdyn", "yhdyt", "yhtyy", "yhdymme", "yhdytte", "yhtyvät"],
-    "imp" => ["yhdyin", "yhdyit", "yhtyi", "yhdyimme", "yhdyitte", "yhtyivät"],
+    "preesens" => ["yhdyn", "yhdyt", "yhtyy", "yhdymme", "yhdytte", "yhtyvät"],
+    "imperfect" => ["yhdyin", "yhdyit", "yhtyi", "yhdyimme", "yhdyitte", "yhtyivät"],
+    "perfect" => ["yhtynyt", "yhtyneet"],
+    "imperative" => ["yhdy", "yhtykää"],
   ],
   "ylistää" => [
-    "pre" => ["ylistän", "ylistät", "ylistää", "ylistämme", "ylistätte", "ylistävät"],
-    "imp" => ["ylistin", "ylistit", "ylisti", "ylistimme", "ylistitte", "ylistivät"],
+    "preesens" => ["ylistän", "ylistät", "ylistää", "ylistämme", "ylistätte", "ylistävät"],
+    "imperfect" => ["ylistin", "ylistit", "ylisti", "ylistimme", "ylistitte", "ylistivät"],
+    "perfect" => ["ylistänyt", "ylistäneet"],
+    "imperative" => ["ylistä", "ylistäkää"],
   ],
   "ylittää" => [
-    "pre" => ["ylitän", "ylität", "ylittää", "ylitämme", "ylitätte", "ylittävät"],
-    "imp" => ["ylitin", "ylitit", "ylitti", "ylitimme", "ylititte", "ylittivät"],
+    "preesens" => ["ylitän", "ylität", "ylittää", "ylitämme", "ylitätte", "ylittävät"],
+    "imperfect" => ["ylitin", "ylitit", "ylitti", "ylitimme", "ylititte", "ylittivät"],
+    "perfect" => ["ylittänyt", "ylittäneet"],
+    "imperative" => ["ylitä", "ylittäkää"],
   ],
   "yllättää" => [
-    "pre" => ["yllätän", "yllätät", "yllättää", "yllätämme", "yllätätte", "yllättävät"],
-    "imp" => ["yllätin", "yllätit", "yllätti", "yllätimme", "yllätitte", "yllättivät"],
-    "perfekti" => ["yllättänyt", "yllättäneet"],
-    "imperatiivi" => ["yllätä", "yllättäkää"],
+    "preesens" => ["yllätän", "yllätät", "yllättää", "yllätämme", "yllätätte", "yllättävät"],
+    "imperfect" => ["yllätin", "yllätit", "yllätti", "yllätimme", "yllätitte", "yllättivät"],
+    "perfect" => ["yllättänyt", "yllättäneet"],
+    "imperative" => ["yllätä", "yllättäkää"],
   ],
   "ymmärtää" => [
-    "pre" => ["ymmärrän", "ymmärrät", "ymmärtää", "ymmärrämme", "ymmärrätte", "ymmärtävät"],
-    "imp" => ["ymmärsin", "ymmärsit", "ymmärsi", "ymmärsimme", "ymmärsitte", "ymmärsivät"],
+    "preesens" => ["ymmärrän", "ymmärrät", "ymmärtää", "ymmärrämme", "ymmärrätte", "ymmärtävät"],
+    "imperfect" => ["ymmärsin", "ymmärsit", "ymmärsi", "ymmärsimme", "ymmärsitte", "ymmärsivät"],
+    "perfect" => ["ymmärtänyt", "ymmärtäneet"],
+    "imperative" => ["ymmärrä", "ymmärtäkää"],
   ],
   "yrittää" => [
-    "pre" => ["yritän", "yrität", "yrittää", "yritämme", "yritätte", "yrittävät"],
-    "imp" => ["yritin", "yritit", "yritti", "yritimme", "yrititte", "yrittivät"],
-    "perfekti" => ["yrittänyt", "yrittäneet"],
-    "imperatiivi" => ["yritä", "yrittäkää"],
+    "preesens" => ["yritän", "yrität", "yrittää", "yritämme", "yritätte", "yrittävät"],
+    "imperfect" => ["yritin", "yritit", "yritti", "yritimme", "yrititte", "yrittivät"],
+    "perfect" => ["yrittänyt", "yrittäneet"],
+    "imperative" => ["yritä", "yrittäkää"],
   ],
   "äänestää" => [
-    "pre" => ["äänestän", "äänestät", "äänestää", "äänestämme", "äänestätte", "äänestävät"],
-    "imp" => ["äänestin", "äänestit", "äänesti", "äänestimme", "äänestitte", "äänestivät"],
-    "perfekti" => ["äänestänyt", "äänestäneet"],
+    "preesens" => ["äänestän", "äänestät", "äänestää", "äänestämme", "äänestätte", "äänestävät"],
+    "imperfect" => ["äänestin", "äänestit", "äänesti", "äänestimme", "äänestitte", "äänestivät"],
+    "perfect" => ["äänestänyt", "äänestäneet"],
+    "imperative" => ["äänestä", "äänestäkää"],
   ],
 ];
