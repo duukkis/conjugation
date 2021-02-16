@@ -9,13 +9,9 @@ class Conjugate
   const CACHE_FILE = "words.inc";
   // some helpers if we want to conjugate same word (performance)
   private ?string $word = null;
-  // helper for finding the correct word
-  private ?string $index = null;
   private string $bestMatch;
   private ?string $original;
   private array $conjugation;
-  // a/o or ä/ö
-  private bool $auml;
   private ?bool $backVowelWord;
   private array $backWovels = ["a", "o", "u"];
   private array $frontWovels = ["y", "ä", "ö"];
@@ -26,7 +22,7 @@ class Conjugate
   public array $indexed_words = [];
 
   // toista exception is done on function
-  public $numerals = [
+  public array $numerals = [
         "yksi" => "yhde",
         "kaksi" => "kahde",
         "kolme" => "kolme",
@@ -170,9 +166,9 @@ class Conjugate
   * checks if the word is numeral and conjugates that
   * @param string $word to check
   * @param string $ender what to place at the end n|ksi|lle ...
-  * @return mixed false if not a numeral else the conjugated numeral
+  * @return ?string null if not a numeral else the conjugated numeral
   */
-  private function isNumeral(string $word, string $ender = 'n')
+  private function isNumeral(string $word, string $ender = 'n'): ?string
   {
     $numeral = trim($word);
     $result = trim($word);
@@ -188,7 +184,7 @@ class Conjugate
     if (empty($numeral)) { // numeral, when all is replaced
       return $result;
     } else {
-      return false;
+      return null;
     }
   }
   
@@ -435,7 +431,7 @@ class Conjugate
 
     // then check for numeral
     $numeral = $this->isNumeral($word, $ender);
-    if ($numeral !== false) {
+    if ($numeral !== null) {
       $this->word = $word;
       return array("match" => "numeral", "answer" => $numeral);
     }
@@ -487,14 +483,13 @@ class Conjugate
   /**
   * function to match the word
   * @param string $word - word to match
-  * @return string - the matched word against which to conjugate
   */
   private function matchWord(string $word)
   {
     // ------- have the original if we have to convert some ä's / a's
     $this->original = null;
     // ------- then check the ao OR äö this is used so that both a and ä conjugate the same
-    $this->auml = false; // is the last one ä/ö and not a/o
+    $auml = false; // is the last one ä/ö and not a/o
     $aumlpos = mb_strrpos($word, "ä");
     $oumlpos = mb_strrpos($word, "ö");
     if ($aumlpos !== false || $oumlpos !== false) {
@@ -510,11 +505,11 @@ class Conjugate
         $a = $opos;
       }
       if ($aumlpos !== false && $oumlpos !== false && max($aumlpos, $oumlpos) > $a) {
-        $this->auml = true;
+        $auml = true;
       } else if ($aumlpos !== false && $aumlpos > $a) {
-        $this->auml = true;
+        $auml = true;
       } else if ($oumlpos !== false && $oumlpos > $a) {
-        $this->auml = true;
+        $auml = true;
       }
     }
     
@@ -522,14 +517,14 @@ class Conjugate
     $word = str_replace(array("ä", "ö"), array("a", "o"), $word);
     $drow = $this->utf8Strrev($word);
     
-    $this->index = mb_substr($drow, 0, 1);
+    $index = mb_substr($drow, 0, 1);
 
     $wordLength = mb_strlen($word);
     
     $this->bestMatch = "";
     $bestMatchLetters = 0;
-    if (isset($this->indexed_words[$this->index])) {
-      foreach ($this->indexed_words[$this->index] as $w => $useOnlyKeys) {
+    if (isset($this->indexed_words[$index])) {
+      foreach ($this->indexed_words[$index] as $w => $useOnlyKeys) {
         $match = 0;
         $shorterWord = min(mb_strlen($w), $wordLength);
         for ($i = 0; $i < $shorterWord; $i++) {
@@ -547,13 +542,13 @@ class Conjugate
           $this->bestMatch = $w;
         }
       }
-      $this->conjugation = $this->indexed_words[$this->index][$this->bestMatch];
+      $this->conjugation = $this->indexed_words[$index][$this->bestMatch];
       $this->bestMatch = strrev($this->bestMatch);
     }
     
     // fix the conjugation with the umlauts
     if (!empty($this->original)) {
-      if ($this->auml) {
+      if ($auml) {
         // fix all conjugations
         foreach ($this->conjugation as $k => $v) {
           $this->conjugation[$k] = str_replace(array("a", "o"), array("ä", "ö"), $this->conjugation[$k]);
@@ -563,11 +558,10 @@ class Conjugate
           $this->conjugation[$k] = str_replace(array("ä", "ö"), array("a", "o"), $this->conjugation[$k]);
         }
       }
-    } else if (!$this->auml) {
+    } else if (!$auml) {
       foreach ($this->conjugation as $k => $v) {
         $this->conjugation[$k] = str_replace(array("ä", "ö"), array("a", "o"), $this->conjugation[$k]);
       }
     }
-    
   }
 }
