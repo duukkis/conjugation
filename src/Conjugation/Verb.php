@@ -1,12 +1,12 @@
 <?php
 
+namespace Conjugation;
 
 /**
 * conjugate verbs
 */
-class Verbicate
+class Verb
 {
-
   const E = "e";
   const I = "i";
   // word we are conjugating

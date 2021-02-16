@@ -1,13 +1,14 @@
 <?php
+use Conjugation\Verb;
 use PHPUnit\Framework\TestCase;
 
 class VerbTest extends TestCase
 {
     public function testVerbs()
     {
+      $conjugate = new Verb();
       include(__DIR__.'/testset.php');
-      include(__DIR__.'/../verbicate.php');
-      $conjugate = new Verbicate();
+
       foreach($testSet AS $verb => $corr){
         $this->assertSame($corr["preesens"][0], $conjugate->preesensMe($verb));
         $this->assertSame($corr["preesens"][1], $conjugate->preesensYou($verb));

@@ -1,0 +1,17 @@
+{
+    "name": "duukkis/conjugation",
+    "require": {
+        "php": "^7.4|^8.0"
+    },
+    "authors": [
+        {
+            "name": "duukkis",
+            "email": "duukkis@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Conjugation\\": "src/Conjugation/"
+        }
+    }
+}

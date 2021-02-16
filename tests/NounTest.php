@@ -1,4 +1,5 @@
 <?php
+use Conjugation\Noun;
 use PHPUnit\Framework\TestCase;
 
 class NounTest extends TestCase
@@ -375,12 +376,11 @@ class NounTest extends TestCase
                   "tapaus" => "tapauksen",
       );
 
-      include(__DIR__.'/../function.php');
       // initialize and use cache
-      $conjugate = new Conjugate(true);
+      $noun = new Noun(true);
 
       foreach ($testSet as $word => $correct_answer) {
-        $actual = $conjugate->genitive($word);
+        $actual = $noun->genitive($word);
         $this->assertSame($correct_answer, $actual["answer"]);
       }
     }
