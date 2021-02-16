@@ -18,13 +18,74 @@ PHP:lla tehty taivutuskirjasto suomen kielen substantiiveille ja verbeille.
 - Akkusatiivi - akkusative, not implemented, same as nominative/genetive, so returns nominative
 
 ```php
-include('function.php');
-$conj = new Conjugate();
-print $conj->nominative("nalle")["answer"].PHP_EOL;
-print $conj->essive("nalle")["answer"].PHP_EOL;
-print $conj->essive("nalle")["answer"].PHP_EOL;
-print $conj->essive("nalle")["answer"].PHP_EOL;
-print $conj->essive("nalle")["answer"].PHP_EOL;
+include("vendor/autoload.php");
+
+use Conjugation\Noun;
+
+$noun = "nalle";
+$conj = new Noun();
+
+print $conj->nominative($noun)["answer"].PHP_EOL;
+print $conj->genitive($noun)["answer"].PHP_EOL;
+print $conj->akkusative($noun)["answer"].PHP_EOL;
+print $conj->partitive($noun)["answer"].PHP_EOL;
+print $conj->essive($noun)["answer"].PHP_EOL;
+print $conj->translative($noun)["answer"].PHP_EOL;
+print $conj->inessive($noun)["answer"].PHP_EOL;
+print $conj->elative($noun)["answer"].PHP_EOL;
+print $conj->illative($noun)["answer"].PHP_EOL;
+print $conj->adessive($noun)["answer"].PHP_EOL;
+print $conj->ablative($noun)["answer"].PHP_EOL;
+print $conj->allative($noun)["answer"].PHP_EOL;
+print $conj->abessive($noun)["answer"].PHP_EOL;
+
+$plural = $conj->plural($noun)["answer"];
+print $plural.PHP_EOL;
+print $conj->nominative($plural)["answer"].PHP_EOL;
+print $conj->genitive($plural)["answer"].PHP_EOL;
+print $conj->akkusative($plural)["answer"].PHP_EOL;
+print $conj->partitive($plural)["answer"].PHP_EOL;
+print $conj->essive($plural)["answer"].PHP_EOL;
+print $conj->translative($plural)["answer"].PHP_EOL;
+print $conj->inessive($plural)["answer"].PHP_EOL;
+print $conj->elative($plural)["answer"].PHP_EOL;
+print $conj->illative($plural)["answer"].PHP_EOL;
+print $conj->adessive($plural)["answer"].PHP_EOL;
+print $conj->ablative($plural)["answer"].PHP_EOL;
+print $conj->allative($plural)["answer"].PHP_EOL;
+print $conj->abessive($plural)["answer"].PHP_EOL;
+```
+
+prints out
+
+```
+nalle
+nallen
+nalle
+nallea
+nallena
+nalleksi
+nallessa
+nallesta
+nalleen
+nallella
+nallelta
+nallelle
+nalletta
+nallet
+nallet
+nallejen
+nallet
+nalleja
+nalleina
+nalleiksi
+nalleissa
+nalleista
+nalleihin
+nalleilla
+nalleilta
+nalleille
+nalleitta
 ```
 
 ## Introducing also verbs!
@@ -34,8 +95,10 @@ print $conj->essive("nalle")["answer"].PHP_EOL;
 - Imperative
 
 ```php
-include('verbicate.php');
-$conjugate = new Verbicate();
+// or autolaod
+use Conjugation/Verb;
+
+$conjugate = new Verb();
 $me = $conjugate->preesensMe("taivuttaa");
 print "Minä ".$me.PHP_EOL;
 print "Sinä ".$conjugate->preesensYou("taivuttaa").PHP_EOL;
