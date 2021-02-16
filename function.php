@@ -5,23 +5,28 @@
 */
 class Conjugate
 {
-
+  const WORD_FILE = "words.php";
+  const CACHE_FILE = "words.inc";
   // some helpers if we want to conjugate same word (performance)
-  private $word = null;
-  private $index = null;
-  private $bestMatch = null;
-  private $original = null;
-  private $conjugation = null;
-  private $auml = null;
-  private $backVowelWord = null;
+  private ?string $word = null;
+  // helper for finding the correct word
+  private ?string $index = null;
+  private string $bestMatch;
+  private ?string $original;
+  private array $conjugation;
+  // a/o or ä/ö
+  private bool $auml;
+  private ?bool $backVowelWord;
+  private array $backWovels = ["a", "o", "u"];
+  private array $frontWovels = ["y", "ä", "ö"];
   
   // array of words
-  public $words;
+  public array $words;
   // use this as helper
-  public $indexed_words = array();
+  public array $indexed_words = [];
 
   // toista exception is done on function
-  public $numerals = array(
+  public $numerals = [
         "yksi" => "yhde",
         "kaksi" => "kahde",
         "kolme" => "kolme",
@@ -41,26 +46,23 @@ class Conjugate
         "miljardia|miljardi" => "miljardi",
         "biljoonaa|biljoona" => "biljoona",
         "triljoonaa|triljoona" => "triljoona",
-      );
-  
-  private $word_file = "words.php";
-  private $cache_file = "words.inc";
+      ];
   
   /**
   * constructor
   * @param boolean $cache - use cache or not
   * @return void
   */
-  public function __construct($cache = false) {
+  public function __construct(bool $cache = false) {
     if ($cache) {
       if (!$this->getCacheWords()) {
-        include($this->word_file);
+        include(self::WORD_FILE);
         $this->words = $words;
         $this->makeWords();
         $this->setCacheWords();
       }
     } else {
-      include($this->word_file);
+      include(self::WORD_FILE);
       $this->words = $words;
       $this->makeWords();
     }
@@ -70,8 +72,9 @@ class Conjugate
   * load words from cache
   * @return boolean - if loading was succesful
   */
-  private function getCacheWords() {
-    $c = @file_get_contents($this->cache_file);
+  private function getCacheWords(): bool
+  {
+    $c = @file_get_contents(self::CACHE_FILE);
     if (!empty($c)) {
       $d = unserialize($c);
       if (isset($d["words"]) && !empty($d["words"])) {
@@ -94,9 +97,10 @@ class Conjugate
   * saves words to cache
   * @return void
   */
-  private function setCacheWords() {
+  private function setCacheWords(): void
+  {
     $data = array("words" => $this->words, "indexed_words" => $this->indexed_words);
-    @file_put_contents($this->cache_file, serialize($data));
+    @file_put_contents(self::CACHE_FILE, serialize($data));
   }
   
   /**
@@ -105,8 +109,8 @@ class Conjugate
   */
   public function makeWords() {
     // build the plurals and helper array here
-    $singles = array();
-    $plurals = array();
+    $singles = [];
+    $plurals = [];
     
     foreach ($this->words as $word => $conjugation) {
 //      $word = str_replace(array("ä", "ö"), array("a", "o"), $word);
@@ -118,14 +122,14 @@ class Conjugate
       
       // revert the word and set it into the helper
       $drow = $this->utf8Strrev($word);
-      $c_temp = array_merge(array($conjugation[0]), $conjugation["si"]);
+      $c_temp = array_merge([$conjugation[0]], $conjugation["si"]);
       $this->indexed_words[substr($drow, 0, 1)][$drow] = $c_temp;
       $singles[$word] = $c_temp;
       
       // add plural also to helper array
       $larulp = $this->utf8Strrev($plural);
 
-      $p_temp = array_merge(array($plural_postfix), $conjugation["pl"]);
+      $p_temp = array_merge([$plural_postfix], $conjugation["pl"]);
       $this->indexed_words[substr($larulp, 0, 1)][$larulp] = $p_temp;
       // add the plural to plurals
       $plurals[$plural] = $p_temp;
@@ -139,7 +143,8 @@ class Conjugate
   * @param string $str - string to reverse
   * @return string gnirts
   */
-  private function utf8Strrev($str) {
+  private function utf8Strrev(string $str): string
+  {
     // return strrev($str);
     preg_match_all('/./us', $str, $ar);
     return join('', array_reverse($ar[0]));
@@ -152,7 +157,8 @@ class Conjugate
   * @param string $subject - where
   * @return string replaced word
   */
-  private function strRreplace($search, $replace, $subject) {
+  private function strRreplace(string $search, string $replace, string $subject): string
+  {
     $pos = mb_strrpos($subject, $search);
     if ($pos !== false) {
       $subject = mb_substr($subject, 0, $pos).$replace;
@@ -166,8 +172,8 @@ class Conjugate
   * @param string $ender what to place at the end n|ksi|lle ...
   * @return mixed false if not a numeral else the conjugated numeral
   */
-  private function isNumeral($word, $ender = 'n') {
-    
+  private function isNumeral(string $word, string $ender = 'n')
+  {
     $numeral = trim($word);
     $result = trim($word);
     foreach ($this->numerals as $numb => $conj) {
@@ -189,14 +195,16 @@ class Conjugate
   /**
   * nominative
   */
-  public function nominative($word){
+  public function nominative(string $word): array
+  {
     return array("match" => $word, "answer" => $word);
   }
   
   /**
   * plural
   */
-  public function plural($word){
+  public function plural(string $word): array
+  {
     $this->isBackWovelWord($word); // call this even not used so caching works
     $this->matchWord($word);
     $answer = $this->strRreplace($this->conjugation[0], $this->conjugation[1], $word)."t";
@@ -208,7 +216,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function genitive($word) {
+  public function genitive(string $word): array
+  {
     $this->isBackWovelWord($word); // call this even not used so caching works
     return $this->conjugateWord($word, "n", 1);
   }
@@ -219,7 +228,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word given and "answer" with the word
   */
-  public function akkusative($word) {
+  public function akkusative(string $word): array
+  {
     $this->isBackWovelWord($word); // call this even not used so caching works
     return array("match" => $word, "answer" => $word);
   }
@@ -230,7 +240,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function partitive($word) {
+  public function partitive(string $word): array
+  {
     if ($this->isBackWovelWord($word)) {
       return $this->conjugateWord($word, "a", 4);
     } else {
@@ -245,7 +256,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function essive($word) {
+  public function essive(string $word): array
+  {
     if ($this->isBackWovelWord($word)) {
       return $this->conjugateWord($word, "na", 5);
     } else {
@@ -258,7 +270,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function translative($word) {
+  public function translative(string $word): array
+  {
     $this->isBackWovelWord($word); // call this even not used so caching works
     return $this->conjugateWord($word, "ksi", 2);
   }
@@ -268,7 +281,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function inessive($word) {
+  public function inessive(string $word): array
+  {
     if ($this->isBackWovelWord($word)) {
       return $this->conjugateWord($word, "ssa", 2);
     } else {
@@ -281,7 +295,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function elative($word) {
+  public function elative(string $word): array
+  {
     if ($this->isBackWovelWord($word)) {
       return $this->conjugateWord($word, "sta", 2);
     } else {
@@ -299,7 +314,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function illative($word) {
+  public function illative(string $word): array
+  {
     $this->isBackWovelWord($word); // call this even not used so caching works
     return $this->conjugateWord($word, "n", 3);
   }
@@ -310,7 +326,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function adessive($word) {
+  public function adessive(string $word): array
+  {
     if ($this->isBackWovelWord($word)) {
       return $this->conjugateWord($word, "lla", 2);
     } else {
@@ -323,7 +340,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function ablative($word) {
+  public function ablative(string $word): array
+  {
     if ($this->isBackWovelWord($word)) {
       return $this->conjugateWord($word, "lta", 2);
     } else {
@@ -336,7 +354,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function allative($word) {
+  public function allative(string $word): array
+  {
     $this->isBackWovelWord($word); // call this even not used so caching works
     return $this->conjugateWord($word, "lle", 2);
   }
@@ -346,7 +365,8 @@ class Conjugate
   * @param string $word to conjugate
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function abessive($word) {
+  public function abessive(string $word): array
+  {
     if ($this->isBackWovelWord($word)) {
       return $this->conjugateWord($word, "tta", 2);
     } else {
@@ -361,7 +381,8 @@ class Conjugate
   * @param string $word string to check
   * @return boolean is back wovel
   */
-  private function isBackWovelWord($word) {
+  private function isBackWovelWord(string $word): ?bool
+  {
     // if the same word is being checked, use the previous result instead of matching again
     if ($word == $this->word && $this->backVowelWord !== null) {
       return $this->backVowelWord;
@@ -369,44 +390,28 @@ class Conjugate
       // nullify
       $this->backVowelWord = null;
     }
-    
+
     $backVowelPos = -1;
-    $apos = mb_strrpos($word, "a");
-    if ($apos !== false) {
-      $backVowelPos = $apos;
+    foreach ($this->backWovels as $backWovel) {
+      $pos = mb_strrpos($word, $backWovel);
+      if ($pos !== false && $pos > $backVowelPos) {
+        $backVowelPos = $pos;
+      }
     }
-    $opos = mb_strrpos($word, "o");
-    if ($opos !== false && $opos > $backVowelPos) {
-      $backVowelPos = $opos;
-    }
-    $upos = mb_strrpos($word, "u");
-    if ($upos !== false && $upos > $backVowelPos) {
-      $backVowelPos = $upos;
-    }
-    
+
     $frontVowelPos = -1;
-    $apos = mb_strrpos($word, "ä");
-    if ($apos !== false) {
-      $frontVowelPos = $apos;
+    foreach ($this->frontWovels as $frontWovel) {
+      $pos = mb_strrpos($word, $frontWovel);
+      if ($pos !== false && $pos > $frontVowelPos) {
+        $frontVowelPos = $pos;
+      }
     }
-    $opos = mb_strrpos($word, "ö");
-    if ($opos !== false && $opos > $frontVowelPos) {
-      $frontVowelPos = $opos;
-    }
-    $upos = mb_strrpos($word, "y");
-    if ($upos !== false && $upos > $frontVowelPos) {
-      $frontVowelPos = $upos;
-    }
-    
+
     if ($frontVowelPos == -1 && $backVowelPos == -1) { // only i's and e's
       $this->backVowelWord = false;
-    } else if ($backVowelPos >= 0 && $frontVowelPos == -1) { // there is a, o or u and no ä, ö or y
+    } else if ($backVowelPos >= $frontVowelPos) { // there is a, o or u and no ä, ö or y
       $this->backVowelWord = true;
-    } else if ($backVowelPos == -1 && $frontVowelPos >= 0) { // there is  ä, ö or y and no a, o or u
-      $this->backVowelWord = false;
-    } else if ($backVowelPos > $frontVowelPos) { // both present (combined word)
-      $this->backVowelWord = true;
-    } else if ($backVowelPos < $frontVowelPos){  // both present frontWovel later
+    } else if ($backVowelPos <= $frontVowelPos) { // there is  ä, ö or y and no a, o or u
       $this->backVowelWord = false;
     }
     return $this->backVowelWord;
@@ -419,7 +424,8 @@ class Conjugate
   * @param int $use_index - what index to use in words
   * @return array "match" with the word that was matched and "answer" with the confugation
   */
-  public function conjugateWord($word, $ender, $use_index) {
+  public function conjugateWord(string $word, string $ender, int $use_index): array
+  {
     // full match
     $fMatch = $this->fullMatchCheck($word, $use_index, $ender);
     if ($fMatch !== false) {
@@ -462,7 +468,8 @@ class Conjugate
   * full match checker
   *
   */
-  private function fullMatchCheck($word, $use_index, $ender){
+  private function fullMatchCheck($word, $use_index, $ender)
+  {
     if (isset($this->words[$word])) {
       if (isset($this->words[$word][0]) && !empty($this->words[$word][0])
           && isset($this->words[$word][$use_index])) {
@@ -482,7 +489,8 @@ class Conjugate
   * @param string $word - word to match
   * @return string - the matched word against which to conjugate
   */
-  private function matchWord($word) {
+  private function matchWord(string $word)
+  {
     // ------- have the original if we have to convert some ä's / a's
     $this->original = null;
     // ------- then check the ao OR äö this is used so that both a and ä conjugate the same
