@@ -144,21 +144,21 @@ class Verbicate
 
   public function perfectSingle(string $word): string
   {
-    $this->init($word);
+    $word = $this->init($word);
     if ($this->backVowelWord) {
       $this->ender = "nut";
-      return $this->conjugatePerfect();
+      return $this->conjugatePerfect($word);
     } else {
       $this->ender = "nyt";
-      return $this->conjugatePerfect();
+      return $this->conjugatePerfect($word);
     }
   }
 
   public function perfectPlural(string $word): string
   {
-    $this->init($word);
+    $word = $this->init($word);
     $this->ender = "neet";
-    return $this->conjugatePerfect();
+    return $this->conjugatePerfect($word);
   }
 
   public function imperativeSingle(string $word): string
@@ -613,10 +613,17 @@ class Verbicate
    * me, you, he/she
    * @return string
    */
-  private function conjugatePerfect(): string
+  private function conjugatePerfect(string $word): string
   {
     $w = $this->orig;
     $nos = $this->nbr_of_sylls;
+    $secondfirst = mb_substr($this->sylls[$nos-2], 0, 1);
+    $secondlast = mb_substr($this->sylls[$nos-2], -1);
+    if ($nos >= 3) {
+      $thirdlast = mb_substr($this->sylls[$nos-3], -1);
+    } else {
+      $thirdlast = "";
+    }
 
     switch ($this->last_syllabus) {
       case "taa": // tää
@@ -629,8 +636,19 @@ class Verbicate
         $w[$nos-1] = "l" . mb_substr($this->ender, 1);
         break;
       case "ta": // tä
-        // aidata
-        $w[$nos-1] = "n" . $this->ender;
+        if ($this->isVerbClass72($word)) {
+          $w[$nos-1] = "";
+          $w = $this->taVerb72ForPerfect($word, $w, $nos, $secondfirst, $secondlast, $thirdlast);
+          // if last is wovel then nnut, else nut
+          if (in_array(mb_substr($w[$nos-2], -1), $this->wovels)) {
+            $w[$nos-1] = "n".$this->ender;
+          } else {
+            $w[$nos-1] = mb_substr($this->ender, 1);
+          }
+        } else { // verb class 74
+          // kontata, rynnätä
+          $w[$nos-1] = "n".$this->ender;
+        }
         break;
       case "a": // ä
         $w[$nos-1] = $this->ender;
@@ -753,6 +771,7 @@ class Verbicate
   {
     $w = $this->orig;
     $nos = $this->nbr_of_sylls;
+    $secondlast = mb_substr($this->sylls[$nos-2], -1);
 
     switch ($this->last_syllabus) {
       case "taa": // tää
@@ -766,7 +785,11 @@ class Verbicate
         break;
       case "ta": // tä
         // aidata
-        $w[$nos-1] = "t" . $this->ender;
+        if (in_array($secondlast, $this->wovels)) {
+          $w[$nos-1] = "t" . $this->ender;
+        } else { // ehkäistä
+          $w[$nos-1] = $this->ender;
+        }
         break;
       case "a": // ä
         $w[$nos-1] = $this->ender;
@@ -819,6 +842,7 @@ class Verbicate
     }
     return $w;
   }
+
   /**
   * conjugation for ta-verbs 72
   */
@@ -843,7 +867,28 @@ class Verbicate
     }
     return $w;
   }
-  
+
+  /**
+  * conjugation for ta-verbs 72
+  */
+  private function taVerb72ForPerfect(string $word, array $w, int $nos, string $secondfirst, string $secondlast, string $thirdlast): array
+  {
+    if ($word == "juosta") { // juosta
+      $w[$nos-2] = mb_substr($w[$nos-2], 0, -1)."ks";
+    } else if ($secondfirst == "d") { // pidetä
+      $w[$nos-2] = "t".mb_substr($w[$nos-2], 1)."n";
+    } else if ($secondlast == "s") { // hotkaista, nousta, ehkäistä
+      $w[$nos-2] .= "s";
+    } else if ($thirdlast == "r" && $secondfirst == "j") { // tarjeta
+      $w[$nos-2] = "k".mb_substr($w[$nos-2], 1);
+    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "v") { // kaveta
+      $w[$nos-2] = "p".mb_substr($w[$nos-2], 1);
+    } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "p") { // suipeta
+      $w[$nos-2] = "p".$w[$nos-2];
+    }
+    return $w;
+  }
+
   /**
   * conjugation for ta-verbs 74
   */

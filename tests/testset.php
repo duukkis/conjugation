@@ -76,10 +76,14 @@ $testSet = [
   "ampua" => [
     "pre" => ["ammun", "ammut", "ampuu", "ammumme", "ammutte", "ampuvat"],
     "imp" => ["ammuin", "ammuit", "ampui", "ammuimme", "ammuitte", "ampuivat"],
+    "perfekti" => ["ampunut", "ampuneet"],
+    "imperatiivi" => ["ammu", "ampukaa"],
   ],
   "anoa" => [
     "pre" => ["anon", "anot", "anoo", "anomme", "anotte", "anovat"],
     "imp" => ["anoin", "anoit", "anoi", "anoimme", "anoitte", "anoivat"],
+    "perfekti" => ["anonut", "anoneet"],
+    "imperatiivi" => ["ano", "anokaa"],
   ],
   "ansaita" => [
     "pre" => ["ansaitsen", "ansaitset", "ansaitsee", "ansaitsemme", "ansaitsette", "ansaitsevat"],
@@ -114,6 +118,8 @@ $testSet = [
   "arvostella" => [
     "pre" => ["arvostelen", "arvostelet", "arvostelee", "arvostelemme", "arvostelette", "arvostelevat"],
     "imp" => ["arvostelin", "arvostelit", "arvosteli", "arvostelimme", "arvostelitte", "arvostelivat"],
+    "perfekti" => ["arvostellut", "arvostelleet"],
+    "imperatiivi" => ["arvostele", "arvostelkaa"],
   ],
   "asennoitua" => [
     "pre" => ["asennoidun", "asennoidut", "asennoituu", "asennoidumme", "asennoidutte", "asennoituvat"],
@@ -198,11 +204,15 @@ $testSet = [
   ],
   "ehkäistä" => [
     "pre" => ["ehkäisen", "ehkäiset", "ehkäisee", "ehkäisemme", "ehkäisette", "ehkäisevät"],
-    "imp" => ["ehkäisin", "ehkäisit", "ehkäisi", "ehkäisimme", "ehkäisitte", "ehkäisivät"]
+    "imp" => ["ehkäisin", "ehkäisit", "ehkäisi", "ehkäisimme", "ehkäisitte", "ehkäisivät"],
+    "perfekti" => ["ehkäissyt", "ehkäisseet"],
+    "imperatiivi" => ["ehkäise", "ehkäiskää"],
   ],
   "ehtiä" => [
     "pre" => ["ehdin", "ehdit", "ehtii", "ehdimme", "ehditte", "ehtivät"],
-    "imp" => ["ehdin", "ehdit", "ehti", "ehdimme", "ehditte", "ehtivät"]
+    "imp" => ["ehdin", "ehdit", "ehti", "ehdimme", "ehditte", "ehtivät"],
+    "perfekti" => ["ehtinyt", "ehtineet"],
+    "imperatiivi" => ["ehdi", "ehtikää"],
   ],
   "eksyä" => [
     "pre" => ["eksyn", "eksyt", "eksyy", "eksymme", "eksytte", "eksyvät"],
@@ -343,6 +353,8 @@ $testSet = [
   "harkita" => [
     "pre" => ["harkitsen", "harkitset", "harkitsee", "harkitsemme", "harkitsette", "harkitsevat"],
     "imp" => ["harkitsin", "harkitsit", "harkitsi", "harkitsimme", "harkitsitte", "harkitsivat"],
+    "perfekti" => ["harkinnut", "harkinneet"],
+    "imperatiivi" => ["harkitse", "harkitkaa"],
   ],
   "harppoa" => [
     "pre" => ["harpon", "harpot", "harppoo", "harpomme", "harpotte", "harppovat"],
@@ -2598,11 +2610,11 @@ $testSet = [
   ],
   "viedä" => [
     "pre" => ["vien", "viet", "vie", "viemme", "viette", "vievät"],
-    "imp" => ["vein", "veit", "vei", "veimme", "veitte", "veivät"]
+    "imp" => ["vein", "veit", "vei", "veimme", "veitte", "veivät"],
   ],
   "vierailla" => [
     "pre" => ["vierailen", "vierailet", "vierailee", "vierailemme", "vierailette", "vierailevat"],
-    "imp" => ["vierailin", "vierailit", "vieraili", "vierailimme", "vierailitte", "vierailivat"]
+    "imp" => ["vierailin", "vierailit", "vieraili", "vierailimme", "vierailitte", "vierailivat"],
   ],
   "viettää" => [
     "pre" => ["vietän", "vietät", "viettää", "vietämme", "vietätte", "viettävät"],
@@ -2631,6 +2643,8 @@ $testSet = [
   "viljellä" => [
     "pre" => ["viljelen", "viljelet", "viljelee", "viljelemme", "viljelette", "viljelevät"],
     "imp" => ["viljelin", "viljelit", "viljeli", "viljelimme", "viljelitte", "viljelivät"],
+    "perfekti" => ["viljellyt", "viljelleet"],
+    "imperatiivi" => ["viljele", "viljelkää"],
   ],
   "virkata" => [
     "pre" => ["virkkaan", "virkkaat", "virkkaa", "virkkaamme", "virkkaatte", "virkkaavat"],
@@ -2639,6 +2653,8 @@ $testSet = [
   "voida" => [
     "pre" => ["voin", "voit", "voi", "voimme", "voitte", "voivat"],
     "imp" => ["voin", "voit", "voi", "voimme", "voitte", "voivat"],
+    "perfekti" => ["voinut", "voineet"],
+    "imperatiivi" => ["voi", "voikaa"],
   ],
   "voittaa" => [
     "pre" => ["voitan", "voitat", "voittaa", "voitamme", "voitatte", "voittavat"],
@@ -2683,6 +2699,8 @@ $testSet = [
   "yllättää" => [
     "pre" => ["yllätän", "yllätät", "yllättää", "yllätämme", "yllätätte", "yllättävät"],
     "imp" => ["yllätin", "yllätit", "yllätti", "yllätimme", "yllätitte", "yllättivät"],
+    "perfekti" => ["yllättänyt", "yllättäneet"],
+    "imperatiivi" => ["yllätä", "yllättäkää"],
   ],
   "ymmärtää" => [
     "pre" => ["ymmärrän", "ymmärrät", "ymmärtää", "ymmärrämme", "ymmärrätte", "ymmärtävät"],
