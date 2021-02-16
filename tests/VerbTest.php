@@ -22,6 +22,10 @@ class VerbTest extends TestCase
         $this->assertSame($corr["imp"][3], $conjugate->imperfectPluralWe($verb));
         $this->assertSame($corr["imp"][4], $conjugate->imperfectPluralYou($verb));
         $this->assertSame($corr["imp"][5], $conjugate->imperfectPluralThey($verb));
+        if (isset($corr["perfekti"][0])) {
+          $this->assertSame($corr["perfekti"][0], $conjugate->perfectSingle($verb));
+          $this->assertSame($corr["perfekti"][1], $conjugate->perfectPlural($verb));
+        }
       }
     }
 }
