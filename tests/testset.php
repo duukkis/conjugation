@@ -5,16 +5,19 @@ $testSet = [
     "pre" => ["aavistan", "aavistat", "aavistaa", "aavistamme", "aavistatte", "aavistavat"],
     "imp" => ["aavistin", "aavistit", "aavisti", "aavistimme", "aavistitte", "aavistivat"],
     "perfekti" => ["aavistanut", "aavistaneet"],
+    "imperatiivi" => ["aavista", "aavistakaa"],
   ],
   "aidata" => [
     "pre" => ["aitaan", "aitaat", "aitaa", "aitaamme", "aitaatte", "aitaavat"],
     "imp" => ["aitasin", "aitasit", "aitasi", "aitasimme", "aitasitte", "aitasivat"],
     "perfekti" => ["aidannut", "aidanneet"],
+    "imperatiivi" => ["aitaa", "aidatkaa"],
   ],
   "aiheuttaa" => [
     "pre" => ["aiheutan", "aiheutat", "aiheuttaa", "aiheutamme", "aiheutatte", "aiheuttavat"],
     "imp" => ["aiheutin", "aiheutit", "aiheutti", "aiheutimme", "aiheutitte", "aiheuttivat"],
     "perfekti" => ["aiheuttanut", "aiheuttaneet"],
+    "imperatiivi" => ["aiheuta", "aiheuttakaa"],
   ],
   "aiheutua" => [
     "pre" => ["aiheudun", "aiheudut", "aiheutuu", "aiheudumme", "aiheudutte", "aiheutuvat"],
@@ -24,16 +27,19 @@ $testSet = [
     "pre" => ["aikaansaan", "aikaansaat", "aikaansaa", "aikaansaamme", "aikaansaatte", "aikaansaavat"],
     "imp" => ["aikaansain", "aikaansait", "aikaansai", "aikaansaimme", "aikaansaitte", "aikaansaivat"],
     "perfekti" => ["aikaansaanut", "aikaansaaneet"],
+    "imperatiivi" => ["aikaansaa", "aikaansaakaa"],
   ],
   "aikoa" => [
     "pre" => ["aion", "aiot", "aikoo", "aiomme", "aiotte", "aikovat"],
     "imp" => ["aioin", "aioit", "aikoi", "aioimme", "aioitte", "aikoivat"],
     "perfekti" => ["aikonut", "aikoneet"],
+    "imperatiivi" => ["aio", "aikokaa"],
   ],
   "ajaa" => [
     "pre" => ["ajan", "ajat", "ajaa", "ajamme", "ajatte", "ajavat"],
     "imp" => ["ajoin", "ajoit", "ajoi", "ajoimme", "ajoitte", "ajoivat"],
     "perfekti" => ["ajanut", "ajaneet"],
+    "imperatiivi" => ["aja", "ajakaa"],
   ],
   "ajatella" => [
     "pre" => ["ajattelen", "ajattelet", "ajattelee", "ajattelemme", "ajattelette", "ajattelevat"],
@@ -43,6 +49,7 @@ $testSet = [
     "pre" => ["alennan", "alennat", "alentaa", "alennamme", "alennatte", "alentavat"],
     "imp" => ["alensin", "alensit", "alensi", "alensimme", "alensitte", "alensivat"],
     "perfekti" => ["alentanut", "alentaneet"],
+    "imperatiivi" => ["alenna", "alentakaa"],
   ],
   "alistaa" => [
     "pre" => ["alistan", "alistat", "alistaa", "alistamme", "alistatte", "alistavat"],
@@ -52,6 +59,7 @@ $testSet = [
     "pre" => ["alistun", "alistut", "alistuu", "alistumme", "alistutte", "alistuvat"],
     "imp" => ["alistuin", "alistuit", "alistui", "alistuimme", "alistuitte", "alistuivat"],
     "perfekti" => ["alistunut", "alistuneet"],
+    "imperatiivi" => ["alistu", "alistukaa"],
   ],
   "alkaa" => [
     "pre" => ["alan", "alat", "alkaa", "alamme", "alatte", "alkaa"],
@@ -77,6 +85,7 @@ $testSet = [
     "pre" => ["ansaitsen", "ansaitset", "ansaitsee", "ansaitsemme", "ansaitsette", "ansaitsevat"],
     "imp" => ["ansaitsin", "ansaitsit", "ansaitsi", "ansaitsimme", "ansaitsitte", "ansaitsivat"],
     "perfekti" => ["ansainnut", "ansainneet"],
+    "imperatiivi" => ["ansaitse", "ansaitkaa"],
   ],
   "antaa" => [
     "pre" => ["annan", "annat", "antaa", "annamme", "annatte", "antavat"],
@@ -86,6 +95,7 @@ $testSet = [
     "pre" => ["arvaan", "arvaat", "arvaa", "arvaamme", "arvaatte", "arvaavat"],
     "imp" => ["arvasin", "arvasit", "arvasi", "arvasimme", "arvasitte", "arvasivat"],
     "perfekti" => ["arvannut", "arvanneet"],
+    "imperatiivi" => ["arvaa", "arvatkaa"],
   ],
   "arvella" => [
     "pre" => ["arvelen", "arvelet", "arvelee", "arvelemme", "arvelette", "arvelevat"],
@@ -99,6 +109,7 @@ $testSet = [
     "pre" => ["arvostan", "arvostat", "arvostaa", "arvostamme", "arvostatte", "arvostavat"],
     "imp" => ["arvostin", "arvostit", "arvosti", "arvostimme", "arvostitte", "arvostivat"],
     "perfekti" => ["arvostanut", "arvostaneet"],
+    "imperatiivi" => ["arvosta", "arvostakaa"],
   ],
   "arvostella" => [
     "pre" => ["arvostelen", "arvostelet", "arvostelee", "arvostelemme", "arvostelette", "arvostelevat"],
@@ -112,6 +123,7 @@ $testSet = [
     "pre" => ["asennan", "asennat", "asentaa", "asennamme", "asennatte", "asentavat"],
     "imp" => ["asensin", "asensit", "asensi", "asensimme", "asensitte", "asensivat"],
     "perfekti" => ["asentanut", "asentaneet"],
+    "imperatiivi" => ["asenna", "asentakaa"],
   ],
   "asettaa" => [
     "pre" => ["asetan", "asetat", "asettaa", "asetamme", "asetatte", "asettavat"],
@@ -125,6 +137,7 @@ $testSet = [
     "pre" => ["askartelen", "askartelet", "askartelee", "askartelemme", "askartelette", "askartelevat"],
     "imp" => ["askartelin", "askartelit", "askarteli", "askartelimme", "askartelitte", "askartelivat"],
     "perfekti" => ["askarrellut", "askarrelleet"],
+    "imperatiivi" => ["askartele", "askarrelkaa"],
   ],
   "astella" => [
     "pre" => ["astelen", "astelet", "astelee", "astelemme", "astelette", "astelevat"],
@@ -134,6 +147,7 @@ $testSet = [
     "pre" => ["astun", "astut", "astuu", "astumme", "astutte", "astuvat"],
     "imp" => ["astuin", "astuit", "astui", "astuimme", "astuitte", "astuivat"],
     "perfekti" => ["astunut", "astuneet"],
+    "imperatiivi" => ["astu", "astukaa"],
   ],
   "asua" => [
     "pre" => ["asun", "asut", "asuu", "asumme", "asutte", "asuvat"],
@@ -151,6 +165,7 @@ $testSet = [
     "pre" => ["avaudun", "avaudut", "avautuu", "avaudumme", "avaudutte", "avautuvat"],
     "imp" => ["avauduin", "avauduit", "avautui", "avauduimme", "avauduitte", "avautuivat"],
     "perfekti" => ["avautunut", "avautuneet"],
+    "imperatiivi" => ["avaudu", "avautukaa"],
   ],
   "avustaa" => [
     "pre" => ["avustan", "avustat", "avustaa", "avustamme", "avustatte", "avustavat"],
@@ -197,6 +212,7 @@ $testSet = [
     "pre" => ["elän", "elät", "elää", "elämme", "elätte", "elävät"],
     "imp" => ["elin", "elit", "eli", "elimme", "elitte", "elivät"],
     "perfekti" => ["elänyt", "eläneet"],
+    "imperatiivi" => ["elä", "eläkää"],
   ],
   "ennustaa" => [
     "pre" => ["ennustan", "ennustat", "ennustaa", "ennustamme", "ennustatte", "ennustavat"],
@@ -210,6 +226,7 @@ $testSet = [
     "pre" => ["epäilen", "epäilet", "epäilee", "epäilemme", "epäilette", "epäilevät"],
     "imp" => ["epäilin", "epäilit", "epäili", "epäilimme", "epäilitte", "epäilivät"],
     "perfekti" => ["epäillyt", "epäilleet"],
+    "imperatiivi" => ["epäile", "epäilkää"],
   ],
   "epäonnistua" => [
     "pre" => ["epäonnistun", "epäonnistut", "epäonnistuu", "epäonnistumme", "epäonnistutte", "epäonnistuvat"],
@@ -231,6 +248,7 @@ $testSet = [
     "pre" => ["eroan", "eroat", "eroaa", "eroamme", "eroatte", "eroavat"],
     "imp" => ["erosin", "erosit", "erosi", "erosimme", "erositte", "erosivat"],
     "perfekti" => ["eronnut", "eronneet"],
+    "imperatiivi" => ["eroa", "erotkaa"],
   ],
   "erottaa" => [
     "pre" => ["erotan", "erotat", "erottaa", "erotamme", "erotatte", "erottavat"],
@@ -248,15 +266,19 @@ $testSet = [
     "pre" => ["esitän", "esität", "esittää", "esitämme", "esitätte", "esittävät"],
     "imp" => ["esitin", "esitit", "esitti", "esitimme", "esititte", "esittivät"],
     "perfekti" => ["esittänyt", "esittäneet"],
+    "imperatiivi" => ["esitä", "esittäkää"],
   ],
   "estää" => [
     "pre" => ["estän", "estät", "estää", "estämme", "estätte", "estävät"],
     "imp" => ["estin", "estit", "esti", "estimme", "estitte", "estivät"],
+    "perfekti" => ["estänyt", "estäneet"],
+    "imperatiivi" => ["estä", "estäkää"],
   ],
   "etsiä" => [
     "pre" => ["etsin", "etsit", "etsii", "etsimme", "etsitte", "etsivät"],
     "imp" => ["etsin", "etsit", "etsi", "etsimme", "etsitte", "etsivät"],
     "perfekti" => ["etsinyt", "etsineet"],
+    "imperatiivi" => ["etsi", "etsikää"],
   ],
   "haastatella" => [
     "pre" => ["haastattelen", "haastattelet", "haastattelee", "haastattelemme", "haastattelette", "haastattelevat"],
@@ -270,11 +292,13 @@ $testSet = [
     "pre" => ["hajoan", "hajoat", "hajoaa", "hajoamme", "hajoatte", "hajoavat"],
     "imp" => ["hajosin", "hajosit", "hajosi", "hajosimme", "hajositte", "hajosivat"],
     "perfekti" => ["hajonnut", "hajonneet"],
+    "imperatiivi" => ["hajoa", "hajotkaa"],
   ],
   "hajottaa" => [
     "pre" => ["hajotan", "hajotat", "hajottaa", "hajotamme", "hajotatte", "hajottavat"],
     "imp" => ["hajotin", "hajotit", "hajotti", "hajotimme", "hajotitte", "hajottivat"],
     "perfekti" => ["hajottanut", "hajottaneet"],
+    "imperatiivi" => ["hajota", "hajottakaa"],
   ],
   "hakata" => [
     "pre" => ["hakkaan", "hakkaat", "hakkaa", "hakkaamme", "hakkaatte", "hakkaavat"],
@@ -324,35 +348,39 @@ $testSet = [
     "pre" => ["harpon", "harpot", "harppoo", "harpomme", "harpotte", "harppovat"],
     "imp" => ["harpoin", "harpoit", "harppoi", "harpoimme", "harpoitte", "harppoivat"],
     "perfekti" => ["harpponut", "harpponeet"],
+    "imperatiivi" => ["harpo", "harppokaa"],
   ],
   "harrastaa" => [
     "pre" => ["harrastan", "harrastat", "harrastaa", "harrastamme", "harrastatte", "harrastavat"],
     "imp" => ["harrastin", "harrastit", "harrasti", "harrastimme", "harrastitte", "harrastivat"],
     "perfekti" => ["harrastanut", "harrastaneet"],
+    "imperatiivi" => ["harrasta", "harrastakaa"],
   ],
   "haudata" => [
     "pre" => ["hautaan", "hautaat", "hautaa", "hautaamme", "hautaatte", "hautaavat"],
     "imp" => ["hautasin", "hautasit", "hautasi", "hautasimme", "hautasitte", "hautasivat"],
+    "perfekti" => ["haudannut", "haudanneet"],
+    "imperatiivi" => ["hautaa", "haudatkaa"],
   ],
   "havaita" => [
     "pre" => ["havaitsen", "havaitset", "havaitsee", "havaitsemme", "havaitsette", "havaitsevat"],
-    "imp" => ["havaitsin", "havaitsit", "havaitsi", "havaitsimme", "havaitsitte", "havaitsivat"]
+    "imp" => ["havaitsin", "havaitsit", "havaitsi", "havaitsimme", "havaitsitte", "havaitsivat"],
   ],
   "heitellä" => [
     "pre" => ["heittelen", "heittelet", "heittelee", "heittelemme", "heittelette", "heittelevät"],
-    "imp" => ["heittelin", "heittelit", "heitteli", "heittelimme", "heittelitte", "heittelivät"]
+    "imp" => ["heittelin", "heittelit", "heitteli", "heittelimme", "heittelitte", "heittelivät"],
   ],
   "heittää" => [
     "pre" => ["heitän", "heität", "heittää", "heitämme", "heitätte", "heittävät"],
-    "imp" => ["heitin", "heitit", "heitti", "heitimme", "heititte", "heittivät"]
+    "imp" => ["heitin", "heitit", "heitti", "heitimme", "heititte", "heittivät"],
   ],
   "helpottaa" => [
     "pre" => ["helpotan", "helpotat", "helpottaa", "helpotamme", "helpotatte", "helpottavat"],
-    "imp" => ["helpotin", "helpotit", "helpotti", "helpotimme", "helpotitte", "helpottivat"]
+    "imp" => ["helpotin", "helpotit", "helpotti", "helpotimme", "helpotitte", "helpottivat"],
   ],
   "hengittää" => [
     "pre" => ["hengitän", "hengität", "hengittää", "hengitämme", "hengitätte", "hengittävät"],
-    "imp" => ["hengitin", "hengitit", "hengitti", "hengitimme", "hengititte", "hengittivät"]
+    "imp" => ["hengitin", "hengitit", "hengitti", "hengitimme", "hengititte", "hengittivät"],
   ],
   "herjetä" => [
     "pre" => ["herkenen", "herkenet", "herkenee", "herkenemme", "herkenette", "herkenevät"],
@@ -369,23 +397,22 @@ $testSet = [
   "hirnua" => [
     "pre" => ["hirnun", "hirnut", "hirnuu", "hirnumme", "hirnutte", "hirnuvat"],
     "imp" => ["hirnuin", "hirnuit", "hirnui", "hirnuimme", "hirnuitte", "hirnuivat"],
-
   ],
   "hiihtää" => [
     "pre" => ["hiihdän", "hiihdät", "hiihtää", "hiihdämme", "hiihdätte", "hiihtävät"],
-    "imp" => ["hiihdin", "hiihdit", "hiihti", "hiihdimme", "hiihditte", "hiihtivät"]
+    "imp" => ["hiihdin", "hiihdit", "hiihti", "hiihdimme", "hiihditte", "hiihtivät"],
   ],
   "hoitaa" => [
     "pre" => ["hoidan", "hoidat", "hoitaa", "hoidamme", "hoidatte", "hoitavat"],
-    "imp" => ["hoidin", "hoidit", "hoiti", "hoidimme", "hoiditte", "hoitivat"]
+    "imp" => ["hoidin", "hoidit", "hoiti", "hoidimme", "hoiditte", "hoitivat"],
   ],
   "houkutella" => [
     "pre" => ["houkuttelen", "houkuttelet", "houkuttelee", "houkuttelemme", "houkuttelette", "houkuttelevat"],
-    "imp" => ["houkuttelin", "houkuttelit", "houkutteli", "houkuttelimme", "houkuttelitte", "houkuttelivat"]
+    "imp" => ["houkuttelin", "houkuttelit", "houkutteli", "houkuttelimme", "houkuttelitte", "houkuttelivat"],
   ],
   "huolehtia" => [
     "pre" => ["huolehdin", "huolehdit", "huolehtii", "huolehdimme", "huolehditte", "huolehtivat"],
-    "imp" => ["huolehdin", "huolehdit", "huolehti", "huolehdimme", "huolehditte", "huolehtivat"]
+    "imp" => ["huolehdin", "huolehdit", "huolehti", "huolehdimme", "huolehditte", "huolehtivat"],
   ],
   "huolia" => [
     "pre" => ["huolin", "huolit", "huolii", "huolimme", "huolitte", "huolivat"],
@@ -2171,7 +2198,9 @@ $testSet = [
   ],
   "tehdä" => [
     "pre" => ["teen", "teet", "tekee", "teemme", "teette", "tekevät"],
-    "imp" => ["tein", "teit", "teki", "teimme", "teitte", "tekivät"]
+    "imp" => ["tein", "teit", "teki", "teimme", "teitte", "tekivät"],
+    "perfekti" => ["tehnyt", "tehneet"],
+    "imperatiivi" => ["tee", "tehkää"],
   ],
   "tehostaa" => [
     "pre" => ["tehostan", "tehostat", "tehostaa", "tehostamme", "tehostatte", "tehostavat"],
@@ -2215,7 +2244,9 @@ $testSet = [
   ],
   "toistaa" => [
     "pre" => ["toistan", "toistat", "toistaa", "toistamme", "toistatte", "toistavat"],
-    "imp" => ["toistin", "toistit", "toisti", "toistimme", "toistitte", "toistivat"]
+    "imp" => ["toistin", "toistit", "toisti", "toistimme", "toistitte", "toistivat"],
+    "perfekti" => ["toistanut", "toistaneet"],
+    "imperatiivi" => ["toista", "toistakaa"],
   ],
   "toivoa" => [
     "pre" => ["toivon", "toivot", "toivoo", "toivomme", "toivotte", "toivovat"],
@@ -2334,7 +2365,9 @@ $testSet = [
   ],
   "täyttää" => [
     "pre" => ["täytän", "täytät", "täyttää", "täytämme", "täytätte", "täyttävät"],
-    "imp" => ["täytin", "täytit", "täytti", "täytimme", "täytitte", "täyttivät"]
+    "imp" => ["täytin", "täytit", "täytti", "täytimme", "täytitte", "täyttivät"],
+    "perfekti" => ["täyttänyt", "täyttäneet"],
+    "imperatiivi" => ["täytä", "täyttäkää"],
   ],
   "täytyä" => [
     "pre" => ["täydyn", "täydyt", "täytyy", "täydymme", "täydytte", "täytyvät"],
@@ -2658,6 +2691,8 @@ $testSet = [
   "yrittää" => [
     "pre" => ["yritän", "yrität", "yrittää", "yritämme", "yritätte", "yrittävät"],
     "imp" => ["yritin", "yritit", "yritti", "yritimme", "yrititte", "yrittivät"],
+    "perfekti" => ["yrittänyt", "yrittäneet"],
+    "imperatiivi" => ["yritä", "yrittäkää"],
   ],
   "äänestää" => [
     "pre" => ["äänestän", "äänestät", "äänestää", "äänestämme", "äänestätte", "äänestävät"],

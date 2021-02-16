@@ -43,7 +43,7 @@ class Verbicate
     }
   }
 
-  private function init(string $word = null)
+  private function init(string $word = null): string
   {
     $this->isBackWovelWord($word);
     if ($this->backVowelWord) {
@@ -147,10 +147,10 @@ class Verbicate
     $this->init($word);
     if ($this->backVowelWord) {
       $this->ender = "nut";
-      return $this->conjugatePerfectWithoutGradation();
+      return $this->conjugatePerfect();
     } else {
       $this->ender = "nyt";
-      return $this->conjugatePerfectWithoutGradation();
+      return $this->conjugatePerfect();
     }
   }
 
@@ -158,7 +158,21 @@ class Verbicate
   {
     $this->init($word);
     $this->ender = "neet";
-    return $this->conjugatePerfectWithoutGradation();
+    return $this->conjugatePerfect();
+  }
+
+  public function imperativeSingle(string $word): string
+  {
+    $word = $this->init($word);
+    $this->ender = "";
+    return $this->conjugateImperativeSingle($word, $this->a);
+  }
+
+  public function imperativePlural(string $word): string
+  {
+    $word = $this->init($word);
+    $this->ender = "k" . $this->a . $this->a;
+    return $this->conjugateImperativePlural();
   }
 
   /**
@@ -599,7 +613,7 @@ class Verbicate
    * me, you, he/she
    * @return string
    */
-  private function conjugatePerfectWithoutGradation(): string
+  private function conjugatePerfect(): string
   {
     $w = $this->orig;
     $nos = $this->nbr_of_sylls;
@@ -643,7 +657,143 @@ class Verbicate
 
     return $this->buildWord($w);
   }
-  
+
+  /**
+   * IMPERATIVE
+   * you, you
+   * @param string $word
+   * @param string $a
+   * @return string
+   */
+  private function conjugateImperativeSingle(string $word, string $a): string
+  {
+    $w = $this->orig;
+    $nos = $this->nbr_of_sylls;
+    // aak-kos-taa
+    // $secondlast = aakko(s)taa
+    // $secondfirst = aak(k)ostaa
+    // thirdlast = aa(k)kostaa
+    if ($nos >= 3) {
+      $thirdlast = mb_substr($this->sylls[$nos-3], -1);
+    } else {
+      $thirdlast = "";
+    }
+    $secondfirst = mb_substr($this->sylls[$nos-2], 0, 1);
+    $secondlast = mb_substr($this->sylls[$nos-2], -1);
+
+    switch ($this->last_syllabus) {
+      case "taa": // tää
+        $w = $this->taaVerb($w, $nos, $secondlast, $a);
+        $w[$nos-1] .= $this->ender;
+        break;
+      case "da": // dä
+        if ($secondlast == "h") { // tehdä, nähdä
+          $w[$nos-2] = mb_substr($w[$nos-2], 0, -1);
+          $w[$nos-1] = self::E.$this->ender;
+        } else {
+          $w[$nos-1] = $this->ender;
+        }
+        break;
+      case "la": // lä
+        $w = $this->laVerb($w, $nos, $secondfirst, $thirdlast);
+        $w[$nos-1] = self::E.$this->ender;
+        break;
+      case "ta": // tä
+        // verb match class 72
+        if ($this->isVerbClass72($word)) {
+          $w[$nos-1] = "";
+          $w = $this->taVerb72($word, $w, $nos, $secondfirst, $secondlast, $thirdlast);
+
+          // if last is wovel then nen, else en
+          if (in_array(mb_substr($w[$nos-2], -1), $this->wovels)) {
+            $w[$nos-1] = "n".self::E.$this->ender;
+          } else {
+            $w[$nos-1] = self::E.$this->ender;
+          }
+        } else { // verb class 74
+          $w = $this->taVerb74($word, $w, $nos, $secondfirst, $secondlast, $thirdlast);
+          $w[$nos-1] = $a.$this->ender;
+        }
+        break;
+      case "a": // ä
+        $w = $this->aVerb($w, $nos, $secondfirst, $thirdlast);
+        $w[$nos-1] = $this->ender;
+        break;
+      case "paa": // lappaa, nappaa
+        $w[$nos-1] = $a.$this->ender;
+        break;
+      case "na": // mennä
+      case "ra": // purra
+        $w[$nos-1] = self::E.$this->ender;
+        break;
+      case "kaa": // alkaa, jakaa
+        if (in_array($secondlast, array("l", "a", "r"))) { // alkaa, jakaa, purkaa
+          $w[$nos-1] = mb_substr($w[$nos-1], 1, -1).$this->ender;
+        } else { // jatkaa
+          $w[$nos-1] = mb_substr($w[$nos-1], 0, -1).$this->ender;
+        }
+        break;
+      case "jaa": // ajaa
+      case "nee": // tarkenee
+      case "laa": // palaa
+      default: // jaksaa, maksaa, jauhaa, kalvaa, nauraa, painaa
+        $w[$nos-1] = mb_substr($w[$nos-1], 0, -1).$this->ender;
+        break;
+    }
+
+    return $this->buildWord($w);
+  }
+
+  /**
+   * PERFECT
+   * me, you, he/she
+   * @return string
+   */
+  private function conjugateImperativePlural(): string
+  {
+    $w = $this->orig;
+    $nos = $this->nbr_of_sylls;
+
+    switch ($this->last_syllabus) {
+      case "taa": // tää
+        $w[$nos-1] = mb_substr($w[$nos-1], 0, -1) . $this->ender;
+        break;
+      case "da": // dä
+        $w[$nos-1] = $this->ender;
+        break;
+      case "la": // lä
+        $w[$nos-1] = $this->ender;
+        break;
+      case "ta": // tä
+        // aidata
+        $w[$nos-1] = "t" . $this->ender;
+        break;
+      case "a": // ä
+        $w[$nos-1] = $this->ender;
+        break;
+      case "paa": // lappaa, nappaa
+        $w[$nos-1] = mb_substr($w[$nos-1], 0, -1).$this->ender;
+        break;
+      case "na": // mennä
+        $w[$nos-1] = "n" . mb_substr($this->ender, 1);
+        break;
+      case "ra": // purra
+        $w[$nos-1] = "r" . mb_substr($this->ender, 1);
+        break;
+      case "kaa": // alkaa, jakaa, purkaa
+        $w[$nos-1] = mb_substr($w[$nos-1], 0, -1).$this->ender;
+        break;
+      case "jaa": // ajaa
+      case "nee": // tarkenee
+      case "laa": // palaa
+      default: // jaksaa, maksaa, jauhaa, kalvaa, nauraa, painaa
+        $w[$nos-1] = mb_substr($w[$nos-1], 0, -1) . $this->ender;
+        break;
+    }
+
+    return $this->buildWord($w);
+  }
+
   /**
   * build the final word we can return
   */
