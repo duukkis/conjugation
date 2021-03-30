@@ -11,15 +11,7 @@ class Verb
   const I = "i";
   // word we are conjugating
   private ?string $word = null;
-  // syllabuses with ä replaced with a
-  private array $sylls = [];
-  // syllabuses with nothing replaced
-  private array $orig = [];
-  // number of syllabuses
-  private int $nbr_of_sylls = 0;
-  
-  // last syllabus
-  private ?string $last_syllabus = null;
+
   // is the word bach vowel word, if false then front wovel word
   private ?bool $backVowelWord = null;
   // ender we use minä haistan > n
@@ -31,7 +23,8 @@ class Verb
 
   private string $a;
   private string $o;
-  
+
+  private Syllabus $syllabus;
   /**
   * constructor
   * @return void
@@ -54,7 +47,7 @@ class Verb
       $this->o = "ö";
     }
     $this->word = $word;
-    $this->syllabs($word);
+    $this->syllabus = new Syllabus($word);
     return str_replace(["ä", "ö", "å"], ["a", "o", "a"], $word);
   }
   
@@ -184,21 +177,21 @@ class Verb
    */
   private function conjugatePreesensWithGradation(string $word, string $a): string
   {
-    $w = $this->orig;
-    $nos = $this->nbr_of_sylls;
+    $w = $this->syllabus->getOrig();
+    $nos = $this->syllabus->getNumberOfSyllabuses();
     // aak-kos-taa
     // $secondlast = aakko(s)taa
     // $secondfirst = aak(k)ostaa
     // thirdlast = aa(k)kostaa
     if ($nos >= 3) {
-      $thirdlast = mb_substr($this->sylls[$nos-3], -1);
+      $thirdlast = mb_substr($this->syllabus->getSyllabus($nos-3), -1);
     } else {
       $thirdlast = "";
     }
-    $secondfirst = mb_substr($this->sylls[$nos-2], 0, 1);
-    $secondlast = mb_substr($this->sylls[$nos-2], -1);
+    $secondfirst = mb_substr($this->syllabus->getSyllabus($nos-2), 0, 1);
+    $secondlast = mb_substr($this->syllabus->getSyllabus($nos-2), -1);
 
-    switch ($this->last_syllabus) {
+    switch ($this->syllabus->getLastSyllabus()) {
       case "taa": // tää
         $w = $this->taaVerb($w, $nos, $secondlast, $a);
         $w[$nos-1] .= $this->ender;
@@ -271,21 +264,21 @@ class Verb
   */
   private function conjugatePreesensWithoutGradation(string $word, string $a, string $e): string
   {
-    $w = $this->orig;
-    $nos = $this->nbr_of_sylls;
+    $w = $this->syllabus->getOrig();
+    $nos = $this->syllabus->getNumberOfSyllabuses();
     // aak-kos-taa
     // $secondlast = aakko(s)taa
     // $secondfirst = aak(k)ostaa
     // thirdlast = aa(k)kostaa
     if ($nos >= 3) {
-      $thirdlast = mb_substr($this->sylls[$nos-3], -1);
+      $thirdlast = mb_substr($this->syllabus->getSyllabus($nos-3), -1);
     } else {
       $thirdlast = "";
     }
-    $secondfirst = mb_substr($this->sylls[$nos-2], 0, 1);
-    $secondlast = mb_substr($this->sylls[$nos-2], -1);
+    $secondfirst = mb_substr($this->syllabus->getSyllabus($nos-2), 0, 1);
+    $secondlast = mb_substr($this->syllabus->getSyllabus($nos-2), -1);
 
-    switch ($this->last_syllabus) {
+    switch ($this->syllabus->getLastSyllabus()) {
       case "taa": // tää
         $w[$nos-1] = "t".$a.$this->ender;
         break;
@@ -357,22 +350,22 @@ class Verb
    */
   private function conjugateImperfectWithGradation($word, $o): string
   {
-    $w = $this->orig;
-    $nos = $this->nbr_of_sylls;
+    $w = $this->syllabus->getOrig();
+    $nos = $this->syllabus->getNumberOfSyllabuses();
     // aak-kos-taa
     // $secondlast = aakko(s)taa
     // $secondfirst = aak(k)ostaa
     // thirdlast = aa(k)kostaa
     if ($nos >= 3) {
-      $thirdlast = mb_substr($this->sylls[$nos-3], -1);
+      $thirdlast = mb_substr($this->syllabus->getSyllabus($nos-3), -1);
     } else {
       $thirdlast = "";
     }
-    $secondfirst = mb_substr($this->sylls[$nos-2], 0, 1);
-    $secondlast = mb_substr($this->sylls[$nos-2], -1);
-    $secondlasttwo = mb_substr($this->sylls[$nos-2], -2);
+    $secondfirst = mb_substr($this->syllabus->getSyllabus($nos-2), 0, 1);
+    $secondlast = mb_substr($this->syllabus->getSyllabus($nos-2), -1);
+    $secondlasttwo = mb_substr($this->syllabus->getSyllabus($nos-2), -2);
 
-    switch ($this->last_syllabus) {
+    switch ($this->syllabus->getLastSyllabus()) {
       case "taa": // tää
         if ($secondlast == "t" && $thirdlast == "t") { // laittaa
           $w[$nos-1] = self::I;
@@ -499,26 +492,26 @@ class Verb
    */
   private function conjugateImperfectWithoutGradation(string $word, string $o): string
   {
-    $w = $this->orig;
-    $nos = $this->nbr_of_sylls;
+    $w = $this->syllabus->getOrig();
+    $nos = $this->syllabus->getNumberOfSyllabuses();
     // aak-kos-taa
     // $secondlast = aakko(s)taa
     // $secondfirst = aak(k)ostaa
     // thirdlast = aa(k)kostaa
     if ($nos >= 3) {
-      $thirdlast = mb_substr($this->sylls[$nos-3], -1);
+      $thirdlast = mb_substr($this->syllabus->getSyllabus($nos-3), -1);
     } else {
       $thirdlast = "";
     }
-    $secondfirst = mb_substr($this->sylls[$nos-2], 0, 1);
-    $secondlast = mb_substr($this->sylls[$nos-2], -1);
-    $secondlasttwo = mb_substr($this->sylls[$nos-2], -2);
+    $secondfirst = mb_substr($this->syllabus->getSyllabus($nos-2), 0, 1);
+    $secondlast = mb_substr($this->syllabus->getSyllabus($nos-2), -1);
+    $secondlasttwo = mb_substr($this->syllabus->getSyllabus($nos-2), -2);
 
-    switch ($this->last_syllabus) {
+    switch ($this->syllabus->getLastSyllabus()) {
       case "taa": // tää
-        if (in_array($this->sylls[$nos-2], array("an", "kan", "ut", "lait", "saat", "kat", "mah", "vaih"))) {
+        if (in_array($this->syllabus->getSyllabus($nos-2), array("an", "kan", "ut", "lait", "saat", "kat", "mah", "vaih"))) {
           $w[$nos-1] = "t".$o.self::I.$this->ender;
-        } else if (in_array($this->sylls[$nos-2], array("len", "sen", "kiel", "kier", "kaan", "jen", "ler", "loy", "myon", "ran", "nen", "piir", "hal", "pyy", "ken", "rien", "siir", "sal", "vel", "kel", "tai", "tie", "tyon", "den", "kal", "uur", "el", "hen", "mar"))) {
+        } else if (in_array($this->syllabus->getSyllabus($nos-2), array("len", "sen", "kiel", "kier", "kaan", "jen", "ler", "loy", "myon", "ran", "nen", "piir", "hal", "pyy", "ken", "rien", "siir", "sal", "vel", "kel", "tai", "tie", "tyon", "den", "kal", "uur", "el", "hen", "mar"))) {
           $w[$nos-1] = "s".self::I.$this->ender;
         } else {
           $w[$nos-1] = "t".self::I.$this->ender;
@@ -615,17 +608,17 @@ class Verb
    */
   private function conjugatePerfect(string $word): string
   {
-    $w = $this->orig;
-    $nos = $this->nbr_of_sylls;
-    $secondfirst = mb_substr($this->sylls[$nos-2], 0, 1);
-    $secondlast = mb_substr($this->sylls[$nos-2], -1);
+    $w = $this->syllabus->getOrig();
+    $nos = $this->syllabus->getNumberOfSyllabuses();
+    $secondfirst = mb_substr($this->syllabus->getSyllabus($nos-2), 0, 1);
+    $secondlast = mb_substr($this->syllabus->getSyllabus($nos-2), -1);
     if ($nos >= 3) {
-      $thirdlast = mb_substr($this->sylls[$nos-3], -1);
+      $thirdlast = mb_substr($this->syllabus->getSyllabus($nos-3), -1);
     } else {
       $thirdlast = "";
     }
 
-    switch ($this->last_syllabus) {
+    switch ($this->syllabus->getLastSyllabus()) {
       case "taa": // tää
         $w[$nos-1] = mb_substr($w[$nos-1], 0, -1) . $this->ender;
         break;
@@ -685,21 +678,21 @@ class Verb
    */
   private function conjugateImperativeSingle(string $word, string $a): string
   {
-    $w = $this->orig;
-    $nos = $this->nbr_of_sylls;
+    $w = $this->syllabus->getOrig();
+    $nos = $this->syllabus->getNumberOfSyllabuses();
     // aak-kos-taa
     // $secondlast = aakko(s)taa
     // $secondfirst = aak(k)ostaa
     // thirdlast = aa(k)kostaa
     if ($nos >= 3) {
-      $thirdlast = mb_substr($this->sylls[$nos-3], -1);
+      $thirdlast = mb_substr($this->syllabus->getSyllabus($nos-3), -1);
     } else {
       $thirdlast = "";
     }
-    $secondfirst = mb_substr($this->sylls[$nos-2], 0, 1);
-    $secondlast = mb_substr($this->sylls[$nos-2], -1);
+    $secondfirst = mb_substr($this->syllabus->getSyllabus($nos-2), 0, 1);
+    $secondlast = mb_substr($this->syllabus->getSyllabus($nos-2), -1);
 
-    switch ($this->last_syllabus) {
+    switch ($this->syllabus->getLastSyllabus()) {
       case "taa": // tää
         $w = $this->taaVerb($w, $nos, $secondlast, $a);
         $w[$nos-1] .= $this->ender;
@@ -769,11 +762,11 @@ class Verb
    */
   private function conjugateImperativePlural(): string
   {
-    $w = $this->orig;
-    $nos = $this->nbr_of_sylls;
-    $secondlast = mb_substr($this->sylls[$nos-2], -1);
+    $w = $this->syllabus->getOrig();
+    $nos = $this->syllabus->getNumberOfSyllabuses();
+    $secondlast = mb_substr($this->syllabus->getSyllabus($nos-2), -1);
 
-    switch ($this->last_syllabus) {
+    switch ($this->syllabus->getLastSyllabus()) {
       case "taa": // tää
         $w[$nos-1] = mb_substr($w[$nos-1], 0, -1) . $this->ender;
         break;
@@ -1001,9 +994,9 @@ class Verb
       $w[$nos-2] = mb_substr($w[$nos-2], 1);
     } else if (in_array($thirdlast, $this->wovels) && $secondfirst == "p") { // hiipiä, kaapia, ruopia, ...
       $w[$nos-2] = "v".mb_substr($w[$nos-2], 1);
-    } else if ($this->sylls[$nos-2] == "tu") { // kaatua
+    } else if ($this->syllabus->getSyllabus($nos-2) == "tu") { // kaatua
       $w[$nos-2] = "du";
-    } else if ($this->sylls[$nos-2] == "ty") { // jäätyä
+    } else if ($this->syllabus->getSyllabus($nos-2) == "ty") { // jäätyä
       $w[$nos-2] = "dy";
     }
     return $w;
@@ -1065,111 +1058,7 @@ class Verb
     }
     return false;
   }
-  
-  /**
-  * return array with syllabuses
-  */
-  private function syllabs(string $word): void
-  {
-    if (empty($word)) {
-      return;
-    }
-    $this->orig = [];
-    $orig = $word;
-    
-    $cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"];
-    $wovels = ["a", "e", "i", "o", "u", "y"];
-    // diftongit
-    $dif = ["yi", "ui", "oi", "ai", "ay", " au", "yo", "oy", "uo", "ou", "ie", "ei", "eu", "iu", "ey", "iy"];
 
-    $word = trim($word);
-    // utf stuff. a:ksi ja o:ksi
-    $word = str_replace(["å", "ä", "ö", "Å", "Ä", "Ö"], ["a", "a", "o", "a", "a", "o"], $word);
-    $loop = mb_strlen($word);
-    
-    // split the word
-    $w = str_split(mb_strtolower($word));
-    $w[] = " "; // helpers so we dont get notice's
-    $w[] = " ";
-    $w[] = " ";
-    $w[] = " ";
-
-    // put the word here letters and -'s
-    $com_word = [];
-    for ($i = 0; $i < $loop;) {
-      $d = 1; // how many digits forward
-      if (in_array($w[$i], $cons)) {
-        if (($i+1) >= $loop) { // if last is kons, remove the possible previous -
-          $last = array_pop($com_word);
-          if ($last != "-") {
-            $com_word[] = $last;
-          }
-        }
-        $com_word[] = $w[$i];
-      } else if (in_array($w[$i], $wovels)) {
-        $com_word[] = $w[$i];
-        if (in_array($w[$i].$w[$i+1], $dif) || $w[$i] == $w[$i+1] || $w[$i+1] == "i") {
-          // next diftongi, same vokaali or "i"
-          $com_word[] = $w[$i+1];
-          $d = 2;
-          if (in_array($w[$i+2], $wovels)) {
-            $com_word[] = "-";
-          } else if (in_array($w[$i+2], $cons) && in_array($w[$i+3], $cons) && in_array($w[$i+4], $cons)) {
-            $com_word[] = $w[$i+2];
-            $com_word[] = $w[$i+3];
-            $com_word[] = "-";
-            $d = 4;
-          } else if (in_array($w[$i+2], $cons) && in_array($w[$i+3], $cons)) {
-            $com_word[] = $w[$i+2];
-            $com_word[] = "-";
-            $d = 3;
-          } else if (in_array($w[$i+2], $cons)) {
-            $com_word[] = "-";
-            $d = 2;
-          }
-        } else if (in_array($w[$i+1], $wovels)) {
-          $com_word[] = "-";
-          $d = 1;
-        } else {
-          if (in_array($w[$i+1], $cons) && in_array($w[$i+2], $cons) && in_array($w[$i+3], $cons)) {
-            $com_word[] = $w[$i+1];
-            $com_word[] = $w[$i+2];
-            $com_word[] = "-";
-            $d = 3;
-          } else if (in_array($w[$i+1], $cons) && in_array($w[$i+2], $cons)) {
-            $com_word[] = $w[$i+1];
-            $com_word[] = "-";
-            $d = 2;
-          } else if (in_array($w[$i+1], $cons)) {
-            $com_word[] = "-";
-            $d = 1;
-          }
-        }
-      }
-      $i = $i + $d;
-    }
-    // now build the word back together
-    $sylls = array();
-    $tindex = 0;
-    $windex = 0; // word index
-    foreach ($com_word as $in => $letter) {
-      if ($letter == "-") {
-        $tindex++;
-      } else if (isset($sylls[$tindex])) {
-        $sylls[$tindex] .= $letter;
-        $this->orig[$tindex] .= mb_substr($orig, $windex, 1);
-        $windex++;
-      } else {
-        $sylls[$tindex] = $letter;
-        $this->orig[$tindex] = mb_substr($orig, $windex, 1);
-        $windex++;
-      }
-    }
-    $this->last_syllabus = $sylls[$tindex];
-    $this->nbr_of_sylls = $tindex + 1;
-    $this->sylls = $sylls;
-  }
-  
   /**
   * check if the word is back wovel word
   * NOTE: HAS TO BE CALLED BEFORE conjugateWord function
