@@ -375,6 +375,7 @@ class NounTest extends TestCase
         foreach ($testSet as $word => $correct_answer) {
             $actual = $noun->genitive($word);
             $this->assertSame($correct_answer, $actual["answer"]);
+            $this->assertSame($noun->newGenetive($word, "n"), $actual["answer"]);
         }
 
         // create set for all
@@ -411,6 +412,12 @@ class NounTest extends TestCase
                 $result .= $noun->allative($word)["answer"].";";
                 $result .= $noun->abessive($word)["answer"].PHP_EOL;
                 file_put_contents("result.txt", $result, FILE_APPEND);
+            }
+        }
+
+        if (false) {
+            foreach ($testSet as $word => $correct_answer) {
+                $noun->detectWordType($word, "");
             }
         }
     }

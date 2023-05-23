@@ -572,4 +572,49 @@ class Noun
             }
         }
     }
+
+    public function newGenetive(string $word, string $ender): string
+    {
+        $syllabus = new Syllabus($word);
+        print $syllabus->lastLetter() . " ";
+        switch ($syllabus->lastLetter()){
+            case "a":
+            case "o":
+            case "u":
+            case "y":
+                // kukka
+                if ($syllabus->lastDiftong() == "kk") {
+                    $syllabus->removeLastLetterFromSecondToLastSyllabus();
+                }
+                return $word . $ender;
+            case "i":
+                return $word . $ender;
+            case "e":
+                $doubleE = true;
+                // säde
+                if ($syllabus->firstLetterInLastSyllabus() == "d") {
+                    $syllabus->replaceFirstLetterOfLastSyllabus("t");
+                }
+                // lomake
+                if ($syllabus->firstLetterInLastSyllabus() == "k" && $syllabus->isVowel($syllabus->lastLetterInSecondToLastSyllabus())) {
+                    $syllabus->replaceFirstLetterOfLastSyllabus("kk");
+                }
+                // lahje, pohje
+                if ($syllabus->lastDiftong() == "hj" && !in_array($word, ["ohje"])) {
+                    $syllabus->replaceFirstLetterOfLastSyllabus("k");
+                }
+                // nukke
+                if ($syllabus->lastDiftong() == "kk") {
+                    $syllabus->removeLastLetterFromSecondToLastSyllabus();
+                    $doubleE = false;
+                }
+                // e > ee
+                if (!in_array($syllabus->secondToLastLetterInLastSyllabus(), ["e", "g", "i"]) && $doubleE) {
+                    $ender = "e" . $ender;
+                }
+                return $syllabus->returnWord() . $ender;
+            default:
+                return $word . $ender;
+        }
+    }
 }
