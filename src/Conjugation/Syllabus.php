@@ -4,6 +4,9 @@ namespace Conjugation;
 
 class Syllabus
 {
+    // helper as this is passed around
+    public bool $doubleVowel = true;
+
     private string $word;
     private array $sylls;
     private array $orig;
@@ -174,6 +177,20 @@ class Syllabus
         $index = $this->getNumberOfSyllabuses() - 1;
         $this->sylls[$index] = $with . mb_substr($this->getLastSyllabus(), 1);
         $this->orig[$index] = $with . mb_substr($this->orig[$index], 1);
+    }
+
+    public function replaceLastLetter(string $with): void
+    {
+        $index = $this->getNumberOfSyllabuses() - 1;
+        $this->sylls[$index] = mb_substr($this->getLastSyllabus(), 0, -1) . $with;
+        $this->orig[$index] = mb_substr($this->orig[$index], 0, -1) . $with;
+    }
+
+    public function replaceLastSyllabus(string $with): void
+    {
+        $index = $this->getNumberOfSyllabuses() - 1;
+        $this->sylls[$index] = $with;
+        $this->orig[$index] = $with;
     }
 
     public function removeLastLetterFromSecondToLastSyllabus(): void

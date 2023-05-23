@@ -1274,7 +1274,7 @@ $words = array(
                   "pl" => array("kie", "kei", "keihi", "kej", "kei")),
   // -- al
   "sammal" => array("l",
-                  "si" => array("lee", "lee", "leesee", "lt", "lee"),
+                  "si" => array("le", "lee", "leesee", "lt", "lee"),
                   "pl" => array("leide", "lei", "leisii", "li", "li")),
   "taival" => array("val",
                   "si" => array("palee", "palee", "paleesee", "valt", "palee"),

@@ -129,8 +129,8 @@ class NounTest extends TestCase
             "mätä" => "mädän",
             "kide" => "kiteen",
             "kanta" => "kannan",
+            "sammal" => "sammalen",
             "toiminta" => "toiminnan",
-            "sammal" => "sammaleen",
             "elin" => "elimen",
             "puhallin" => "puhaltimen",
             "kulu" => "kulun",
@@ -375,7 +375,7 @@ class NounTest extends TestCase
         foreach ($testSet as $word => $correct_answer) {
             $actual = $noun->genitive($word);
             $this->assertSame($correct_answer, $actual["answer"]);
-            $this->assertSame($noun->newGenetive($word, "n"), $actual["answer"]);
+            $this->assertSame($correct_answer, $noun->newGenetive($word, "n"));
         }
 
         // create set for all
