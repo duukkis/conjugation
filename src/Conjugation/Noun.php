@@ -596,7 +596,8 @@ class Noun
                     $syllabus->replaceFirstLetterOfLastSyllabus("t");
                 }
                 // lomake
-                if ($syllabus->firstLetterInLastSyllabus() == "k" && $syllabus->isVowel($syllabus->lastLetterInSecondToLastSyllabus())) {
+                if ($syllabus->firstLetterInLastSyllabus() == "k" &&
+                    in_array($syllabus->lastLetterInSecondToLastSyllabus(), array_merge(Syllabus::WOVELS, ["l"]))) {
                     $syllabus->replaceFirstLetterOfLastSyllabus("kk");
                 }
                 // lahje, pohje

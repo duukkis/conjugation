@@ -9,8 +9,8 @@ class Syllabus
     private array $orig;
     private int $nbrOfSyllabuses = 0;
 
-    private const CONS = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"];
-    private const WOVELS = ["a", "e", "i", "o", "u", "y"];
+    public const CONS = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z"];
+    public const WOVELS = ["a", "e", "i", "o", "u", "y"];
     // diftongit
     private const DIFTONGS = ["yi", "ui", "oi", "ai", "ay", " au", "yo", "oy", "uo", "ou", "ie", "ei", "eu", "iu", "ey", "iy"];
 
