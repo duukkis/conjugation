@@ -376,5 +376,42 @@ class NounTest extends TestCase
             $actual = $noun->genitive($word);
             $this->assertSame($correct_answer, $actual["answer"]);
         }
+
+        // create set for all
+        if (false) {
+            file_put_contents("result.txt", "");
+            foreach ($testSet as $word => $correct_answer) {
+                $result = "";
+                $plural = $noun->plural($word)["answer"];
+                $result .= $noun->nominative($word)["answer"].";";
+                $result .= $noun->genitive($word)["answer"].";";
+                $result .= $noun->akkusative($word)["answer"].";";
+                $result .= $noun->partitive($word)["answer"].";";
+                $result .= $noun->essive($word)["answer"].";";
+                $result .= $noun->translative($word)["answer"].";";
+                $result .= $noun->inessive($word)["answer"].";";
+                $result .= $noun->elative($word)["answer"].";";
+                $result .= $noun->illative($word)["answer"].";";
+                $result .= $noun->adessive($word)["answer"].";";
+                $result .= $noun->ablative($word)["answer"].";";
+                $result .= $noun->allative($word)["answer"].";";
+                $result .= $noun->abessive($word)["answer"].";";
+                $result .= $plural.";";
+                $word = $plural;
+                $result .= $noun->genitive($word)["answer"].";";
+                $result .= $noun->akkusative($word)["answer"].";";
+                $result .= $noun->partitive($word)["answer"].";";
+                $result .= $noun->essive($word)["answer"].";";
+                $result .= $noun->translative($word)["answer"].";";
+                $result .= $noun->inessive($word)["answer"].";";
+                $result .= $noun->elative($word)["answer"].";";
+                $result .= $noun->illative($word)["answer"].";";
+                $result .= $noun->adessive($word)["answer"].";";
+                $result .= $noun->ablative($word)["answer"].";";
+                $result .= $noun->allative($word)["answer"].";";
+                $result .= $noun->abessive($word)["answer"].PHP_EOL;
+                file_put_contents("result.txt", $result, FILE_APPEND);
+            }
+        }
     }
 }
