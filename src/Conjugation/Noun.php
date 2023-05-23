@@ -590,27 +590,66 @@ class Noun
             case "i":
                 return $word . $ender;
             case "e":
+                // tarve
+                // terve
+
                 $doubleE = true;
                 // säde
-                if ($syllabus->firstLetterInLastSyllabus() == "d") {
-                    $syllabus->replaceFirstLetterOfLastSyllabus("t");
-                }
-                // lomake
-                if ($syllabus->firstLetterInLastSyllabus() == "k" &&
-                    in_array($syllabus->lastLetterInSecondToLastSyllabus(), array_merge(Syllabus::WOVELS, ["l"]))) {
-                    $syllabus->replaceFirstLetterOfLastSyllabus("kk");
-                }
-                // lahje, pohje
                 if ($syllabus->lastDiftong() == "hj" && !in_array($word, ["ohje"])) {
+                    // lahje, pohje
                     $syllabus->replaceFirstLetterOfLastSyllabus("k");
-                }
-                // nukke
-                if ($syllabus->lastDiftong() == "kk") {
+                } else if ($syllabus->lastDiftong() == "kk") {
+                    // nukke
                     $syllabus->removeLastLetterFromSecondToLastSyllabus();
                     $doubleE = false;
+                } else if ($syllabus->lastDiftong() == "rr") {
+                    // piirre
+                    $syllabus->replaceFirstLetterOfLastSyllabus("t");
+                } else if ($syllabus->lastDiftong() == "nn") {
+                    // kanne
+                    $syllabus->replaceFirstLetterOfLastSyllabus("t");
+                } else if ($syllabus->lastDiftong() == "tt") {
+                    // raglette
+                    $syllabus->removeLastLetterFromSecondToLastSyllabus();
+                    $doubleE = false;
+                } else if ($syllabus->lastDiftong() == "ll") {
+                    // nalle
+                    $doubleE = false;
+                } else if ($syllabus->firstLetterInLastSyllabus() == "l" &&
+                    in_array($syllabus->lastLetterInSecondToLastSyllabus(), ["a"])) {
+                    // roikale
+                } else if ($syllabus->firstLetterInLastSyllabus() == "l" &&
+                    in_array($syllabus->lastLetterInSecondToLastSyllabus(), array_merge(Syllabus::WOVELS))) {
+                    // joule
+                    $doubleE = false;
+                } else if ($syllabus->firstLetterInLastSyllabus() == "d") {
+                    $syllabus->replaceFirstLetterOfLastSyllabus("t");
+                } else if ($syllabus->firstLetterInLastSyllabus() == "k" &&
+                    in_array($syllabus->lastLetterInSecondToLastSyllabus(), array_merge(Syllabus::WOVELS, ["l"]))) {
+                    // lomake
+                    $syllabus->replaceFirstLetterOfLastSyllabus("kk");
+                } else if ($syllabus->firstLetterInLastSyllabus() == "v" &&
+                    in_array($syllabus->lastLetterInSecondToLastSyllabus(), array_merge(Syllabus::WOVELS, ["l", "r"]))
+                && $word !== "terve") {
+                    // viive, tarve
+                    $syllabus->replaceFirstLetterOfLastSyllabus("p");
+                } else if ($syllabus->firstLetterInLastSyllabus() == "p" &&
+                    in_array($syllabus->lastLetterInSecondToLastSyllabus(), array_merge(Syllabus::WOVELS))) {
+                    // ripe
+                    $syllabus->replaceFirstLetterOfLastSyllabus("pp");
+                } else if ($syllabus->firstLetterInLastSyllabus() == "t" &&
+                    in_array($syllabus->lastLetterInSecondToLastSyllabus(), array_merge(Syllabus::WOVELS, ["l"]))) {
+                    // liete
+                    $syllabus->replaceFirstLetterOfLastSyllabus("tt");
+                } else if ($syllabus->getLastSyllabus() == "e" &&
+                    in_array($syllabus->lastLetterInSecondToLastSyllabus(), ["a"])) {
+                    // jae, rae
+                    $syllabus->replaceFirstLetterOfLastSyllabus("ke");
                 }
+
                 // e > ee
-                if (!in_array($syllabus->secondToLastLetterInLastSyllabus(), ["e", "g", "i"]) && $doubleE) {
+                if ((!in_array($syllabus->secondToLastLetterInLastSyllabus(), ["e", "g", "i"]) || $syllabus->getLastSyllabus() == "e") && $doubleE) {
+                    // college, tee, tie
                     $ender = "e" . $ender;
                 }
                 return $syllabus->returnWord() . $ender;
