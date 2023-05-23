@@ -1,6 +1,7 @@
 <?php
-include(__DIR__.'/testset.php');
-include(__DIR__.'/../verbicate.php');
+
+include(__DIR__ . '/testset.php');
+include(__DIR__ . '/../verbicate.php');
 $conjugate = new Verb();
 
 /**
@@ -19,36 +20,36 @@ $conjugate = new Verb();
   "imperatiivi" => ["aavista", "aavistakaa"],
 ],
  */
-foreach($testSet AS $verb => $corr){
-  print '"'.$verb.'" => [' . PHP_EOL;
-  print "\t";
-  print '"preesens" => [';
-  print '"'.$conjugate->preesensMe($verb).'", ';
-  print '"'.$conjugate->preesensYou($verb).'", ';
-  print '"'.$conjugate->preesensSHe($verb).'", ';
-  print '"'.$conjugate->preesensPluralWe($verb).'", ';
-  print '"'.$conjugate->preesensPluralYou($verb).'", ';
-  print '"'.$conjugate->preesensPluralThey($verb).'"],';
-  print PHP_EOL;
-  print "\t";
-  print '"imperfect" => [';
-  print '"'.$conjugate->imperfectMe($verb).'", ';
-  print '"'.$conjugate->imperfectYou($verb).'", ';
-  print '"'.$conjugate->imperfectSHe($verb).'", ';
-  print '"'.$conjugate->imperfectPluralWe($verb).'", ';
-  print '"'.$conjugate->imperfectPluralYou($verb).'", ';
-  print '"'.$conjugate->imperfectPluralThey($verb).'"],';
-  print PHP_EOL;
-  print "\t";
-  print '"perfect" => [';
-  print '"'.$conjugate->perfectSingle($verb).'", ';
-  print '"'.$conjugate->perfectPlural($verb).'"],';
-  print PHP_EOL;
-  print "\t";
-  print '"imperative" => [';
-  print '"'.$conjugate->imperativeSingle($verb).'", ';
-  print '"'.$conjugate->imperativePlural($verb).'"],';
-  print PHP_EOL;
-  print "],";
-  print PHP_EOL;
+foreach ($testSet as $verb => $corr) {
+    print '"' . $verb . '" => [' . PHP_EOL;
+    print "\t";
+    print '"preesens" => [';
+    print '"' . $conjugate->preesensMe($verb) . '", ';
+    print '"' . $conjugate->preesensYou($verb) . '", ';
+    print '"' . $conjugate->preesensSHe($verb) . '", ';
+    print '"' . $conjugate->preesensPluralWe($verb) . '", ';
+    print '"' . $conjugate->preesensPluralYou($verb) . '", ';
+    print '"' . $conjugate->preesensPluralThey($verb) . '"],';
+    print PHP_EOL;
+    print "\t";
+    print '"imperfect" => [';
+    print '"' . $conjugate->imperfectMe($verb) . '", ';
+    print '"' . $conjugate->imperfectYou($verb) . '", ';
+    print '"' . $conjugate->imperfectSHe($verb) . '", ';
+    print '"' . $conjugate->imperfectPluralWe($verb) . '", ';
+    print '"' . $conjugate->imperfectPluralYou($verb) . '", ';
+    print '"' . $conjugate->imperfectPluralThey($verb) . '"],';
+    print PHP_EOL;
+    print "\t";
+    print '"perfect" => [';
+    print '"' . $conjugate->perfectSingle($verb) . '", ';
+    print '"' . $conjugate->perfectPlural($verb) . '"],';
+    print PHP_EOL;
+    print "\t";
+    print '"imperative" => [';
+    print '"' . $conjugate->imperativeSingle($verb) . '", ';
+    print '"' . $conjugate->imperativePlural($verb) . '"],';
+    print PHP_EOL;
+    print "],";
+    print PHP_EOL;
 }

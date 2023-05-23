@@ -46,11 +46,11 @@ class Noun
         "triljoonaa|triljoona" => "triljoona",
       ];
 
-  /**
-  * constructor
-  * @param boolean $cache - use cache or not
-  * @return void
-  */
+    /**
+    * constructor
+    * @param boolean $cache - use cache or not
+    * @return void
+    */
     public function __construct(bool $cache = false)
     {
         if ($cache) {
@@ -67,10 +67,10 @@ class Noun
         }
     }
 
-  /**
-  * load words from cache
-  * @return boolean - if loading was succesful
-  */
+    /**
+    * load words from cache
+    * @return boolean - if loading was succesful
+    */
     private function getCacheWords(): bool
     {
         $c = @file_get_contents(self::CACHE_FILE);
@@ -92,20 +92,20 @@ class Noun
         }
     }
 
-  /**
-  * saves words to cache
-  * @return void
-  */
+    /**
+    * saves words to cache
+    * @return void
+    */
     private function setCacheWords(): void
     {
         $data = array("words" => $this->words, "indexed_words" => $this->indexed_words);
         @file_put_contents(self::CACHE_FILE, serialize($data));
     }
 
-  /**
-  * parse the words, make plurals and place all into indexed_words
-  * @return void
-  */
+    /**
+    * parse the words, make plurals and place all into indexed_words
+    * @return void
+    */
     public function makeWords()
     {
       // build the plurals and helper array here
@@ -138,11 +138,11 @@ class Noun
         $this->words = array_merge($singles, $plurals);
     }
 
-  /**
-  * flip a string
-  * @param string $str - string to reverse
-  * @return string gnirts
-  */
+    /**
+    * flip a string
+    * @param string $str - string to reverse
+    * @return string gnirts
+    */
     private function utf8Strrev(string $str): string
     {
       // return strrev($str);
@@ -150,13 +150,13 @@ class Noun
         return join('', array_reverse($ar[0]));
     }
 
-  /**
-  * replace the rightmost occurence of search
-  * @param string $search - what to replace
-  * @param string $replace - with what
-  * @param string $subject - where
-  * @return string replaced word
-  */
+    /**
+    * replace the rightmost occurence of search
+    * @param string $search - what to replace
+    * @param string $replace - with what
+    * @param string $subject - where
+    * @return string replaced word
+    */
     private function strRreplace(string $search, string $replace, string $subject): string
     {
         $pos = mb_strrpos($subject, $search);
@@ -166,12 +166,12 @@ class Noun
         return $subject;
     }
 
-  /**
-  * checks if the word is numeral and conjugates that
-  * @param string $word to check
-  * @param string $ender what to place at the end n|ksi|lle ...
-  * @return ?string null if not a numeral else the conjugated numeral
-  */
+    /**
+    * checks if the word is numeral and conjugates that
+    * @param string $word to check
+    * @param string $ender what to place at the end n|ksi|lle ...
+    * @return ?string null if not a numeral else the conjugated numeral
+    */
     private function isNumeral(string $word, string $ender = 'n'): ?string
     {
         $numeral = trim($word);
@@ -192,17 +192,17 @@ class Noun
         }
     }
 
-  /**
-  * nominative
-  */
+    /**
+    * nominative
+    */
     public function nominative(string $word): array
     {
         return array("match" => $word, "answer" => $word);
     }
 
-  /**
-  * plural
-  */
+    /**
+    * plural
+    */
     public function plural(string $word): array
     {
         $this->isBackWovelWord($word); // call this even not used so caching works
@@ -211,35 +211,35 @@ class Noun
         return array("match" => $word, "answer" => $answer);
     }
 
-  /**
-  * genitive
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * genitive
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function genitive(string $word): array
     {
         $this->isBackWovelWord($word); // call this even not used so caching works
         return $this->conjugateWord($word, "n", 1);
     }
 
-  /**
-  * akkusative
-  * this is same as nominative/ genetive, so no need to implement, returns the same
-  * @param string $word to conjugate
-  * @return array "match" with the word given and "answer" with the word
-  */
+    /**
+    * akkusative
+    * this is same as nominative/ genetive, so no need to implement, returns the same
+    * @param string $word to conjugate
+    * @return array "match" with the word given and "answer" with the word
+    */
     public function akkusative(string $word): array
     {
         $this->isBackWovelWord($word); // call this even not used so caching works
         return array("match" => $word, "answer" => $word);
     }
 
-  /**
-  * partitive
-  * -a, -ä, -ta, -tä, -tta, -ttä
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * partitive
+    * -a, -ä, -ta, -tä, -tta, -ttä
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function partitive(string $word): array
     {
         if ($this->isBackWovelWord($word)) {
@@ -250,12 +250,12 @@ class Noun
     }
 
 
-  /**
-  * essive -na, nä
-  * THINK tauti - tauteina
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * essive -na, nä
+    * THINK tauti - tauteina
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function essive(string $word): array
     {
         if ($this->isBackWovelWord($word)) {
@@ -265,22 +265,22 @@ class Noun
         }
     }
 
-  /**
-  * translative
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * translative
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function translative(string $word): array
     {
         $this->isBackWovelWord($word); // call this even not used so caching works
         return $this->conjugateWord($word, "ksi", 2);
     }
 
-  /**
-  * inessive -ssa, -ssä
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * inessive -ssa, -ssä
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function inessive(string $word): array
     {
         if ($this->isBackWovelWord($word)) {
@@ -290,11 +290,11 @@ class Noun
         }
     }
 
-  /**
-  * elative -sta, -stä
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * elative -sta, -stä
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function elative(string $word): array
     {
         if ($this->isBackWovelWord($word)) {
@@ -304,16 +304,16 @@ class Noun
         }
     }
 
-  /**
-  * illative
-  * 1) Jäätelö putosi hiekka|an. Koputin ove|en. Tulkaa meille kylä|än.
-  * Ota lapsi syli|in. Matkustimme kaupunki|in. Luota minu|un. Salama iski talon pääty|yn.
-  * 2) Astronautit lensivät kuu|hun ja palasivat takaisin maa|han. Lehmä vajosi suo|hon.
-  * Varas pakeni pimeään yö|hön. Tutustuimme kaupungin kirkkoi|hin. Ota yhteyttä mei|hin.
-  * 3) Tekisi mieli matkustaa vieraa|seen maahan. Tutustuimme uusiin oppilai|siin
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * illative
+    * 1) Jäätelö putosi hiekka|an. Koputin ove|en. Tulkaa meille kylä|än.
+    * Ota lapsi syli|in. Matkustimme kaupunki|in. Luota minu|un. Salama iski talon pääty|yn.
+    * 2) Astronautit lensivät kuu|hun ja palasivat takaisin maa|han. Lehmä vajosi suo|hon.
+    * Varas pakeni pimeään yö|hön. Tutustuimme kaupungin kirkkoi|hin. Ota yhteyttä mei|hin.
+    * 3) Tekisi mieli matkustaa vieraa|seen maahan. Tutustuimme uusiin oppilai|siin
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function illative(string $word): array
     {
         $this->isBackWovelWord($word); // call this even not used so caching works
@@ -321,11 +321,11 @@ class Noun
     }
 
 
-  /**
-  * adessive -lla, -llä
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * adessive -lla, -llä
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function adessive(string $word): array
     {
         if ($this->isBackWovelWord($word)) {
@@ -335,11 +335,11 @@ class Noun
         }
     }
 
-  /**
-  * ablatiivi -lta, -ltä
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * ablatiivi -lta, -ltä
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function ablative(string $word): array
     {
         if ($this->isBackWovelWord($word)) {
@@ -349,22 +349,22 @@ class Noun
         }
     }
 
-  /**
-  * allative -lle
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * allative -lle
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function allative(string $word): array
     {
         $this->isBackWovelWord($word); // call this even not used so caching works
         return $this->conjugateWord($word, "lle", 2);
     }
 
-  /**
-  * abessive -tta, -ttä
-  * @param string $word to conjugate
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * abessive -tta, -ttä
+    * @param string $word to conjugate
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function abessive(string $word): array
     {
         if ($this->isBackWovelWord($word)) {
@@ -375,12 +375,12 @@ class Noun
     }
 
 
-  /**
-  * check if the word is frontWovel word
-  * NOTE: HAS TO BE CALLED BEFORE conjugateWord function
-  * @param string $word string to check
-  * @return boolean is back wovel
-  */
+    /**
+    * check if the word is frontWovel word
+    * NOTE: HAS TO BE CALLED BEFORE conjugateWord function
+    * @param string $word string to check
+    * @return boolean is back wovel
+    */
     private function isBackWovelWord(string $word): ?bool
     {
       // if the same word is being checked, use the previous result instead of matching again
@@ -417,13 +417,13 @@ class Noun
         return $this->backVowelWord;
     }
 
-  /**
-  * conjugate a word, match to this->words
-  * @param string $word to conjugate
-  * @param string $ender to add to end of the conjugated word n|ksi|lle|ltä
-  * @param int $use_index - what index to use in words
-  * @return array "match" with the word that was matched and "answer" with the confugation
-  */
+    /**
+    * conjugate a word, match to this->words
+    * @param string $word to conjugate
+    * @param string $ender to add to end of the conjugated word n|ksi|lle|ltä
+    * @param int $use_index - what index to use in words
+    * @return array "match" with the word that was matched and "answer" with the confugation
+    */
     public function conjugateWord(string $word, string $ender, int $use_index): array
     {
       // full match
@@ -466,10 +466,10 @@ class Noun
         return array("match" => $this->bestMatch, "answer" => $word);
     }
 
-  /**
-  * full match checker
-  *
-  */
+    /**
+    * full match checker
+    *
+    */
     private function fullMatchCheck($word, $use_index, $ender)
     {
         if (isset($this->words[$word])) {
@@ -488,10 +488,10 @@ class Noun
         return false;
     }
 
-  /**
-  * function to match the word
-  * @param string $word - word to match
-  */
+    /**
+    * function to match the word
+    * @param string $word - word to match
+    */
     private function matchWord(string $word)
     {
       // ------- have the original if we have to convert some ä's / a's
