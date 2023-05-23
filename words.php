@@ -208,7 +208,7 @@ $words = array(
                   "pl" => array("mie", "mi", "mii", "pi", "pi")),
   // -- oa
   "ainoa" => array("a",
-                  "si" => array("o", "o", "aa", "a", "a"),
+                  "si" => array("a", "a", "aa", "a", "a"),
                   "pl" => array("ide", "i", "isii", "it", "oi")),
   // -- pa
   "napa" => array("pa",
@@ -1518,7 +1518,7 @@ $words = array(
                   "si" => array("o", "o", "oo", "o", "o"),
                   "pl" => array("oide", "oi", "oihi", "oj", "oi")),
   "aarteisto" => array("isto",
-                  "si" => array("histo", "histo", "istoo", "isto", "isto"),
+                  "si" => array("isto", "isto", "istoo", "isto", "isto"),
                   "pl" => array("istoide", "istoi", "istoihi", "istoj", "istoi")),
   "pihatto" => array("to",
                   "si" => array("o", "o", "too", "to", "to"),

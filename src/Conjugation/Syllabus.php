@@ -200,6 +200,13 @@ class Syllabus
         $this->orig[$index] = mb_substr($this->orig[$index], 0, -1);
     }
 
+    public function removeLastLetter(): void
+    {
+        $index = $this->getNumberOfSyllabuses() - 1;
+        $this->sylls[$index] = mb_substr($this->sylls[$index], 0, -1);
+        $this->orig[$index] = mb_substr($this->orig[$index], 0, -1);
+    }
+
     public function returnWord(): string
     {
         return implode("", $this->getOrig());

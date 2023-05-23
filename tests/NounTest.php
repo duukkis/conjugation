@@ -144,7 +144,6 @@ class NounTest extends TestCase
             "kaunis" => "kauniin",
             "retki" => "retken",
             "muhennos" => "muhennoksen",
-            "kestit" => "kestien",
             "onki" => "ongen",
             "tikas" => "tikkaan",
             "henki" => "hengen",
@@ -367,6 +366,7 @@ class NounTest extends TestCase
             "seksi" => "seksin",
             "outo" => "oudon",
             "tapaus" => "tapauksen",
+            "kestit" => "kestien",
         );
 
         // initialize and use cache
@@ -374,8 +374,8 @@ class NounTest extends TestCase
 
         foreach ($testSet as $word => $correct_answer) {
             $actual = $noun->genitive($word);
-            $this->assertSame($correct_answer, $actual["answer"]);
-            $this->assertSame($correct_answer, $noun->newGenetive($word, "n"));
+            $this->assertEquals($correct_answer, $actual["answer"]);
+            $this->assertEquals($correct_answer, $noun->newGenetive($word, "n"));
         }
 
         // create set for all
@@ -419,6 +419,81 @@ class NounTest extends TestCase
             foreach ($testSet as $word => $correct_answer) {
                 $noun->detectWordType($word, "");
             }
+        }
+    }
+
+    public function testPresetWords(): void
+    {
+        // initialize and use cache
+        $noun = new Noun(false);
+        $words = [
+            "aakkonen", "aalto", "aari", "aarteisto", "ahdas", "ahven", "aie", "aika", "aine", "ainoa", "airut",
+            "aitta", "aivoitus", "aivot", "akne", "alanko", "alaston", "alkeet", "alkovi", "alku", "allas", "alpi",
+            "altis", "alue", "alusta", "amme", "analogia", "ananas", "antelias", "anto", "apaja", "apila", "appi",
+            "apu", "arki", "arpi", "arvelu", "ase", "asema", "askel", "auer", "autio", "auto", "autuas", "avanto",
+            "bakteeri", "balladi", "banaali", "banaani", "band", "bebe", "betoni", "biografi", "bisnes", "college",
+            "desi", "doping", "edam", "elin", "eläke", "emäntä", "enemmistö", "enne", "fan", "farc", "filmi", "gnu",
+            "golf", "haahti", "haka", "haku", "halpa", "hame", "hammas", "hanhi", "hanka", "hanki", "hapan", "happi",
+            "hapsi", "harras", "harteet", "hattu", "hauis", "hauki", "heikkous", "heisi", "helle", "helmi", "helpi",
+            "henki", "herttua", "herttuatar", "hetki", "hevonen", "hiiri", "hiisi", "hiki", "hinku", "hirsi", "hirvas",
+            "hius", "hoikka", "hollanti", "honka", "hontelo", "hoppu", "housut", "hulluus", "huokoisuus", "huoli",
+            "huopa", "hupi", "huvi", "hylky", "hymni", "hyppy", "hän", "härkä", "ien", "ies", "iiris", "ikä",
+            "illuusio", "impi", "insuliini", "istuin", "iäkäs", "jakso", "jalas", "jaotus", "joka", "joki", "joukko",
+            "joule", "jousi", "juhta", "julkkis", "jumala", "juoni", "juossut", "juuri", "jälki", "jälsi", "järki",
+            "järvi", "jäsen", "kaadin", "kaari", "kaarto", "kaavin", "kahdeksas", "kaihi", "kaikki", "kaipaus",
+            "kajakki", "kala", "kalleus", "kalsium", "kamari", "kampa", "kangas", "kanki", "kannel", "kansi", "kanta",
+            "kantaja", "kappa", "karahka", "karmi", "kaski", "kasvain", "kasvi", "katsaus", "katseltu", "katve",
+            "kauha", "kaulus", "kaunis", "kauris", "kausi", "kebab", "kenkä", "kenttä", "keppi", "kerroin", "kertomus",
+            "kesi", "keskus", "ketju", "kevät", "keväämmällä", "kieli", "kierre", "kiharrin", "kiinteistö", "kiiru",
+            "kiiski", "killinki", "kilpi", "kimpi", "kinkku", "kinnas", "kinner", "kippo", "kirves", "kisa", "kiuas",
+            "kiusaus", "kives", "kivi", "koe", "kohtu", "koipi", "koira", "koiras", "kokous", "kompa", "koneisto",
+            "konsuli", "konvehti", "kori", "korkea", "korpi", "kortisoni", "koru", "koski", "kota", "koti", "kuitu",
+            "kukka", "kulkija", "kulta", "kumi", "kumpi", "kumppani", "kumppanuus", "kumpu", "kuollut", "kuori",
+            "kuponki", "kuppi", "kurki", "kusi", "kutsu", "kuu", "kuuri", "kuusi", "kuvaus", "kvartsi", "kyky",
+            "kyljys", "kylki", "kylpy", "kymi", "kypsennys", "käki", "kärhi", "kärki", "käsi", "käsittely", "kätkö",
+            "käärme", "laatu", "lahjakkuus", "lahje", "lahti", "laidun", "laki", "laku", "lampi", "lape", "lapsi",
+            "lasi", "laupias", "leah", "lehti", "leikkaus", "leikki", "leikkuu", "leipä", "leiri", "lempi", "lepo",
+            "leski", "letku", "leuto", "liesi", "liete", "lihas", "lihava", "liika", "liitto", "lintu", "loitolla",
+            "loosi", "lounas", "lujuus", "luku", "lumi", "lumme", "lupa", "lupaus", "lyhty", "lämmin", "lämmitys",
+            "länget", "läpi", "löytö", "maa", "maailma", "maar", "maineikas", "makkara", "maku", "marinadi", "markkina",
+            "matala", "matka", "me", "medaljonki", "mehu", "mesi", "mies", "minä", "mopo", "morsian", "muki", "muoto",
+            "muovi", "mutteri", "muuan", "myrkky", "myrsky", "myyjä", "mäki", "määräys", "naamari", "nahka", "nainen",
+            "nalle", "napa", "naru", "neiti", "neitsyt", "niemi", "niini", "nimi", "nivel", "noki", "nugaa", "nukke",
+            "numero", "nummi", "nuolaistu", "nuoli", "nuori", "nurmi", "närhi", "näyte", "ohjaus", "ohje", "ohjus",
+            "oja", "olki", "oltu", "ommel", "onki", "onneton", "onnettomuus", "onni", "opel", "oppi", "ori", "osa",
+            "osoite", "ovi", "paasi", "pahe", "pahin", "pakkaus", "palaute", "palle", "pano", "paperi", "paras", "parfait",
+            "parta", "pasuuna", "pata", "pato", "peili", "peitsi", "peli", "pelti", "peluri", "penger", "peruna",
+            "peti", "pieni", "piennar", "pieru", "pihatto", "pihdit", "pihti", "pii", "piinaus", "piki", "pilkahdus",
+            "piru", "pistooli", "pitkä", "pohja", "poika", "poliisi", "poljin", "polte", "pommi", "pop", "porsas",
+            "poski", "pouta", "puhuttu", "puin", "punainen", "punk", "punonut", "puoleen", "puoli", "purje", "purkaus",
+            "purrut", "purtu", "puu", "pylväs", "pyramidi", "pysähdys", "päitset", "päivä", "päälys", "pöksy", "pöytä",
+            "raaka", "raamattu", "raaste", "raglette", "raitis", "rakas", "rakennus", "rakkaus", "rako", "raskas",
+            "raskaus", "rastas", "ratas", "rauhanen", "rauta", "reaktori", "reikä", "reisi", "reki", "renki", "revyy",
+            "riita", "rimpi", "ripsi", "risti", "rock", "rose", "rotu", "ruis", "ruiske", "ruisku", "runsaus", "ruoka",
+            "ruoko", "ruotsi", "rupi", "ränni", "saapas", "saari", "saarni", "saatana", "sade", "saksi", "salaatti",
+            "salmi", "sammal", "sampi", "sampo", "sankari", "sappi", "sataa", "savi", "savotta", "seimi", "seksi",
+            "selkä", "seutu", "siemen", "sieni", "siipi", "siisti", "sika", "sinappi", "sini", "sinä", "sipuli", "sisar",
+            "sisaruus", "sisin", "sivellin", "sivumpana", "solakka", "solki", "soppi", "sormi", "sotilas", "spray",
+            "stadion", "substantiivi", "suihke", "suihku", "suikale", "suitset", "suksi", "summeri", "suo", "suodatin",
+            "suoli", "suomi", "suoni", "suunta", "suurempi", "suuri", "sydän", "sylki", "symboli", "synty", "säen",
+            "sähkö", "sänki", "sänky", "särki", "sääksi", "sääri", "sääski", "tae", "taika", "taival", "taive", "takki",
+            "taklaus", "talous", "tammi", "tanssit", "tapaus", "tarjous", "tarve", "tarvike", "tatti", "taulu", "tauti",
+            "teak", "tee", "teeri", "teko", "telefoni", "telki", "tennis", "terrieri", "terve", "teräs", "tie",
+            "tiedote", "tienoo", "tilavuus", "tilhi", "tiu", "tiuku", "tolppa", "topografia", "topografinen",
+            "toppaus", "torni", "tosi", "totuus", "toveri", "trikoo", "tuhat", "tuki", "tulppaani", "tunneli",
+            "tunti", "tuoli", "tuomari", "tuomi", "tuoni", "tuppi", "turismi", "turta", "tuska", "tuuli", "typpi",
+            "tytär", "tyvi", "tyyni", "tyyppi", "tähti", "täysi", "udar", "uistin", "uksi", "ulappa", "umpi", "uni",
+            "uros", "urut", "usko", "utare", "utelias", "uuni", "uusi", "vahti", "vaikutelma", "vaimennin", "valas",
+            "valmis", "valo", "valta", "vanki", "vapaa", "vapaus", "vara", "varas", "varvas", "vasen", "vaski", "vastaus",
+            "vati", "veitsi", "vekkuli", "veli", "veranta", "veri", "vesi", "vetävyys", "video", "vieras", "vieri",
+            "vierus", "vihanta", "viiksi", "viini", "viive", "vika", "vire", "virpi", "viski", "voima", "vuoksi",
+            "vuori", "vuosi", "vyyhti", "väki", "väsymys", "yhdistetty", "yhteys", "yhtye", "ylkä", "yö", "äiti",
+            "ääni", "öljy"
+        ];
+        foreach ($words as $word) {
+            $actual = $noun->genitive($word);
+            $correct_answer = $actual["answer"];
+            $this->assertEquals($correct_answer, $noun->newGenetive($word, "n"));
         }
     }
 }

@@ -582,9 +582,10 @@ class Noun
         $secLastLetter = $syllabus->secondToLastLetterInLastSyllabus(); // roi ka [l]e
         $firstLetterInLast = $syllabus->firstLetterInLastSyllabus();    // roi ka [l]e
         $lastInSecLast = $syllabus->lastLetterInSecondToLastSyllabus(); // roi k[a] le
+        $lastLetter = $syllabus->lastLetter();
 
         // print $syllabus->lastLetter() . " ";
-        switch ($syllabus->lastLetter()){
+        switch ($lastLetter) {
             case "a":
             case "o":
             case "u":
@@ -609,8 +610,10 @@ class Noun
             default:
                 $syllabus = $this->fixAsteVaihteluForConsonant($word, $syllabus);
                 $lastLetter = $syllabus->lastLetter();
-                if ($syllabus->isVowel($lastLetter)) {
+                if ($syllabus->isVowel($lastLetter) && $syllabus->doubleVowel) {
                     return $syllabus->returnWord() . $lastLetter . $ender;
+                } else if ($syllabus->isVowel($lastLetter) && !$syllabus->doubleVowel) {
+                    return $syllabus->returnWord() . $ender;
                 } else {
                     return $syllabus->returnWord() . "e" . $ender;
                 }
@@ -622,48 +625,83 @@ class Noun
         // example: roi ka le
         $diftong = $syllabus->lastDiftong();                            // roi k[a l]e
         $lastSyllabus = $syllabus->getLastSyllabus();                   // roi ka [le]
-        // $secLastLetter = $syllabus->secondToLastLetterInLastSyllabus(); // roi ka [l]e
+        $secToLastSyllabus = $syllabus->getSecondToLastSyllabus();      // roi [ka] le
+        $secLastLetter = $syllabus->secondToLastLetterInLastSyllabus(); // roi ka [l]e
         $firstLetterInLast = $syllabus->firstLetterInLastSyllabus();    // roi ka [l]e
         $lastInSecLast = $syllabus->lastLetterInSecondToLastSyllabus(); // roi k[a] le
         $lastLetter = $syllabus->lastLetter();                          // roi ka l[e]
+        $twoLastLetters = $secLastLetter . $lastLetter;                 // roi ka [le]
+
+        if ($diftong == "ll") {
+            // puhallin
+            $syllabus->replaceFirstLetterOfLastSyllabus("t");
+        } else if ($firstLetterInLast == "t" && in_array($lastInSecLast, ["i", "e", "o", "u", "y"])) {
+            // teroitin, keitin
+            $syllabus->replaceFirstLetterOfLastSyllabus("tt");
+        }
 
         if ($lastSyllabus == "mas") {
             // lammas, hammas
             $syllabus->replaceLastSyllabus("pa");
+        } else if ($lastSyllabus == "nen") {
+            // aakkonen, hetkinen
+            $syllabus->replaceLastSyllabus("s");
+        } else if ($lastSyllabus == "las") {
+            // valas
+            $syllabus->replaceLastSyllabus("la");
+        } else if ($lastSyllabus == "kas") {
+            // rakas
+            $syllabus->replaceLastSyllabus("kka");
         } else if ($lastSyllabus == "das") {
             // tehdas, ahdas
             $syllabus->replaceLastSyllabus("ta");
-        } else if ($lastLetter == "n") {
-            // sisin
+        } else if ($lastSyllabus == "ton") {
+            // alaston, onneton
+            $syllabus->replaceLastLetter("ma");
+            $syllabus->doubleVowel = false;
+        } else if ($twoLastLetters == "in") {
+            // sisin, teroitin, keitin
             $syllabus->replaceLastLetter("m");
         } else if ($word == "rakkaus") {
             // rakkaus
             $syllabus->replaceLastLetter("d");
-        } else if (in_array($lastSyllabus, ["ruus", "vuus"])) {
-            // suotavuus, avaruus
+        } else if (in_array($lastSyllabus, ["ruus", "vuus", "kuus"]) || ($word == "runsaus")) {
+            // suotavuus, avaruus, runsaus, oikeus
             $syllabus->replaceLastLetter("d");
-        } else if ($lastLetter == "s") {
-            // pilkahdus, pakkaus
+        } else if (in_array($twoLastLetters, ["us", "os", "ys", "as"])) {
+            // pilkahdus, pakkaus, kudos, punos, väsymys, lihas, kiusaus
             $syllabus->replaceLastLetter("ks");
+        } else if (in_array($twoLastLetters, ["is"])) {
+            // kaunis
+            $syllabus->removeLastLetter();
         }
         return $syllabus;
     }
 
     public const iToeBodyWords = [
+        "hanki",
+        "henki",
         "hirsi",
+        "kampi",
         "kampi",
         "kivi",
         "kumpi",
+        "kuukausi",
         "käsi",
         "kieli",
         "lahti",
         "lampi",
+        "lehti",
+        "luomi",
         "mäki",
+        "onki",
+        "retki",
         "saari",
         "susi",
         "sysi",
         "tosi",
         "vesi",
+        "vuori",
         "vuosi",
         "ääni",
     ];
@@ -684,6 +722,7 @@ class Noun
             // tosi, susi, sysi, käsi
             $syllabus->replaceLastLetter("e");
             if ($firstLetterInLast == "s") {
+                // susi
                 $syllabus->replaceFirstLetterOfLastSyllabus("d");
             }
         }
@@ -701,8 +740,8 @@ class Noun
         } else if ($diftong == "mp" && $lastSyllabus == "pi") {
             // kampi, kumpi, lampi
             $syllabus->replaceFirstLetterOfLastSyllabus("m");
-        } else if ($diftong == "lt" && in_array($lastLetter, ["a", "o", "u"])) {
-            // pelto, valta, multa
+        } else if ($diftong == "lt" && in_array($lastLetter, ["a", "o", "u", "i"])) {
+            // pelto, valta, multa, pelti
             // NOT polte
             $syllabus->replaceFirstLetterOfLastSyllabus("l");
         } else if ($diftong == "nt" && in_array($lastLetter, ["a", "o", "u", "i"])) {
@@ -711,9 +750,8 @@ class Noun
         } else if ($diftong == "rt" && in_array($lastLetter, ["a", "o", "u"])) {
             // parta, virta
             $syllabus->replaceFirstLetterOfLastSyllabus("r");
-        } else if ($diftong == "nk" && $lastSyllabus == "ki") {
-            // hanki, kanki, renki, henki
-            $syllabus->replaceLastSyllabus("ge");
+        } else if ($diftong == "nk") {
+            $syllabus->replaceFirstLetterOfLastSyllabus("g");
         } else if (in_array($diftong, ["lk", "rk"]) && $lastSyllabus == "ki") {
             // kylki, sylki
             // arki
@@ -730,6 +768,11 @@ class Noun
             $syllabus->doubleVowel = false;
 
         //--------------- second the last syllabuses
+        } else if ($secToLastSyllabus == "ai" && $lastSyllabus == "ka") {
+            // aika
+            $syllabus->removeLastLetterFromSecondToLastSyllabus();
+            $syllabus->replaceLastSyllabus("ja");
+            $syllabus->doubleVowel = false;
         } else if ($lastSyllabus == "ku" && in_array($lastInSecLast, ["u"])) {
             // puku, suku
             $syllabus->replaceFirstLetterOfLastSyllabus("v");
@@ -760,15 +803,15 @@ class Noun
             && $word !== "terve") {
             // viive, tarve
             $syllabus->replaceFirstLetterOfLastSyllabus("p");
-        } else if ($firstLetterInLast == "p" && in_array($lastInSecLast, ["a", "u", "o"])) {
-            // käpy,lupa, suopa
+        } else if ($firstLetterInLast == "p" && in_array($lastInSecLast, ["a", "u", "o", "l"])) {
+            // käpy, lupa, suopa, kylpy
             $syllabus->replaceFirstLetterOfLastSyllabus("v");
         } else if ($firstLetterInLast == "p" &&
             in_array($lastInSecLast, ["i"])) {
             // ripe
             $syllabus->replaceFirstLetterOfLastSyllabus("pp");
-        } else if ($firstLetterInLast == "t" && in_array($lastInSecLast, ["a", "y"])) {
-            // pato, lato, mötö, pöytä
+        } else if ($firstLetterInLast == "t" && in_array($lastInSecLast, ["a", "y", "u", "i", "h"])) {
+            // pato, lato, mötö, pöytä, pihti
             $syllabus->replaceFirstLetterOfLastSyllabus("d");
         } else if ($lastSyllabus == "e" &&
             in_array($lastInSecLast, ["a", "o", "i"])) {
