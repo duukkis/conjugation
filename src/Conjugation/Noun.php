@@ -652,6 +652,9 @@ class Noun
         } else if ($lastSyllabus == "las") {
             // valas
             $syllabus->replaceLastSyllabus("la");
+        } else if ($lastSyllabus == "pas") {
+            // opas, saapas
+            $syllabus->replaceLastSyllabus("ppa");
         } else if ($lastSyllabus == "kas") {
             // rakas
             $syllabus->replaceLastSyllabus("kka");
@@ -680,8 +683,17 @@ class Noun
             //   veisaus
             // pilkahdus, pakkaus, kudos, punos, väsymys, lihas, kiusaus
             $syllabus->replaceLastLetter("ks");
-        } else if ($lastLetter == "t") {
-            // tanssit
+        } else if (in_array($twoLastLetters, ["et"])) {
+            // alkeet, pal-keet, aineet, ihmeet
+            $syllabus->removeLastLetter();
+            $syllabus->replaceLastLetter("ide");
+            $syllabus->doubleVowel = false;
+        } else if (in_array($twoLastLetters, ["ot"])) {
+            // aivot
+            $syllabus->replaceLastLetter("je");
+            $syllabus->doubleVowel = false;
+        } else if (in_array($twoLastLetters, ["it", "ut"])) {
+            // tanssit, airut
             $syllabus->replaceLastLetter("e");
             $syllabus->doubleVowel = false;
         } else if (in_array($twoLastLetters, ["is"])) {
@@ -715,6 +727,7 @@ class Noun
         "mäki",
         "onki",
         "piki",
+        "pieni",
         "retki",
         "saari",
         "siipi",

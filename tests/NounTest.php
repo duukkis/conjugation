@@ -5,9 +5,9 @@ use PHPUnit\Framework\TestCase;
 
 class NounTest extends TestCase
 {
-    public function testNounGenitives()
+    public function testBasicGenitives()
     {
-        $testSet = array(
+        $testSet = [
             "säde" => "säteen",
             "tee" => "teen",
             "college" => "collegen",
@@ -292,6 +292,7 @@ class NounTest extends TestCase
             "rotu" => "rodun",
             "kätkö" => "kätkön",
             "summeri" => "summerin",
+            "pieni" => "pienen",
             "kilpi" => "kilven",
             "näyttelyvieras" => "näyttelyvieraan",
             "tekniikka" => "tekniikan",
@@ -367,7 +368,7 @@ class NounTest extends TestCase
             "outo" => "oudon",
             "tapaus" => "tapauksen",
             "kestit" => "kestien",
-        );
+        ];
 
         // initialize and use cache
         $noun = new Noun(true);
