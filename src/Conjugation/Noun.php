@@ -643,9 +643,14 @@ class Noun
             $syllabus->replaceFirstLetterOfLastSyllabus("tt");
         }
 
+        $vovels = 'a|e|i|o|u|y';
+
         if ($lastSyllabus == "mas") {
-            // lammas, hammas
+            // lammas, hammas, ommel
             $syllabus->replaceLastSyllabus("pa");
+        } else if (preg_match('/(mel)$/', $word)) {
+            // ommel
+            $syllabus->replaceLastSyllabus("pele");
         } else if ($lastSyllabus == "nen") {
             // aakkonen, hetkinen
             $syllabus->replaceLastSyllabus("s");
@@ -671,8 +676,17 @@ class Noun
         } else if ($word == "rakkaus") {
             // rakkaus
             $syllabus->replaceLastLetter("d");
+        } else if (preg_match('/(' . $vovels . ')ras$/', $word)) {
+            // piiras, sairas, naaras
+            $syllabus->removeLastLetter();
+        } else if (preg_match('/(yy|uu)s$/', $word)) {
+            // kiihtyvyys, suuruus
+            $syllabus->replaceLastLetter("d");
+        } else if (preg_match('/(lou)s$/', $word)) {
+            // talous
+            $syllabus->replaceLastLetter("d");
         } else if (
-            preg_match('/(v|r|k|t|h|l)(au|eu|ey|ou)s$/', $word)
+            preg_match('/(v|r|k|t|h)(au|eu|ey)s$/', $word)
             || preg_match('/uus$/', $word)
             || preg_match('/(i|n)saus$/', $word)
             ) {
@@ -697,7 +711,7 @@ class Noun
             $syllabus->replaceLastLetter("e");
             $syllabus->doubleVowel = false;
         } else if (in_array($twoLastLetters, ["is"])) {
-            // kaunis
+            // kaunis, kauris, piiras
             $syllabus->removeLastLetter();
         }
         return $syllabus;
@@ -765,10 +779,19 @@ class Noun
                 $syllabus->replaceFirstLetterOfLastSyllabus("d");
             }
         }
+
+        $vovels = 'a|e|i|o|u|y';
+
         //--------------- first the diftongs
-        if ($diftong == "hj" && !in_array($word, ["ohje"])) {
+        if ($diftong == "hj" && !in_array($word, ["ohje"]) && false) {
             // lahje, pohje
             $syllabus->replaceFirstLetterOfLastSyllabus("k");
+
+        } else if (preg_match('/(hj)(' . $vovels . ')$/', $word) && !in_array($word, ["ohje"])) {
+            // lahje, pohje
+            $word = preg_replace('/(hj)(' . $vovels . ')$/', 'hk{1}', $word);
+//             $syllabus->replaceFirstLetterOfLastSyllabus("k");
+            return new Syllabus($word);
         } else if (in_array($diftong, ["kk", "pp"])) {
             // nukke, kukka, lakka, nappi
             $syllabus->removeLastLetterFromSecondToLastSyllabus();
@@ -812,6 +835,10 @@ class Noun
             $syllabus->removeLastLetterFromSecondToLastSyllabus();
             $syllabus->replaceLastSyllabus("ja");
             $syllabus->doubleVowel = false;
+        } else if (preg_match('/(po)(ika)$/', $word)) {
+            // poika
+            $syllabus->removeLastLetterFromSecondToLastSyllabus();
+            $syllabus->replaceFirstLetterOfLastSyllabus("j");
         } else if (preg_match('/(u|y)(ku|ky)$/', $word)) {
             // puku, suku, kyky
             $syllabus->replaceFirstLetterOfLastSyllabus("v");

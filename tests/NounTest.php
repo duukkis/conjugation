@@ -212,6 +212,7 @@ class NounTest extends TestCase
             "opas" => "oppaan",
             "piiras" => "piiraan",
             "kiihtyvyys" => "kiihtyvyyden",
+            "suuruus" => "suuruuden",
             "kokous" => "kokouksen",
             "kuitu" => "kuidun",
             "poika" => "pojan",
