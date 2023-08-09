@@ -53,6 +53,7 @@ class Noun
     */
     public function __construct(bool $cache = false)
     {
+        $words = [];
         if ($cache) {
             if (!$this->getCacheWords()) {
                 include(self::WORD_FILE);
@@ -574,6 +575,66 @@ class Noun
     }
 
     public function newGenetive(string $word, string $ender): string
+    {
+        $wordModel = new Word($word);
+
+        $word = $this->fixAste($word);
+        return $word . $ender;
+    }
+
+    public function fixAste(string $word): string
+    {
+        $vovels = 'a|e|i|o|u|y';
+        $matches = [];
+
+        // first some kk > k, hj > hk, etc
+        if (preg_match('/(.*)(nk)(' . $vovels . ')$/', $word, $matches)) {
+            // lanko, runko,
+            unset($matches[0]);
+            $matches[2] = "ng";
+        } else if (preg_match('/(.*)(' . $vovels . ')(ke)$/', $word, $matches)) {
+            // lomake, liike
+            $matches[3] = "kkee";
+        } else if (preg_match('/(.*)(rre)$/', $word, $matches)) {
+            // piirre, kaarre, exclude jarru, darra,
+            $matches[2] = "rte";
+        }
+
+        if (count($matches) > 0) {
+            unset($matches[0]);
+            $word = implode("", $matches);
+        }
+        $matches = [];
+
+
+
+        if (preg_match('/(.*)(de)$/', $word, $matches)) {
+            // säde, lyhde, hede, nide
+            $matches[2] = "tee";
+        } else if (preg_match('/(.*)(he)$/', $word, $matches)) {
+            // pahe, virhe
+            $matches[2] = "hee";
+        } else if (in_array($word, ["ohje"])) {
+            // ohje
+            $word .= "e";
+        } else if (preg_match('/(.*)(je)$/', $word, $matches)) {
+            // lahje, vehje
+            $matches[2] = "kee";
+        } else if (preg_match('/(.*)(hke)$/', $word, $matches)) {
+            // suihke, voihke
+            $matches[2] = "hkee";
+        }
+
+        if (count($matches) > 1) {
+            unset($matches[0]);
+            return implode("", $matches);
+        } else {
+            return $word;
+        }
+    }
+
+
+    public function newGenetive2(string $word, string $ender): string
     {
         $syllabus = new Syllabus($word);
         // example: roi ka le

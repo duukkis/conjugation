@@ -8,6 +8,7 @@ class NounTest extends TestCase
     public function testBasicGenitives()
     {
         $testSet = [
+            "auringonsäde" => "auringonsäteen",
             "säde" => "säteen",
             "tee" => "teen",
             "college" => "collegen",
