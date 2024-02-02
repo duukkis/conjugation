@@ -49,7 +49,7 @@ class Noun
   public array $pronouns = [
         "minä" => ["", "minu", "minu", "minu", "minu", "minu"],
         "sinä" => ["", "sinu", "sinu", "sinu", "sinu", "sinu"],
-        "hän" => ["", "häne", "häne", "hän2", "hänen", "häne"],
+        "hän" => ["", "häne", "häne", "hänee", "hänt", "häne"],
         "me" => ["", "meidä", "mei", "meidä", "meit", "mei"],
         "te" => ["", "teidä", "tei", "teidä", "teit", "tei"],
         "he" => ["", "heidä", "hei", "heidä", "heit", "hei"],
