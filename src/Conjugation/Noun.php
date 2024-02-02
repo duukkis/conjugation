@@ -45,24 +45,34 @@ class Noun
         "biljoonaa|biljoona" => "biljoona",
         "triljoonaa|triljoona" => "triljoona",
       ];
-  
+
+  public array $pronouns = [
+        "minä" => ["", "minu", "minu", "minu", "minu", "minu"],
+        "sinä" => ["", "sinu", "sinu", "sinu", "sinu", "sinu"],
+        "hän" => ["", "häne", "häne", "hän2", "hänen", "häne"],
+        "me" => ["", "meidä", "mei", "meidä", "meit", "mei"],
+        "te" => ["", "teidä", "tei", "teidä", "teit", "tei"],
+        "he" => ["", "heidä", "hei", "heidä", "heit", "hei"],
+      ];
+
   /**
   * constructor
   * @param boolean $cache - use cache or not
   * @return void
   */
   public function __construct(bool $cache = false) {
+  $words = [];
     if ($cache) {
-      if (!$this->getCacheWords()) {
+        if (!$this->getCacheWords()) {
+            include(self::WORD_FILE);
+            $this->words = $words;
+            $this->makeWords();
+            $this->setCacheWords();
+        }
+    } else {
         include(self::WORD_FILE);
         $this->words = $words;
         $this->makeWords();
-        $this->setCacheWords();
-      }
-    } else {
-      include(self::WORD_FILE);
-      $this->words = $words;
-      $this->makeWords();
     }
   }
 
@@ -124,13 +134,15 @@ class Noun
       $this->indexed_words[substr($drow, 0, 1)][$drow] = $c_temp;
       $singles[$word] = $c_temp;
       
-      // add plural also to helper array
-      $larulp = $this->utf8Strrev($plural);
+      if (count($conjugation["pl"]) > 0) {
+          // add plural also to helper array
+          $larulp = $this->utf8Strrev($plural);
 
-      $p_temp = array_merge([$plural_postfix], $conjugation["pl"]);
-      $this->indexed_words[substr($larulp, 0, 1)][$larulp] = $p_temp;
-      // add the plural to plurals
-      $plurals[$plural] = $p_temp;
+          $p_temp = array_merge([$plural_postfix], $conjugation["pl"]);
+          $this->indexed_words[substr($larulp, 0, 1)][$larulp] = $p_temp;
+          // add the plural to plurals
+          $plurals[$plural] = $p_temp;
+      }
     }
     // finally add merge the originals and plurals
     $this->words = array_merge($singles, $plurals);
@@ -189,6 +201,44 @@ class Noun
       return null;
     }
   }
+
+    /**
+     * checks if the word is pronoun and conjugates that
+     * @param string $word to check
+     * @param string $ender what to place at the end n|ksi|lle ...
+     * @return ?string null if not a numeral else the conjugated numeral
+     */
+    private function isPronoun(string $word, string $ender, int $use_index): ?string
+    {
+        /*
+        * genetiivi : huo va n ["si"][0] minun, sinun, häne, meidä, teidä, heidä
+        * translatiivi : huo va ksi ["si"][1], minuksi, sinuksi, häneksi, meiksi
+        * inessiivi : huo va ssa ["si"][1]
+        * elatiivi : huo va sta ["si"][1]
+        * adessiivi : huo va lla ["si"][1]
+        * ablatiivi : huo va lta ["si"][1]
+        * allatiivi : huo va lle ["si"][1]
+        * abessiivi : huo va tta ["si"][1] minu tta, mei ttä
+        * illatiivi : huo paa n ["si"][2] minuu n, mei hin
+        * partitive : huo pa a ["si"][3], min ua, mei tä
+        * essive : huo pa na ["si"][4], minu na, mei nö
+        */
+        $pronoun = trim($word);
+        $result = trim($word);
+        foreach ($this->pronouns as $pro => $conj) {
+            if ($pronoun == $pro) {
+                if (in_array($pro, ['minä', 'sinä'])) {
+                    $this->backVowelWord = false;
+                    $ender = str_replace('ä', 'a', $ender);
+                }
+                // also make the result ready if the word is pronoun
+                $result = $conj[$use_index].$ender;
+                return $result;
+            }
+
+        }
+        return null;
+    }
   
   /**
   * nominative
@@ -437,7 +487,13 @@ class Noun
       $this->word = $word;
       return array("match" => "numeral", "answer" => $numeral);
     }
-    
+    // then check for pronoun
+    $pronoun = $this->isPronoun($word, $ender, $use_index);
+    if ($pronoun !== null) {
+      $this->word = $word;
+      return array("match" => "pronoun", "answer" => $pronoun);
+    }
+
     // if the word is same as previously, use the existing conjugation and bestMatch
     // otherwise match the word again
     if ($word != $this->word) {
