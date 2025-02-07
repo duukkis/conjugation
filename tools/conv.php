@@ -41,37 +41,6 @@ class InflectionType {
     }
 }
 
-$grads = [
-    ['sw', 'tt', 'av1'],
-    ['sw', 'pp', 'av1'],
-    ['sw', 'kk', 'av1'],
-    ['sw', 'mp', 'av1'],
-    ['sw', 'p', 'av1'],
-    ['sw', 'nt', 'av1'],
-    ['sw', 'lt', 'av1'],
-    ['sw', 'rt', 'av1'],
-    ['sw', 't', 'av1'],
-    ['sw', 'nk', 'av1'],
-    ['sw', 'uku', 'av1'],
-    ['sw', 'yky', 'av1'],
-    ['ws', 'b', 'av2'],
-    ['ws', 'g', 'av2'],
-    ['ws', 't', 'av2'],
-    ['ws', 'p', 'av2'],
-    ['ws', 'k', 'av2'],
-    ['ws', 'mm', 'av2'],
-    ['ws', 'v', 'av2'],
-    ['ws', 'nn', 'av2'],
-    ['ws', 'll', 'av2'],
-    ['ws', 'rr', 'av2'],
-    ['ws', 'd', 'av2'],
-    ['ws', 'ng', 'av2'],
-    ['sw', 'k>j', 'av3'],
-    ['ws', 'j>k', 'av4'],
-    ['sw', 'k>', 'av5'],
-    ['ws', '>k', 'av6']
-];
-
 define('SUBST', 1);
 define('ADJ', 2);
 
@@ -87,452 +56,6 @@ define('GRAD_WS', 2);
 define('GRAD_WEAK', 3);
 define('GRAD_STRONG', 4);
 
-
-$modern_classmap = [
-    ['valo', 'sw', [
-        [null, '(.*)', 'valo'],
-        ['k>', '(ko)ko', 'koko'],
-        ['k>', '(.*uo)ko', 'ruoko'],
-        ['kk', '(.*k)kU', 'alku'],
-        ['uku', '(.*U)kU', 'luku'],
-        ['k>', '(..U)kU', 'tiuku'],
-        ['k>', '(.*)kU', 'alku'],
-        ['lt', '(.*l)tO', 'aalto'],
-        ['nt', '(.*n)tO', 'anto'],
-        ['nt', '(.*n)tU', 'lintu'],
-        ['nk', '(.*n)kO', 'hanko'],
-        ['tt', '(.*t)tU', 'hattu'],
-        ['tt', '(.*t)tO', 'liitto'],
-        ['nk', '(.*n)kU', 'hinku'],
-        ['pp', '(.*p)pU', 'hoppu'],
-        ['rt', '(.*r)tO', 'kaarto'],
-        ['pp', '(.*p)pO', 'kippo'],
-        ['mp', '(.*m)pO', 'sampo'],
-        ['mp', '(.*m)pU', 'kumpu'],
-        ['t', '(.*)tU', 'laatu'],
-        ['p', '(.*)pU', 'apu'],
-        ['p', '(.*)pO', 'lepo'],
-        ['t', '(.*)tO', 'leuto'],
-        ['kk', '(.*k)kO', 'verkko'],
-        ['k>', '(.*h)kO', 'vihko'],
-        ['k>', '(.*)kO', 'verkko']
-    ]],
-    ['arvelu', 'sw', [
-        [null, '(.*Ce[lr])O', 'hontelo', [2]],
-        [null, '(.*)', 'arvelu'],
-        ['nk', '(.*n)kO', 'alanko'],
-        ['nt', '(.*n)tO', 'avanto'],
-        ['kk', '(.*k)kO', 'laatikko'],
-        ['tt', '(.*t)tO', 'pihatto'],
-        ['tt', '(.*t)tU', 'raamattu']
-    ]],
-    ['autio', '-', [
-        [null, '(.*)', 'autio']
-    ]],
-    ['kiiski', '-', [
-        [null, '(.*)i', 'kiiski']
-    ]],
-    ['siisti', '-', [
-        [null, '(.*)i', 'siisti']
-    ]],
-    ['risti', 'sw', [
-        [null, '(.*)i', 'risti'],
-        ['pp', '(pop)pi', 'pop'],
-        ['pp', '(.*p)pi', 'keppi'],
-        ['lt', '(.*l)ti', 'pelti'],
-        ['nk', '(.*n)ki', 'renki'],
-        ['kk', '(punk)ki', 'punk'],
-        ['kk', '(.*k)ki', 'takki'],
-        ['tt', '(.*t)ti', 'tatti'],
-        ['nt', '(.*n)ti', 'tunti'],
-        ['p', '(.*)pi', 'hupi'],
-        ['t', '(.*)ti', 'vati'],
-        ['k>', '(.*)ki', 'takki']
-    ]],
-    ['paperi', 'sw', [
-        [null, '(.*)i', 'paperi'],
-        ['nt', '(.*n)ti', 'hollanti'],
-        ['nk', '(.*n)ki', 'killinki'],
-        ['kk', '(.*k)ki', 'kajakki'],
-        ['tt', '(.*t)ti', 'salaatti'],
-        ['pp', '(.*p)pi', 'sinappi'],
-        ['t', '(.*)ti', 'konvehti']
-    ]],
-    ['edam', '-', [
-        [null, '(.*C)', 'edam']
-    ]],
-    ['kalsium', '-', [
-        [null, '(.*)i', 'fan'],
-        [null, '(.*)', 'kalsium']
-    ]],
-    ['lovi', 'sw', [
-        [null, '(.*)i', 'lovi'],
-        ['nk', '(.*n)ki', 'hanki'],
-        ['pp', '(.*p)pi', 'happi'],
-        ['mp', '(.*lam)pi', 'lampi'],
-        ['mp', '(.*m)pi', 'sampi'],
-        ['kk', '(.*k)ki', 'kaikki'],
-        ['k>j', '(.*)ki', 'kylki'],
-        ['t', '(.*lah)ti', 'lahti'],
-        ['t', '(.*h)ti', 'lehti'],
-        ['p', '(.*)pi', 'siipi'],
-        ['k>', '(.*i)ki', 'piki'],
-        ['k>', '(.*)ki', 'kaikki']
-    ]],
-    ['toholampi', '-', [
-        [null, '(.*lam)pi', 'toholampi']
-    ]],
-    ['suksi', '-', [
-        [null, '(.*u)ksi', 'suksi']
-    ]],
-    ['veli', '-', [
-        [null, '(.*el)i', 'veli']
-    ]],
-    ['nalle', 'sw', [
-        [null, '(.*Ce)', 'nalle'],
-        [null, '(.*Cé)', 'nalle'],
-        [null, '(.*[iu]e)', 'nalle'],
-        ['tt', '(.*t)te', 'atte'],
-        ['pp', '(.*p)pe', 'hjerppe'],
-        ['kk', '(.*k)ke', 'nukke']
-    ]],
-    ['kala', 'sw', [
-        [null, '(.*)A', 'kala'],
-        ['tt', '(.*t)tA', 'aitta'],
-        ['nk', '(.*n)kA', 'hanka'],
-        ['mp', '(.*m)pA', 'kampa'],
-        ['nt', '(.*n)tA', 'kanta'],
-        ['pp', '(.*p)pA', 'kappa'],
-        ['rt', '(.*r)tA', 'parta'],
-        ['lt', '(.*l)tA', 'valta'],
-        ['kk', '(.*k)kA', 'haka'],
-        ['p', '(.*)pA', 'napa'],
-        ['t', '(.*)tA', 'pata'],
-        ['k>j', '(.*A)ikA', 'aika'],
-        ['k>', '(.*AA)kA', 'raaka'],
-        ['k>', '(.*V)kA', 'liika'],
-        ['k>', '(.*C)kA', 'haka']
-    ]],
-    ['nahka', '-', [
-        [null, '(.*)kA', 'nahka']
-    ]],
-    ['jumala', '-', [
-        [null, '(.*l)A', 'jumala']
-    ]],
-    ['koira', 'sw', [
-        [null, '(.*)A', 'koira'],
-        ['tt', '(.*t)tA', 'kenttä'],
-        ['nk', '(.*n)kA', 'honka'],
-        ['mp', '(.*m)pA', 'kompa'],
-        ['nt', '(.*n)tA', 'suunta'],
-        ['pp', '(.*p)pA', 'tolppa'],
-        ['rt', '(.*r)tA', 'turta'],
-        ['lt', '(.*l)tA', 'kulta'],
-        ['kk', '(.*k)kA', 'hoikka'],
-        ['p', '(.*)pA', 'huopa'],
-        ['t', '(.*)tA', 'juhta'],
-        ['k>', '(.*i)kA', 'ikä'],
-        ['k>', '(.*)kA', 'hoikka']
-    ]],
-    ['ylkä', '-', [
-        [null, '(.*l)kA', 'ylkä']
-    ]],
-    ['pitkä', '-', [
-        [null, '(.*pi)tkA', 'pitkä']
-    ]],
-    ['ruoka', '-', [
-        [null, '(.*ru)oka', 'ruoka']
-    ]],
-    ['poika', '-', [
-        [null, '(.*po)ikA', 'poika']
-    ]],
-    ['matala', '-', [
-        [null, '(.*C)A', 'matala']
-    ]],
-    ['asema', 'sw', [
-        [null, '(.*)A', 'asema'],
-        ['tt', '(.*t)tA', 'opotta'],
-        ['nt', '(.*n)tA', 'emäntä']
-    ]],
-    ['kulkija', '-', [
-        [null, '(.*i)jA', 'kulkija'],
-        [null, '(.*)A', 'apila']
-    ]],
-    ['video', '-', [
-        [null, '(.*deO)', 'video']
-    ]],
-    ['karahka', 'sw', [
-        [null, '(.*)A', 'karahka'],
-        ['tt', '(.*t)tA', 'savotta'],
-        ['pp', '(.*p)pA', 'ulappa'],
-        ['kk', '(.*k)kA', 'solakka'],
-        ['nt', '(.*n)tA', 'veranta']
-    ]],
-    ['apaja', '-', [
-        [null, '(.*C)A', 'apaja']
-    ]],
-    ['peruna', '-', [
-        [null, '(.*C)A', 'peruna']
-    ]],
-    ['korkea', '-', [
-        [null, '(.*C)eA', 'korkea'],
-        [null, '(.*O)A', 'ainoa']
-    ]],
-    ['suurempi', 'sw', [
-        ['mp', '(.*V)mpi', 'suurempi']
-    ]],
-    ['vapaa', '-', [
-        [null, '(.*CA)A', 'vapaa'],
-        [null, '(.*CO)O', 'tienoo'],
-        [null, '(.*CU)U', 'leikkuu']
-    ]],
-    ['kamee', '-', [
-        [null, '(.*Ce)e', 'kamee'],
-        [null, '(.*CA)A', 'nugaa'],
-        [null, '(.*CO)O', 'trikoo'],
-        [null, '(.*CU)U', 'revyy']
-    ]],
-    ['pii', '-', [
-        [null, '(.*V)i', 'pii'],
-        [null, '(.*A)A', 'maa'],
-        [null, '(.*Ce)e', 'tee'],
-        [null, '(.*U)U', 'puu']
-    ]],
-    ['suo', '-', [
-        [null, '(.*C)UO', 'suo']
-    ]],
-    ['askel', 'ws', [
-        [null, '(.*VC)', 'askel'],
-        ['nn', '(.*n)nel', 'kannel'],
-        ['nn', '(.*n)ner', 'kinner'],
-        ['nn', '(.*n)nAr', 'piennar'],
-        ['mm', '(.*m)mel', 'ommel'],
-        ['ng', '(.*n)ger', 'penger'],
-        ['d', '(.*)dAr', 'udar'],
-        ['v', '(.*)vAl', 'taival'],
-        ['>k', '(.*)en', 'säen']
-    ]],
-    ['rosé', '-', [
-        [null, '(.*V)', 'rosé']
-    ]],
-    ['spray', '-', [
-        [null, '(.*[ao]y)', 'spray']
-    ]],
-    ['parfait', '-', [
-        [null, '(.*)', 'parfait']
-    ]],
-    ['huuli', '-', [
-        [null, '(.*C)i', 'tuohi']
-    ]],
-    ['meri', '-', [
-        [null, '(.*er)i', 'meri']
-    ]],
-    ['tuohi', '-', [
-        [null, '(.*C)i', 'lohi']
-    ]],
-    ['niemi', '-', [
-        [null, '(.*V)mi', 'niemi']
-    ]],
-    ['pieni', '-', [
-        [null, '(.*n)i', 'pieni']
-    ]],
-    ['lumi', '-', [
-        [null, '(.*V)mi', 'lumi']
-    ]],
-    ['susi', '-', [
-        [null, '(.*V)si', 'susi']
-    ]],
-    ['tosi', '-', [
-        [null, '(.*V)si', 'tosi']
-    ]],
-    ['kansi', '-', [
-        [null, '(.*n)si', 'kansi'],
-        [null, '(.*r)si', 'hirsi'],
-        [null, '(.*l)si', 'jälsi']
-    ]],
-    ['sisar', 'ws', [
-        [null, '(.*CVC)', 'sisar'],
-        ['t', '(.*t)Ar', 'tytär'],
-        ['>k', '(.*i)en', 'ien']
-    ]],
-    ['hapan', '-', [
-        [null, '(.*p)An', 'hapan']
-    ]],
-    ['uistin', 'ws', [
-        [null, '(.*[iaä])n', 'uistin'],
-        ['nn', '(.*n)nin', 'vaimennin'],
-        ['ll', '(.*l)lin', 'sivellin'],
-        ['rr', '(.*r)rin', 'kiharrin'],
-        ['rr', '(.*r)rOin', 'kerroin'],
-        ['d', '(.*)din', 'kaadin'],
-        ['v', '(.*)vin', 'kaavin'],
-        ['t', '(.*t)in', 'suodatin'],
-        ['k', '(.*k)in', 'puin'],
-        ['j>k', '(.*l)jin', 'poljin'],
-        ['>k', '(.*)in', 'puin']
-    ]],
-    ['laidun', '-', [
-        [null, '(.*)dUn', 'laidun']
-    ]],
-    ['onneton', 'ws', [
-        [null, '(.*t)On', 'alaston'],
-        ['t', '(.*t)On', 'onneton']
-    ]],
-    ['lämmin', '-', [
-        [null, '(.*m)min', 'lämmin']
-    ]],
-    ['vasen', '-', [
-        [null, '(.*e)n', 'vasen']
-    ]],
-    ['sisin', '', [
-        [null, '(.*)in', 'pahin']
-    ]],
-    ['nainen', '-', [
-        [null, '(.*)nen', 'nainen']
-    ]],
-    ['vastaus', '-', [
-        [null, '(.*V)s', 'vastaus']
-    ]],
-    ['kalleus', '-', [
-        [null, '(.*VU)s', 'kalleus'],
-        [null, '(.*vU)s', 'kalleus']
-    ]],
-    ['kaunis', '-', [
-        [null, '(.*C)is', 'kaunis']
-    ]],
-    ['autuas', '-', [
-        [null, '(.*U)As', 'autuas']
-    ]],
-    ['laupias', '-', [
-        [null, '(.*p)iAs', 'laupias']
-    ]],
-    ['vieras', 'ws', [
-        [null, '(.*[lmr]i[aä])s', 'antelias'],
-        [null, '(.*il[aä])s', 'antelias'],
-        [null, '(.*A)s', 'vieras'],
-        [null, '(.*)is', 'kauris'],
-        [null, '(.*e)s', 'kirves'],
-        ['nn', '(.*n)nAs', 'kinnas'],
-        ['ll', '(.*l)lAs', 'allas'],
-        ['rr', '(.*r)rAs', 'harras'],
-        ['mm', '(.*m)mAs', 'hammas'],
-        ['ng', '(.*n)gAs', 'kangas'],
-        ['k', '(.*k)As', 'avokas', [SUBST]],
-        ['k', '(.*k)As', 'vilkas', [ADJ]],
-        ['p', '(.*p)As', 'saapas'],
-        ['d', '(.*)dAs', 'ahdas'],
-        ['v', '(.*)vAs', 'varvas'],
-        ['t', '(.*t)As', 'ratas'],
-        ['t', '(.*t)is', 'altis'],
-        ['>k', '(.*)As', 'varas'],
-        ['>k', '(.*)is', 'ruis'],
-        ['>k', '(.*)es', 'ies']
-    ]],
-    ['iäkäs', 'ws', [
-        ['k', '(.*k)As', 'iäkäs', [ADJ]],
-        ['k', '(.*k)As', 'asiakas', [SUBST]]
-    ]],
-    ['ohut', '-', [
-        [null, '(.*CU)t', 'airut']
-    ]],
-    ['kevät', '-', [
-        [null, '(.*A)t', 'kevät']
-    ]],
-    ['mies', '-', [
-        [null, '(.*mie)s', 'mies']
-    ]],
-    ['kuollut', '-', [
-        [null, '(.*C)Ut', 'kuollut']
-    ]],
-    ['hame', 'ws', [
-        [null, '(.*e)', 'hame'],
-        ['nn', '(.*n)ne', 'enne'],
-        ['ll', '(.*l)le', 'helle'],
-        ['rr', '(.*r)re', 'kierre'],
-        ['mm', '(.*m)me', 'lumme'],
-        ['j>k', '(.*C)je', 'lahje'],
-        ['p', '(.*p)e', 'lape'],
-        ['d', '(.*)de', 'sade'],
-        ['v', '(.*)ve', 'taive'],
-        ['k', '(.*k)e', 'tarvike'],
-        ['>k', '(.*V)e', 'tarvike'],
-        ['>k', '(.*h)e', 'tarvike'],
-        ['t', '(.*Vt)e', 'vaate'],
-        ['t', '(.*lt)e', 'vaate'],
-        ['t', '(.*rt)e', 'vaate']
-    ]],
-    ['alkeet', '-', [
-        [null, '(.*ke)et', 'alkeet']
-    ]],
-    ['tie', '-', [
-        [null, '(.*t)ie', 'tie']
-    ]],
-    ['lapsi', '-', [
-        [null, '(.*)psi', 'lapsi']
-    ]],
-    ['hapsi', '-', [
-        [null, '(.*)psi', 'hapsi']
-    ]],
-    ['loppu', '-', [
-        [null, '(.*)', 'loppu']
-    ]],
-    ['veitsi', '-', [
-        [null, '(.*)tsi', 'veitsi']
-    ]],
-    ['kantaja', '-', [
-        [null, '(.*j)A', 'kantaja']
-    ]],
-    ['koiras', '-', [
-        [null, '(.*)s', 'koiras']
-    ]],
-];
-
-
-
-// https://github.com/voikko/corevoikko/blob/master/tools/pylib/voikkoinfl.py#L426
-
-function compileClassmapREs($inputClassmap) {
-    /**
-     * Converts a classmap to a form where regular expressions have been
-     * compiled to regular expression objects
-     */
-    $outputClassmap = [];
-
-    foreach ($inputClassmap as $joClass) {
-        $ruleList = [];
-
-        foreach ($joClass[2] as $inputRule) {
-            $pattern = $inputRule[1];
-            $pattern = str_replace('V', '(?:a|á|e|i|o|u|y|ä|ö|é)', $pattern);
-            $pattern = str_replace('C', '(?:b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z|š|ž)', $pattern);
-            $pattern = str_replace('A', '(?:a|ä)', $pattern);
-            $pattern = str_replace('O', '(?:o|ö)', $pattern);
-            $pattern = str_replace('U', '(?:u|y)', $pattern);
-            $regExp = '/^' . $pattern . '$/i';
-
-            $outputRule = [$inputRule[0], $regExp, $inputRule[2]];
-
-            if (count($inputRule) === 4) {
-                $outputRule[] = $inputRule[3];
-            }
-
-            $ruleList[] = $outputRule;
-        }
-
-        $outputClassmap[] = [$joClass[0], $joClass[1], $ruleList];
-    }
-
-    return $outputClassmap;
-}
-
-
-function match_re($str, $regExp) {
-    if (preg_match($regExp, $str, $matches)) {
-        return $matches[1];
-    } else {
-        return null;
-    }
-}
 
 # Translates word match pattern to a Perl-compatible regular expression
 function wordPatternToPCRE($pattern) {
@@ -675,15 +198,14 @@ function replaceConditionalApostrophe($word) {
 function inflectWordWithType(
     string $word,
     InflectionType $inflection_type,
-    $infclass,
-    $gradclass,
-    $vowel_type = VOWEL_DEFAULT
+    string $infclass,
+    string $gradclass,
+    int $vowel_type = VOWEL_DEFAULT
 ) {
     if ($inflection_type->joukahainenClasses == null) {
         return [];
     }
     if (!in_array($infclass, $inflection_type->joukahainenClasses)) return [];
-
     $word_no_sfx = $inflection_type->removeSuffix($word);
     $word_grad = applyGradation($word_no_sfx, $gradclass);
     if ($word_grad === null) return [];
@@ -704,7 +226,6 @@ function inflectWordWithType(
     if ($vowel_type === VOWEL_DEFAULT) {
         $vowel_type = getWordformInflVowelType($word);
     }
-
     foreach ($inflection_type->inflectionRules as $rule) {
         $word_base = ($rule->gradation === GRAD_STRONG) ? $word_grad[0] : $word_grad[1];
         $hunspell_rules = regexToHunspell($rule->delSuffix, $rule->addSuffix);
@@ -759,6 +280,51 @@ function inflectWordWithType(
     return $inflection_list;
 }
 
+function normalizeBase($base) {
+    $pos = strpos($base, '=');
+    if ($pos !== false) {
+        $base = substr($base, $pos + 1);
+    }
+    return strtolower($base);
+}
+
+
+function vtypeSpecialClass1($base) {
+    $base = normalizeBase($base);
+    $lastBack = max(strrpos($base, 'a'), strrpos($base, 'o'), strrpos($base, 'å'), strrpos($base, 'u'));
+    $lastFront = max(strrpos($base, 'ä'), strrpos($base, 'ö'), strrpos($base, 'y'));
+
+    if ($lastFront > $lastBack) {
+        return VOWEL_FRONT;
+    } else {
+        return VOWEL_BACK;
+    }
+}
+
+function vtypeSpecialClass2($base) {
+    $base = normalizeBase($base);
+
+    $lastBack = max(strrpos($base, 'a'), strrpos($base, 'o'), strrpos($base, 'å'), strrpos($base, 'u'));
+    $lastFront = max(strrpos($base, 'ä'), strrpos($base, 'ö'), strrpos($base, 'y'));
+
+    if ($lastFront > $lastBack) {
+        return VOWEL_FRONT;
+    } elseif ($lastFront < $lastBack) {
+        return VOWEL_BACK;
+    } else {
+        // No front or back vowels
+        if (strrpos($base, 'e') !== false) {
+            // "hel|istä" -> "heläjää"
+            return VOWEL_FRONT;
+        } else {
+            // "kih|istä" -> "kihajaa"
+            return VOWEL_BACK;
+        }
+    }
+}
+function vtypeMeriPartitive($base) {
+    return VOWEL_BACK;
+}
 
 
 function inflectWord($word, $classes) {
@@ -1025,9 +591,6 @@ function __read_option($options, $name, $default) : string
 
     return $default;
 }
-
-
-
 
 
 
