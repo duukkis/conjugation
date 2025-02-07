@@ -1,5 +1,46 @@
 <?php
 
+class InflectedWord {
+    public $formName;
+    public $isCharacteristic;
+    public $priority;
+    public $inflectedWord;
+}
+
+class InflectionRule {
+    public $name;
+    public $isCharacteristic;
+    public $delSuffix;
+    public $addSuffix;
+    public $gradation;
+    public $rulePriority;
+}
+class InflectionType {
+    public $kotusClasses;
+    public $joukahainenClasses;
+    public $gradation;
+    public $matchWord;
+    public $rmsfx;
+    public array $inflectionRules;
+    public $note;
+
+    public function removeSuffix(string $word): string
+    {
+        if (!isset($this->rmsfx)) {
+            return $word;
+        }
+        $l = strlen($this->rmsfx);
+
+        if ($l == 0) {
+            return $word;
+        } elseif (strlen($word) <= $l) {
+            return "";
+        } else {
+            return substr($word, 0, -$l);
+        }
+    }
+}
+
 $grads = [
     ['sw', 'tt', 'av1'],
     ['sw', 'pp', 'av1'],
@@ -631,48 +672,6 @@ function replaceConditionalApostrophe($word) {
     return str_replace('$', '', $word);
 }
 
-
-class InflectedWord {
-    public $formName;
-    public $isCharacteristic;
-    public $priority;
-    public $inflectedWord;
-}
-
-class InflectionRule {
-    public $name;
-    public $isCharacteristic;
-    public $delSuffix;
-    public $addSuffix;
-    public $gradation;
-    public $rulePriority;
-}
-class InflectionType {
-    public $kotusClasses;
-    public $joukahainenClasses;
-    public $gradation;
-    public $matchWord;
-    public $rmsfx;
-    public array $inflectionRules;
-    public $note;
-
-    public function removeSuffix(string $word): string
-    {
-        if (!isset($this->rmsfx)) {
-            return $word;
-        }
-        $l = strlen($this->rmsfx);
-
-        if ($l == 0) {
-            return $word;
-        } elseif (strlen($word) <= $l) {
-            return "";
-        } else {
-            return substr($word, 0, -$l);
-        }
-    }
-}
-
 function inflectWordWithType(
     string $word,
     InflectionType $inflection_type,
@@ -765,46 +764,42 @@ function inflectWordWithType(
 function inflectWord($word, $classes) {
     $noun_types = readInflectionTypes("data.aff");
 
-    list($infclass) = wordAndInflClass($classes);
+    $classes = wordAndInflClass($classes);
+    $infclass = $classes["infclass"];
+    $av = $classes["av"];
 
-    $itypes = $noun_types;
-
-    foreach (inflectAWord($word, $infclass, $itypes) as $iword) {
+    foreach (inflectAWord($word, $infclass, $av, $noun_types) as $iword) {
         print ($iword->formName . " " . $iword->inflectedWord . "\n");
     }
 }
 
-function wordAndInflClass($fullclass) {
+/**
+ * @param $fullclass subst-risti-av1
+ * @return string[] "risti", "av1"
+ * @throws Exception
+ */
+function wordAndInflClass($fullclass): array
+{
+    $av = "-";
     $infclass_parts = explode('-', $fullclass);
-    if (count($infclass_parts) == 2) {
-        $wordclass = $infclass_parts[0];
-        $infclass = $infclass_parts[1];
+    if (count($infclass_parts) <= 1) {
+        throw new Exception('Incorrect inflection class');
     } elseif (count($infclass_parts) == 3) {
-        $wordclass = $infclass_parts[0];
-        $infclass = $infclass_parts[1] . '-' . $infclass_parts[2];
-    } else {
-        die('Incorrect inflection class');
+        $av = $infclass_parts[2];
     }
+    $wordclass = $infclass_parts[0];
 
     if (!in_array($wordclass, ['subst', 'verbi'])) {
-        die('Incorrect word class');
+        throw new Exception('Incorrect word class');
     }
 
-    return [$infclass];
+    return ["infclass" => $infclass_parts[1], "av" => $av];
 }
 
-function inflectAWord($word, $jo_infclass, $inflection_types) {
-    $dash = strpos($jo_infclass, '-');
-    if ($dash === false) {
-        $infclass = $jo_infclass;
-        $gradclass = '-';
-    } else {
-        $infclass = substr($jo_infclass, 0, $dash);
-        $gradclass = substr($jo_infclass, $dash + 1);
-
-        if (!in_array($gradclass, ['av1', 'av2', 'av3', 'av4', 'av5', 'av6', '-'])) {
-            return [];
-        }
+function inflectAWord(string $word, string $infclass, string $gradclass, array $inflection_types): array
+{
+    if (!in_array($gradclass, ['av1', 'av2', 'av3', 'av4', 'av5', 'av6', '-'])) {
+        return [];
     }
     foreach ($inflection_types as $inflection_type) {
         $inflection = inflectWordWithType($word, $inflection_type, $infclass, $gradclass, VOWEL_DEFAULT);
@@ -903,29 +898,11 @@ function isConsonant($char) {
 }
 
 
-function readInflectionTypes($file_name) {
-    $inflection_types = [];
-    $inflection_types = __read_inflection_type($file_name);
-    return $inflection_types;
-}
-
-function getNextLine($file) {
-    do {
-        $line = fgets($file);
-        if (str_starts_with($line, '#')) {
-            $line = "";
-        } else {
-            $line = trim($line);
-        }
-    } while ($line !== false && $line === '');
-    return $line;
-}
-
 /**
  * @param $file
  * @return InflectionType[] array
  */
-function __read_inflection_type($file): array
+function readInflectionTypes($file): array
 {
     $result = [];
     $lines = [];
@@ -950,9 +927,6 @@ function __read_inflection_type($file): array
             $header_tuple[1] = trim($header_tuple[1]);
             if (count($header_tuple) > 2) {
                 $header_tuple[1] .= ":".$header_tuple[2];
-            }
-            if (str_contains($header_tuple[1], "#")) {
-                die($header_tuple[1]);
             }
         }
         switch ($header_tuple[0]) {
@@ -1030,7 +1004,6 @@ function __read_inflection_type($file): array
                 break;
         }
     }
-
     return $result;
 }
 
