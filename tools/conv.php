@@ -592,14 +592,33 @@ function __read_option($options, $name, $default) : string
     return $default;
 }
 
+function utf8_strrev($str){
+    preg_match_all('/./us', $str, $ar);
+    return implode(array_reverse($ar[0]));
+}
+
+function doMatch (string $word, string $haystack) {
+    $word = utf8_strrev($word);
+    $word .= " ";
+    do {
+        $word = mb_substr($word, 0, -1);
+        $pattern = '/;(' . $word . '[a-zäöå]*);(.*);(.*)\s/';
+        preg_match_all($pattern, $haystack, $matches, PREG_PATTERN_ORDER);
+        if (mb_strlen($word) <= 1) {
+            return "";
+        } else if (isset($matches[3][0])) {
+            return $matches[3][0];
+        }
+    } while(true);
+}
 
 
+$c = file_get_contents("jouka.log");
+$word = "folaatti";
+$word = "tuhat";
+inflectWord($word, "subst-" . doMatch($word, $c));
 
-
-
-
-
-
+// $res = doMatch("edäs", $c);
 // inflectWord("makkara", "subst-kulkija");
-inflectWord("folaatti", "subst-risti-av1");
+// inflectWord("folaatti", "subst-risti-av1");
 
