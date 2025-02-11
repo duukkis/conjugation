@@ -233,6 +233,12 @@ function inflectWordWithType(
             $word_stripped_base = ($hunspell_rule[0] === '0') ? $word_base : substr($word_base, 0, -strlen($hunspell_rule[0]));
             $affix = ($hunspell_rule[1] === '0') ? '' : $hunspell_rule[1];
             $pattern = ($hunspell_rule[2] === '.') ? '' : $hunspell_rule[2];
+            if ($pattern == null) {
+                $pattern = "";
+            }
+            if ($affix == null) {
+                $affix = "";
+            }
 
             $infl = new InflectedWord();
             $infl->formName = $rule->name;
@@ -598,6 +604,9 @@ function utf8_strrev($str){
 }
 
 function doMatch (string $word, string $haystack) {
+    if (mb_strlen($word) > 20) {
+        $word = mb_substr($word, -20);
+    }
     $word = utf8_strrev($word);
     $word .= " ";
     do {
@@ -616,6 +625,9 @@ function doMatch (string $word, string $haystack) {
 $c = file_get_contents("jouka.log");
 $word = "folaatti";
 $word = "tuhat";
+$word = "poliisi";
+$word = "kivi";
+// print (doMatch($word, $c));die();
 inflectWord($word, "subst-" . doMatch($word, $c));
 
 // $res = doMatch("edäs", $c);

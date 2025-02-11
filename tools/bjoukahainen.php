@@ -4,6 +4,7 @@ $c = file_get_contents("joukahainen.xml");
 $p = explode('</word>', $c);
 
 $data = [];
+$maximi = 0;
 
 foreach ($p as $line) {
     if (strpos($line, '<word') !== false) {
@@ -17,6 +18,9 @@ foreach ($p as $line) {
                 $w = $e[count($e) - 1];
             }
             $w = mb_strtolower($w, 'UTF-8');
+            if (mb_strlen($w) > $maximi) {
+                $maximi = mb_strlen($w);
+            }
             $wrev = utf8_strrev($w);
 //            print $xml->classes->wclass. ';';
             if (is_array($xml->inflection->infclass)) {
@@ -29,7 +33,6 @@ foreach ($p as $line) {
     }
 }
 ksort($data);
-
 foreach ($data as $rev => $act) {
     print ";".$rev . ";" . $act["w"] . ";" . $act["infclass"] . PHP_EOL;
 }
