@@ -29,14 +29,14 @@ class InflectionType {
         if (!isset($this->rmsfx)) {
             return $word;
         }
-        $l = strlen($this->rmsfx);
+        $l = mb_strlen($this->rmsfx);
 
         if ($l == 0) {
             return $word;
-        } elseif (strlen($word) <= $l) {
+        } elseif (mb_strlen($word) <= $l) {
             return "";
         } else {
-            return substr($word, 0, -$l);
+            return mb_substr($word, 0, -$l);
         }
     }
 }
@@ -74,9 +74,9 @@ function capitalCharRegexp($pattern) {
 function simpleVowelType($word) {
     $word = strtolower($word);
 
-    $lastBack = max(strrpos($word, 'a') ?: -1, strrpos($word, 'o') ?: -1, strrpos($word, 'å') ?: -1, strrpos($word, 'u') ?: -1);
-    $lastOrdFront = max(strrpos($word, 'ä') ?: -1, strrpos($word, 'ö') ?: -1);
-    $lastY = strrpos($word, 'y') ?: -1;
+    $lastBack = max(mb_strrpos($word, 'a') ?: -1, mb_strrpos($word, 'o') ?: -1, mb_strrpos($word, 'å') ?: -1, mb_strrpos($word, 'u') ?: -1);
+    $lastOrdFront = max(mb_strrpos($word, 'ä') ?: -1, mb_strrpos($word, 'ö') ?: -1);
+    $lastY = mb_strrpos($word, 'y') ?: -1;
 
     if ($lastBack > -1 && max($lastOrdFront, $lastY) == -1) {
         return VOWEL_BACK;
@@ -97,24 +97,24 @@ function simpleVowelType($word) {
 function getWordformInflVowelType($wordform)
 {
     // Search for last '=' or '-', check the trailing part using recursion
-    $startind = max(strrpos($wordform, '='), strrpos($wordform, '-'));
-    if ($startind === strlen($wordform) - 1) {
+    $startind = max(mb_strrpos($wordform, '='), mb_strrpos($wordform, '-'));
+    if ($startind === mb_strlen($wordform) - 1) {
         return VOWEL_BOTH;
     }
     if ($startind !== false) {
-        return getWordformInflVowelType(substr($wordform, $startind + 1));
+        return getWordformInflVowelType(mb_substr($wordform, $startind + 1));
     }
 
     // Search for first '|', check the trailing part using recursion
-    $startind = strpos($wordform, '|');
-    if ($startind === strlen($wordform) - 1) {
+    $startind = mb_strpos($wordform, '|');
+    if ($startind === mb_strlen($wordform) - 1) {
         return VOWEL_BOTH;
     }
     $vtypeWhole = simpleVowelType($wordform);
     if ($startind === false) {
         return $vtypeWhole;
     }
-    $vtypePart = getWordformInflVowelType(substr($wordform, $startind + 1));
+    $vtypePart = getWordformInflVowelType(mb_substr($wordform, $startind + 1));
 
     return ($vtypeWhole === $vtypePart) ? $vtypeWhole : VOWEL_BOTH;
 }
@@ -179,9 +179,9 @@ function regexToHunspell($exp, $repl) {
 }
 
 function replaceConditionalApostrophe($word) {
-    $ind = strpos($word, '$');
+    $ind = mb_strpos($word, '$');
     if ($ind === false) return $word;
-    if ($ind == 0 || $ind == strlen($word) - 1) return str_replace('$', '', $word);
+    if ($ind == 0 || $ind == mb_strlen($word) - 1) return str_replace('$', '', $word);
 
     if ($word[$ind - 1] == $word[$ind + 1]) {
         if (in_array($word[$ind - 1], ['i', 'o', 'u', 'y', 'ö'])) {
@@ -230,7 +230,7 @@ function inflectWordWithType(
         $word_base = ($rule->gradation === GRAD_STRONG) ? $word_grad[0] : $word_grad[1];
         $hunspell_rules = regexToHunspell($rule->delSuffix, $rule->addSuffix);
         foreach ($hunspell_rules as $hunspell_rule) {
-            $word_stripped_base = ($hunspell_rule[0] === '0') ? $word_base : substr($word_base, 0, -strlen($hunspell_rule[0]));
+            $word_stripped_base = ($hunspell_rule[0] === '0') ? $word_base : mb_substr($word_base, 0, -mb_strlen($hunspell_rule[0]));
             $affix = ($hunspell_rule[1] === '0') ? '' : $hunspell_rule[1];
             $pattern = ($hunspell_rule[2] === '.') ? '' : $hunspell_rule[2];
             if ($pattern == null) {
@@ -256,6 +256,7 @@ function inflectWordWithType(
 
             $final_base = str_replace(["=", "|"], "", $word_stripped_base);
             if ($vowel_harmony_rule !== null) {
+                // FIX THIS
                 if (call_user_func($vowel_harmony_rule, $word_stripped_base) === VOWEL_FRONT) {
                     $infl->inflectedWord = $final_base . convertTvEv($affix);
                 } else {
@@ -287,18 +288,18 @@ function inflectWordWithType(
 }
 
 function normalizeBase($base) {
-    $pos = strpos($base, '=');
+    $pos = mb_strpos($base, '=');
     if ($pos !== false) {
-        $base = substr($base, $pos + 1);
+        $base = mb_substr($base, $pos + 1);
     }
-    return strtolower($base);
+    return mb_strtolower($base);
 }
 
 
 function vtypeSpecialClass1($base) {
     $base = normalizeBase($base);
-    $lastBack = max(strrpos($base, 'a'), strrpos($base, 'o'), strrpos($base, 'å'), strrpos($base, 'u'));
-    $lastFront = max(strrpos($base, 'ä'), strrpos($base, 'ö'), strrpos($base, 'y'));
+    $lastBack = max(mb_strrpos($base, 'a'), mb_strrpos($base, 'o'), mb_strrpos($base, 'å'), mb_strrpos($base, 'u'));
+    $lastFront = max(mb_strrpos($base, 'ä'), mb_strrpos($base, 'ö'), mb_strrpos($base, 'y'));
 
     if ($lastFront > $lastBack) {
         return VOWEL_FRONT;
@@ -310,8 +311,8 @@ function vtypeSpecialClass1($base) {
 function vtypeSpecialClass2($base) {
     $base = normalizeBase($base);
 
-    $lastBack = max(strrpos($base, 'a'), strrpos($base, 'o'), strrpos($base, 'å'), strrpos($base, 'u'));
-    $lastFront = max(strrpos($base, 'ä'), strrpos($base, 'ö'), strrpos($base, 'y'));
+    $lastBack = max(mb_strrpos($base, 'a'), mb_strrpos($base, 'o'), mb_strrpos($base, 'å'), mb_strrpos($base, 'u'));
+    $lastFront = max(mb_strrpos($base, 'ä'), mb_strrpos($base, 'ö'), mb_strrpos($base, 'y'));
 
     if ($lastFront > $lastBack) {
         return VOWEL_FRONT;
@@ -319,7 +320,7 @@ function vtypeSpecialClass2($base) {
         return VOWEL_BACK;
     } else {
         // No front or back vowels
-        if (strrpos($base, 'e') !== false) {
+        if (mb_strrpos($base, 'e') !== false) {
             // "hel|istä" -> "heläjää"
             return VOWEL_FRONT;
         } else {
@@ -333,16 +334,20 @@ function vtypeMeriPartitive($base) {
 }
 
 
-function inflectWord($word, $classes) {
-    $noun_types = readInflectionTypes("data.aff");
-
+function inflectWord($word, $classes): string
+{
+    $noun_types = readInflectionTypes(__DIR__ . "/data.aff");
     $classes = wordAndInflClass($classes);
     $infclass = $classes["infclass"];
     $av = $classes["av"];
 
     foreach (inflectAWord($word, $infclass, $av, $noun_types) as $iword) {
-        print ($iword->formName . " " . $iword->inflectedWord . "\n");
+        if ($iword->formName == "genetiivi") {
+           return trim($iword->inflectedWord);
+        }
+        // print ($iword->formName . " " . $iword->inflectedWord . "\n");
     }
+    return $word;
 }
 
 /**
@@ -374,6 +379,7 @@ function inflectAWord(string $word, string $infclass, string $gradclass, array $
         return [];
     }
     foreach ($inflection_types as $inflection_type) {
+
         $inflection = inflectWordWithType($word, $inflection_type, $infclass, $gradclass, VOWEL_DEFAULT);
         if (!empty($inflection)) {
             return $inflection;
@@ -391,74 +397,74 @@ function applyGradation($word, $gradType) {
         return [$word, $word];
     }
 
-    if (isConsonant(substr($word, -1)) && !isConsonant(substr($word, -2, 1)) && strlen($word) >= 3) {
-        if (substr($word, -4, 2) == 'ng') {
-            return [substr($word, 0, -4) . 'nk' . substr($word, -2), $word];
+    if (isConsonant(mb_substr($word, -1)) && !isConsonant(mb_substr($word, -2, 1)) && mb_strlen($word) >= 3) {
+        if (mb_substr($word, -4, 2) == 'ng') {
+            return [mb_substr($word, 0, -4) . 'nk' . mb_substr($word, -2), $word];
         }
-        if (substr($word, -4, 2) == 'mm') {
-            return [substr($word, 0, -4) . 'mp' . substr($word, -2), $word];
+        if (mb_substr($word, -4, 2) == 'mm') {
+            return [mb_substr($word, 0, -4) . 'mp' . mb_substr($word, -2), $word];
         }
-        if (substr($word, -4, 2) == 'nn') {
-            return [substr($word, 0, -4) . 'nt' . substr($word, -2), $word];
+        if (mb_substr($word, -4, 2) == 'nn') {
+            return [mb_substr($word, 0, -4) . 'nt' . mb_substr($word, -2), $word];
         }
-        if (substr($word, -4, 2) == 'll') {
-            return [substr($word, 0, -4) . 'lt' . substr($word, -2), $word];
+        if (mb_substr($word, -4, 2) == 'll') {
+            return [mb_substr($word, 0, -4) . 'lt' . mb_substr($word, -2), $word];
         }
-        if (substr($word, -4, 2) == 'rr') {
-            return [substr($word, 0, -4) . 'rt' . substr($word, -2), $word];
+        if (mb_substr($word, -4, 2) == 'rr') {
+            return [mb_substr($word, 0, -4) . 'rt' . mb_substr($word, -2), $word];
         }
-        if (substr($word, -3, 1) == 'd') {
-            return [substr($word, 0, -3) . 't' . substr($word, -2), $word];
+        if (mb_substr($word, -3, 1) == 'd') {
+            return [mb_substr($word, 0, -3) . 't' . mb_substr($word, -2), $word];
         }
-        if (in_array(substr($word, -3, 1), ['t', 'k', 'p'])) {
-            return [substr($word, 0, -2) . substr($word, -3), $word];
+        if (in_array(mb_substr($word, -3, 1), ['t', 'k', 'p'])) {
+            return [mb_substr($word, 0, -2) . mb_substr($word, -3), $word];
         }
-        if (substr($word, -3, 1) == 'v') {
-            return [substr($word, 0, -3) . 'p' . substr($word, -2), $word];
-        }
-    }
-
-    if ($gradType == 'av1' && strlen($word) >= 3) {
-        if (in_array(substr($word, -3, 2), ['tt', 'kk', 'pp'])) {
-            return [$word, substr($word, 0, -2) . substr($word, -1)];
-        }
-        if (substr($word, -3, 2) == 'mp') {
-            return [$word, substr($word, 0, -3) . 'mm' . substr($word, -1)];
-        }
-        if (substr($word, -2, 1) == 'p' && !isConsonant(substr($word, -1))) {
-            return [$word, substr($word, 0, -2) . 'v' . substr($word, -1)];
-        }
-        if (substr($word, -3, 2) == 'nt') {
-            return [$word, substr($word, 0, -3) . 'nn' . substr($word, -1)];
-        }
-        if (substr($word, -3, 2) == 'lt') {
-            return [$word, substr($word, 0, -3) . 'll' . substr($word, -1)];
-        }
-        if (substr($word, -3, 2) == 'rt') {
-            return [$word, substr($word, 0, -3) . 'rr' . substr($word, -1)];
-        }
-        if (substr($word, -2, 1) == 't') {
-            return [$word, substr($word, 0, -2) . 'd' . substr($word, -1)];
+        if (mb_substr($word, -3, 1) == 'v') {
+            return [mb_substr($word, 0, -3) . 'p' . mb_substr($word, -2), $word];
         }
     }
 
-    if ($gradType == 'av3' && strlen($word) >= 3 && substr($word, -2, 1) == 'k') {
-        if (isConsonant(substr($word, -3, 1))) {
-            return [$word, substr($word, 0, -2) . 'j' . substr($word, -1)];
+    if ($gradType == 'av1' && mb_strlen($word) >= 3) {
+        if (in_array(mb_substr($word, -3, 2), ['tt', 'kk', 'pp'])) {
+            return [$word, mb_substr($word, 0, -2) . substr($word, -1)];
+        }
+        if (mb_substr($word, -3, 2) == 'mp') {
+            return [$word, mb_substr($word, 0, -3) . 'mm' . mb_substr($word, -1)];
+        }
+        if (mb_substr($word, -2, 1) == 'p' && !isConsonant(mb_substr($word, -1))) {
+            return [$word, mb_substr($word, 0, -2) . 'v' . mb_substr($word, -1)];
+        }
+        if (mb_substr($word, -3, 2) == 'nt') {
+            return [$word, mb_substr($word, 0, -3) . 'nn' . mb_substr($word, -1)];
+        }
+        if (mb_substr($word, -3, 2) == 'lt') {
+            return [$word, mb_substr($word, 0, -3) . 'll' . mb_substr($word, -1)];
+        }
+        if (mb_substr($word, -3, 2) == 'rt') {
+            return [$word, mb_substr($word, 0, -3) . 'rr' . mb_substr($word, -1)];
+        }
+        if (mb_substr($word, -2, 1) == 't') {
+            return [$word, mb_substr($word, 0, -2) . 'd' . mb_substr($word, -1)];
+        }
+    }
+
+    if ($gradType == 'av3' && mb_strlen($word) >= 3 && mb_substr($word, -2, 1) == 'k') {
+        if (isConsonant(mb_substr($word, -3, 1))) {
+            return [$word, mb_substr($word, 0, -2) . 'j' . mb_substr($word, -1)];
         } else {
-            return [$word, substr($word, 0, -3) . 'j' . substr($word, -1)];
+            return [$word, mb_substr($word, 0, -3) . 'j' . mb_substr($word, -1)];
         }
     }
 
-    if ($gradType == 'av5' && strlen($word) >= 2 && substr($word, -2, 1) == 'k') {
-        return [$word, substr($word, 0, -2) . '$' . substr($word, -1)];
+    if ($gradType == 'av5' && mb_strlen($word) >= 2 && mb_substr($word, -2, 1) == 'k') {
+        return [$word, mb_substr($word, 0, -2) . '$' . mb_substr($word, -1)];
     }
 
-    if ($gradType == 'av6' && strlen($word) >= 1) {
-        if (isConsonant(substr($word, -1))) {
-            return [substr($word, 0, -2) . 'k' . substr($word, -2), $word];
+    if ($gradType == 'av6' && mb_strlen($word) >= 1) {
+        if (isConsonant(mb_substr($word, -1))) {
+            return [mb_substr($word, 0, -2) . 'k' . mb_substr($word, -2), $word];
         } else {
-            return [substr($word, 0, -1) . 'k' . substr($word, -1), $word];
+            return [mb_substr($word, 0, -1) . 'k' . mb_substr($word, -1), $word];
         }
     }
 
@@ -543,7 +549,7 @@ function readInflectionTypes($file): array
                 $columns = preg_split('/\s+/', $strippedLine);
 
                 if (str_starts_with($columns[0], '!')) {
-                    $rule->name = substr($columns[0], 1);
+                    $rule->name = mb_substr($columns[0], 1);
                     $rule->isCharacteristic = true;
                 } else {
                     $rule->name = $columns[0];
@@ -608,7 +614,9 @@ function doMatch (string $word, string $haystack) {
         $word = mb_substr($word, -20);
     }
     $word = utf8_strrev($word);
+    $umlword = str_replace(['ä', 'ö', 'å'], ['a', 'o', 'a'], $word);
     $word .= " ";
+    $umlword .= " ";
     do {
         $word = mb_substr($word, 0, -1);
         $pattern = '/;(' . $word . '[a-zäöå]*);(.*);(.*)\s/';
@@ -618,18 +626,30 @@ function doMatch (string $word, string $haystack) {
         } else if (isset($matches[3][0])) {
             return $matches[3][0];
         }
+        $umlword = mb_substr($umlword, 0, -1);
+        $umlpattern = '/;(' . $umlword . '[a-zäöå]*);(.*);(.*)\s/';
+        preg_match_all($umlpattern, $haystack, $matches, PREG_PATTERN_ORDER);
+        if (isset($matches[3][0])) {
+            return $matches[3][0];
+        }
     } while(true);
 }
 
+function dd(...$params)
+{
+    var_dump($params);
+    die();
+}
 
+/*
 $c = file_get_contents("jouka.log");
 $word = "folaatti";
-$word = "tuhat";
+$word = "tuhat"; // handle this as numerals
 $word = "poliisi";
 $word = "kivi";
 // print (doMatch($word, $c));die();
 inflectWord($word, "subst-" . doMatch($word, $c));
-
+*/
 // $res = doMatch("edäs", $c);
 // inflectWord("makkara", "subst-kulkija");
 // inflectWord("folaatti", "subst-risti-av1");
