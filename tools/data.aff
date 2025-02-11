@@ -2218,3 +2218,43 @@ instruktiivi_mon	0	in	s	ps=f
 instruktiivi_mon	0	ein	s	ps=f
 end: rules
 end: class
+
+# Kotus 19 tie
+class: 19
+sm-class: tie
+match-word: Cie
+consonant-gradation: -
+group: t
+transform-group: e
+rules:
+nominatiivi	0	0	s
+genetiivi		0	n	w
+partitiivi	0	ta	s
+translatiivi	0	ksi	w	ps=f
+translatiivi	0	kse	w	ps=r
+essiivi		0	na	s
+inessiivi		0	ssa	w
+elatiivi		0	sta	w
+illatiivi		0	hon	s
+adessiivi		0	lla	w
+ablatiivi		0	lta	w
+allatiivi		0	lle	w
+abessiivi		0	tta	w	ps=f
+nominatiivi_mon	0	t	w	ps=f
+genetiivi_mon	ie	eiden	s
+genetiivi_mon	ie	eitten	s
+partitiivi_mon	ie	eita	s
+translatiivi_mon	ei	eiksi	w	ps=f
+translatiivi_mon	ei	eikse	w	ps=r
+essiivi_mon	ie	eina	s
+inessiivi_mon	ie	eissa	w
+elatiivi_mon	ie	eista	w
+illatiivi_mon	ie	eihin	s
+adessiivi_mon	ie	eilla	w
+ablatiivi_mon	ie	eilta	w
+allatiivi_mon	ie	eille	w
+abessiivi_mon	ie	eitta	w	ps=f
+komitatiivi_mon	ie	eine	s	ps=r
+instruktiivi_mon	ie	ein	w	ps=f
+end: rules
+end: class

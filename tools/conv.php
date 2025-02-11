@@ -448,6 +448,36 @@ function applyGradation($word, $gradType) {
         }
     }
 
+    if ($gradType === 'av2' && mb_strlen($word) >= 2) {
+        $beforeLastTwo = mb_substr($word, -3, 2);
+        $beforeLastOne = mb_substr($word, -2, 1);
+
+        if ($beforeLastTwo === 'ng') {
+            return [mb_substr($word, 0, -3) . 'nk' . mb_substr($word, -1), $word];
+        }
+        if ($beforeLastTwo === 'mm') {
+            return [mb_substr($word, 0, -3) . 'mp' . mb_substr($word, -1), $word];
+        }
+        if ($beforeLastTwo === 'nn') {
+            return [mb_substr($word, 0, -3) . 'nt' . mb_substr($word, -1), $word];
+        }
+        if ($beforeLastTwo === 'll') {
+            return [mb_substr($word, 0, -3) . 'lt' . mb_substr($word, -1), $word];
+        }
+        if ($beforeLastTwo === 'rr') {
+            return [mb_substr($word, 0, -3) . 'rt' . mb_substr($word, -1), $word];
+        }
+        if ($beforeLastOne === 'd') {
+            return [mb_substr($word, 0, -2) . 't' . mb_substr($word, -1), $word];
+        }
+        if (strpos('tkpbg', $beforeLastOne) !== false) {
+            return [mb_substr($word, 0, -1) . mb_substr($word, -2), $word];
+        }
+        if ($beforeLastOne === 'v') {
+            return [mb_substr($word, 0, -2) . 'p' . mb_substr($word, -1), $word];
+        }
+    }
+
     if ($gradType == 'av3' && mb_strlen($word) >= 3 && mb_substr($word, -2, 1) == 'k') {
         if (isConsonant(mb_substr($word, -3, 1))) {
             return [$word, mb_substr($word, 0, -2) . 'j' . mb_substr($word, -1)];
@@ -467,7 +497,6 @@ function applyGradation($word, $gradType) {
             return [mb_substr($word, 0, -1) . 'k' . mb_substr($word, -1), $word];
         }
     }
-
     return null;
 }
 
