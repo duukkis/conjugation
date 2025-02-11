@@ -501,7 +501,7 @@ function applyGradation($word, $gradType) {
 }
 
 function isConsonant($char) {
-    return preg_match('/[bcdfghjklmnpqrstvwxyz]/i', $char);
+    return preg_match('/[qwrtpsdfghjklzxcvbnm]/i', $char);
 }
 
 
