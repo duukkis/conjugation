@@ -425,26 +425,39 @@ function applyGradation($word, $gradType) {
     }
 
     if ($gradType == 'av1' && mb_strlen($word) >= 3) {
-        if (in_array(mb_substr($word, -3, 2), ['tt', 'kk', 'pp'])) {
-            return [$word, mb_substr($word, 0, -2) . substr($word, -1)];
+        $beforeLastTwo = mb_substr($word, -3, 2);
+        $beforeLastOne = mb_substr($word, -2, 1);
+        $lastThree = mb_substr($word, -3);
+
+        if (in_array($beforeLastTwo, ['tt', 'kk', 'pp'])) {
+            return [$word, mb_substr($word, 0, -2) . mb_substr($word, -1)];
         }
-        if (mb_substr($word, -3, 2) == 'mp') {
+        if ($beforeLastTwo === 'mp') {
             return [$word, mb_substr($word, 0, -3) . 'mm' . mb_substr($word, -1)];
         }
-        if (mb_substr($word, -2, 1) == 'p' && !isConsonant(mb_substr($word, -1))) {
+        if ($beforeLastOne === 'p' && !isConsonant(mb_substr($word, -1))) {
             return [$word, mb_substr($word, 0, -2) . 'v' . mb_substr($word, -1)];
         }
-        if (mb_substr($word, -3, 2) == 'nt') {
+        if ($beforeLastTwo === 'nt') {
             return [$word, mb_substr($word, 0, -3) . 'nn' . mb_substr($word, -1)];
         }
-        if (mb_substr($word, -3, 2) == 'lt') {
+        if ($beforeLastTwo === 'lt') {
             return [$word, mb_substr($word, 0, -3) . 'll' . mb_substr($word, -1)];
         }
-        if (mb_substr($word, -3, 2) == 'rt') {
+        if ($beforeLastTwo === 'rt') {
             return [$word, mb_substr($word, 0, -3) . 'rr' . mb_substr($word, -1)];
         }
-        if (mb_substr($word, -2, 1) == 't') {
+        if ($beforeLastOne === 't') {
             return [$word, mb_substr($word, 0, -2) . 'd' . mb_substr($word, -1)];
+        }
+        if ($beforeLastTwo === 'nk') {
+            return [$word, mb_substr($word, 0, -3) . 'ng' . mb_substr($word, -1)];
+        }
+        if ($lastThree === 'uku') {
+            return [$word, mb_substr($word, 0, -3) . 'uvu'];
+        }
+        if ($lastThree === 'yky') {
+            return [$word, mb_substr($word, 0, -3) . 'yvy'];
         }
     }
 

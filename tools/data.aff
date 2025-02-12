@@ -1523,6 +1523,46 @@ instruktiivi_mon	0	n	s	ps=f
 end: rules
 end: class
 
+# Kotus 27 tosi
+class: 27
+sm-class: tosi
+match-word: Vsi
+consonant-gradation: -
+group: t
+transform-group: e
+rules:
+nominatiivi	0	0	s	ps=f
+nominatiivi	si	te	s	ps=r
+genetiivi		si	den	s	ps=f
+partitiivi	si	tta	s
+translatiivi	si	deksi	s	ps=f
+translatiivi	si	dekse	s	ps=r
+essiivi		si	tena	s
+inessiivi		si	dessa	s
+elatiivi		si	desta	s
+illatiivi		si	teen	s
+adessiivi		si	della	s
+ablatiivi		si	delta	s
+allatiivi		si	delle	s
+abessiivi		si	detta	s	ps=f
+nominatiivi_mon	si	det	s	ps=f
+genetiivi_mon	0	en	s
+genetiivi_mon	si	tten	s	prio=2
+partitiivi_mon	0	a	s
+translatiivi_mon	0	ksi	s	ps=f
+translatiivi_mon	0	kse	s	ps=r
+essiivi_mon	0	na	s
+inessiivi_mon	0	ssa	s
+elatiivi_mon	0	sta	s
+illatiivi_mon	0	in	s
+adessiivi_mon	0	lla	s
+ablatiivi_mon	0	lta	s
+allatiivi_mon	0	lle	s
+abessiivi_mon	0	tta	s	ps=f
+komitatiivi_mon	0	ne	s	ps=r
+instruktiivi_mon	0	n	s	ps=f
+end: rules
+end: class
 
 # Kotus 28 kansi
 class: 28
