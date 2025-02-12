@@ -1609,6 +1609,7 @@ end: class
 # Kotus 29, 30 lapsi
 # FIXME: 29,30
 class: 29,30
+sm-class: lapsi
 match-word: (?:p|t)si
 consonant-gradation: -
 group: t

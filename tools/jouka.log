@@ -1802,7 +1802,7 @@
 ;aklus;sulka;koira-av5
 ;aknah;hanka;kala-av1
 ;aknahul;luhanka;kala-av1
-;aknal;lanka;kala
+;aknal;lanka;kala-av1
 ;aknaloup;puolanka;kala-av1
 ;aknaluo;oulanka;kala-av1
 ;aknamih;himanka;kala-av1
@@ -7950,7 +7950,7 @@
 ;iminim;minimi;paperi
 ;imiol;loimi;niemi
 ;imios;soimi;niemi
-;imiot;toimi;risti
+;imiot;toimi;niemi
 ;imirglip;pilgrimi;paperi
 ;imiskam;maksimi;paperi
 ;imitpes;septimi;risti
@@ -11619,8 +11619,8 @@
 ;istep;petsi;risti
 ;istepart;trapetsi;paperi
 ;istiem;meitsi;risti
-;istiep;peitsi;veitsi
-;istiev;veitsi;veitsi
+;istiep;peitsi;lapsi
+;istiev;veitsi;lapsi
 ;istievs;sveitsi;risti
 ;istih;hitsi;risti
 ;istik;kitsi;risti
@@ -11651,7 +11651,7 @@
 ;istubbik;kibbutsi;risti
 ;istuks;skutsi;risti
 ;istum;mutsi;risti
-;istuoj;joutsi;veitsi
+;istuoj;joutsi;lapsi
 ;istuok;koutsi;risti
 ;istur;rutsi;risti
 ;isturts;strutsi;risti
@@ -20086,6 +20086,7 @@
 ;suakhu;uhkaus;vastaus
 ;suakiek;keikaus;vastaus
 ;suakkap;pakkaus;vastaus
+;suakkar;rakkaus;kalleus
 ;suakkiel;leikkaus;vastaus
 ;suakkles;selkkaus;vastaus
 ;suakkrun;nurkkaus;vastaus
@@ -20108,7 +20109,6 @@
 ;suales;selaus;vastaus
 ;sualiot;toilaus;vastaus
 ;sualiv;vilaus;vastaus
-;sualk;klaus;kalsium
 ;sualok;kolaus;vastaus
 ;sualokin;nikolaus;vastaus
 ;sualsinat;tanislaus;vastaus
@@ -20120,6 +20120,8 @@
 ;suamluk;kulmaus;vastaus
 ;suamuuh;huumaus;vastaus
 ;suanrut;turnaus;vastaus
+;suapat;tapaus;vastaus
+;suapav;vapaus;kalleus
 ;suapeik;kiepaus;vastaus
 ;suapir;ripaus;vastaus
 ;suapok;kopaus;vastaus
@@ -21479,7 +21481,7 @@
 ;tyheit;tiehyt;ohut
 ;tyktäk;kätkyt;ohut
 ;tynääj;jäänyt;kuollut
-;tystien;neitsyt;ohut
+;tystien;neitsyt;kuollut
 ;tyviäp;päivyt;ohut
 ;tänev;venät;
 ;tävek;kevät;kevät
