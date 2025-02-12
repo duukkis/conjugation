@@ -110,6 +110,12 @@ class Word
 
     public function getGradation(): void
     {
+        // here we should detect if the word is
+        // 1. arvo, pomo, pöly, raivo, risu, äly
+        // 2. aivosto, arkisto, hienosto, jaosto, kilpailu, parittelu, säteily,
+        // 3. arvio, eliö, illuusio, kuutio, lyseo,
+        // 5. aari, aasi, arabi, argon, au pair, balladi, baari, crossfit,
+        // 6. iskuri, kalori, laser, leipuri, piiskuri, rehtori, räätäli,
 
     }
 

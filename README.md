@@ -162,4 +162,5 @@ chmod +x phpunit
 Wordlist from Institute for the Languages of Finland
 KOTIMAISTEN KIELTEN KESKUKSEN NYKYSUOMEN SANALISTA
 
-http://kaino.kotus.fi/sanat/nykysuomi/
+https://kotus.fi/sanakirjat/kielitoimiston-sanakirja/nykysuomen-sana-aineistot/nykysuomen-sanalista/
+
