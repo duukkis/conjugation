@@ -2,6 +2,8 @@
 
 namespace Conjugation\Classes;
 
+use Conjugation\Enums\GradType;
+
 class Inflection {
 
     /** @var array|InflectionType[] $nounTypes */
@@ -9,7 +11,7 @@ class Inflection {
 
     public function __construct()
     {
-        $subst = file_get_contents(__DIR__ . "../resources/subst.aff");
+        $subst = file_get_contents(__DIR__ . "/../../resources/subst.aff");
         $lines = explode("\n", $subst);
         $this->nounTypes = $this->readInflectionTypes($lines);
     }
@@ -60,9 +62,9 @@ class Inflection {
                     $t->matchWord = $header_tuple[1];
                     break;
                 case 'consonant-gradation':
-                    if ($header_tuple[1] === '-') $t->gradation = GRAD_NONE;
-                    if ($header_tuple[1] === 'sw') $t->gradation = GRAD_SW;
-                    if ($header_tuple[1] === 'ws') $t->gradation = GRAD_WS;
+                    if ($header_tuple[1] === '-') $t->gradation = GradType::GRAD_NONE;
+                    if ($header_tuple[1] === 'sw') $t->gradation = GradType::GRAD_SW;
+                    if ($header_tuple[1] === 'ws') $t->gradation = GradType::GRAD_WS;
                     break;
                 case 'note':
                     $t->note = $header_tuple[1];
@@ -107,7 +109,7 @@ class Inflection {
                         $rule->addSuffix = $columns[2];
                     }
                     if ($columns[3] === 's') {
-                        $rule->gradation = GRAD_STRONG;
+                        $rule->gradation = GradType::GRAD_STRONG;
                     }
                     if (count($columns) > 4) {
                         // skip r

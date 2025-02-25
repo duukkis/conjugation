@@ -5,7 +5,7 @@ namespace Conjugation\Helpers;
 class ConjugateWord
 {
 
-    public string $infclass;
+    public ?string $infclass = null;
     public string $av;
     public string $haystack;
 
@@ -17,7 +17,7 @@ class ConjugateWord
         private readonly string $word
     )
     {
-        $this->haystack = file_get_contents(__DIR__ . "../../resources/words.txt");
+        $this->haystack = file_get_contents(__DIR__ . "/../../resources/words.txt");
         $this->runDetection();
     }
 

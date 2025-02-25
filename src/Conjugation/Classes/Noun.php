@@ -2,19 +2,19 @@
 
 namespace Conjugation\Classes;
 
+use Conjugation\Enums\GradType;
+use Conjugation\Enums\VowelType;
 use Conjugation\Helpers\ConjugateWord;
 
 class Noun {
 
-    const VOWEL_DEFAULT = 0;
-    const VOWEL_FRONT = 1;
-    const VOWEL_BACK = 2;
-    const VOWEL_BOTH = 3;
+    public array $nounTypes;
 
-    const GRAD_NONE = 0;
-    const GRAD_SW = 1;
-    const GRAD_WS = 2;
-    const GRAD_STRONG = 4;
+    public function __construct()
+    {
+        $inflection = new Inflection();
+        $this->nounTypes = $inflection->nounTypes;
+    }
 
 
     public function inflectWord(string $word, string $formName = "nominatiivi"): string
@@ -33,13 +33,11 @@ class Noun {
     public function inflectWordAllForms(string $word): array
     {
         $result = [];
-        $inflection = new Inflection();
-        $nounTypes = $inflection->nounTypes;
 
         $conjugateBasedOn = new ConjugateWord($word);
         $infclass = $conjugateBasedOn->infclass;
         $av = $conjugateBasedOn->av;
-        foreach ($this->inflectAWord($word, $infclass, $av, $nounTypes) as $iword) {
+        foreach ($this->inflectAWord($word, $infclass, $av, $this->nounTypes) as $iword) {
             $result[$iword->formName] = trim($iword->inflectedWord);
         }
         return $result;
@@ -52,7 +50,7 @@ class Noun {
         }
         foreach ($inflection_types as $inflection_type) {
 
-            $inflection = $this->inflectWordWithType($word, $inflection_type, $infclass, $gradclass, VOWEL_DEFAULT);
+            $inflection = $this->inflectWordWithType($word, $inflection_type, $infclass, $gradclass, VowelType::VOWEL_DEFAULT);
             if (!empty($inflection)) {
                 return $inflection;
             }
@@ -85,18 +83,18 @@ class Noun {
         $lastY = mb_strrpos($word, 'y') ?: -1;
 
         if ($lastBack > -1 && max($lastOrdFront, $lastY) == -1) {
-            return self::VOWEL_BACK;
+            return VowelType::VOWEL_BACK;
         }
         if ($lastBack == -1 && max($lastOrdFront, $lastY) > -1) {
-            return self::VOWEL_FRONT;
+            return VowelType::VOWEL_FRONT;
         }
         if (max($lastBack, $lastOrdFront, $lastY) == -1) {
-            return self::VOWEL_FRONT;
+            return VowelType::VOWEL_FRONT;
         }
         if ($lastY < max($lastBack, $lastOrdFront)) {
-            return ($lastBack > $lastOrdFront) ? self::VOWEL_BACK : self::VOWEL_FRONT;
+            return ($lastBack > $lastOrdFront) ? VowelType::VOWEL_BACK : VowelType::VOWEL_FRONT;
         } else {
-            return self::VOWEL_BOTH;
+            return VowelType::VOWEL_BOTH;
         }
     }
 
@@ -105,7 +103,7 @@ class Noun {
         // Search for last '=' or '-', check the trailing part using recursion
         $startind = max(mb_strrpos($wordform, '='), mb_strrpos($wordform, '-'));
         if ($startind === mb_strlen($wordform) - 1) {
-            return self::VOWEL_BOTH;
+            return VowelType::VOWEL_BOTH;
         }
         if ($startind !== false) {
             return $this->getWordformInflVowelType(mb_substr($wordform, $startind + 1));
@@ -114,7 +112,7 @@ class Noun {
         // Search for first '|', check the trailing part using recursion
         $startind = mb_strpos($wordform, '|');
         if ($startind === mb_strlen($wordform) - 1) {
-            return self::VOWEL_BOTH;
+            return VowelType::VOWEL_BOTH;
         }
         $vtypeWhole = $this->simpleVowelType($wordform);
         if ($startind === false) {
@@ -122,7 +120,7 @@ class Noun {
         }
         $vtypePart = $this->getWordformInflVowelType(mb_substr($wordform, $startind + 1));
 
-        return ($vtypeWhole === $vtypePart) ? $vtypeWhole : self::VOWEL_BOTH;
+        return ($vtypeWhole === $vtypePart) ? $vtypeWhole : VowelType::VOWEL_BOTH;
     }
 
     public function regexToHunspell(?string $exp, string $repl): array
@@ -207,7 +205,7 @@ class Noun {
         InflectionType $inflection_type,
         string $infclass,
         string $gradclass,
-        int $vowel_type = self::VOWEL_DEFAULT
+        int $vowel_type = VowelType::VOWEL_DEFAULT
     ): array {
         if ($inflection_type->joukahainenClasses == null) {
             return [];
@@ -218,23 +216,23 @@ class Noun {
         if ($word_grad === null) return [];
 
         if ($gradclass === '-') {
-            $grad_type = self::GRAD_NONE;
+            $grad_type = GradType::GRAD_NONE;
         } elseif (in_array($gradclass, ['av1', 'av3', 'av5'])) {
-            $grad_type = self::GRAD_SW;
+            $grad_type = GradType::GRAD_SW;
         } elseif (in_array($gradclass, ['av2', 'av4', 'av6'])) {
-            $grad_type = self::GRAD_WS;
+            $grad_type = GradType::GRAD_WS;
         }
 
-        if ($grad_type !== self::GRAD_NONE && $grad_type !== $inflection_type->gradation) return [];
+        if ($grad_type !== GradType::GRAD_NONE && $grad_type !== $inflection_type->gradation) return [];
 
         if (!preg_match("/" . $this->wordPatternToPCRE($inflection_type->matchWord) . "/i", $word)) return [];
 
         $inflection_list = [];
-        if ($vowel_type === self::VOWEL_DEFAULT) {
+        if ($vowel_type === VowelType::VOWEL_DEFAULT) {
             $vowel_type = $this->getWordformInflVowelType($word);
         }
         foreach ($inflection_type->inflectionRules as $rule) {
-            $word_base = ($rule->gradation === self::GRAD_STRONG) ? $word_grad[0] : $word_grad[1];
+            $word_base = ($rule->gradation === GradType::GRAD_STRONG) ? $word_grad[0] : $word_grad[1];
             $hunspell_rules = $this->regexToHunspell($rule->delSuffix, $rule->addSuffix);
             foreach ($hunspell_rules as $hunspell_rule) {
                 $word_stripped_base = ($hunspell_rule[0] === '0') ? $word_base : mb_substr($word_base, 0, -mb_strlen($hunspell_rule[0]));
@@ -257,7 +255,7 @@ class Noun {
 
 
                 if (in_array($rule->name, ['subst_tO', 'subst_Os'])) {
-                    if ($this->vtypeSpecialClass1($word_stripped_base) === self::VOWEL_FRONT) {
+                    if ($this->vtypeSpecialClass1($word_stripped_base) === VowelType::VOWEL_FRONT) {
                         $infl->inflectedWord = $final_base . $this->convertTvEv($affix);
                     } else {
                         $infl->inflectedWord = $final_base . $affix;
@@ -270,7 +268,7 @@ class Noun {
                     continue;
                 }
 
-                if (in_array($vowel_type, [self::VOWEL_BACK, self::VOWEL_BOTH]) &&
+                if (in_array($vowel_type, [VowelType::VOWEL_BACK, VowelType::VOWEL_BOTH]) &&
                     str_ends_with($word_base, $pattern)) {
                     $infl->inflectedWord = $this->replaceConditionalApostrophe($final_base . $affix);
                     $inflection_list[] = $infl;
@@ -281,7 +279,7 @@ class Noun {
                     $infl->priority = $rule->rulePriority;
                 }
 
-                if (in_array($vowel_type, [self::VOWEL_FRONT, self::VOWEL_BOTH]) &&
+                if (in_array($vowel_type, [VowelType::VOWEL_FRONT, VowelType::VOWEL_BOTH]) &&
                     str_ends_with($word_base, $this->convertTvEv($pattern))) {
                     $infl->inflectedWord = $this->replaceConditionalApostrophe($final_base . $this->convertTvEv($affix));
                     $inflection_list[] = $infl;
@@ -308,9 +306,9 @@ class Noun {
         $lastFront = max(mb_strrpos($base, 'ä'), mb_strrpos($base, 'ö'), mb_strrpos($base, 'y'));
 
         if ($lastFront > $lastBack) {
-            return self::VOWEL_FRONT;
+            return VowelType::VOWEL_FRONT;
         } else {
-            return self::VOWEL_BACK;
+            return VowelType::VOWEL_BACK;
         }
     }
 
