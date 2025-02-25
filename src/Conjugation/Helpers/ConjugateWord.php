@@ -19,9 +19,6 @@ class ConjugateWord
     {
         $this->haystack = file_get_contents(__DIR__ . "/../../resources/words.txt");
         $this->runDetection();
-        if (false && $this->word == "") {
-            print_r($this->av);die();
-        }
     }
 
     public function runDetection(): void

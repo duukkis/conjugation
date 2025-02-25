@@ -251,10 +251,6 @@ class Noun {
                 $infl->isCharacteristic = $rule->isCharacteristic;
                 $infl->priority = $rule->rulePriority;
 
-
-                $final_base = str_replace(["=", "|"], "", $word_stripped_base);
-
-
                 if (in_array($rule->name, ['subst_tO', 'subst_Os'])) {
                     if ($this->vtypeSpecialClass1($word_stripped_base) === VowelType::VOWEL_FRONT) {
                         $infl->inflectedWord = $final_base . $this->convertTvEv($affix);
@@ -268,6 +264,8 @@ class Noun {
                     $inflection_list[] = $infl;
                     continue;
                 }
+
+                $final_base = str_replace(["=", "|"], "", $word_stripped_base);
 
                 if (in_array($vowel_type, [VowelType::VOWEL_BACK, VowelType::VOWEL_BOTH]) &&
                     str_ends_with($word_base, $pattern)) {
@@ -441,6 +439,6 @@ class Noun {
     }
 
     public function isConsonant(string $char): bool {
-        return (preg_match('/[qwrtpsdfghjklzxcvbnm]/i', $char) !== false);
+        return preg_match('/[qwrtpsdfghjklzxcvbnm]/i', $char);
     }
 }

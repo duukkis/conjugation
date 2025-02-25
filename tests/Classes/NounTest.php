@@ -374,7 +374,7 @@ class NounTest extends TestCase
         ];
 
         $noun = new Noun();
-        $actual = $noun->inflectWord("tee", "genetiivi");
+        $actual = $noun->inflectWord("säe", "genetiivi");
 
         foreach ($testSet as $word => $correct_answer) {
             $actual = $noun->inflectWord($word, "genetiivi");
