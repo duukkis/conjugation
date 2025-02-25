@@ -6,7 +6,7 @@ class ConjugateWord
 {
 
     public ?string $infclass = null;
-    public string $av;
+    public ?string $av;
     public string $haystack;
 
     /**
@@ -19,6 +19,9 @@ class ConjugateWord
     {
         $this->haystack = file_get_contents(__DIR__ . "/../../resources/words.txt");
         $this->runDetection();
+        if (false && $this->word == "") {
+            print_r($this->av);die();
+        }
     }
 
     public function runDetection(): void
@@ -56,7 +59,11 @@ class ConjugateWord
         if (isset($matches[3][0])) {
             $pieces = explode("-", $matches[3][0]);
             $this->infclass = $pieces[0];
-            $this->av = $pieces[1];
+            if (isset($pieces[1]) && $pieces[1] !== '') {
+                $this->av = $pieces[1];
+            } else {
+                $this->av = "-";
+            }
         }
     }
 

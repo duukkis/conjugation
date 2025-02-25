@@ -38,7 +38,9 @@ class Noun {
         $infclass = $conjugateBasedOn->infclass;
         $av = $conjugateBasedOn->av;
         foreach ($this->inflectAWord($word, $infclass, $av, $this->nounTypes) as $iword) {
-            $result[$iword->formName] = trim($iword->inflectedWord);
+            if (!isset($result[$iword->formName])) {
+                $result[$iword->formName] = trim($iword->inflectedWord);
+            }
         }
         return $result;
     }
@@ -49,7 +51,6 @@ class Noun {
             return [];
         }
         foreach ($inflection_types as $inflection_type) {
-
             $inflection = $this->inflectWordWithType($word, $inflection_type, $infclass, $gradclass, VowelType::VOWEL_DEFAULT);
             if (!empty($inflection)) {
                 return $inflection;
@@ -123,7 +124,7 @@ class Noun {
         return ($vtypeWhole === $vtypePart) ? $vtypeWhole : VowelType::VOWEL_BOTH;
     }
 
-    public function regexToHunspell(?string $exp, string $repl): array
+    public function regexToHunspell(?string $exp, ?string $repl): array
     {
         $ruleList = [];
         $wChars = "[a-zäöé]";
