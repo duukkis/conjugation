@@ -5,20 +5,23 @@ namespace Conjugation\Helpers;
 class ConjugateWord
 {
 
-    public string $result;
+    public string $infclass;
+    public string $av;
+    public string $haystack;
 
     /**
      * @param string $word
      * @param string $haystack this is text file with lines like this ;aamhev;vehmaa;vapaa (drow;word;word-to-conjugate-by)
      */
     public function __construct(
-        private readonly string $word,
-        private readonly string $haystack,
+        private readonly string $word
     )
     {
+        $this->haystack = file_get_contents(__DIR__ . "../../resources/words.txt");
+        $this->runDetection();
     }
 
-    public function getResult(): string
+    public function runDetection(): void
     {
         $word = $this->word;
 
@@ -29,19 +32,19 @@ class ConjugateWord
         $umlword = str_replace(['ä', 'ö', 'å'], ['a', 'o', 'a'], $word);
         do {
             $this->doWord($word, $this->haystack);
-            if ($this->result !== null) {
-                return $this->result;
+            if ($this->infclass !== null) {
+                return;
             }
             $word = mb_substr($word, 0, -1);
 
             $this->doWord($umlword, $this->haystack);
-            if ($this->result !== null) {
-                return $this->result;
+            if ($this->infclass !== null) {
+                return;
             }
             $umlword = mb_substr($umlword, 0, -1);
 
             if (mb_strlen($word) <= 1) {
-                return "";
+                return;
             }
         } while(true);
     }
@@ -51,7 +54,9 @@ class ConjugateWord
         $pattern = '/;(' . $word . '[a-zäöå]*);(.*);(.*)\s/';
         preg_match_all($pattern, $haystack, $matches, PREG_PATTERN_ORDER);
         if (isset($matches[3][0])) {
-            $this->result = $matches[3][0];
+            $pieces = explode("-", $matches[3][0]);
+            $this->infclass = $pieces[0];
+            $this->av = $pieces[1];
         }
     }
 

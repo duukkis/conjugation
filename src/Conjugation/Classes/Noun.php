@@ -2,7 +2,7 @@
 
 namespace Conjugation\Classes;
 
-use Exception;
+use Conjugation\Helpers\ConjugateWord;
 
 class Noun {
 
@@ -17,44 +17,32 @@ class Noun {
     const GRAD_STRONG = 4;
 
 
-    public function inflectWord($word, $classes): string
+    public function inflectWord(string $word, string $formName = "nominatiivi"): string
     {
-        $inflection = new Inflection();
-        $noun_types = $inflection->nounTypes;
-
-        $classes = $this->wordAndInflClass($classes);
-        $infclass = $classes["infclass"];
-        $av = $classes["av"];
-
-        foreach ($this->inflectAWord($word, $infclass, $av, $noun_types) as $iword) {
-            if ($iword->formName == "genetiivi") {
-                return trim($iword->inflectedWord);
-            }
+        $result = $this->inflectWordAllForms($word);
+        if (isset($result[$formName])) {
+            return $result[$formName];
         }
         return $word;
     }
 
     /**
-     * @param string $fullclass subst-risti-av1
-     * @return string[] "risti", "av1"
-     * @throws Exception
+     * @param $word
+     * @return array<string, string>
      */
-    public function wordAndInflClass(string $fullclass): array
+    public function inflectWordAllForms(string $word): array
     {
-        $av = "-";
-        $infclass_parts = explode('-', $fullclass);
-        if (count($infclass_parts) <= 1) {
-            throw new Exception('Incorrect inflection class');
-        } elseif (count($infclass_parts) == 3) {
-            $av = $infclass_parts[2];
-        }
-        $wordclass = $infclass_parts[0];
+        $result = [];
+        $inflection = new Inflection();
+        $nounTypes = $inflection->nounTypes;
 
-        if (!in_array($wordclass, ['subst', 'verbi'])) {
-            throw new Exception('Incorrect word class');
+        $conjugateBasedOn = new ConjugateWord($word);
+        $infclass = $conjugateBasedOn->infclass;
+        $av = $conjugateBasedOn->av;
+        foreach ($this->inflectAWord($word, $infclass, $av, $nounTypes) as $iword) {
+            $result[$iword->formName] = trim($iword->inflectedWord);
         }
-
-        return ["infclass" => $infclass_parts[1], "av" => $av];
+        return $result;
     }
 
     public function inflectAWord(string $word, string $infclass, string $gradclass, array $inflection_types): array
@@ -73,11 +61,13 @@ class Noun {
     }
 
     # Translates word match pattern to a Perl-compatible regular expression
-    public function wordPatternToPCRE($pattern) {
+    public function wordPatternToPCRE(string $pattern): string
+    {
         return '.*' . $this->capitalCharRegexp($pattern) . '$';
     }
 
-    public function capitalCharRegexp($pattern) {
+    public function capitalCharRegexp(string $pattern): string
+    {
         $pattern = str_replace('V', '(?:a|e|i|o|u|y|ä|ö|é|è|á|ó|â)', $pattern);
         $pattern = str_replace('C', '(?:b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|z|š|ž)', $pattern);
         $pattern = str_replace('A', '(?:a|ä)', $pattern);
@@ -86,7 +76,8 @@ class Noun {
         return $pattern;
     }
 
-    public function simpleVowelType($word) {
+    public function simpleVowelType(string $word): int
+    {
         $word = strtolower($word);
 
         $lastBack = max(mb_strrpos($word, 'a') ?: -1, mb_strrpos($word, 'o') ?: -1, mb_strrpos($word, 'å') ?: -1, mb_strrpos($word, 'u') ?: -1);
@@ -109,7 +100,7 @@ class Noun {
         }
     }
 
-    public function getWordformInflVowelType($wordform)
+    public function getWordformInflVowelType(string $wordform): int
     {
         // Search for last '=' or '-', check the trailing part using recursion
         $startind = max(mb_strrpos($wordform, '='), mb_strrpos($wordform, '-'));
@@ -134,7 +125,8 @@ class Noun {
         return ($vtypeWhole === $vtypePart) ? $vtypeWhole : self::VOWEL_BOTH;
     }
 
-    public function regexToHunspell($exp, $repl) {
+    public function regexToHunspell(?string $exp, string $repl): array
+    {
         $ruleList = [];
         $wChars = "[a-zäöé]";
 
@@ -189,11 +181,11 @@ class Noun {
             return $ruleList;
         }
 
-        echo "Unsupported regular expression: exp='$exp', repl='$repl'\n";
         return [];
     }
 
-    public function replaceConditionalApostrophe($word) {
+    public function replaceConditionalApostrophe(string $word): string
+    {
         $ind = mb_strpos($word, '$');
         if ($ind === false) return $word;
         if ($ind == 0 || $ind == mb_strlen($word) - 1) return str_replace('$', '', $word);
@@ -216,7 +208,7 @@ class Noun {
         string $infclass,
         string $gradclass,
         int $vowel_type = self::VOWEL_DEFAULT
-    ) {
+    ): array {
         if ($inflection_type->joukahainenClasses == null) {
             return [];
         }
@@ -299,7 +291,8 @@ class Noun {
         return $inflection_list;
     }
 
-    public function normalizeBase($base) {
+    public function normalizeBase(string $base): string
+    {
         $pos = mb_strpos($base, '=');
         if ($pos !== false) {
             $base = mb_substr($base, $pos + 1);
@@ -308,7 +301,8 @@ class Noun {
     }
 
 
-    public function vtypeSpecialClass1($base) {
+    public function vtypeSpecialClass1(string $base): int
+    {
         $base = $this->normalizeBase($base);
         $lastBack = max(mb_strrpos($base, 'a'), mb_strrpos($base, 'o'), mb_strrpos($base, 'å'), mb_strrpos($base, 'u'));
         $lastFront = max(mb_strrpos($base, 'ä'), mb_strrpos($base, 'ö'), mb_strrpos($base, 'y'));
@@ -320,11 +314,13 @@ class Noun {
         }
     }
 
-    public function convertTvEv($pattern) {
+    public function convertTvEv(string $pattern): string
+    {
         return str_replace(['a', 'o', 'u'], ['ä', 'ö', 'y'], $pattern);
     }
 
-    public function applyGradation($word, $gradType) {
+    public function applyGradation(string $word, string $gradType): ?array
+    {
         if ($gradType == '-') {
             return [$word, $word];
         }
@@ -445,7 +441,7 @@ class Noun {
         return null;
     }
 
-    public function isConsonant($char) {
-        return preg_match('/[qwrtpsdfghjklzxcvbnm]/i', $char);
+    public function isConsonant(string $char): bool {
+        return (preg_match('/[qwrtpsdfghjklzxcvbnm]/i', $char) !== false);
     }
 }
